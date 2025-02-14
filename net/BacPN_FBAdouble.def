@@ -1,0 +1,39 @@
+|1
+Call["Starvation", FromTable["Bacteria_Parameters.csv", 0, 0], 0]
+|2
+Call["Duplication", FromTable["Bacteria_Parameters.csv", 0, 1], 0]
+|3
+Call["Death", FromTable["Bacteria_Parameters.csv", 0, 2], 0]
+|4
+\mathbf{FBA}[Escherichia_coli_str_K_12_substr_MG1655.txt,EX_biomass_e,1,E_coli,E_coli_biomass_e,true]
+|5
+\mathbf{FBA}[Escherichia_coli_str_K_12_substr_MG1655.txt,EX_biomass_e,1,E_coli,E_coli_biomass_e,true]
+|6
+\mathbf{FBA}[Escherichia_coli_str_K_12_substr_MG1655.txt,EX_glc_D_e,1,E_coli,E_coli_biomass_e,false]
+|7
+\mathbf{FBA}[Escherichia_coli_str_K_12_substr_MG1655.txt,EX_lcts_e,1,E_coli,E_coli_biomass_e,false]
+|8
+\mathbf{FBA}[Escherichia_coli_str_K_12_substr_MG1655.txt,EX_glc_D_e,1,E_coli,E_coli_biomass_e,false]
+|9
+\mathbf{FBA}[Escherichia_coli_str_K_12_substr_MG1655.txt,EX_lcts_e,1,E_coli,E_coli_biomass_e,false]
+|10
+\mathbf{FBA}[Clostridium_butyricum_DSM_10702.txt,EX_biomass_e,1,Clost_buty,Clost_buty_biomass_e,true]
+|11
+\mathbf{FBA}[Clostridium_butyricum_DSM_10702.txt,EX_biomass_e,1,Clost_buty,Clost_buty_biomass_e,true]
+|12
+Call["Starvation", FromTable["Bacteria_Parameters.csv", 1, 0], 1]
+|13
+Call["Death", FromTable["Bacteria_Parameters.csv", 1, 2], 1]
+|14
+Call["Duplication", FromTable["Bacteria_Parameters.csv", 1, 1], 1]
+|15
+\mathbf{FBA}[Clostridium_butyricum_DSM_10702.txt,EX_lcts_e,1,Clost_buty,Clost_buty_biomass_e,false]
+|16
+\mathbf{FBA}[Clostridium_butyricum_DSM_10702.txt,EX_glc_D_e,1,Clost_buty,Clost_buty_biomass_e,false]
+|17
+\mathbf{FBA}[Clostridium_butyricum_DSM_10702.txt,EX_glc_D_e,1,Clost_buty,Clost_buty_biomass_e,false]
+|18
+\mathbf{FBA}[Clostridium_butyricum_DSM_10702.txt,EX_lcts_e,1,Clost_buty,Clost_buty_biomass_e,false]
+|256
+%
+|

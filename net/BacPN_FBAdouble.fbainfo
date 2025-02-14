@@ -1,0 +1,134 @@
+[
+  {
+    "Transition": "E_coli_EX_biomass_e_out",
+    "LPfile": "Escherichia_coli_str_K_12_substr_MG1655.txt",
+    "Reaction": "EX_biomass_e",
+    "Multiplicity": 1,
+    "BacteriaCountPlace": "E_coli",
+    "BacteriaBiomassPlace": "E_coli_biomass_e",
+    "InputPlaces": ["E_coli_biomass_e"],
+    "OutputPlaces": ["E_coli_biomass_e"],
+    "IsBiomass": true
+  },
+  {
+    "Transition": "E_coli_EX_biomass_e_in",
+    "LPfile": "Escherichia_coli_str_K_12_substr_MG1655.txt",
+    "Reaction": "EX_biomass_e",
+    "Multiplicity": 1,
+    "BacteriaCountPlace": "E_coli",
+    "BacteriaBiomassPlace": "E_coli_biomass_e",
+    "InputPlaces": ["E_coli_biomass_e"],
+    "OutputPlaces": [],
+    "IsBiomass": true
+  },
+  {
+    "Transition": "E_coli_EX_glc_D_e_out",
+    "LPfile": "Escherichia_coli_str_K_12_substr_MG1655.txt",
+    "Reaction": "EX_glc_D_e",
+    "Multiplicity": 1,
+    "BacteriaCountPlace": "E_coli",
+    "BacteriaBiomassPlace": "E_coli_biomass_e",
+    "InputPlaces": [],
+    "OutputPlaces": ["glc_D_e"],
+    "IsBiomass": false
+  },
+  {
+    "Transition": "E_coli_EX_lcts_e_out",
+    "LPfile": "Escherichia_coli_str_K_12_substr_MG1655.txt",
+    "Reaction": "EX_lcts_e",
+    "Multiplicity": 1,
+    "BacteriaCountPlace": "E_coli",
+    "BacteriaBiomassPlace": "E_coli_biomass_e",
+    "InputPlaces": [],
+    "OutputPlaces": ["lcts_e"],
+    "IsBiomass": false
+  },
+  {
+    "Transition": "E_coli_EX_glc_D_e_in",
+    "LPfile": "Escherichia_coli_str_K_12_substr_MG1655.txt",
+    "Reaction": "EX_glc_D_e",
+    "Multiplicity": 1,
+    "BacteriaCountPlace": "E_coli",
+    "BacteriaBiomassPlace": "E_coli_biomass_e",
+    "InputPlaces": ["glc_D_e"],
+    "OutputPlaces": [],
+    "IsBiomass": false
+  },
+  {
+    "Transition": "E_coli_EX_lcts_e_in",
+    "LPfile": "Escherichia_coli_str_K_12_substr_MG1655.txt",
+    "Reaction": "EX_lcts_e",
+    "Multiplicity": 1,
+    "BacteriaCountPlace": "E_coli",
+    "BacteriaBiomassPlace": "E_coli_biomass_e",
+    "InputPlaces": ["lcts_e"],
+    "OutputPlaces": [],
+    "IsBiomass": false
+  },
+  {
+    "Transition": "Clost_Buty_EX_biomass_e_in",
+    "LPfile": "Clostridium_butyricum_DSM_10702.txt",
+    "Reaction": "EX_biomass_e",
+    "Multiplicity": 1,
+    "BacteriaCountPlace": "Clost_buty",
+    "BacteriaBiomassPlace": "Clost_buty_biomass_e",
+    "InputPlaces": ["Clost_buty_biomass_e"],
+    "OutputPlaces": [],
+    "IsBiomass": true
+  },
+  {
+    "Transition": "copy_E_coli_EX_biomass_e_out",
+    "LPfile": "Clostridium_butyricum_DSM_10702.txt",
+    "Reaction": "EX_biomass_e",
+    "Multiplicity": 1,
+    "BacteriaCountPlace": "Clost_buty",
+    "BacteriaBiomassPlace": "Clost_buty_biomass_e",
+    "InputPlaces": ["Clost_buty_biomass_e"],
+    "OutputPlaces": ["Clost_buty_biomass_e"],
+    "IsBiomass": true
+  },
+  {
+    "Transition": "Clost_buty_EX_lcts_e_in",
+    "LPfile": "Clostridium_butyricum_DSM_10702.txt",
+    "Reaction": "EX_lcts_e",
+    "Multiplicity": 1,
+    "BacteriaCountPlace": "Clost_buty",
+    "BacteriaBiomassPlace": "Clost_buty_biomass_e",
+    "InputPlaces": ["lcts_e"],
+    "OutputPlaces": [],
+    "IsBiomass": false
+  },
+  {
+    "Transition": "Clost_buty_EX_glc_D_e_in",
+    "LPfile": "Clostridium_butyricum_DSM_10702.txt",
+    "Reaction": "EX_glc_D_e",
+    "Multiplicity": 1,
+    "BacteriaCountPlace": "Clost_buty",
+    "BacteriaBiomassPlace": "Clost_buty_biomass_e",
+    "InputPlaces": ["glc_D_e"],
+    "OutputPlaces": [],
+    "IsBiomass": false
+  },
+  {
+    "Transition": "Clost_buty_EX_glc_D_e_out",
+    "LPfile": "Clostridium_butyricum_DSM_10702.txt",
+    "Reaction": "EX_glc_D_e",
+    "Multiplicity": 1,
+    "BacteriaCountPlace": "Clost_buty",
+    "BacteriaBiomassPlace": "Clost_buty_biomass_e",
+    "InputPlaces": [],
+    "OutputPlaces": ["glc_D_e"],
+    "IsBiomass": false
+  },
+  {
+    "Transition": "Clost_buty_EX_lcts_e_out",
+    "LPfile": "Clostridium_butyricum_DSM_10702.txt",
+    "Reaction": "EX_lcts_e",
+    "Multiplicity": 1,
+    "BacteriaCountPlace": "Clost_buty",
+    "BacteriaBiomassPlace": "Clost_buty_biomass_e",
+    "InputPlaces": [],
+    "OutputPlaces": ["lcts_e"],
+    "IsBiomass": false
+  }
+]
