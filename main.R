@@ -232,20 +232,7 @@ system(paste0("mv ",
 
 start_time <- Sys.time()
 
-# 1. Apri un file di testo per scrivere tutto
-conn <- file("model_analysis.log", open = "wt")
 
-# 2. Sink dell'output (stdout) con split=TRUE,
-#    così vedrai in Console in tempo reale SOLO ciò che va su stdout
-sink(conn, type = "output", split = TRUE)
-
-# 3. Sink dei messaggi (stderr) SENZA split=TRUE (non consentito)
-#    e con append=TRUE in modo da non sovrascrivere quanto già acquisito dallo stdout
-sink(conn, type = "message", append = TRUE)
-
-# 4. Ora tutto ciò che model.analysis() genera
-#    - su stdout (cat, print, ecc.) --> finisce nel file + console
-#    - su stderr (message, warning, error, ecc.) --> finisce nel file, MA NON in console
 model.analysis(
   solver_fname    = paste0(wd, "/net/", model_name, ".solver"),
   parameters_fname= paste0(wd, "/input/initData.csv"),
@@ -264,18 +251,6 @@ model.analysis(
     paste0(wd, "/results_ex_reactions/EX_upper_bounds_nonFBA.csv")
   )
 )
-
-# 5. Chiudi prima il sink dei messaggi...
-sink(type = "message")
-
-# 6. ...poi quello dell'output
-sink(type = "output")
-
-# 7. Infine chiudi il file
-close(conn)
-
-# Alla fine, "model_analysis.log" conterrà sia stdout che stderr.
-# Tuttavia, i messaggi inviati su stderr NON appariranno live in console.
 
 
 end_time <- Sys.time()
