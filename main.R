@@ -8,6 +8,7 @@ library(tidyr)
 library(patchwork)
 library(ggplot2)
 library(scales)
+library(rlang)
 # remove.packages("epimod")
 # install_github("https://github.com/qBioTurin/epimod", ref="epimod_pFBA")
 library(epimod)
@@ -231,7 +232,6 @@ system(paste0("mv ",
               model_name, ".solver ", wd, "/net/"))
 
 start_time <- Sys.time()
-
 
 model.analysis(
   solver_fname    = paste0(wd, "/net/", model_name, ".solver"),
