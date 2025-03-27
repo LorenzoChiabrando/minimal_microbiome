@@ -202,10 +202,12 @@ writeLines(cpp_content, cpp_file_path)
 R_funct_file_path <- paste0(wd, "/functions/functions.R")
 R_funct_content <- readLines(R_funct_file_path)
 
+# yini.names <- c("E_coli", "E_coli_biomass_e", "lcts_e", "glc_D_e", "Clost_buty", "Clost_buty_biomass_e")
 # Insert the new variables after the includes
 R_funct_content <- c(
   R_funct_content[1:6],
-  paste0("  y_ini <- c(", bacteria_counts, ", ", biomass, ")"),
+  paste0("  y_ini <- c(", bacteria_counts, ", ", 
+         bacteria_counts2, ", ", 10, ", " , 10, ", ", biomass, ", ", biomass, ")"),
   R_funct_content[8:length(R_funct_content)]
 )
 
@@ -238,8 +240,8 @@ model.analysis(
   parameters_fname= paste0(wd, "/input/initData.csv"),
   functions_fname = paste0(wd, "/functions/functions.R"),
   debug           = TRUE,
-  f_time          = 72,
-  s_time          = 0.25,
+  f_time          = 10,
+  s_time          = 1,
   i_time          = 0,
   rchn            = 1e-06,
   event_function  = NULL,
@@ -266,6 +268,9 @@ p = plot_analysis(reactions_of_interest = c("EX_biomass_e_f", "EX_biomass_e_r",
                                             "EX_ppa_e_r", "EX_ppa_e_f",
                                             "EX_ac_e_r", "EX_ac_e_f"), ncol_reactions = 3,
                   place2plot = c(abbr, paste0(abbr, "_biomass_e")), ncol_places = 1)
+
+#Error in plot_analysis(reactions_of_interest = c("EX_biomass_e_f", "EX_biomass_e_r",  : 
+#could not find function "plot_analysis"
 
 ggsave(paste0(model_name, "_",  "Analysis_results.pdf"), 
        p[[1]] + p[[2]] + (p[[3]] / p[[4]] / p[[5]]), 
