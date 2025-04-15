@@ -1,0 +1,35 @@
+Metabolite Projection Analysis
+============================
+
+Analyzing model: Escherichia_coli (Ec)
+Checking metabolite projections:
+  ✓ ac_e: Found in model
+  ✓ ppa_e: Found in model
+  ✓ but_e: Found in model
+  ✓ glc__D_e: Found in model
+  ✓ lcts_e: Found in model
+  Found 1 reactions for ac_e: EX_ac_e
+  Found 1 reactions for ppa_e: EX_ppa_e
+  Found 1 reactions for but_e: EX_but_e
+  Found 1 reactions for glc__D_e: EX_glc_D_e
+  Found 1 reactions for lcts_e: EX_lcts_e
+
+Analyzing model: Clostridium_butyricum (Cb)
+Checking metabolite projections:
+  ✓ ac_e: Found in model
+  ✓ ppa_e: Found in model
+  ✓ but_e: Found in model
+  ✓ glc__D_e: Found in model
+  ✓ lcts_e: Found in model
+  Found 1 reactions for ac_e: EX_ac_e
+  Found 1 reactions for ppa_e: EX_ppa_e
+  Found 1 reactions for but_e: EX_but_e
+  Found 1 reactions for glc__D_e: EX_glc_D_e
+  Found 1 reactions for lcts_e: EX_lcts_e
+
+
+Summary:
+Total bacterial models analyzed: 2
+Compatible models found: 2
+Total shared boundary reactions: 5
+Output files saved to: /home/user/Git_Repositories/minimal_microbiome/results_ex_reactions
