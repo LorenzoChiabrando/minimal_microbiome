@@ -20,8 +20,6 @@
 #' n rows)   definition of the x bounds
 #' m*n rows) definition of the S coeffs: row_index col_index value
 #'
-#' @author Aucello Riccardo, Beccuti Marco, Cordero Francesca, Pernice Simone
-#'
 #' @export
 
 FBA4Greatmod.generation = function(fba_mat=NULL,
@@ -44,7 +42,7 @@ FBA4Greatmod.generation = function(fba_mat=NULL,
                          c(modelMAT$obj_coef),
                          modelMAT$react_id,
                          modelMAT$met_id,
-                         gene_assoc = modelMAT$gene_assoc 
+                         gene_assoc = as.integer(modelMAT$gene_assoc)
 												)
   }
   else if(!is.null(S) && !is.null(lb) && !is.null(ub) && !is.null(obj_fun) )

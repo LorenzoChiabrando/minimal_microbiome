@@ -9,6 +9,9 @@ library(patchwork)
 library(ggplot2)
 library(scales)
 library(rlang)
+library(parallel)
+library(foreach)
+library(doParallel)
 # remove.packages("epimod")
 # install_github("https://github.com/qBioTurin/epimod", ref="epimod_pFBA")
 library(epimod)
@@ -24,117 +27,238 @@ source(paste0(wd, "/epimod_FBAfunctions/R/ex_bounds_module.R"))
 source(paste0(wd, "/epimod_FBAfunctions/inst/diets/Script4Diets.R"))
 source(paste0(wd, "/functions/compiling_mn.R"))
 
-model_name = "BacPN_FBAdouble"
-mn_name = "Escherichia_coli_str_K_12_substr_MG1655"
-org_name = "Escherichia_coli"
-abbr = "E_coli"
-
-mn_name2 = "Clostridium_butyricum_DSM_10702"
-org_name2 = "Clostridium_butyricum"
-abbr2 = "Clost_buty"
-
-# Define the models to be processed
-models <- list(list(name = mn_name, type = org_name), list(name = mn_name2, type = org_name2))
-
 # Define the output directory for results
 dest_dir <- paste0(wd, "/results/")
+
+# Define model configuration
+model_name <- "Minimal_EcCb"
+
+# Define bacterial models with consistent parameters
+bacterial_models <- list(
+  list(
+    FBAmodel = "Escherichia_coli_str_K_12_substr_MG1655",
+    organism = "Escherichia_coli",
+    abbreviation = "Ec",
+    biomass = list(max = 1.172, mean = 0.489, min = 0.083)
+  ),
+  list(
+    FBAmodel = "Clostridium_butyricum_DSM_10702",
+    organism = "Clostridium_butyricum",
+    abbreviation = "Cb",
+    biomass = list(max = 1.5, mean = 0.6, min = 0.1)  # Customize these values
+  )
+)
 
 # Start timing
 start_time <- Sys.time()
 
-# Loop through each model for FBA processing
-for (model_info in models) {
-  fba_name <- model_info$name    # Extract the model name
-  model_type <- model_info$type    # Extract the model type
+# Process each bacterial model sequentially 
+process_results <- list()
+
+# Define function to process one model
+process_model <- function(model) {
+  # Extract model information
+  organism <- model$organism
+  abbr <- model$abbreviation
+  FBAmodel <- ifelse(is.null(model$FBAmodel), organism, model$FBAmodel)
   
-  # Construct file paths for FBA input
-  fba_fname <- paste0(fba_name, ".txt")
-  matfile <- paste0(wd, '/input/', model_type, "/", fba_name, ".mat")
-  cat("METABOLIC NETWORK: ", fba_name, " ( ", model_type, " )\n")
+  # Log processing step
+  cat(sprintf("\nProcessing %s (%s)\n", organism, abbr))
+  cat(paste(rep("-", nchar(organism) + nchar(abbr) + 13), collapse = ""), "\n")
   
-  # Check if the .mat file exists
-  if (!file.exists(matfile)) {
-    stop(paste("File not found:", matfile))  # Stop execution if file is missing
+  # Construct file paths
+  input_dir <- file.path(wd, "input", organism)
+  mat_file <- file.path(input_dir, paste0(FBAmodel, ".mat"))
+  
+  # Validate input file
+  if (!file.exists(mat_file)) {
+    cat(sprintf("ERROR: Input file not found: %s\n", mat_file))
+    return(list(
+      status = "error",
+      message = sprintf("Input file not found: %s", mat_file),
+      organism = organism,
+      abbr = abbr
+    ))
   }
   
-  # Generate the model for the specified .mat file
-  cat("Generating model for:", fba_name, "\n")
-  model <- FBA4Greatmod.generation(fba_mat = matfile)
+  # Generate FBA model
+  cat(sprintf("Generating FBA model for %s...\n", organism))
+  model_obj <- tryCatch({
+    FBA4Greatmod.generation(fba_mat = mat_file)
+  }, error = function(e) {
+    cat(sprintf("ERROR: Failed to generate model: %s\n", e$message))
+    return(NULL)
+  })
   
-  # Set biomass parameters for the FBA model
-  model <- setBiomassParameters(model, bioMax = 1.172, bioMean = 0.489, bioMin = 0.083)
+  # If model generation failed, return error
+  if ( is.null(model_obj) ) {
+    return(list(
+      status = "error",
+      message = "Failed to generate model",
+      organism = organism,
+      abbr = abbr
+    ))
+  }
   
-  # Prepare the output path for .rds files
-  output_rds_path <- paste0(wd, "/input/", model_type)
-  files_to_move <- list.files(pattern = "\\.rds$", full.names = TRUE)
+  # Set biomass parameters
+  cat("Setting biomass parameters...\n")
+  model_obj <- setBiomassParameters(
+    model_obj, 
+    bioMax = model$biomass$max, 
+    bioMean = model$biomass$mean, 
+    bioMin = model$biomass$min
+  )
   
-  # Move .rds files to the appropriate directory
-  if (length(files_to_move) > 0) {
-    sapply(files_to_move, function(f) {
-      file.rename(from = f, to = file.path(output_rds_path, basename(f)))
-    })
+  # Get model components for classification
+  S <- model_obj@S
+  react_id <- model_obj@react_id
+  met_id <- model_obj@met_id
+  lb <- model_obj@lowbnd
+  ub <- model_obj@uppbnd
+  
+  # Generate reaction classification
+  cat("Classifying reactions...\n")
+  n_rxns <- length(react_id)
+  reaction_types <- character(n_rxns)
+  reaction_subtypes <- character(n_rxns)
+  
+  # Your reaction classification code here
+  # This is a placeholder - add your actual classification logic
+  for (i in seq_len(n_rxns)) {
+    if (grepl("^EX_", react_id[i])) {
+      reaction_types[i] <- "boundary"
+      reaction_subtypes[i] <- "exchange"
+    } else if (grepl("^DM_", react_id[i])) {
+      reaction_types[i] <- "boundary"
+      reaction_subtypes[i] <- "demand"
+    } else if (grepl("^SINK_", react_id[i])) {
+      reaction_types[i] <- "boundary"
+      reaction_subtypes[i] <- "sink"
+    } else {
+      reaction_types[i] <- "core"
+      reaction_subtypes[i] <- "internal"
+    }
+  }
+  
+  # Create reactions dataframe
+  cat("Creating reaction metadata...\n")
+  reactions_df <- data.frame(
+    abbreviation = react_id,
+    type = reaction_types,
+    subtype = reaction_subtypes,
+    lowbnd = lb,
+    uppbnd = ub,
+    stringsAsFactors = FALSE
+  )
+  
+  # Generate metabolite classification
+  cat("Classifying metabolites...\n")
+  n_mets <- length(met_id)
+  is_core <- logical(n_mets)
+  is_boundary <- logical(n_mets)
+  
+  # Your metabolite classification code here
+  # This is a placeholder - add your actual classification logic
+  for (i in seq_len(n_mets)) {
+    # Simple placeholder logic
+    is_core[i] <- TRUE
+    is_boundary[i] <- FALSE
+  }
+  
+  # Create metabolites dataframe
+  cat("Creating metabolite metadata...\n")
+  met_metadata <- data.frame(
+    id = met_id,
+    is_core = is_core,
+    is_boundary = is_boundary,
+    stringsAsFactors = FALSE
+  )
+  
+  # Create output directories if they don't exist
+  reactions_dir <- file.path(input_dir)
+  if (!dir.exists(reactions_dir)) dir.create(reactions_dir, recursive = TRUE)
+  
+  # Write metadata files
+  cat("Writing metadata files...\n")
+  reactions_file <- file.path(reactions_dir, "reactions_metadata.csv")
+  write.csv(reactions_df, file = reactions_file, row.names = FALSE)
+  
+  metabolites_file <- file.path(reactions_dir, "metabolites_metadata.csv")
+  write.csv(met_metadata, file = metabolites_file, row.names = FALSE)
+  
+  # Save model in compiled_models directory
+  output_dir <- file.path(wd, "compiled_models")
+  if (!dir.exists(output_dir)) dir.create(output_dir, recursive = TRUE)
+  
+  output_file <- file.path(output_dir, paste0(abbr, "_model.txt"))
+  capture_output <- capture.output(model_obj)
+  writeLines(capture_output, output_file)
+  
+  cat(sprintf("Model saved to %s\n", output_file))
+  
+  return(list(
+    status = "success",
+    message = sprintf("Successfully processed %s (%s)", organism, abbr),
+    organism = organism,
+    abbr = abbr,
+    reactions_file = reactions_file,
+    metabolites_file = metabolites_file,
+    model_file = output_file
+  ))
+}
+
+# Process each model one at a time
+for (i in seq_along(bacterial_models)) {
+  process_results[[i]] <- process_model(bacterial_models[[i]])
+}
+
+# Display summary
+cat("\nProcessing Summary:\n")
+cat("-----------------\n")
+
+for (result in process_results) {
+  if (result$status == "success") {
+    cat(sprintf("✓ %s (%s): Successfully processed\n", result$organism, result$abbr))
   } else {
-    cat("No .rds files found for", fba_name, "\n")
+    cat(sprintf("✗ %s (%s): ERROR - %s\n", result$organism, result$abbr, result$message))
   }
 }
 
-# End timing
+# Calculate and display elapsed time
 end_time <- Sys.time()
+elapsed <- end_time - start_time
+cat(sprintf("\nAll models processed in %.2f seconds\n", as.numeric(elapsed)))
 
-# Force to minutes
-elapsed_time <- end_time - start_time
-units(elapsed_time) <- "mins"
-cat("Time elapsed:", elapsed_time, "minutes\n")
-
-FBA_PARAMETERS <- list(biomass = list(max = 1.172, mean = 0.489, min = 0.083),
-                       model_tags = list(name = mn_name, type = org_name))
-
-start_time <- Sys.time()
-
-process_fba_models(working_dir = NULL, list(FBA_PARAMETERS$model_tags))
-
-end_time <- Sys.time()
-
-elapsed_time <- end_time - start_time
-units(elapsed_time) <- "mins"
-cat("Time elapsed:", elapsed_time, "minutes\n")
-
-# This function extracts all the specified EX_ reactions from the provided models (bacteria_files)
-# and calculates their lower bound as (bacteria_counts*biomass)/MW.
-
-# NotFBA exchange reactions LOWER BOUNDS are denoting metabolite concentration units. 
-# Essential unit conversions include:
-#
-# - Biomass in grams of dry weight (gDW)
-# - Environmental volume in milliliters (mL)
-# - Metabolite concentration in millimolar (mM = mmol/L = 0.001 mmol/mL)
-# 
-# The environment is defined by volume (V) bacterial cell counts, and medium composition. 
-# Conversion between molar concentrations and absolute quantities follows:
+met_places = c("ac_e", "ppa_e", "but_e", "glc__D_e", "ltcs_e")
+FBA_possible_reactions  = ...
 
 # Define the FBA models and associated counts
-bacteria_models <- c(paste0(wd, "/results/", mn_name, ".txt"), paste0(wd, "/results/", mn_name2, ".txt"))
-bacteria_counts <- 1000 # (cells)
-bacteria_counts2 <- 500 # (cells)
+bacteria_txt <- c(paste0(wd, "/compiled_mdoels/", bacterial_models[[1]][["abbreviation"]], ".txt"), 
+                     paste0(wd, "/compiled_mdoels/", bacterial_models[[1]][["abbreviation"]], ".txt"))
 
-molar = 10 # mmol/mL (1000 mM)
-V = 0.001 # mL (1 microL)
-C = molar*V # mmol
-biomass = 1 # pgWD
+biomass_0 = 1 # pgWD
+biomass_0 = 1 # pgWD
+
+bacteria_counts <- 1000000 # (cell)
+bacteria_counts <- 1000000 # (cell)
 
 run_full_ex_bounds(
   extraction_output  = "extracted_ex_reactions.txt",
-  bacteria_files     = bacteria_models,
+  bacteria_files     = bacteria_txt,
   output_dir         = "results_ex_reactions",
   bacteria_counts    = c(bacteria_counts*biomass, bacteria_counts2*biomass),
-  fba_upper_bound    = c(100,50),
-  fba_reactions      = c("EX_glc_D_e", "EX_lcts_e"),
+  fba_upper_bound    = c(1000, 1000),
+  fba_reactions      = c("EX_glc_D_e", "EX_lcts_e", "EX_ppa_e", "EX_ac_e"),
   not_shared_base_bound = C,
   reaction_version   = "r"
 )
 
 bounds_file_path = paste0(wd, "/results_ex_reactions/EX_upper_bounds_nonFBA.csv")
 irr_exchange_bounds = read.csv(bounds_file_path, head = T)
+
+molar = 10 # mmol/mL (1000 mM)
+V = 0.001 # mL (1 microL)
+C = molar*V # mmol
 
 diet_medium = process_medium_data(media_wd = paste0(wd, "/epimod_FBAfunctions/inst/diets/vmh"),
                                   medium_name = "EU_average",
