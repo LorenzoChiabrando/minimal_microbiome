@@ -1,23 +1,7 @@
 
-library(devtools)
-library(dplyr)
-library(R.matlab)
-library(ggplot2)
-library(dplyr)
-library(tidyr)
-library(patchwork)
-library(ggplot2)
-library(scales)
-library(rlang)
-library(parallel)
-library(foreach)
-library(doParallel)
-# remove.packages("epimod")
-# install_github("https://github.com/qBioTurin/epimod", ref="epimod_pFBA")
-library(epimod)
-# downloadContainers()
-
 wd = getwd()
+
+source(paste0(wd, "/install_and_setup.R"))
 
 # Load custom R scripts for Flux Balance Analysis (FBA) functions and utilities
 source(paste0(wd, "/epimod_FBAfunctions/R/FBAgreatmodeClass.R"))    # Core FBA class functions
@@ -36,7 +20,7 @@ model_name <- "Minimal_EcCb"
 # Define bacterial models with consistent parameters
 bacterial_models <- list(
   list(
-    FBAmodel = "Escherichia_coli_str_K_12_substr_MG1655",
+    FBAmodel = "Escherichia_coli_SE11",
     organism = "Escherichia_coli",
     abbreviation = "Ec",
     biomass = list(max = 1.172, mean = 0.489, min = 0.083)
@@ -45,7 +29,7 @@ bacterial_models <- list(
     FBAmodel = "Clostridium_butyricum_DSM_10702",
     organism = "Clostridium_butyricum",
     abbreviation = "Cb",
-    biomass = list(max = 1.5, mean = 0.6, min = 0.1)  # Customize these values
+    biomass = list(max = 1.5, mean = 0.6, min = 0.1)
   )
 )
 
