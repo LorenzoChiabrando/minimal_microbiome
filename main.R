@@ -72,11 +72,6 @@ for (result in process_results) {
 }
 
 source(paste0(wd, "/functions/validating_projection.R"))
-
-validation_test = validate_pnpro(file_path = paste0(wd, "/net/", model_name, ".PNPRO"),
-                                 bacterial_models, 
-                                 metabolite_places, 
-                                 model_dir = "compiled_models")
   
 molar = 10 # mmol/mL (1000 mM)
 V = 0.001 # mL (1 microL)
