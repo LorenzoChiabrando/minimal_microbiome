@@ -5,7 +5,7 @@
 #' @import R.matlab stringr
 #' @export
 
-FBAmat.read = function(fba_mat){
+FBAmat.read = function(fba_mat, input_dir){
   
   data = R.matlab::readMat(fba_mat)
   dat.mat = data[[1]]
@@ -137,6 +137,8 @@ FBAmat.read = function(fba_mat){
   
   mod.mod_compart <- unique(unlist(met_comp))
   mod.met_comp    <- match(met_comp, mod.mod_compart)
+  
+  original_met_ids = met_id
   
   met_id <- gsub("_", "__", met_id)
   met_id <- gsub("\\(", "_", met_id)
@@ -302,6 +304,51 @@ FBAmat.read = function(fba_mat){
   subsystems <- sapply(subsystems, function(x) {
     if (length(x) == 0) NA else x
   }, simplify = TRUE, USE.NAMES = FALSE)
+  
+  # Create a lookup table for replacements (order by length to avoid partial matches)
+  met_lookup <- data.frame(
+    original = original_met_ids,
+    processed = met_id,
+    stringsAsFactors = FALSE
+  )
+  
+  # Sort by length (descending) to ensure longer patterns are matched first
+  met_lookup <- met_lookup[order(-nchar(met_lookup$original)), ]
+  
+  # Load required package
+  library(stringr)
+  
+  # Precompute and clean metabolite patterns once
+  clean_original <- gsub("\\(|\\[", "_", met_lookup$original)
+  clean_original <- gsub("\\)|\\]", "", clean_original)
+  pattern_keys <- paste0("\\b", clean_original, "\\b")
+  replacements <- met_lookup$processed
+  names(replacements) <- pattern_keys
+  
+  # Define all prefixes and compile a single regex
+  prefixes <- c("EX_", "DM_", "SINK_", "ex_", "dm_", "sink_")
+  prefix_pattern <- paste0("^(?:", paste(prefixes, collapse = "|"), ")")
+  
+  # Vectorized function to update all reaction IDs
+  update_reaction_ids <- function(rx_ids) {
+    # Extract any prefix (or NA if none)
+    found_prefix <- str_extract(rx_ids, prefix_pattern)
+    
+    # Remove prefix for processing
+    no_prefix <- str_replace(rx_ids, prefix_pattern, "")
+    
+    # Perform all metabolite replacements at once
+    replaced <- str_replace_all(no_prefix, replacements)
+    
+    # Replace NA prefixes with empty string
+    found_prefix[is.na(found_prefix)] <- ""
+    
+    # Reattach prefixes
+    paste0(found_prefix, replaced)
+  }
+  
+  # Apply to your vector of IDs
+  react_id <- update_reaction_ids(react_id)
   
   # Create reactions dataframe
   reactions_df <- data.frame(
@@ -546,6 +593,18 @@ FBAmat.read = function(fba_mat){
       }
     }
   }
+  
+  # Create output directories if they don't exist
+  reactions_dir <- file.path(input_dir)
+  if (!dir.exists(reactions_dir)) dir.create(reactions_dir, recursive = TRUE)
+  
+  # Write metadata files
+  cat("Writing metadata files...\n")
+  reactions_file <- file.path(reactions_dir, "reactions_metadata.csv")
+  write.csv(reactions_df, file = reactions_file, row.names = FALSE)
+  
+  metabolites_file <- file.path(reactions_dir, "metabolites_metadata.csv")
+  write.csv(met_metadata, file = metabolites_file, row.names = FALSE)
   
   mod.S = S
   return(

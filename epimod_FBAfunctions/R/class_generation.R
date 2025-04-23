@@ -28,14 +28,15 @@ FBA4Greatmod.generation = function(fba_mat=NULL,
                                    ub = NULL,
                                    lb = NULL, 
                                    obj_fun = NULL,
-                                   react_name = NULL
+                                   react_name = NULL,
+                                   input_dir
                                    ) 
                                    {
   #### Checking the existence of all elements in fba_mat file
   if( !is.null(fba_mat) && file.exists(fba_mat) ) 
     {
     
-    modelMAT = FBAmat.read(fba_mat)
+    modelMAT = FBAmat.read(fba_mat, input_dir)
     model = FBA_greatmod(as.matrix(modelMAT$S),
                          modelMAT$uppbnd,
                          modelMAT$lowbnd,

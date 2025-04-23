@@ -1,0 +1,124 @@
+PNPRO Validation Report
+=====================
+
+File:  /home/user/Git_Repositories/minimal_microbiome/net/Minimal_EcCb.PNPRO 
+Date:  2025-04-23 17:06:49 
+
+
+ Model Statistics 
+---------------- 
+Places: 6 
+Transitions: 18 
+Bacterial Models: 2 
+
+
+ 1. Metabolic Network Validation 
+------------------------------- 
+[ERROR]  Metabolic Network: File not found: compiled_models/Escherichia_coli_SE11.txt 
+[ERROR]  Metabolic Network: File not found: compiled_models/Clostridium_butyricum_DSM_10702.txt 
+
+ 2. Place Validation 
+------------------- 
+[ERROR]  Places: Missing bacterial place: N_Ec 
+[ERROR]  Places: Missing biomass place: biomass_e_Ec 
+[ERROR]  Places: Missing bacterial place: N_Cb 
+[ERROR]  Places: Missing biomass place: biomass_e_Cb 
+
+ 3. Required Transitions Validation 
+---------------------------------- 
+Checking required transitions for Escherichia_coli (Ec):
+[ERROR]  Required Transitions: Missing transition: Starv_Ec 
+[ERROR]  Required Transitions: Missing transition: Death_Ec 
+[ERROR]  Required Transitions: Missing transition: Dup_Ec 
+[ERROR]  Required Transitions: Missing transition: EX_biomass_e_out_Ec 
+[ERROR]  Required Transitions: Missing transition: EX_biomass_e_in_Ec 
+Checking required transitions for Clostridium_butyricum (Cb):
+[ERROR]  Required Transitions: Missing transition: Starv_Cb 
+[ERROR]  Required Transitions: Missing transition: Death_Cb 
+[ERROR]  Required Transitions: Missing transition: Dup_Cb 
+[ERROR]  Required Transitions: Missing transition: EX_biomass_e_out_Cb 
+[ERROR]  Required Transitions: Missing transition: EX_biomass_e_in_Cb 
+
+ 4. Biomass Exchange Validation 
+------------------------------ 
+[INFO]  Biomass Exchange: Found biomass uptake transitions 
+[INFO]  Biomass Exchange: Found biomass secretion transitions 
+
+ 5. Organism-Specific Biomass Transitions 
+---------------------------------------- 
+[ERROR]  Organism Biomass: Missing biomass exchange transitions for Escherichia_coli 
+[ERROR]  Organism Biomass: Missing biomass exchange transitions for Clostridium_butyricum 
+
+ 6. FBA Transition Pattern Validation 
+------------------------------------ 
+[INFO]  FBA Patterns: Found 12 potential FBA transitions 
+[ERROR]  FBA Patterns: Transition E_coli_EX_biomass_e_out does not reference any valid model file 
+[ERROR]  FBA Patterns: Transition E_coli_EX_biomass_e_in does not reference any valid model file 
+[ERROR]  FBA Patterns: Transition E_coli_EX_glc_D_e_out does not reference any valid model file 
+[ERROR]  FBA Patterns: Transition E_coli_EX_lcts_e_out does not reference any valid model file 
+[ERROR]  FBA Patterns: Transition E_coli_EX_glc_D_e_in does not reference any valid model file 
+[ERROR]  FBA Patterns: Transition E_coli_EX_lcts_e_in does not reference any valid model file 
+
+ 7. Shared Metabolite Validation 
+------------------------------- 
+[ERROR]  Shared Metabolites: Missing metabolite place: glc__D_e 
+[INFO]  Shared Metabolites: Found metabolite place: lcts_e 
+
+ 8. Exchange Reaction Validation 
+------------------------------- 
+[ERROR]  Exchange Reactions: Missing transitions for exchange reaction 'EX_glc__D_e' needed by organisms: Ec, Cb 
+[INFO]  Exchange Reactions: Found transitions for exchange reaction: EX_lcts_e 
+
+ 9. Organism-Specific Reaction Validation 
+---------------------------------------- 
+[INFO]  Exclusive Reactions: No exclusive reactions found for Ec 
+[INFO]  Exclusive Reactions: No exclusive reactions found for Cb 
+
+ 10. FBA Command Syntax Validation 
+--------------------------------- 
+[INFO]  FBA Syntax: Found 12 FBA command transitions 
+[ERROR]  FBA Syntax: Unknown model file: Escherichia_coli_str_K_12_substr_MG1655.txt 
+[ERROR]  FBA Syntax: Unknown model file: Escherichia_coli_str_K_12_substr_MG1655.txt 
+[ERROR]  FBA Syntax: Unknown model file: Escherichia_coli_str_K_12_substr_MG1655.txt 
+[ERROR]  FBA Syntax: Unknown model file: Escherichia_coli_str_K_12_substr_MG1655.txt 
+[ERROR]  FBA Syntax: Unknown model file: Escherichia_coli_str_K_12_substr_MG1655.txt 
+[ERROR]  FBA Syntax: Unknown model file: Escherichia_coli_str_K_12_substr_MG1655.txt 
+
+ 11. Call Function Parameter Validation 
+-------------------------------------- 
+[INFO]  Call Functions: Found 6 Call function transitions 
+[ERROR]  Call Functions: Error reading Bacteria_Parameters.csv: object 'bacteria_params' not found 
+
+ 12. Shared Metabolite Validation 
+-------------------------------- 
+[ERROR]  Metabolites: Missing metabolite place: glc__D_e 
+[INFO]  Metabolites: Found metabolite place: lcts_e 
+
+ 12. Place-Transition Connectivity Validation 
+-------------------------------------------- 
+[INFO]  Connectivity: Found 62 arcs in the Petri net 
+[INFO]  Connectivity: Found 12 boundary reaction transitions to validate 
+[ERROR]  Connectivity: Boundary transition E_coli_EX_biomass_e_out (EX) is not properly connected to any metabolite place 
+[WARNING]  Connectivity: Transition E_coli_EX_biomass_e_out might be missing connectivity with bacterial count place N_coli 
+[ERROR]  Connectivity: Boundary transition E_coli_EX_biomass_e_in (EX) is not properly connected to any metabolite place 
+[WARNING]  Connectivity: Transition E_coli_EX_biomass_e_in might be missing connectivity with bacterial count place N_coli 
+[ERROR]  Connectivity: Boundary transition E_coli_EX_glc_D_e_out (EX) is not properly connected to any metabolite place 
+[WARNING]  Connectivity: Transition E_coli_EX_glc_D_e_out might be missing connectivity with bacterial count place N_coli 
+[ERROR]  Connectivity: Boundary transition E_coli_EX_lcts_e_out (EX) is not properly connected to any metabolite place 
+[WARNING]  Connectivity: Transition E_coli_EX_lcts_e_out might be missing connectivity with bacterial count place N_coli 
+[ERROR]  Connectivity: Boundary transition E_coli_EX_glc_D_e_in (EX) is not properly connected to any metabolite place 
+[WARNING]  Connectivity: Transition E_coli_EX_glc_D_e_in might be missing connectivity with bacterial count place N_coli 
+[ERROR]  Connectivity: Boundary transition E_coli_EX_lcts_e_in (EX) is not properly connected to any metabolite place 
+[WARNING]  Connectivity: Transition E_coli_EX_lcts_e_in might be missing connectivity with bacterial count place N_coli 
+[ERROR]  Connectivity: Boundary transition Clost_Buty_EX_biomass_e_in (EX) is not properly connected to any metabolite place 
+[WARNING]  Connectivity: Transition Clost_Buty_EX_biomass_e_in might be missing connectivity with bacterial count place N_Buty 
+[ERROR]  Connectivity: Boundary transition Clost_Buty_EX_biomass_e_out (EX) is not properly connected to any metabolite place 
+[WARNING]  Connectivity: Transition Clost_Buty_EX_biomass_e_out might be missing connectivity with bacterial count place N_Buty 
+[ERROR]  Connectivity: Boundary transition Clost_buty_EX_lcts_e_in (EX) is not properly connected to any metabolite place 
+[WARNING]  Connectivity: Transition Clost_buty_EX_lcts_e_in might be missing connectivity with bacterial count place N_buty 
+[ERROR]  Connectivity: Boundary transition Clost_buty_EX_glc_D_e_in (EX) is not properly connected to any metabolite place 
+[WARNING]  Connectivity: Transition Clost_buty_EX_glc_D_e_in might be missing connectivity with bacterial count place N_buty 
+[ERROR]  Connectivity: Boundary transition Clost_buty_EX_glc_D_e_out (EX) is not properly connected to any metabolite place 
+[WARNING]  Connectivity: Transition Clost_buty_EX_glc_D_e_out might be missing connectivity with bacterial count place N_buty 
+[ERROR]  Connectivity: Boundary transition Clost_buty_EX_lcts_e_out (EX) is not properly connected to any metabolite place 
+[WARNING]  Connectivity: Transition Clost_buty_EX_lcts_e_out might be missing connectivity with bacterial count place N_buty 

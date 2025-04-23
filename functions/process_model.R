@@ -28,7 +28,7 @@ process_model <- function(model) {
   # Generate FBA model
   cat(sprintf("Generating FBA model for %s...\n", organism))
   model_obj <- tryCatch({
-    FBA4Greatmod.generation(fba_mat = mat_file)
+    FBA4Greatmod.generation(fba_mat = mat_file, input_dir = input_dir)
   }, error = function(e) {
     cat(sprintf("ERROR: Failed to generate model: %s\n", e$message))
     return(NULL)
@@ -53,18 +53,6 @@ process_model <- function(model) {
     bioMin = model$biomass$min
   )
   
-  # Create output directories if they don't exist
-  reactions_dir <- file.path(input_dir)
-  if (!dir.exists(reactions_dir)) dir.create(reactions_dir, recursive = TRUE)
-  
-  # Write metadata files
-  cat("Writing metadata files...\n")
-  reactions_file <- file.path(reactions_dir, "reactions_metadata.csv")
-  write.csv(reactions_df, file = reactions_file, row.names = FALSE)
-  
-  metabolites_file <- file.path(reactions_dir, "metabolites_metadata.csv")
-  write.csv(met_metadata, file = metabolites_file, row.names = FALSE)
-  
   # Save model in compiled_models directory
   output_dir <- file.path(wd, "compiled_models")
   if (!dir.exists(output_dir)) dir.create(output_dir, recursive = TRUE)
@@ -80,8 +68,6 @@ process_model <- function(model) {
     message = sprintf("Successfully processed %s (%s)", organism, abbr),
     organism = organism,
     abbr = abbr,
-    reactions_file = reactions_file,
-    metabolites_file = metabolites_file,
     model_file = output_file
   ))
 }

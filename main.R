@@ -1,22 +1,24 @@
 
 wd = getwd()
-
-source(paste0(wd, "/install_and_setup.R"))
+dest_dir <- paste0(wd, "/results/")
+output_dir_projections <- file.path(wd, "results_ex_reactions")
 
 # Load custom R scripts for Flux Balance Analysis (FBA) functions and utilities
-source(paste0(wd, "/epimod_FBAfunctions/R/FBAgreatmodeClass.R"))    # Core FBA class functions
-source(paste0(wd, "/epimod_FBAfunctions/R/class_generation.R"))     # Functions for generating FBA models
-source(paste0(wd, "/epimod_FBAfunctions/R/readMat.R"))              # MATLAB file reading utilities
+source(paste0(wd, "/functions/install_and_setup.R"))
+
+source(paste0(wd, "/functions/process_model.R"))
+source(paste0(wd, "/epimod_FBAfunctions/R/FBAgreatmodeClass.R"))
+source(paste0(wd, "/epimod_FBAfunctions/R/class_generation.R")) 
+source(paste0(wd, "/epimod_FBAfunctions/R/readMat.R"))
+
 source(paste0(wd, "/epimod_FBAfunctions/R/ex_bounds_module.R"))
 source(paste0(wd, "/epimod_FBAfunctions/inst/diets/Script4Diets.R"))
-source(paste0(wd, "/functions/compiling_mn.R"))
-source(paste0(wd, "/functions/process_model.R"))
-
-# Define the output directory for results
-dest_dir <- paste0(wd, "/results/")
 
 # Define model configuration
 model_name <- "Minimal_EcCb"
+
+# Define metabolite places to project across models
+metabolite_places <- c("glc__D_e", "lcts_e")
 
 # Define bacterial models with consistent parameters
 bacterial_models <- list(
@@ -24,24 +26,36 @@ bacterial_models <- list(
     FBAmodel = "Escherichia_coli_SE11",
     organism = "Escherichia_coli",
     abbreviation = "Ec",
-    biomass = list(max = 1.172, mean = 0.489, min = 0.083)
+    txt_file = "Ec_model",
+    biomass = list(max = 1.172, mean = 0.489, min = 0.083),
+    bac_pop_p = list(starv = 0.21, dup = 1, death = 0.018),
+    initial_count = 1e+06
   ),
   list(
     FBAmodel = "Clostridium_butyricum_DSM_10702",
     organism = "Clostridium_butyricum",
     abbreviation = "Cb",
-    biomass = list(max = 1.5, mean = 0.6, min = 0.1)
+    txt_file = "Cb_model",
+    biomass = list(max = 1.5, mean = 0.6, min = 0.1),
+    bac_pop_p = list(starv = 0.21, dup = 1, death = 0.018),
+    initial_count = 1e+06
   )
 )
 
-# Start timing
-start_time <- Sys.time()
+Bacteria_Parameters <- read.csv(paste0(wd, "/input/Bacteria_Parameters.csv"), head = F)
+Bacteria_Parameters[1, ] = as.vector(unlist(bacterial_models[[1]]$bac_pop_p))
+Bacteria_Parameters[1, ] = as.vector(unlist(bacterial_models[[2]]$bac_pop_p))
+
+write.table(Bacteria_Parameters,
+            paste0(wd, "/input/Bacteria_Parameters.csv"),
+            sep = ",", row.names = FALSE, col.names = FALSE, quote = F)
 
 # Process each bacterial model sequentially 
 process_results <- list()
 
 # Process each model one at a time
-for (i in seq_along(bacterial_models)) {
+# model = bacterial_models[[i]]
+for ( i in seq_along(bacterial_models) ) {
   process_results[[i]] <- process_model(bacterial_models[[i]])
 }
 
@@ -57,162 +71,21 @@ for (result in process_results) {
   }
 }
 
-# Calculate and display elapsed time
-end_time <- Sys.time()
-elapsed <- end_time - start_time
-cat(sprintf("\nAll models processed in %.2f seconds\n", as.numeric(elapsed)))
+source(paste0(wd, "/functions/validating_projection.R"))
 
+validation_test = validate_pnpro(file_path = paste0(wd, "/net/", model_name, ".PNPRO"),
+                                 bacterial_models, 
+                                 metabolite_places, 
+                                 model_dir = "compiled_models")
+  
 molar = 10 # mmol/mL (1000 mM)
 V = 0.001 # mL (1 microL)
 C = molar*V # mmol
 
-
-# Define metabolite places to project across models
-metabolite_places <- c("ac_e", "ppa_e", "but_e", "glc__D_e", "lcts_e")
-
-output_dir <- file.path(wd, "results_ex_reactions")
-
-# Initialize output lists
-bacteria_files <- character()
-bacteria_counts <- numeric()
-fba_upper_bounds <- numeric()
-shared_reactions <- list()
-
-# Log file for tracking projectable metabolites
-log_file <- file.path(output_dir, "projection_log.txt")
-cat("Metabolite Projection Analysis\n", file = log_file)
-cat("============================\n\n", file = log_file, append = TRUE)
-
-# Process each bacterial model
-for ( i in seq_along(bacterial_models) ) {
-  model <- bacterial_models[[i]]
-  organism <- model$organism
-  abbr <- model$abbreviation
-  
-  cat(sprintf("Analyzing model: %s (%s)\n", organism, abbr), file = log_file, append = TRUE)
-  
-  # Set file path for compiled model
-  model_file <- file.path("compiled_models", paste0(abbr, "_model.txt"))
-  
-  # Verify model file exists
-  if (!file.exists(model_file)) {
-    cat(sprintf("Error: Model file not found: %s\n", model_file), file = log_file, append = TRUE)
-    next
-  }
-  
-  # Load metabolite metadata
-  meta_file <- file.path("input", organism, "metabolites_metadata.csv")
-  if (!file.exists(meta_file)) {
-    cat(sprintf("Error: Metabolite metadata not found: %s\n", meta_file), file = log_file, append = TRUE)
-    next
-  }
-  
-  # Load reaction metadata
-  rxn_file <- file.path("input", organism, "reactions_metadata.csv")
-  if (!file.exists(rxn_file)) {
-    cat(sprintf("Error: Reaction metadata not found: %s\n", rxn_file), file = log_file, append = TRUE)
-    next
-  }
-  
-  # Read metadata
-  metabolite_data <- read.csv(meta_file)
-  reaction_data <- read.csv(rxn_file, stringsAsFactors = FALSE)
-  
-  # Check which metabolite places can be projected to this model
-  cat("Checking metabolite projections:\n", file = log_file, append = TRUE)
-  projectable_metabolites <- character()
-  
-  for (met in metabolite_places) {
-    # Check if metabolite exists in this model
-    if (any(grepl(met, metabolite_data$id))) {
-      projectable_metabolites <- c(projectable_metabolites, met)
-      cat(sprintf("  ✓ %s: Found in model\n", met), file = log_file, append = TRUE)
-    } else {
-      cat(sprintf("  ✗ %s: Not found in model\n", met), file = log_file, append = TRUE)
-    }
-  }
-  
-  # Find boundary reactions associated with projectable metabolites
-  boundary_reactions <- reaction_data$abbreviation[reaction_data$type == "boundary"]
-  
-  for (met in projectable_metabolites) {
-    
-    related_rxns <- character()
-    
-    # 1. Check reaction equations if available in metadata
-    if ("equation" %in% names(reaction_data)) {
-      # Get boundary reactions where the metabolite appears in the equation
-      eq_matches <- character()
-      for (i in which(reaction_data$type == "boundary")) {
-        # Check if metabolite is in the equation as a standalone term
-        # This uses word boundaries to avoid partial matches
-        if (grepl(paste0("\\b", met, "\\b"), reaction_data$equation[i])) {
-          eq_matches <- c(eq_matches, reaction_data$abbreviation[i])
-        }
-      }
-      related_rxns <- c(related_rxns, eq_matches)
-    }
-    
-    # Remove duplicates
-    related_rxns <- unique(related_rxns)
-    
-    if (length(related_rxns) > 0) {
-      model_shared_reactions <- c(unique(model_shared_reactions), related_rxns)
-      cat(sprintf("  Found %d reactions for %s: %s\n", 
-                  length(related_rxns), met, paste(related_rxns, collapse=", ")), 
-          file = log_file, append = TRUE)
-    } else {
-      # If no reactions found through analysis, log this information
-      cat(sprintf("  No boundary reactions found for %s through direct analysis\n", met), 
-          file = log_file, append = TRUE)
-      
-    }
-  }
-  
-  # Add to output lists if projectable metabolites were found
-  if (length(projectable_metabolites) > 0) {
-    bacteria_files <- c(bacteria_files, model_file)
-    
-    # Use default values or those from the model if available
-    biomass_value <- ifelse(!is.null(model$biomass$mean), 
-                            model$biomass$mean, 
-                            default_biomass)
-    
-    bacteria_count <- ifelse(!is.null(model$initial_count), 
-                             model$initial_count, 
-                             default_bacteria_count)
-    
-    bacteria_counts <- c(bacteria_counts, bacteria_count * biomass_value)
-    fba_upper_bounds <- c(fba_upper_bounds, default_fba_upper_bound)
-    shared_reactions[[abbr]] <- model_shared_reactions
-  }
-  
-  cat("\n", file = log_file, append = TRUE)
-}
-
-# Remove duplicate entries for each abbreviation
-shared_reactions <- lapply(shared_reactions, unique)
-# Compute the joint (union) of all reactions
-joint_reactions <- Reduce(union, shared_reactions)
-
-# Only run if we found compatible models
-if (length(bacteria_files) > 0) {
-  
-  # Log summary
-  cat("\nSummary:\n", file = log_file, append = TRUE)
-  cat(sprintf("Total bacterial models analyzed: %d\n", length(bacterial_models)), file = log_file, append = TRUE)
-  cat(sprintf("Compatible models found: %d\n", length(bacteria_files)), file = log_file, append = TRUE)
-  cat(sprintf("Total boundary reactions: %d\n", length(joint_reactions)), file = log_file, append = TRUE)
-  cat(sprintf("Output files saved to: %s\n", output_dir), file = log_file, append = TRUE)
-  
-} else {
-  cat("No compatible models found for the specified metabolites.\n", file = log_file, append = TRUE)
-}
-
 run_full_ex_bounds(
   extraction_output  = "extracted_ex_reactions.txt",
   bacteria_files     = bacteria_files,
-  output_dir         = "results_ex_reactions",
+  output_dir_projections         = "results_ex_reactions",
   bacteria_counts    = bacteria_counts,
   fba_upper_bound    = rep(1000, length(joint_reactions)),
   fba_reactions      = joint_reactions,
@@ -250,15 +123,6 @@ write.csv(result_df, bounds_file_path, row.names = F, quote = F)
 irr_exchange_bounds = readLines(bounds_file_path)
 irr_exchange_bounds[1] = paste0("base_upper_bounds,", C)
 writeLines(irr_exchange_bounds, bounds_file_path)
-
-Bacteria_Parameters <- read.csv(paste0(wd, "/input/Bacteria_Parameters.csv"), head = F)
-Bacteria_Parameters[1] <- 0.21 # starv
-Bacteria_Parameters[2] <- 1 # dup
-Bacteria_Parameters[3] <- 0.018 # death
-
-write.table(Bacteria_Parameters,
-            paste0(wd, "/input/Bacteria_Parameters.csv"),
-            sep = ",", row.names = FALSE, col.names = FALSE, quote = F)
 
 # Adjust General_functions.cpp
 delta = 1e+10 # density
