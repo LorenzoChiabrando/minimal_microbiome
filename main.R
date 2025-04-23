@@ -11,9 +11,6 @@ source(paste0(wd, "/epimod_FBAfunctions/R/FBAgreatmodeClass.R"))
 source(paste0(wd, "/epimod_FBAfunctions/R/class_generation.R")) 
 source(paste0(wd, "/epimod_FBAfunctions/R/readMat.R"))
 
-source(paste0(wd, "/epimod_FBAfunctions/R/ex_bounds_module.R"))
-source(paste0(wd, "/epimod_FBAfunctions/inst/diets/Script4Diets.R"))
-
 # Define model configuration
 model_name <- "Minimal_EcCb"
 

@@ -1,26 +1,26 @@
 Metabolite Projection Analysis
 ============================
 
-Analyzing model: Escherichia_coli (Ec)
+Analyzing model: Escherichia_coli (ec)
 Checking metabolite projections:
   ✓ glc__D_e: Found in model
   ✓ lcts_e: Found in model
   Found 1 reactions for glc__D_e: EX_glc__D_e
   Found 1 reactions for lcts_e: EX_lcts_e
 
-Reaction Bounds for Model: Ec 
+Reaction Bounds for Model: ec 
 ----------------------------------
   EX_glc__D_e: Lower = -1000, Upper = 1000
   EX_lcts_e: Lower = -1000, Upper = 1000
 
-Analyzing model: Clostridium_butyricum (Cb)
+Analyzing model: Clostridium_butyricum (cb)
 Checking metabolite projections:
   ✓ glc__D_e: Found in model
   ✓ lcts_e: Found in model
   Found 1 reactions for glc__D_e: EX_glc__D_e
   Found 1 reactions for lcts_e: EX_lcts_e
 
-Reaction Bounds for Model: Cb 
+Reaction Bounds for Model: cb 
 ----------------------------------
   EX_glc__D_e: Lower = -1000, Upper = 1000
   EX_lcts_e: Lower = -1000, Upper = 1000
@@ -36,23 +36,22 @@ Detailed Reaction Information:
 ============================
 
 All Shared Boundary Reactions:
-  EX_glc__D_e: Found in organisms [Ec, Cb]
-  EX_lcts_e: Found in organisms [Ec, Cb]
+  EX_glc__D_e: Found in organisms [ec, cb]
+  EX_lcts_e: Found in organisms [ec, cb]
 
 Organism-Exclusive Reactions:
-  Ec has no exclusive reactions
-  Cb has no exclusive reactions
+  ec has no exclusive reactions
+  cb has no exclusive reactions
 
 Reactions Shared Across All Organisms:
   EX_glc__D_e, EX_lcts_e
 
 Bounds for Common Reactions:
   EX_glc__D_e:
-    Ec: Lower = -1000, Upper = 1000
-    Cb: Lower = -1000, Upper = 1000
+    ec: Lower = -1000, Upper = 1000
+    cb: Lower = -1000, Upper = 1000
   EX_lcts_e:
-    Ec: Lower = -1000, Upper = 1000
-    Cb: Lower = -1000, Upper = 1000
+    ec: Lower = -1000, Upper = 1000
+    cb: Lower = -1000, Upper = 1000
 
-Output files saved to: /home/user/Git_Repositories/minimal_microbiome/results_ex_reactions
-[ERROR]  Call Functions: Error reading Bacteria_Parameters.csv: object 'bacteria_params' not found 
+Output files saved to: /home/user/Documents/git_repositories/minimal_microbiome/results_ex_reactions
