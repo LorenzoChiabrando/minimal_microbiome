@@ -1,471 +1,318 @@
-
-file_path = paste0(wd, "/net/", model_name, ".PNPRO")
+# Setup paths and defaults
+file_path      <- paste0(wd, "/net/", model_name, ".PNPRO")
 bacterial_models
 metabolite_places
-model_dir = "compiled_models"
-log_file = NULL
+model_dir      <- "compiled_models"
+log_file       <- NULL
 
-
-
-# Set default log file if not provided
+# Default log file
 if (is.null(log_file)) {
-  log_dir <- file.path(dirname(file_path), "validation_logs")
+  log_dir  <- file.path(dirname(file_path), "validation_logs")
   if (!dir.exists(log_dir)) dir.create(log_dir, recursive = TRUE)
   log_file <- file.path(log_dir, paste0(basename(file_path), "_validation.log"))
 }
 
-# Initialize log file
-cat("PNPRO Validation Report\n", file = log_file)
-cat("=====================\n\n", file = log_file, append = TRUE)
-cat("File: ", file_path, "\n", file = log_file, append = TRUE)
-cat("Date: ", format(Sys.time(), "%Y-%m-%d %H:%M:%S"), "\n\n", file = log_file, append = TRUE)
+# Initialize log
+cat("PNPRO Validation Report
+", file = log_file)
+cat("=====================
 
-# Initialize validation counters
-validation_summary <- list(
-  errors = 0,
-  warnings = 0,
-  info = 0,
-  status = "PASS"
-)
+", file = log_file, append = TRUE)
+cat("File: ", file_path, "
+", file = log_file, append = TRUE)
+cat("Date: ", format(Sys.time(), "%Y-%m-%d %H:%M:%S"), "
 
-# Helper function to log issues
+", file = log_file, append = TRUE)
+
+# Validation summary
+validation_summary <- list(errors = 0, warnings = 0, info = 0, status = "PASS")
+
+# Logging helpers
 log_issue <- function(level, message, section = NULL) {
   prefix <- switch(level,
-                   "ERROR" = "[ERROR] ",
+                   "ERROR"   = "[ERROR] ",
                    "WARNING" = "[WARNING] ",
-                   "INFO" = "[INFO] ",
+                   "INFO"    = "[INFO] ",
                    "")
-  
-  if (!is.null(section)) {
-    message <- paste0(section, ": ", message)
-  }
-  
+  if (!is.null(section)) message <- paste0(section, ": ", message)
   cat(prefix, message, "\n", file = log_file, append = TRUE)
-  
-  # Update counters
   validation_summary[[tolower(level)]] <- validation_summary[[tolower(level)]] + 1
-  
-  # Update status
-  if (level == "ERROR" && validation_summary$status != "FAIL") {
-    validation_summary$status <- "FAIL"
-  } else if (level == "WARNING" && validation_summary$status == "PASS") {
-    validation_summary$status <- "WARN"
-  }
+  if (level == "ERROR" && validation_summary$status != "FAIL") validation_summary$status <- "FAIL"
+  if (level == "WARNING" && validation_summary$status == "PASS") validation_summary$status <- "WARN"
 }
-
-# Helper function to log section headers
 log_section <- function(title) {
   cat("\n", title, "\n", file = log_file, append = TRUE)
   cat(paste(rep("-", nchar(title)), collapse = ""), "\n", file = log_file, append = TRUE)
 }
 
-# Get projection vectors for validating exchange reactions
-projection_data <- tryCatch({
-  get_projection_vectors()
-}, error = function(e) {
-  log_issue("WARNING", paste("Could not get projection vectors:", e$message), "Initialization")
-  return(NULL)
-})
+# Normalize names for case-insensitive matching
+# Note: trimws to remove any leading/trailing whitespace
+normalize <- function(x) tolower(trimws(x))
 
-# Extract components from PNPRO file
-xml_content <- tryCatch({
-  xml2::read_xml(file_path)
-}, error = function(e) {
+# Fetch and parse XML
+projection_data <- tryCatch(get_projection_vectors(), error = function(e) {
+  log_issue("WARNING", paste("Could not get projection vectors:", e$message), "Initialization")
+  NULL
+})
+xml_content <- tryCatch(xml2::read_xml(file_path), error = function(e) {
   log_issue("ERROR", paste("Failed to parse XML file:", e$message), "XML Parsing")
-  cat("\nValidation Summary:\n", file = log_file, append = TRUE)
-  cat("  Errors:", validation_summary$errors, "\n", file = log_file, append = TRUE)
-  cat("  Warnings:", validation_summary$warnings, "\n", file = log_file, append = TRUE)
-  cat("  Status:", validation_summary$status, "\n", file = log_file, append = TRUE)
   return(validation_summary)
 })
 
 # Extract components
-places <- xml2::xml_find_all(xml_content, "//place")
+places      <- xml2::xml_find_all(xml_content, "//place")
 transitions <- xml2::xml_find_all(xml_content, "//transition")
 place_names <- xml2::xml_attr(places, "name")
 transition_names <- xml2::xml_attr(transitions, "name")
 transition_delays <- xml2::xml_attr(transitions, "delay")
+# Clean vectors for insensitive compare
+place_names_lc      <- normalize(place_names)
+transition_names_lc <- normalize(transition_names)
 
-# Log basic model stats
-log_section("Model Statistics")
-cat("Places:", length(places), "\n", file = log_file, append = TRUE)
-cat("Transitions:", length(transitions), "\n", file = log_file, append = TRUE)
-cat("Bacterial Models:", length(bacterial_models), "\n\n", file = log_file, append = TRUE)
+# Step counters
+step_num <- 0
 
-# === VALIDATION STEPS ===
+# === Validation Steps ===
 
-# Step 0: Validate metabolic networks
-log_section("1. Metabolic Network Validation")
+# Step 0: Metabolic Network Validation
+step_num <- step_num + 1
+log_section(sprintf("%d. Metabolic Network Validation", step_num))
+# Check each FBA model file directly
 for (model in bacterial_models) {
-  fba_model <- model$FBAmodel
-  model_file <- file.path(model_dir, paste0(fba_model, ".txt"))
-  
-  # Check if file exists
-  if (!file.exists(model_file)) {
-    log_issue("ERROR", sprintf("File not found: %s", model_file), "Metabolic Network")
-    next
+  fba_file <- sprintf("%s.txt", model$txt_file)
+  fba_path <- file.path(model_dir, fba_file)
+  if (!file.exists(fba_path)) {
+    log_issue("ERROR", sprintf("Missing FBA model file: %s", fba_path), "Metabolic Network")
+  } else {
+    log_issue("INFO", sprintf("Found FBA model file: %s", fba_path), "Metabolic Network")
   }
-  
-  # Check file format
-  tryCatch({
-    lines <- readLines(model_file, n = 5)
-    
-    # Basic content validation
-    if (length(lines) < 3 || !grepl("^\\s*[A-Za-z0-9_\\-]+(\\s+[A-Za-z0-9_\\-]+)*\\s*$", lines[1])) {
-      log_issue("ERROR", sprintf("Invalid reactions line format: %s", model_file), "Metabolic Network")
-    }
-    
-    if (!grepl("^\\s*(min|max)\\s+[0-9]+\\s+[0-9]+\\s*$", lines[2])) {
-      log_issue("ERROR", sprintf("Invalid optimization line format: %s", model_file), "Metabolic Network")
-    }
-    
-    if (!grepl("^\\s*[0-9\\.eE\\+\\-]+(\\s+[0-9\\.eE\\+\\-]+)*\\s*$", lines[3])) {
-      log_issue("ERROR", sprintf("Invalid objective coefficients format: %s", model_file), "Metabolic Network")
-    }
-    
-  }, error = function(e) {
-    log_issue("ERROR", sprintf("Error reading file %s: %s", model_file, e$message), "Metabolic Network")
-  })
 }
-
-# Step 1: Validate place names
-log_section("2. Place Validation")
-for (model in bacterial_models) {
-  abbr <- model$abbreviation
-  
-  # Check bacterial place
-  bacterial_place <- sprintf("N_%s", abbr)
-  if (!any(place_names == bacterial_place)) {
-    log_issue("ERROR", sprintf("Missing bacterial place: %s", bacterial_place), "Places")
+# Also verify every FBA transition references an existing .txt
+fba_indices <- grepl("^FBA\\[", transition_delays)
+for (i in which(fba_indices)) {
+  trans_name <- transition_names[i]
+  delay_attr <- transition_delays[i]
+  m <- regmatches(delay_attr, regexec('FBA\\[\\s*"([^".]+\\.txt)"', delay_attr))[[1]]
+  if (length(m) >= 2) {
+    fba_path <- file.path(model_dir, m[2])
+    if (!file.exists(fba_path)) {
+      log_issue("ERROR",
+                sprintf("Transition '%s': referenced FBA file not found: %s", trans_name, fba_path),
+                "Metabolic Network")
+    }
   } else {
-    log_issue("INFO", sprintf("Found bacterial place: %s", bacterial_place), "Places")
-  }
-  
-  # Check biomass place
-  biomass_place <- sprintf("biomass_e_%s", abbr)
-  if (!any(place_names == biomass_place)) {
-    log_issue("ERROR", sprintf("Missing biomass place: %s", biomass_place), "Places")
-  } else {
-    log_issue("INFO", sprintf("Found biomass place: %s", biomass_place), "Places")
+    log_issue("WARNING",
+              sprintf("Transition '%s': cannot parse FBA filename: %s", trans_name, delay_attr),
+              "Metabolic Network")
   }
 }
 
-# Step 2: Validate required transitions
-log_section("3. Required Transitions Validation")
+# Step 1: Place Validation
+step_num <- step_num + 1
+log_section(sprintf("%d. Place Validation", step_num))
 for (model in bacterial_models) {
-  abbr <- model$abbreviation
-  
-  # Check necessary transitions
-  required_transitions <- c(
-    sprintf("Starv_%s", abbr),
-    sprintf("Death_%s", abbr),
-    sprintf("Dup_%s", abbr),
-    sprintf("EX_biomass_e_out_%s", abbr),
-    sprintf("EX_biomass_e_in_%s", abbr)
+  abbr <- normalize(model$abbreviation)
+  log_issue("INFO", sprintf("Validating places for %s", model$organism), "Places")
+  expected <- c(sprintf("n_%s", abbr), sprintf("biomass_e_%s", abbr))
+  for (place in expected) {
+    if (!(place %in% place_names_lc)) {
+      log_issue("ERROR", sprintf("Missing place '%s'", place), "Places")
+    }
+  }
+  # Warn about near matches
+  matches <- grep(abbr, place_names_lc, value = TRUE)
+  extras  <- setdiff(matches, expected)
+  if (length(extras) > 0) {
+    log_issue("WARNING",
+              sprintf("Unexpected places related to '%s': %s", abbr, paste(extras, collapse=", ")),
+              "Places")
+  }
+}
+
+# Step 2: Required Transitions Validation
+step_num <- step_num + 1
+log_section(sprintf("%d. Required Transitions Validation", step_num))
+for (model in bacterial_models) {
+  abbr <- normalize(model$abbreviation)
+  log_issue("INFO", sprintf("Validating transitions for %s", model$organism), "Transitions")
+  required <- c(
+    sprintf("starv_%s", abbr),
+    sprintf("death_%s", abbr),
+    sprintf("dup_%s", abbr),
+    sprintf("ex_biomass_e_out_%s", abbr),
+    sprintf("ex_biomass_e_in_%s", abbr)
   )
-  
-  cat(sprintf("Checking required transitions for %s (%s):\n", model$organism, abbr), 
-      file = log_file, append = TRUE)
-  
-  for (req_trans in required_transitions) {
-    if (!any(transition_names == req_trans)) {
-      log_issue("ERROR", sprintf("Missing transition: %s", req_trans), "Required Transitions")
-    } else {
-      log_issue("INFO", sprintf("Found transition: %s", req_trans), "Required Transitions")
-    }
+  # Vectorized check
+  exists <- required %in% transition_names_lc
+  for (j in seq_along(required)) {
+    level <- if (exists[j]) "INFO" else "ERROR"
+    log_issue(level,
+              sprintf("%s transition: %s",
+                      if (exists[j]) "Found" else "Missing",
+                      required[j]),
+              "Required Transitions")
+  }
+  # Unexpected near matches
+  near <- grep(abbr, transition_names_lc, value = TRUE)
+  extras <- setdiff(near, required)
+  if (length(extras) > 0) {
+    log_issue("WARNING",
+              sprintf("Unexpected transitions related to '%s': %s", abbr, paste(extras, collapse=", ")),
+              "Required Transitions")
   }
 }
+# Step 3: Validate FBA transition patterns
+step_num <- step_num + 1
+log_section(sprintf("%d. FBA Transition Pattern Validation", step_num))
 
-# Step 3: Validate biomass exchange transitions regardless of naming convention
-log_section("4. Biomass Exchange Validation")
-has_biomass_in <- any(grepl("biomass_e.*in", transition_names, ignore.case = TRUE))
-has_biomass_out <- any(grepl("biomass_e.*out", transition_names, ignore.case = TRUE))
+# Match any transition whose name starts with EX_, DM_ or SINK_ and mentions in/out
+fba_pattern <- "(EX|DM|SINK)_[A-Za-z0-9_]+_(in|out)"
+candidates   <- transitions[
+  grepl(fba_pattern, transition_names, ignore.case = TRUE)
+]
+names_lc   <- normalize(transition_names)
 
-if (!has_biomass_in) {
-  log_issue("ERROR", "Missing biomass uptake transition (containing 'biomass_e' and 'in')", "Biomass Exchange")
-} else {
-  log_issue("INFO", "Found biomass uptake transitions", "Biomass Exchange")
-}
-
-if (!has_biomass_out) {
-  log_issue("ERROR", "Missing biomass secretion transition (containing 'biomass_e' and 'out')", "Biomass Exchange")
-} else {
-  log_issue("INFO", "Found biomass secretion transitions", "Biomass Exchange")
-}
-
-# Step 4: For each bacterial model, validate their biomass transitions exist
-log_section("5. Organism-Specific Biomass Transitions")
-for (model in bacterial_models) {
-  # Extract possible identifiers to look for in transition names
-  identifiers <- c(model$organism, model$abbreviation)
-  model_has_biomass <- FALSE
-  
-  for (id in identifiers) {
-    model_biomass_pattern <- paste0(".*", id, ".*biomass_e.*|.*biomass_e.*", id, ".*")
-    if (any(grepl(model_biomass_pattern, transition_names, ignore.case = TRUE))) {
-      model_has_biomass <- TRUE
-      break
-    }
-  }
-  
-  if (!model_has_biomass) {
-    log_issue("ERROR", sprintf("Missing biomass exchange transitions for %s", model$organism), 
-              "Organism Biomass")
-  } else {
-    log_issue("INFO", sprintf("Found biomass exchange transitions for %s", model$organism), 
-              "Organism Biomass")
-  }
-}
-
-# Step 5: Validate FBA transition patterns
-log_section("6. FBA Transition Pattern Validation")
-fba_pattern <- ".*EX_.*_(in|out).*|.*(in|out)_EX_.*"
-potential_fba_transitions <- transitions[grepl(fba_pattern, transition_names, ignore.case = TRUE)]
-
-if (length(potential_fba_transitions) > 0) {
-  log_issue("INFO", sprintf("Found %d potential FBA transitions", length(potential_fba_transitions)), 
+if (length(candidates) > 0) {
+  log_issue("INFO", sprintf("Found %d boundary reaction transitions", length(candidates)),
             "FBA Patterns")
   
-  for (trans in potential_fba_transitions) {
+  for (trans in candidates) {
     trans_name <- xml2::xml_attr(trans, "name")
     delay_attr <- xml2::xml_attr(trans, "delay")
+    section    <- "FBA Patterns"
     
-    # Check if it uses FBA command
-    if (!grepl("FBA\\[", delay_attr)) {
-      log_issue("ERROR", sprintf("Transition %s does not use FBA command", trans_name), "FBA Patterns")
+    # 1) Must invoke FBA[...]
+    if (!grepl("^FBA\\[", delay_attr)) {
+      log_issue("ERROR",
+                sprintf("Transition '%s' does not use an FBA command", trans_name),
+                section)
       next
     }
     
-    # Check biomass flag for biomass transitions
-    if (grepl("biomass_e", trans_name, ignore.case = TRUE)) {
-      if (!grepl("\"true\"", delay_attr)) {
-        log_issue("WARNING", sprintf("Biomass transition %s should have biomass flag set to 'true'", 
-                                     trans_name), "FBA Patterns")
-      }
+    # 2) Biomass‐flag for biomass reactions
+    if (grepl("biomass_e", trans_name, ignore.case = TRUE) &&
+        !grepl("\"true\"", delay_attr)) {
+      log_issue("WARNING",
+                sprintf("Biomass transition '%s' should include a biomass-flag = 'true'", trans_name),
+                section)
     }
     
-    # Check for model file reference
-    model_found <- FALSE
-    for (model in bacterial_models) {
-      if (grepl(sprintf('"%s\\.txt"', model$FBAmodel), delay_attr)) {
-        model_found <- TRUE
-        break
+    # 3) Model file reference (*.txt) must exist
+    m <- regmatches(delay_attr, regexec('FBA\\[\\s*"([^"]+\\.txt)"', delay_attr))[[1]]
+    if (length(m) >= 2) {
+      fba_file <- m[2]
+      fba_path <- file.path(model_dir, fba_file)
+      if (!file.exists(fba_path)) {
+        log_issue("ERROR",
+                  sprintf("Transition '%s': referenced model file not found: %s",
+                          trans_name, fba_path),
+                  section)
       }
-    }
-    
-    if (!model_found) {
-      log_issue("ERROR", sprintf("Transition %s does not reference any valid model file", 
-                                 trans_name), "FBA Patterns")
+    } else {
+      log_issue("ERROR",
+                sprintf("Transition '%s': could not parse model filename in delay: %s",
+                        trans_name, delay_attr),
+                section)
     }
   }
 } else {
-  log_issue("WARNING", "No potential FBA transitions found", "FBA Patterns")
+  log_issue("WARNING", "No boundary reaction transitions matching EX_/DM_/SINK_..._(in|out) found",
+            "FBA Patterns")
 }
 
-# Step 6: Validate shared metabolite places
-log_section("7. Shared Metabolite Validation")
-for (met in metabolite_places) {
-  if (!any(place_names == met)) {
-    log_issue("ERROR", sprintf("Missing metabolite place: %s", met), "Shared Metabolites")
-  } else {
-    log_issue("INFO", sprintf("Found metabolite place: %s", met), "Shared Metabolites")
-  }
-}
+# Step 4: Shared Metabolite Validation
+step_num <- step_num + 1
+log_section(sprintf("%d. Shared Metabolite Validation", step_num))
 
-# Step 7: Validate that appropriate exchange reactions for shared metabolites are present
-log_section("8. Exchange Reaction Validation")
+# Normalize metabolite place names for case‐insensitive compare
+metabolite_places_lc <- normalize(metabolite_places)
 
-if (!is.null(projection_data) && !is.null(projection_data$joint_reactions)) {
-  for (rxn in projection_data$joint_reactions) {
-    # Skip biomass reactions as they're already validated
-    if (grepl("biomass", rxn, ignore.case = TRUE)) {
-      next
-    }
-    
-    # Look for transitions handling this reaction
-    has_reaction_transition <- FALSE
-    
-    # Check both standard naming and any variations
-    reaction_patterns <- c(
-      paste0("^", rxn, "_(in|out)_[A-Za-z0-9]+$"),
-      paste0("^[A-Za-z0-9]+_", rxn, "_(in|out)$"),
-      paste0("^.*_", rxn, "_.*$")
+for (i in seq_along(metabolite_places)) {
+  orig_met <- metabolite_places[i]
+  met_lc   <- metabolite_places_lc[i]
+  
+  if (!(met_lc %in% place_names_lc)) {
+    log_issue(
+      "ERROR",
+      sprintf("Missing metabolite place: %s", orig_met),
+      "Shared Metabolites"
     )
-    
-    for (pattern in reaction_patterns) {
-      if (any(grepl(pattern, transition_names, ignore.case = TRUE))) {
-        has_reaction_transition <- TRUE
-        break
-      }
-    }
-    
-    # Alternative check - look in the FBA command text
-    if (!has_reaction_transition) {
-      for (i in seq_along(transition_delays)) {
-        if (grepl(paste0('"', rxn, '"'), transition_delays[i])) {
-          has_reaction_transition <- TRUE
-          break
-        }
-      }
-    }
-    
-    # Flag missing transitions
-    if (!has_reaction_transition) {
-      orgs_with_rxn <- projection_data$reaction_organism_map[[rxn]]
-      
-      if (length(orgs_with_rxn) > 0) {
-        log_issue("ERROR", sprintf("Missing transitions for exchange reaction '%s' needed by organisms: %s", 
-                                   rxn, paste(orgs_with_rxn, collapse=", ")), "Exchange Reactions")
-      }
-    } else {
-      log_issue("INFO", sprintf("Found transitions for exchange reaction: %s", rxn), 
-                "Exchange Reactions")
-    }
+  } else {
+    log_issue(
+      "INFO",
+      sprintf("Found metabolite place: %s", orig_met),
+      "Shared Metabolites"
+    )
   }
-} else {
-  log_issue("WARNING", "Projection data not available, skipping exchange reaction validation", 
-            "Exchange Reactions")
-}
-
-# Step 8: Validate organism-specific reactions
-log_section("9. Organism-Specific Reaction Validation")
-
-if (!is.null(projection_data) && !is.null(projection_data$exclusive_reactions)) {
-  for (abbr in names(projection_data$exclusive_reactions)) {
-    org_specific_rxns <- projection_data$exclusive_reactions[[abbr]]
-    
-    if (length(org_specific_rxns) > 0) {
-      log_issue("INFO", sprintf("Found %d exclusive reactions for %s", 
-                                length(org_specific_rxns), abbr), "Exclusive Reactions")
-      
-      for (rxn in org_specific_rxns) {
-        
-        # Update the code to skip reactions with multiple boundary reaction patterns
-        if (!grepl("^(EX|DM|SINK)_", rxn, ignore.case = TRUE)) {
-          next
-        }
-        
-        # Look for organism-specific transitions
-        has_org_specific <- FALSE
-        
-        # Check naming patterns
-        reaction_patterns <- c(
-          paste0("^", rxn, "_(in|out)_", abbr, "$"),
-          paste0("^", abbr, "_", rxn, "_(in|out)$"),
-          paste0("^.*", rxn, ".*", abbr, ".*$")
-        )
-        
-        for (pattern in reaction_patterns) {
-          if (any(grepl(pattern, transition_names, ignore.case = TRUE))) {
-            has_org_specific <- TRUE
-            break
-          }
-        }
-        
-        # Alternative check - look in the FBA command text
-        if (!has_org_specific) {
-          for (i in seq_along(transition_delays)) {
-            if (grepl(paste0('"', rxn, '"'), transition_delays[i]) && 
-                grepl(paste0('"', abbr, '"'), transition_delays[i])) {
-              has_org_specific <- TRUE
-              break
-            }
-          }
-        }
-        
-        # Flag missing organism-specific transitions
-        if (!has_org_specific) {
-          log_issue("WARNING", sprintf("Missing transitions for organism-specific exchange reaction '%s' for %s", 
-                                       rxn, abbr), "Exclusive Reactions")
-        } else {
-          log_issue("INFO", sprintf("Found transitions for organism-specific exchange reaction: %s for %s", 
-                                    rxn, abbr), "Exclusive Reactions")
-        }
-      }
-    } else {
-      log_issue("INFO", sprintf("No exclusive reactions found for %s", abbr), "Exclusive Reactions")
-    }
+  
+  # Warn about near‐matches (typos, case differences, extra underscores)
+  near <- grep(met_lc, place_names_lc, value = TRUE)
+  extras <- setdiff(near, met_lc)
+  if (length(extras) > 0) {
+    log_issue(
+      "WARNING",
+      sprintf("Unexpected variant(s) for '%s': %s", orig_met, paste(extras, collapse = ", ")),
+      "Shared Metabolites"
+    )
   }
-} else {
-  log_issue("WARNING", "Projection data not available, skipping organism-specific reaction validation", 
-            "Exclusive Reactions")
 }
 
 # Step 9: FBA Command Syntax Validation
-log_section("10. FBA Command Syntax Validation")
-
-fba_transitions <- transitions[grepl("FBA\\[", xml2::xml_attr(transitions, "delay"))]
-
-if (length(fba_transitions) > 0) {
-  log_issue("INFO", sprintf("Found %d FBA command transitions", length(fba_transitions)), 
-            "FBA Syntax")
-  
-  for (trans in fba_transitions) {
-    trans_name <- xml2::xml_attr(trans, "name")
-    delay_attr <- xml2::xml_attr(trans, "delay")
+step_num <- step_num + 1
+log_section(sprintf("%d. FBA Command Syntax Validation", step_num))
+fba_idx <- grepl("^FBA\\[", transition_delays)
+if (any(fba_idx)) {
+  log_issue("INFO", sprintf("Found %d FBA command transitions", sum(fba_idx)), "FBA Syntax")
+  for (i in which(fba_idx)) {
+    trans_name <- transition_names[i]
+    delay_attr <- transition_delays[i]
+    section    <- "FBA Syntax"
     
-    # Extract FBA command parameters using regex
-    fba_match <- regexec('FBA\\[ *"([^"]+)" *, *"([^"]+)" *, *([0-9.]+) *, *"([^"]+)" *, *"([^"]+)"(?: *, *"(true|false)")? *\\]', delay_attr)
-    fba_parts <- regmatches(delay_attr, fba_match)
+    fba_match <- regexec('FBA\\[ *"([^"]+)" *, *"([^"]+)" *, *([0-9.]+) *, *"([^"]+)" *, *"([^"]+)" *\\]', delay_attr)
+    parts     <- regmatches(delay_attr, fba_match)[[1]]
     
-    if (length(fba_parts) == 0 || length(fba_parts[[1]]) < 6) {
-      # Try alternative pattern with fewer parameters
-      fba_match <- regexec('FBA\\[ *"([^"]+)" *, *"([^"]+)" *, *([0-9.]+) *, *"([^"]+)" *, *"([^"]+)" *\\]', delay_attr)
-      fba_parts <- regmatches(delay_attr, fba_match)
-    }
-    
-    # Check if we could extract the FBA command parts
-    if (length(fba_parts) == 0 || length(fba_parts[[1]]) < 6) {
-      log_issue("ERROR", sprintf("Invalid FBA command syntax: %s", delay_attr), "FBA Syntax")
+    # Validate match length
+    if (length(parts) < 6) {
+      log_issue("ERROR", sprintf("Invalid FBA syntax in '%s': %s", trans_name, delay_attr), section)
       next
     }
     
-    # Extract the parameters
-    parts <- fba_parts[[1]]
-    bacterial_file <- parts[2]
+    # Extract parameters
+    bacterial_file        <- parts[2]
     reaction_to_associate <- parts[3]
-    scaling_constant <- as.numeric(parts[4])
+    scaling_constant      <- as.numeric(parts[4])
     bacterial_count_place <- parts[5]
     average_biomass_place <- parts[6]
-    biomass_flag <- if(length(parts) >= 7) parts[7] else "false"
+    biomass_flag          <- if (length(parts) >= 7) parts[7] else "false"
     
-    # Validate each parameter
-    model_found <- FALSE
-    for (model in bacterial_models) {
-      if (bacterial_file == paste0(model$FBAmodel, ".txt")) {
-        model_found <- TRUE
-        break
+    # 1) Validate model file exists
+    model_found <- any(sapply(bacterial_models, function(m) bacterial_file == paste0(m$FBAmodel, ".txt")))
+    if (!model_found) {
+      log_issue("ERROR", sprintf("Unknown model file '%s' in %s", bacterial_file, trans_name), section)
+    }
+    
+    # 2) Reaction naming
+    if (!grepl("^(EX|DM|SINK)_", reaction_to_associate, ignore.case = TRUE)) {
+      log_issue("WARNING", sprintf("Unusual reaction name '%s' in %s", reaction_to_associate, trans_name), section)
+    }
+    
+    # 3) Scaling constant
+    if (is.na(scaling_constant) || scaling_constant <= 0) {
+      log_issue("ERROR", sprintf("Non-positive scaling constant '%s' in %s", parts[4], trans_name), section)
+    }
+    
+    # 4) Place existence
+    for (place in c(bacterial_count_place, average_biomass_place)) {
+      if (!(place %in% place_names)) {
+        log_issue("ERROR", sprintf("Non-existent place '%s' in %s", place, trans_name), section)
       }
     }
     
-    if (!model_found) {
-      log_issue("ERROR", sprintf("Unknown model file: %s", bacterial_file), "FBA Syntax")
-    }
-    
-    if (!grepl("^(EX|DM|SINK)_", reaction_to_associate, ignore.case = TRUE)) {
-      log_issue("WARNING", sprintf("Unusual reaction naming: %s", reaction_to_associate), "FBA Syntax")
-    }
-    
-    if (is.na(scaling_constant) || scaling_constant <= 0) {
-      log_issue("ERROR", sprintf("Invalid scaling constant: %s", parts[4]), "FBA Syntax")
-    }
-    
-    if (!(bacterial_count_place %in% place_names)) {
-      log_issue("ERROR", sprintf("Non-existent bacterial count place: %s", bacterial_count_place), 
-                "FBA Syntax")
-    }
-    
-    if (!(average_biomass_place %in% place_names)) {
-      log_issue("ERROR", sprintf("Non-existent average biomass place: %s", average_biomass_place), 
-                "FBA Syntax")
-    }
-    
+    # 5) Biomass flag consistency
     if (grepl("biomass", reaction_to_associate, ignore.case = TRUE) && biomass_flag != "true") {
-      log_issue("WARNING", sprintf("Biomass reaction should have biomass flag set to 'true': %s", 
-                                   trans_name), "FBA Syntax")
+      log_issue("WARNING", sprintf("Missing biomassFlag='true' for biomass reaction in %s", trans_name), section)
     } else if (biomass_flag == "true" && !grepl("biomass", reaction_to_associate, ignore.case = TRUE)) {
-      log_issue("WARNING", sprintf("Non-biomass reaction has biomass flag set to 'true': %s", 
-                                   trans_name), "FBA Syntax")
+      log_issue("WARNING", sprintf("biomassFlag=true on non-biomass reaction %s", trans_name), section)
     }
   }
 } else {
@@ -728,10 +575,10 @@ if (length(boundary_trans) > 0) {
 # Rest of the validation remains the same...
 
 # Return summary object
-return(list(
+validation_test = list(
   status = validation_summary$status,
   error_count = validation_summary$errors,
   warning_count = validation_summary$warnings,
   info_count = validation_summary$info,
   log_file = log_file
-))
+)

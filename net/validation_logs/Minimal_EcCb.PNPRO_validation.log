@@ -2,16 +2,79 @@ PNPRO Validation Report
 =====================
 
 File:  /home/user/Git_Repositories/minimal_microbiome/net/Minimal_EcCb.PNPRO 
-Date:  2025-04-23 17:17:41 
-
-
- Model Statistics 
----------------- 
-Places: 6 
-Transitions: 18 
-Bacterial Models: 2 
+Date:  2025-04-23 18:31:44 
 
 
  1. Metabolic Network Validation 
 ------------------------------- 
-[ERROR]  Metabolic Network: File not found: compiled_models/Escherichia_coli_SE11.txt 
+[INFO]  Metabolic Network: Found FBA model file: compiled_models/Ec_model.txt 
+[INFO]  Metabolic Network: Found FBA model file: compiled_models/Cb_model.txt 
+[ERROR]  Metabolic Network: Transition 'E_coli_EX_biomass_e_out': referenced FBA file not found: compiled_models/Escherichia_coli_str_K_12_substr_MG1655.txt 
+[ERROR]  Metabolic Network: Transition 'E_coli_EX_biomass_e_in': referenced FBA file not found: compiled_models/Escherichia_coli_str_K_12_substr_MG1655.txt 
+[ERROR]  Metabolic Network: Transition 'E_coli_EX_glc_D_e_out': referenced FBA file not found: compiled_models/Escherichia_coli_str_K_12_substr_MG1655.txt 
+[ERROR]  Metabolic Network: Transition 'E_coli_EX_lcts_e_out': referenced FBA file not found: compiled_models/Escherichia_coli_str_K_12_substr_MG1655.txt 
+[ERROR]  Metabolic Network: Transition 'E_coli_EX_glc_D_e_in': referenced FBA file not found: compiled_models/Escherichia_coli_str_K_12_substr_MG1655.txt 
+[ERROR]  Metabolic Network: Transition 'E_coli_EX_lcts_e_in': referenced FBA file not found: compiled_models/Escherichia_coli_str_K_12_substr_MG1655.txt 
+[ERROR]  Metabolic Network: Transition 'Clost_Buty_EX_biomass_e_in': referenced FBA file not found: compiled_models/Clostridium_butyricum_DSM_10702.txt 
+[ERROR]  Metabolic Network: Transition 'Clost_Buty_EX_biomass_e_out': referenced FBA file not found: compiled_models/Clostridium_butyricum_DSM_10702.txt 
+[ERROR]  Metabolic Network: Transition 'Clost_buty_EX_lcts_e_in': referenced FBA file not found: compiled_models/Clostridium_butyricum_DSM_10702.txt 
+[ERROR]  Metabolic Network: Transition 'Clost_buty_EX_glc_D_e_in': referenced FBA file not found: compiled_models/Clostridium_butyricum_DSM_10702.txt 
+[ERROR]  Metabolic Network: Transition 'Clost_buty_EX_glc_D_e_out': referenced FBA file not found: compiled_models/Clostridium_butyricum_DSM_10702.txt 
+[ERROR]  Metabolic Network: Transition 'Clost_buty_EX_lcts_e_out': referenced FBA file not found: compiled_models/Clostridium_butyricum_DSM_10702.txt 
+
+ 2. Place Validation 
+------------------- 
+[INFO]  Places: Validating places for Escherichia_coli 
+[ERROR]  Places: Missing place 'n_ec' 
+[ERROR]  Places: Missing place 'biomass_e_ec' 
+[INFO]  Places: Validating places for Clostridium_butyricum 
+[ERROR]  Places: Missing place 'n_cb' 
+[ERROR]  Places: Missing place 'biomass_e_cb' 
+
+ 3. Required Transitions Validation 
+---------------------------------- 
+[INFO]  Transitions: Validating transitions for Escherichia_coli 
+[ERROR]  Required Transitions: Missing transition: starv_ec 
+[ERROR]  Required Transitions: Missing transition: death_ec 
+[ERROR]  Required Transitions: Missing transition: dup_ec 
+[ERROR]  Required Transitions: Missing transition: ex_biomass_e_out_ec 
+[ERROR]  Required Transitions: Missing transition: ex_biomass_e_in_ec 
+[INFO]  Transitions: Validating transitions for Clostridium_butyricum 
+[ERROR]  Required Transitions: Missing transition: starv_cb 
+[ERROR]  Required Transitions: Missing transition: death_cb 
+[ERROR]  Required Transitions: Missing transition: dup_cb 
+[ERROR]  Required Transitions: Missing transition: ex_biomass_e_out_cb 
+[ERROR]  Required Transitions: Missing transition: ex_biomass_e_in_cb 
+
+ 4. FBA Transition Pattern Validation 
+------------------------------------ 
+[INFO]  FBA Patterns: Found 12 boundary reaction transitions 
+[ERROR]  FBA Patterns: Transition 'E_coli_EX_biomass_e_out': referenced model file not found: compiled_models/Escherichia_coli_str_K_12_substr_MG1655.txt 
+[ERROR]  FBA Patterns: Transition 'E_coli_EX_biomass_e_in': referenced model file not found: compiled_models/Escherichia_coli_str_K_12_substr_MG1655.txt 
+[ERROR]  FBA Patterns: Transition 'E_coli_EX_glc_D_e_out': referenced model file not found: compiled_models/Escherichia_coli_str_K_12_substr_MG1655.txt 
+[ERROR]  FBA Patterns: Transition 'E_coli_EX_lcts_e_out': referenced model file not found: compiled_models/Escherichia_coli_str_K_12_substr_MG1655.txt 
+[ERROR]  FBA Patterns: Transition 'E_coli_EX_glc_D_e_in': referenced model file not found: compiled_models/Escherichia_coli_str_K_12_substr_MG1655.txt 
+[ERROR]  FBA Patterns: Transition 'E_coli_EX_lcts_e_in': referenced model file not found: compiled_models/Escherichia_coli_str_K_12_substr_MG1655.txt 
+[ERROR]  FBA Patterns: Transition 'Clost_Buty_EX_biomass_e_in': referenced model file not found: compiled_models/Clostridium_butyricum_DSM_10702.txt 
+[ERROR]  FBA Patterns: Transition 'Clost_Buty_EX_biomass_e_out': referenced model file not found: compiled_models/Clostridium_butyricum_DSM_10702.txt 
+[ERROR]  FBA Patterns: Transition 'Clost_buty_EX_lcts_e_in': referenced model file not found: compiled_models/Clostridium_butyricum_DSM_10702.txt 
+[ERROR]  FBA Patterns: Transition 'Clost_buty_EX_glc_D_e_in': referenced model file not found: compiled_models/Clostridium_butyricum_DSM_10702.txt 
+[ERROR]  FBA Patterns: Transition 'Clost_buty_EX_glc_D_e_out': referenced model file not found: compiled_models/Clostridium_butyricum_DSM_10702.txt 
+[ERROR]  FBA Patterns: Transition 'Clost_buty_EX_lcts_e_out': referenced model file not found: compiled_models/Clostridium_butyricum_DSM_10702.txt 
+
+ 5. Shared Metabolite Validation 
+------------------------------- 
+[ERROR]  Shared Metabolites: Missing metabolite place: glc__D_e 
+[INFO]  Shared Metabolites: Found metabolite place: lcts_e 
+
+ 6. FBA Command Syntax Validation 
+-------------------------------- 
+[INFO]  FBA Syntax: Found 12 FBA command transitions 
+[ERROR]  FBA Syntax: Invalid FBA syntax in 'E_coli_EX_biomass_e_out': FBA[ "Escherichia_coli_str_K_12_substr_MG1655.txt",  "EX_biomass_e"  , 1 , "E_coli"  ,  "E_coli_biomass_e", "true"] 
+[ERROR]  FBA Syntax: Invalid FBA syntax in 'E_coli_EX_biomass_e_in': FBA[ "Escherichia_coli_str_K_12_substr_MG1655.txt",  "EX_biomass_e"  , 1 , "E_coli"  ,  "E_coli_biomass_e", "true"] 
+[ERROR]  FBA Syntax: Unknown model file 'Escherichia_coli_str_K_12_substr_MG1655.txt' in E_coli_EX_glc_D_e_out 
+[ERROR]  FBA Syntax: Unknown model file 'Escherichia_coli_str_K_12_substr_MG1655.txt' in E_coli_EX_lcts_e_out 
+[ERROR]  FBA Syntax: Unknown model file 'Escherichia_coli_str_K_12_substr_MG1655.txt' in E_coli_EX_glc_D_e_in 
+[ERROR]  FBA Syntax: Unknown model file 'Escherichia_coli_str_K_12_substr_MG1655.txt' in E_coli_EX_lcts_e_in 
+[ERROR]  FBA Syntax: Invalid FBA syntax in 'Clost_Buty_EX_biomass_e_in': FBA[ "Clostridium_butyricum_DSM_10702.txt",  "EX_biomass_e"  , 1 , "Clost_buty"  ,  "Clost_buty_biomass_e", "true"] 
+[ERROR]  FBA Syntax: Invalid FBA syntax in 'Clost_Buty_EX_biomass_e_out': FBA[ "Clostridium_butyricum_DSM_10702.txt",  "EX_biomass_e"  , 1 , "Clost_buty"  ,  "Clost_buty_biomass_e", "true"] 

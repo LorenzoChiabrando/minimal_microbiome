@@ -25,8 +25,8 @@ bacterial_models <- list(
   list(
     FBAmodel = "Escherichia_coli_SE11",
     organism = "Escherichia_coli",
-    abbreviation = "Ec",
-    txt_file = "Ec_model",
+    abbreviation = "ec",
+    txt_file = "ec_model",
     biomass = list(max = 1.172, mean = 0.489, min = 0.083),
     bac_pop_p = list(starv = 0.21, dup = 1, death = 0.018),
     initial_count = 1e+06
@@ -34,8 +34,8 @@ bacterial_models <- list(
   list(
     FBAmodel = "Clostridium_butyricum_DSM_10702",
     organism = "Clostridium_butyricum",
-    abbreviation = "Cb",
-    txt_file = "Cb_model",
+    abbreviation = "cb",
+    txt_file = "cb_model",
     biomass = list(max = 1.5, mean = 0.6, min = 0.1),
     bac_pop_p = list(starv = 0.21, dup = 1, death = 0.018),
     initial_count = 1e+06
