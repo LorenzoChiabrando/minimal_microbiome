@@ -1,0 +1,126 @@
+<project name="New project" version="121">
+  <gspn name="PetriNet">
+    <nodes>
+      <place name="glc__D_e" x="0.0" y="0.0" label-x="0.0" label-y="0.0"/>
+      <place name="lcts_e" x="0.0" y="0.0" label-x="0.0" label-y="0.0"/>
+      <place name="n_escherichia" x="0.0" y="0.0" label-x="0.0" label-y="0.0"/>
+      <place name="n_ecs" x="0.0" y="0.0" label-x="0.0" label-y="0.0"/>
+      <place name="biomass_e_escherichia" x="0.0" y="0.0" label-x="0.0" label-y="0.0"/>
+      <place name="biomass_e_ecs" x="0.0" y="0.0" label-x="0.0" label-y="0.0"/>
+      <place name="n_clostridium" x="0.0" y="0.0" label-x="0.0" label-y="0.0"/>
+      <place name="n_cbd1" x="0.0" y="0.0" label-x="0.0" label-y="0.0"/>
+      <place name="biomass_e_clostridium" x="0.0" y="0.0" label-x="0.0" label-y="0.0"/>
+      <place name="biomass_e_cbd1" x="0.0" y="0.0" label-x="0.0" label-y="0.0"/>
+      <transition name="Starv_escherichia" type="EXP" rotation="0.0" x="0.0" y="0.0" delay="0"/>
+      <transition name="Starv_ecs" type="EXP" rotation="0.0" x="0.0" y="0.0" delay="0"/>
+      <transition name="Death_escherichia" type="EXP" rotation="0.0" x="0.0" y="0.0" delay="0"/>
+      <transition name="Death_ecs" type="EXP" rotation="0.0" x="0.0" y="0.0" delay="0"/>
+      <transition name="Dup_escherichia" type="EXP" rotation="0.0" x="0.0" y="0.0" delay="0"/>
+      <transition name="Dup_ecs" type="EXP" rotation="0.0" x="0.0" y="0.0" delay="0"/>
+      <transition name="EX_biomass_e_in_escherichia" type="EXP" rotation="0.0" x="0.0" y="0.0" delay="0"/>
+      <transition name="EX_biomass_e_in_ecs" type="EXP" rotation="0.0" x="0.0" y="0.0" delay="0"/>
+      <transition name="EX_biomass_e_out_escherichia" type="EXP" rotation="0.0" x="0.0" y="0.0" delay="0"/>
+      <transition name="EX_biomass_e_out_ecs" type="EXP" rotation="0.0" x="0.0" y="0.0" delay="0"/>
+      <transition name="Starv_clostridium" type="EXP" rotation="0.0" x="0.0" y="0.0" delay="0"/>
+      <transition name="Starv_cbd1" type="EXP" rotation="0.0" x="0.0" y="0.0" delay="0"/>
+      <transition name="Death_clostridium" type="EXP" rotation="0.0" x="0.0" y="0.0" delay="0"/>
+      <transition name="Death_cbd1" type="EXP" rotation="0.0" x="0.0" y="0.0" delay="0"/>
+      <transition name="Dup_clostridium" type="EXP" rotation="0.0" x="0.0" y="0.0" delay="0"/>
+      <transition name="Dup_cbd1" type="EXP" rotation="0.0" x="0.0" y="0.0" delay="0"/>
+      <transition name="EX_biomass_e_in_clostridium" type="EXP" rotation="0.0" x="0.0" y="0.0" delay="0"/>
+      <transition name="EX_biomass_e_in_cbd1" type="EXP" rotation="0.0" x="0.0" y="0.0" delay="0"/>
+      <transition name="EX_biomass_e_out_clostridium" type="EXP" rotation="0.0" x="0.0" y="0.0" delay="0"/>
+      <transition name="EX_biomass_e_out_cbd1" type="EXP" rotation="0.0" x="0.0" y="0.0" delay="0"/>
+      <transition name="E_coli_EX_biomass_e_in" type="EXP" rotation="0.0" x="0.0" y="0.0" delay="FBA[ &quot;Escherichia_coli_SE11.txt&quot;,  &quot;EX_biomass_e&quot;  , 1 , &quot;E_coli&quot;  ,  &quot;E_coli_biomass_e&quot;, &quot;true&quot;]"/>
+      <transition name="E_coli_EX_biomass_e_out" type="EXP" rotation="0.0" x="0.0" y="0.0" delay="FBA[ &quot;Escherichia_coli_SE11.txt&quot;,  &quot;EX_biomass_e&quot;  , 1 , &quot;E_coli&quot;  ,  &quot;E_coli_biomass_e&quot;, &quot;true&quot;]"/>
+      <transition name="Dup" type="EXP" rotation="0.0" x="0.0" y="0.0" delay="Call[&quot;Duplication&quot;, FromTable[&quot;Bacteria_Parameters.csv&quot;, 0, 1], 0]"/>
+      <transition name="Death" type="EXP" rotation="0.0" x="0.0" y="0.0" delay="Call[&quot;Death&quot;, FromTable[&quot;Bacteria_Parameters.csv&quot;, 0, 2], 0]"/>
+      <transition name="Starv" type="EXP" rotation="0.0" x="0.0" y="0.0" delay="Call[&quot;Starvation&quot;, FromTable[&quot;Bacteria_Parameters.csv&quot;, 0, 0], 0]"/>
+      <transition name="E_coli_EX_glc_D_e_in" type="EXP" rotation="0.0" x="0.0" y="0.0" delay="FBA[ &quot;Escherichia_coli_SE11.txt&quot;,  &quot;EX_glc_D_e&quot;  , 1 , &quot;E_coli&quot;  ,  &quot;E_coli_biomass_e&quot;]"/>
+      <transition name="E_coli_EX_lcts_e_in" type="EXP" rotation="0.0" x="0.0" y="0.0" delay="FBA[ &quot;Escherichia_coli_SE11.txt&quot;,  &quot;EX_lcts_e&quot;  , 1 , &quot;E_coli&quot;  ,  &quot;E_coli_biomass_e&quot;]"/>
+      <transition name="E_coli_EX_glc_D_e_out" type="EXP" rotation="0.0" x="0.0" y="0.0" delay="FBA[ &quot;Escherichia_coli_SE11.txt&quot;,  &quot;EX_glc_D_e&quot;  , 1 , &quot;E_coli&quot;  ,  &quot;E_coli_biomass_e&quot;]"/>
+      <transition name="E_coli_EX_lcts_e_out" type="EXP" rotation="0.0" x="0.0" y="0.0" delay="FBA[ &quot;Escherichia_coli_SE11.txt&quot;,  &quot;EX_lcts_e&quot;  , 1 , &quot;E_coli&quot;  ,  &quot;E_coli_biomass_e&quot;]"/>
+      <transition name="Clost_Buty_EX_biomass_e_in" type="EXP" rotation="0.0" x="0.0" y="0.0" delay="FBA[ &quot;Clostridium_butyricum_DSM_10702.txt&quot;,  &quot;EX_biomass_e&quot;  , 1 , &quot;Clost_buty&quot;  ,  &quot;Clost_buty_biomass_e&quot;, &quot;true&quot;]"/>
+      <transition name="Clost_Buty_EX_biomass_e_out" type="EXP" rotation="0.0" x="0.0" y="0.0" delay="FBA[ &quot;Clostridium_butyricum_DSM_10702.txt&quot;,  &quot;EX_biomass_e&quot;  , 1 , &quot;Clost_buty&quot;  ,  &quot;Clost_buty_biomass_e&quot;, &quot;true&quot;]"/>
+      <transition name="Starv_buty" type="EXP" rotation="0.0" x="0.0" y="0.0" delay="Call[&quot;Starvation&quot;, FromTable[&quot;Bacteria_Parameters.csv&quot;, 1, 0], 1]"/>
+      <transition name="Death_buty" type="EXP" rotation="0.0" x="0.0" y="0.0" delay="Call[&quot;Death&quot;, FromTable[&quot;Bacteria_Parameters.csv&quot;, 1, 2], 1]"/>
+      <transition name="Dup_buty" type="EXP" rotation="0.0" x="0.0" y="0.0" delay="Call[&quot;Duplication&quot;, FromTable[&quot;Bacteria_Parameters.csv&quot;, 1,1], 1]"/>
+      <transition name="Clost_buty_EX_lcts_e_in" type="EXP" rotation="0.0" x="0.0" y="0.0" delay="FBA[ &quot;Clostridium_butyricum_DSM_10702.txt&quot;,  &quot;EX_lcts_e&quot;  , 1 , &quot;Clost_buty&quot;  ,  &quot;Clost_buty_biomass_e&quot;]"/>
+      <transition name="Clost_buty_EX_glc_D_e_in" type="EXP" rotation="0.0" x="0.0" y="0.0" delay="FBA[ &quot;Clostridium_butyricum_DSM_10702.txt&quot;,  &quot;EX_glc_D_e&quot;  , 1 , &quot;Clost_buty&quot;  ,  &quot;Clost_buty_biomass_e&quot;]"/>
+      <transition name="Clost_buty_EX_glc_D_e_out" type="EXP" rotation="0.0" x="0.0" y="0.0" delay="FBA[ &quot;Clostridium_butyricum_DSM_10702.txt&quot;,  &quot;EX_glc_D_e&quot;  , 1 , &quot;Clost_buty&quot;  ,  &quot;Clost_buty_biomass_e&quot;]"/>
+      <transition name="Clost_buty_EX_lcts_e_out" type="EXP" rotation="0.0" x="0.0" y="0.0" delay="FBA[ &quot;Clostridium_butyricum_DSM_10702.txt&quot;,  &quot;EX_lcts_e&quot;  , 1 , &quot;Clost_buty&quot;  ,  &quot;Clost_buty_biomass_e&quot;]"/>
+    </nodes>
+    <edges>
+      <arc head="E_coli_EX_biomass_e_in" tail="E_coli_biomass_e" kind="INPUT" mult="1"/>
+      <arc head="E_coli_biomass_e" tail="E_coli_EX_biomass_e_out" kind="OUTPUT" mult="2"/>
+      <arc head="E_coli_biomass_e" tail="Dup" kind="OUTPUT" mult="1"/>
+      <arc head="Dup" tail="E_coli_biomass_e" kind="INPUT" mult="1"/>
+      <arc head="E_coli" tail="Dup" kind="OUTPUT" mult="2"/>
+      <arc head="Dup" tail="E_coli" kind="INPUT" mult="1"/>
+      <arc head="Death" tail="E_coli_biomass_e" kind="INPUT" mult="1"/>
+      <arc head="E_coli_biomass_e" tail="Death" kind="OUTPUT" mult="1"/>
+      <arc head="Death" tail="E_coli" kind="INPUT" mult="1"/>
+      <arc head="Starv" tail="E_coli_biomass_e" kind="INPUT" mult="1"/>
+      <arc head="E_coli_EX_biomass_e_out" tail="E_coli_biomass_e" kind="INPUT" mult="1"/>
+      <arc head="E_coli_EX_glc_D_e_in" tail="glc_D_e" kind="INPUT" mult="1"/>
+      <arc head="E_coli_EX_lcts_e_in" tail="lcts_e" kind="INPUT" mult="1"/>
+      <arc head="glc_D_e" tail="E_coli_EX_glc_D_e_out" kind="OUTPUT" mult="1"/>
+      <arc head="lcts_e" tail="E_coli_EX_lcts_e_out" kind="OUTPUT" mult="1"/>
+      <arc head="E_coli_biomass_e" tail="E_coli_EX_glc_D_e_in" kind="OUTPUT" mult="1"/>
+      <arc head="E_coli_EX_glc_D_e_in" tail="E_coli_biomass_e" kind="INPUT" mult="1"/>
+      <arc head="E_coli_EX_lcts_e_in" tail="E_coli_biomass_e" kind="INPUT" mult="1"/>
+      <arc head="E_coli_biomass_e" tail="E_coli_EX_lcts_e_in" kind="OUTPUT" mult="1"/>
+      <arc head="E_coli_EX_glc_D_e_out" tail="E_coli_biomass_e" kind="INPUT" mult="1"/>
+      <arc head="E_coli_biomass_e" tail="E_coli_EX_glc_D_e_out" kind="OUTPUT" mult="1"/>
+      <arc head="E_coli_EX_lcts_e_out" tail="E_coli_biomass_e" kind="INPUT" mult="1"/>
+      <arc head="E_coli_biomass_e" tail="E_coli_EX_lcts_e_out" kind="OUTPUT" mult="1"/>
+      <arc head="E_coli_EX_glc_D_e_out" tail="E_coli" kind="INPUT" mult="1"/>
+      <arc head="E_coli" tail="E_coli_EX_glc_D_e_out" kind="OUTPUT" mult="1"/>
+      <arc head="E_coli" tail="E_coli_EX_glc_D_e_in" kind="OUTPUT" mult="1"/>
+      <arc head="E_coli_EX_glc_D_e_in" tail="E_coli" kind="INPUT" mult="1"/>
+      <arc head="E_coli_EX_lcts_e_in" tail="E_coli" kind="INPUT" mult="1"/>
+      <arc head="E_coli" tail="E_coli_EX_lcts_e_in" kind="OUTPUT" mult="1"/>
+      <arc head="E_coli_EX_lcts_e_out" tail="E_coli" kind="INPUT" mult="1"/>
+      <arc head="E_coli" tail="E_coli_EX_lcts_e_out" kind="OUTPUT" mult="1"/>
+      <arc head="Clost_Buty_EX_biomass_e_in" tail="Clost_buty_biomass_e" kind="INPUT" mult="1"/>
+      <arc head="Clost_buty_biomass_e" tail="Clost_Buty_EX_biomass_e_out" kind="OUTPUT" mult="2"/>
+      <arc head="Clost_Buty_EX_biomass_e_out" tail="Clost_buty_biomass_e" kind="INPUT" mult="1"/>
+      <arc head="Starv_buty" tail="Clost_buty_biomass_e" kind="INPUT" mult="1"/>
+      <arc head="Clost_buty_biomass_e" tail="Death_buty" kind="OUTPUT" mult="1"/>
+      <arc head="Death_buty" tail="Clost_buty_biomass_e" kind="INPUT" mult="1"/>
+      <arc head="Death_buty" tail="Clost_buty" kind="INPUT" mult="1"/>
+      <arc head="Dup_buty" tail="Clost_buty_biomass_e" kind="INPUT" mult="1"/>
+      <arc head="Clost_buty_biomass_e" tail="Dup_buty" kind="OUTPUT" mult="1"/>
+      <arc head="Clost_buty" tail="Dup_buty" kind="OUTPUT" mult="2"/>
+      <arc head="Dup_buty" tail="Clost_buty" kind="INPUT" mult="1"/>
+      <arc head="Clost_buty_EX_lcts_e_in" tail="lcts_e" kind="INPUT" mult="1"/>
+      <arc head="Clost_buty_EX_glc_D_e_in" tail="glc_D_e" kind="INPUT" mult="1"/>
+      <arc head="glc_D_e" tail="Clost_buty_EX_glc_D_e_out" kind="OUTPUT" mult="1"/>
+      <arc head="lcts_e" tail="Clost_buty_EX_lcts_e_out" kind="OUTPUT" mult="1"/>
+      <arc head="Clost_buty_biomass_e" tail="Clost_buty_EX_glc_D_e_out" kind="OUTPUT" mult="1"/>
+      <arc head="Clost_buty_EX_glc_D_e_out" tail="Clost_buty_biomass_e" kind="INPUT" mult="1"/>
+      <arc head="Clost_buty_EX_lcts_e_out" tail="Clost_buty_biomass_e" kind="INPUT" mult="1"/>
+      <arc head="Clost_buty_biomass_e" tail="Clost_buty_EX_lcts_e_out" kind="OUTPUT" mult="1"/>
+      <arc head="Clost_buty_biomass_e" tail="Clost_buty_EX_glc_D_e_in" kind="OUTPUT" mult="1"/>
+      <arc head="Clost_buty_EX_glc_D_e_in" tail="Clost_buty_biomass_e" kind="INPUT" mult="1"/>
+      <arc head="Clost_buty_biomass_e" tail="Clost_buty_EX_lcts_e_in" kind="OUTPUT" mult="1"/>
+      <arc head="Clost_buty_EX_lcts_e_in" tail="Clost_buty_biomass_e" kind="INPUT" mult="1"/>
+      <arc head="Clost_buty" tail="Clost_buty_EX_glc_D_e_in" kind="OUTPUT" mult="1"/>
+      <arc head="Clost_buty_EX_glc_D_e_in" tail="Clost_buty" kind="INPUT" mult="1"/>
+      <arc head="Clost_buty" tail="Clost_buty_EX_lcts_e_in" kind="OUTPUT" mult="1"/>
+      <arc head="Clost_buty_EX_lcts_e_in" tail="Clost_buty" kind="INPUT" mult="1"/>
+      <arc head="Clost_buty" tail="Clost_buty_EX_glc_D_e_out" kind="OUTPUT" mult="1"/>
+      <arc head="Clost_buty" tail="Clost_buty_EX_lcts_e_out" kind="OUTPUT" mult="1"/>
+      <arc head="Clost_buty_EX_glc_D_e_out" tail="Clost_buty" kind="INPUT" mult="1"/>
+      <arc head="Clost_buty_EX_lcts_e_out" tail="Clost_buty" kind="INPUT" mult="1"/>
+    </edges>
+  </gspn>
+  <measures gspn-name="PetriNet" name="Measures" simplified-UI="false">
+    <assignments/>
+    <greatspn/>
+    <formulas>
+      <formula comment="Basic statistics of the toolchain execution." language="STAT"/>
+      <formula comment="All the basic Petri net measures" language="ALL"/>
+    </formulas>
+  </measures>
+</project>

@@ -1,51 +1,31 @@
 
 wd <- getwd()
-dest_dir <- paste0(wd, "/results/")
-output_dir_projections <- file.path(wd, "results_ex_reactions")
 
 # Load necessary scripts
-sapply(c("/functions/install_and_setup.R", "/functions/process_model.R", 
-         "/epimod_FBAfunctions/R/FBAgreatmodeClass.R", "/epimod_FBAfunctions/R/class_generation.R", 
+sapply(c("/epimod_FBAfunctions/R/FBAgreatmodeClass.R", "/epimod_FBAfunctions/R/class_generation.R", 
          "/epimod_FBAfunctions/R/readMat.R"), function(f) source(paste0(wd, f)))
 
-# Model configuration
-model_name <- "Minimal_EcCb"
-metabolite_places <- c("glc__D_e", "lcts_e")
-model_names <- c("Escherichia_coli_SE11", "Clostridium_butyricum_DSM_10702")
-model_abbr_candidates <- list()
+source(paste0(wd, "/functions/setup_models.R"))
+source(paste0(wd, "/functions/process_model.R"))
+source(paste0(wd, "/functions/project_boundary_reactions.R"))
+source(paste0(wd, "/functions/validate_pnpro.R"))
 
-for (file_name in model_names) {
-  abbr1 <- str_match(file_name, "^([^_]+)_model$")
-  model_abbr_candidates[[file_name]] <- if(!is.na(abbr1[1,1])) abbr1[1,2] else character(0)
-  
-  name_parts <- strsplit(tools::file_path_sans_ext(file_name), "_")[[1]]
-  if (length(name_parts) > 1) {
-    abbr2 <- tolower(paste0(substr(name_parts, 1, 1), collapse=""))
-    model_abbr_candidates[[file_name]] <- c(model_abbr_candidates[[file_name]], abbr2)
-    
-    if (length(name_parts) == 2) {
-      model_abbr_candidates[[file_name]] <- c(model_abbr_candidates[[file_name]], 
-                                              tolower(paste0(substr(name_parts[1], 1, 1), substr(name_parts[2], 1, 1))))
-    }
-  }
-}
+c("glc__D_e", "lcts_e")
 
-# Define bacterial models
-bacterial_models <- list(
-  list(FBAmodel = "Escherichia_coli_SE11", organism = "Escherichia_coli",
-       abbreviation = model_abbr_candidates$Escherichia_coli_SE11, txt_file = "Escherichia_coli_SE11",
-       biomass = list(max = 1.172, mean = 0.489, min = 0.083),
-       bac_pop_p = list(starv = 0.21, dup = 1, death = 0.018), initial_count = 1e+06),
-  list(FBAmodel = "Clostridium_butyricum_DSM_10702", organism = "Clostridium_butyricum",
-       abbreviation = model_abbr_candidates$Clostridium_butyricum_DSM_10702, txt_file = "Clostridium_butyricum_DSM_10702",
-       biomass = list(max = 1.5, mean = 0.6, min = 0.1),
-       bac_pop_p = list(starv = 0.21, dup = 1, death = 0.018), initial_count = 1e+06)
+bacterial_models <- make_bacterial_models(
+  model_names    = c("Escherichia_coli_SE11", "Clostridium_butyricum_DSM_10702"),
+  biomass_params = list(
+    list(max=1.172, mean=0.489, min=0.083),
+    list(max=1.5,   mean=0.6,   min=0.1)
+  ),
+  pop_params     = list(
+    list(starv=0.21, dup=1, death=0.018),
+    list(starv=0.21, dup=1, death=0.018)
+  ),
+  initial_counts = c(1e6, 1e6)
 )
 
-# Update parameters file
-Bacteria_Parameters <- data.frame(do.call(rbind, lapply(bacterial_models, function(m) as.vector(unlist(m$bac_pop_p)))))
-write.table(Bacteria_Parameters, paste0(wd, "/input/Bacteria_Parameters.csv"), 
-            sep = ",", row.names = FALSE, col.names = FALSE, quote = F)
+write_bac_params(bacterial_models, file.path(wd, "input", "Bacteria_Parameters.csv"))
 
 # Process models and display summary
 process_results <- lapply(bacterial_models, process_model)
@@ -57,10 +37,25 @@ lapply(process_results, function(r) {
               ifelse(r$status == "success", "Successfully processed", paste("ERROR -", r$message))))
 })
 
-# Load additional scripts and configure environment
-source(paste0(wd, "/functions/validating_projection.R"))
-source(paste0(wd, "/functions/pnpro_validation.R"))
-source(paste0(wd, "/functions/repairing_pnpro.R"))
+# assume bacterial_models is your list of models, metabolite_places your vector of metabolite IDs
+results <- project_boundary_reactions(
+  bacterial_models   = bacterial_models,
+  metabolite_places  = metabolite_places,
+  output_dir_projections = paste0(wd, "/hamonisation_projection_info")
+)
+
+# call validation:
+issues <- validate_pnpro(
+  pnpro_path=paste0(wd, "/net/Minimal_EcCb.PNPRO"),
+  bacterial_models=bacterial_models,
+  metabolite_places=metabolite_places,
+  model_dir = "compiled_models",
+  log_dir = paste0(wd, "/net/validation_logs")
+)
+
+##################
+## continuing main
+##################
 
 # Set parameters
 molar <- 10      # mmol/mL 

@@ -1,0 +1,58 @@
+level,section,message,object
+ERROR,FBA Models,Missing model file: compiled_models/Escherichia_coli_SE11.txt,NA
+ERROR,FBA Models,Missing model file: compiled_models/Clostridium_butyricum_DSM_10702.txt,NA
+ERROR,FBA Validation,Invalid scaling constant 'EX_biomass_e' in E_coli_EX_biomass_e_out,E_coli_EX_biomass_e_out
+ERROR,FBA Validation,Count place '1' ≠ 'n_ecs',E_coli_EX_biomass_e_out
+ERROR,FBA Validation,Biomass place 'E_coli' ≠ 'biomass_e_ecs',E_coli_EX_biomass_e_out
+ERROR,FBA Validation,Invalid scaling constant 'EX_biomass_e' in E_coli_EX_biomass_e_in,E_coli_EX_biomass_e_in
+ERROR,FBA Validation,Count place '1' ≠ 'n_ecs',E_coli_EX_biomass_e_in
+ERROR,FBA Validation,Biomass place 'E_coli' ≠ 'biomass_e_ecs',E_coli_EX_biomass_e_in
+ERROR,FBA Validation,Invalid scaling constant 'EX_glc_D_e' in E_coli_EX_glc_D_e_out,E_coli_EX_glc_D_e_out
+ERROR,FBA Validation,Count place '1' ≠ 'n_ecs',E_coli_EX_glc_D_e_out
+ERROR,FBA Validation,Biomass place 'E_coli' ≠ 'biomass_e_ecs',E_coli_EX_glc_D_e_out
+ERROR,FBA Validation,Invalid scaling constant 'EX_lcts_e' in E_coli_EX_lcts_e_out,E_coli_EX_lcts_e_out
+ERROR,FBA Validation,Count place '1' ≠ 'n_ecs',E_coli_EX_lcts_e_out
+ERROR,FBA Validation,Biomass place 'E_coli' ≠ 'biomass_e_ecs',E_coli_EX_lcts_e_out
+ERROR,FBA Validation,Invalid scaling constant 'EX_glc_D_e' in E_coli_EX_glc_D_e_in,E_coli_EX_glc_D_e_in
+ERROR,FBA Validation,Count place '1' ≠ 'n_ecs',E_coli_EX_glc_D_e_in
+ERROR,FBA Validation,Biomass place 'E_coli' ≠ 'biomass_e_ecs',E_coli_EX_glc_D_e_in
+ERROR,FBA Validation,Invalid scaling constant 'EX_lcts_e' in E_coli_EX_lcts_e_in,E_coli_EX_lcts_e_in
+ERROR,FBA Validation,Count place '1' ≠ 'n_ecs',E_coli_EX_lcts_e_in
+ERROR,FBA Validation,Biomass place 'E_coli' ≠ 'biomass_e_ecs',E_coli_EX_lcts_e_in
+ERROR,FBA Validation,Invalid scaling constant 'EX_biomass_e' in Clost_Buty_EX_biomass_e_in,Clost_Buty_EX_biomass_e_in
+ERROR,FBA Validation,Count place '1' ≠ 'n_cbd1',Clost_Buty_EX_biomass_e_in
+ERROR,FBA Validation,Biomass place 'Clost_buty' ≠ 'biomass_e_cbd1',Clost_Buty_EX_biomass_e_in
+ERROR,FBA Validation,Invalid scaling constant 'EX_biomass_e' in Clost_Buty_EX_biomass_e_out,Clost_Buty_EX_biomass_e_out
+ERROR,FBA Validation,Count place '1' ≠ 'n_cbd1',Clost_Buty_EX_biomass_e_out
+ERROR,FBA Validation,Biomass place 'Clost_buty' ≠ 'biomass_e_cbd1',Clost_Buty_EX_biomass_e_out
+ERROR,FBA Validation,Invalid scaling constant 'EX_lcts_e' in Clost_buty_EX_lcts_e_in,Clost_buty_EX_lcts_e_in
+ERROR,FBA Validation,Count place '1' ≠ 'n_cbd1',Clost_buty_EX_lcts_e_in
+ERROR,FBA Validation,Biomass place 'Clost_buty' ≠ 'biomass_e_cbd1',Clost_buty_EX_lcts_e_in
+ERROR,FBA Validation,Invalid scaling constant 'EX_glc_D_e' in Clost_buty_EX_glc_D_e_in,Clost_buty_EX_glc_D_e_in
+ERROR,FBA Validation,Count place '1' ≠ 'n_cbd1',Clost_buty_EX_glc_D_e_in
+ERROR,FBA Validation,Biomass place 'Clost_buty' ≠ 'biomass_e_cbd1',Clost_buty_EX_glc_D_e_in
+ERROR,FBA Validation,Invalid scaling constant 'EX_glc_D_e' in Clost_buty_EX_glc_D_e_out,Clost_buty_EX_glc_D_e_out
+ERROR,FBA Validation,Count place '1' ≠ 'n_cbd1',Clost_buty_EX_glc_D_e_out
+ERROR,FBA Validation,Biomass place 'Clost_buty' ≠ 'biomass_e_cbd1',Clost_buty_EX_glc_D_e_out
+ERROR,FBA Validation,Invalid scaling constant 'EX_lcts_e' in Clost_buty_EX_lcts_e_out,Clost_buty_EX_lcts_e_out
+ERROR,FBA Validation,Count place '1' ≠ 'n_cbd1',Clost_buty_EX_lcts_e_out
+ERROR,FBA Validation,Biomass place 'Clost_buty' ≠ 'biomass_e_cbd1',Clost_buty_EX_lcts_e_out
+ERROR,Places,Missing place 'n_ecs',NA
+ERROR,Places,Missing place 'biomass_e_ecs',NA
+ERROR,Places,Missing place 'n_cbd1',NA
+ERROR,Places,Missing place 'biomass_e_cbd1',NA
+ERROR,Required Transitions,Missing Starv_ecs,NA
+ERROR,Required Transitions,Missing Death_ecs,NA
+ERROR,Required Transitions,Missing Dup_ecs,NA
+ERROR,Required Transitions,Missing EX_biomass_e_in_ecs,NA
+ERROR,Required Transitions,Missing EX_biomass_e_out_ecs,NA
+ERROR,Required Transitions,Missing Starv_cbd1,NA
+ERROR,Required Transitions,Missing Death_cbd1,NA
+ERROR,Required Transitions,Missing Dup_cbd1,NA
+ERROR,Required Transitions,Missing EX_biomass_e_in_cbd1,NA
+ERROR,Required Transitions,Missing EX_biomass_e_out_cbd1,NA
+ERROR,Shared Metabolites,Missing metabolite place: glc__D_e,NA
+ERROR,Arc Connectivity,Starv has no OUTPUT arc,Starv
+ERROR,Arc Connectivity,E_coli_EX_biomass_e_in has no OUTPUT arc,E_coli_EX_biomass_e_in
+ERROR,Arc Connectivity,Clost_Buty_EX_biomass_e_in has no OUTPUT arc,Clost_Buty_EX_biomass_e_in
+ERROR,Arc Connectivity,Starv_buty has no OUTPUT arc,Starv_buty

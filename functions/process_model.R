@@ -3,7 +3,7 @@
 process_model <- function(model) {
   # Extract model information
   organism <- model$organism
-  abbr <- model$abbreviation
+  abbr <- model$abbreviation[2]
   FBAmodel <- ifelse(is.null(model$FBAmodel), organism, model$FBAmodel)
   
   # Log processing step
@@ -11,7 +11,7 @@ process_model <- function(model) {
   cat(paste(rep("-", nchar(organism) + nchar(abbr) + 13), collapse = ""), "\n")
   
   # Construct file paths
-  input_dir <- file.path(wd, "input", organism)
+  input_dir <- file.path(wd, "input", FBAmodel)
   mat_file <- file.path(input_dir, paste0(FBAmodel, ".mat"))
   
   # Validate input file
