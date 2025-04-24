@@ -39,9 +39,10 @@ bacterial_models <- list(
   )
 )
 
+# Define registered general organism module C++ functions' parameters c("Starvation", "Duplication", "Death")
 Bacteria_Parameters <- read.csv(paste0(wd, "/input/Bacteria_Parameters.csv"), head = F)
 Bacteria_Parameters[1, ] = as.vector(unlist(bacterial_models[[1]]$bac_pop_p))
-Bacteria_Parameters[1, ] = as.vector(unlist(bacterial_models[[2]]$bac_pop_p))
+Bacteria_Parameters[2, ] = as.vector(unlist(bacterial_models[[2]]$bac_pop_p))
 
 write.table(Bacteria_Parameters,
             paste0(wd, "/input/Bacteria_Parameters.csv"),
@@ -69,10 +70,13 @@ for (result in process_results) {
 }
 
 source(paste0(wd, "/functions/validating_projection.R"))
+source(paste0(wd, "/functions/pnpro_validation.R"))
   
 molar = 10 # mmol/mL (1000 mM)
 V = 0.001 # mL (1 microL)
 C = molar*V # mmol
+# Adjust General_functions.cpp
+delta = 1e+10 # density
 
 run_full_ex_bounds(
   extraction_output  = "extracted_ex_reactions.txt",
@@ -115,9 +119,6 @@ write.csv(result_df, bounds_file_path, row.names = F, quote = F)
 irr_exchange_bounds = readLines(bounds_file_path)
 irr_exchange_bounds[1] = paste0("base_upper_bounds,", C)
 writeLines(irr_exchange_bounds, bounds_file_path)
-
-# Adjust General_functions.cpp
-delta = 1e+10 # density
 
 # Read the C++ file
 cpp_file_path <- paste0(wd, "/input/General_functions.cpp")

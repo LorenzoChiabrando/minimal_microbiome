@@ -54,4 +54,4 @@ Bounds for Common Reactions:
     ec: Lower = -1000, Upper = 1000
     cb: Lower = -1000, Upper = 1000
 
-Output files saved to: /home/user/Documents/git_repositories/minimal_microbiome/results_ex_reactions
+Output files saved to: /home/user/Git_Repositories/minimal_microbiome/results_ex_reactions
