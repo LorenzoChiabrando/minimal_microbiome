@@ -25,7 +25,7 @@ for ( i in seq_along(bacterial_models) ) {
   cat(sprintf("Analyzing model: %s (%s)\n", organism, abbr), file = log_file, append = TRUE)
   
   # Set file path for compiled model - updated to use FBAmodel property directly
-  model_file <- file.path("compiled_models", paste0(model$txt_file, ".txt"))
+  model_file <- file.path("compiled_models", paste0(model$abbreviation, "_model.txt"))
   
   # Verify model file exists
   if (!file.exists(model_file)) {

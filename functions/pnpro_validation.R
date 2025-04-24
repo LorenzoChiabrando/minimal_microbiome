@@ -2,15 +2,6 @@
 # Setup paths and defaults
 # ─────────────────────────────────────────────────────────────────────────────
 
-library(stringr)
-library(purrr)
-library(xml2)
-library(dplyr)
-library(purrr)
-library(stringr)
-library(readr)
-library(glue)
-
 file_path <- file.path(wd, "net", paste0(model_name, ".PNPRO"))
 model_dir <- "compiled_models"
 
@@ -830,7 +821,7 @@ for (model in bacterial_models) {
   # 1. Biomass Exchange Transitions
   log_subsection("Biomass Exchange Transitions")
   # For EX_biomass_e_out
-  biomass_out_name <- paste0("ex_biomass_e_out_", abbr)
+  biomass_out_name <- paste0("EX_biomass_e_out_", abbr)
   validate_biomass_out_arcs(arc_df, biomass_out_name, abbr)
   
   # For EX_biomass_e_in

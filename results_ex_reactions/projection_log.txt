@@ -1,26 +1,26 @@
 Metabolite Projection Analysis
 ============================
 
-Analyzing model: Escherichia_coli (ec)
+Analyzing model: Escherichia_coli (ecs)
 Checking metabolite projections:
   ✓ glc__D_e: Found in model
   ✓ lcts_e: Found in model
   Found 1 reactions for glc__D_e: EX_glc__D_e
   Found 1 reactions for lcts_e: EX_lcts_e
 
-Reaction Bounds for Model: ec 
+Reaction Bounds for Model: ecs 
 ----------------------------------
   EX_glc__D_e: Lower = -1000, Upper = 1000
   EX_lcts_e: Lower = -1000, Upper = 1000
 
-Analyzing model: Clostridium_butyricum (cb)
+Analyzing model: Clostridium_butyricum (cbd1)
 Checking metabolite projections:
   ✓ glc__D_e: Found in model
   ✓ lcts_e: Found in model
   Found 1 reactions for glc__D_e: EX_glc__D_e
   Found 1 reactions for lcts_e: EX_lcts_e
 
-Reaction Bounds for Model: cb 
+Reaction Bounds for Model: cbd1 
 ----------------------------------
   EX_glc__D_e: Lower = -1000, Upper = 1000
   EX_lcts_e: Lower = -1000, Upper = 1000
@@ -36,22 +36,22 @@ Detailed Reaction Information:
 ============================
 
 All Shared Boundary Reactions:
-  EX_glc__D_e: Found in organisms [ec, cb]
-  EX_lcts_e: Found in organisms [ec, cb]
+  EX_glc__D_e: Found in organisms [ecs, cbd1]
+  EX_lcts_e: Found in organisms [ecs, cbd1]
 
 Organism-Exclusive Reactions:
-  ec has no exclusive reactions
-  cb has no exclusive reactions
+  ecs has no exclusive reactions
+  cbd1 has no exclusive reactions
 
 Reactions Shared Across All Organisms:
   EX_glc__D_e, EX_lcts_e
 
 Bounds for Common Reactions:
   EX_glc__D_e:
-    ec: Lower = -1000, Upper = 1000
-    cb: Lower = -1000, Upper = 1000
+    ecs: Lower = -1000, Upper = 1000
+    cbd1: Lower = -1000, Upper = 1000
   EX_lcts_e:
-    ec: Lower = -1000, Upper = 1000
-    cb: Lower = -1000, Upper = 1000
+    ecs: Lower = -1000, Upper = 1000
+    cbd1: Lower = -1000, Upper = 1000
 
 Output files saved to: /home/user/Git_Repositories/minimal_microbiome/results_ex_reactions

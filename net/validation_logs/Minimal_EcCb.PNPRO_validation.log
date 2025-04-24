@@ -1,64 +1,64 @@
 PNPRO Validation Report
 =======================
 File: /home/user/Git_Repositories/minimal_microbiome/net/Minimal_EcCb.PNPRO
-Date: 2025-04-24 13:12:07
+Date: 2025-04-24 18:13:42
 
 
 0. FBA Model & Transition Validation
 ------------------------------------
 
-[INFO]  FBA Models: Found model file: compiled_models/ec_model.txt 
-[INFO]  FBA Models: Found model file: compiled_models/cb_model.txt 
-[ERROR]  FBA Validation: Unknown model file 'Escherichia_coli_str_K_12_substr_MG1655.txt' in E_coli_EX_biomass_e_out 
-[WARNING]  FBA Validation: Could not infer abbreviation for transition 'E_coli_EX_biomass_e_out' for place validation 
-[ERROR]  FBA Validation: Unknown model file 'Escherichia_coli_str_K_12_substr_MG1655.txt' in E_coli_EX_biomass_e_in 
-[WARNING]  FBA Validation: Could not infer abbreviation for transition 'E_coli_EX_biomass_e_in' for place validation 
-[ERROR]  FBA Validation: Unknown model file 'Escherichia_coli_str_K_12_substr_MG1655.txt' in E_coli_EX_glc_D_e_out 
-[WARNING]  FBA Validation: Could not infer abbreviation for transition 'E_coli_EX_glc_D_e_out' for place validation 
-[ERROR]  FBA Validation: Unknown model file 'Escherichia_coli_str_K_12_substr_MG1655.txt' in E_coli_EX_lcts_e_out 
-[WARNING]  FBA Validation: Could not infer abbreviation for transition 'E_coli_EX_lcts_e_out' for place validation 
-[ERROR]  FBA Validation: Unknown model file 'Escherichia_coli_str_K_12_substr_MG1655.txt' in E_coli_EX_glc_D_e_in 
-[WARNING]  FBA Validation: Could not infer abbreviation for transition 'E_coli_EX_glc_D_e_in' for place validation 
-[ERROR]  FBA Validation: Unknown model file 'Escherichia_coli_str_K_12_substr_MG1655.txt' in E_coli_EX_lcts_e_in 
-[WARNING]  FBA Validation: Could not infer abbreviation for transition 'E_coli_EX_lcts_e_in' for place validation 
-[ERROR]  FBA Validation: Transition 'Clost_Buty_EX_biomass_e_in': bacterialCountPlace 'Clost_buty' should be 'n_cb' 
-[ERROR]  FBA Validation: Transition 'Clost_Buty_EX_biomass_e_in': averageBiomassPlace 'Clost_buty_biomass_e' should be 'biomass_e_cb' 
-[ERROR]  FBA Validation: Transition 'Clost_Buty_EX_biomass_e_out': bacterialCountPlace 'Clost_buty' should be 'n_cb' 
-[ERROR]  FBA Validation: Transition 'Clost_Buty_EX_biomass_e_out': averageBiomassPlace 'Clost_buty_biomass_e' should be 'biomass_e_cb' 
-[ERROR]  FBA Validation: Transition 'Clost_buty_EX_lcts_e_in': bacterialCountPlace 'Clost_buty' should be 'n_cb' 
-[ERROR]  FBA Validation: Transition 'Clost_buty_EX_lcts_e_in': averageBiomassPlace 'Clost_buty_biomass_e' should be 'biomass_e_cb' 
-[ERROR]  FBA Validation: Transition 'Clost_buty_EX_glc_D_e_in': bacterialCountPlace 'Clost_buty' should be 'n_cb' 
-[ERROR]  FBA Validation: Transition 'Clost_buty_EX_glc_D_e_in': averageBiomassPlace 'Clost_buty_biomass_e' should be 'biomass_e_cb' 
-[ERROR]  FBA Validation: Transition 'Clost_buty_EX_glc_D_e_out': bacterialCountPlace 'Clost_buty' should be 'n_cb' 
-[ERROR]  FBA Validation: Transition 'Clost_buty_EX_glc_D_e_out': averageBiomassPlace 'Clost_buty_biomass_e' should be 'biomass_e_cb' 
-[ERROR]  FBA Validation: Transition 'Clost_buty_EX_lcts_e_out': bacterialCountPlace 'Clost_buty' should be 'n_cb' 
-[ERROR]  FBA Validation: Transition 'Clost_buty_EX_lcts_e_out': averageBiomassPlace 'Clost_buty_biomass_e' should be 'biomass_e_cb' 
+[ERROR]  FBA Models: Missing model file: compiled_models/Escherichia_coli_SE11.txt 
+[ERROR]  FBA Models: Missing model file: compiled_models/Clostridium_butyricum_DSM_10702.txt 
+[ERROR]  FBA Validation: Transition 'E_coli_EX_biomass_e_out': bacterialCountPlace 'E_coli' should be 'n_ecs' 
+[ERROR]  FBA Validation: Transition 'E_coli_EX_biomass_e_out': averageBiomassPlace 'E_coli_biomass_e' should be 'biomass_e_ecs' 
+[ERROR]  FBA Validation: Transition 'E_coli_EX_biomass_e_in': bacterialCountPlace 'E_coli' should be 'n_ecs' 
+[ERROR]  FBA Validation: Transition 'E_coli_EX_biomass_e_in': averageBiomassPlace 'E_coli_biomass_e' should be 'biomass_e_ecs' 
+[ERROR]  FBA Validation: Transition 'E_coli_EX_glc_D_e_out': bacterialCountPlace 'E_coli' should be 'n_ecs' 
+[ERROR]  FBA Validation: Transition 'E_coli_EX_glc_D_e_out': averageBiomassPlace 'E_coli_biomass_e' should be 'biomass_e_ecs' 
+[ERROR]  FBA Validation: Transition 'E_coli_EX_lcts_e_out': bacterialCountPlace 'E_coli' should be 'n_ecs' 
+[ERROR]  FBA Validation: Transition 'E_coli_EX_lcts_e_out': averageBiomassPlace 'E_coli_biomass_e' should be 'biomass_e_ecs' 
+[ERROR]  FBA Validation: Transition 'E_coli_EX_glc_D_e_in': bacterialCountPlace 'E_coli' should be 'n_ecs' 
+[ERROR]  FBA Validation: Transition 'E_coli_EX_glc_D_e_in': averageBiomassPlace 'E_coli_biomass_e' should be 'biomass_e_ecs' 
+[ERROR]  FBA Validation: Transition 'E_coli_EX_lcts_e_in': bacterialCountPlace 'E_coli' should be 'n_ecs' 
+[ERROR]  FBA Validation: Transition 'E_coli_EX_lcts_e_in': averageBiomassPlace 'E_coli_biomass_e' should be 'biomass_e_ecs' 
+[ERROR]  FBA Validation: Transition 'Clost_Buty_EX_biomass_e_in': bacterialCountPlace 'Clost_buty' should be 'n_cbd1' 
+[ERROR]  FBA Validation: Transition 'Clost_Buty_EX_biomass_e_in': averageBiomassPlace 'Clost_buty_biomass_e' should be 'biomass_e_cbd1' 
+[ERROR]  FBA Validation: Transition 'Clost_Buty_EX_biomass_e_out': bacterialCountPlace 'Clost_buty' should be 'n_cbd1' 
+[ERROR]  FBA Validation: Transition 'Clost_Buty_EX_biomass_e_out': averageBiomassPlace 'Clost_buty_biomass_e' should be 'biomass_e_cbd1' 
+[ERROR]  FBA Validation: Transition 'Clost_buty_EX_lcts_e_in': bacterialCountPlace 'Clost_buty' should be 'n_cbd1' 
+[ERROR]  FBA Validation: Transition 'Clost_buty_EX_lcts_e_in': averageBiomassPlace 'Clost_buty_biomass_e' should be 'biomass_e_cbd1' 
+[ERROR]  FBA Validation: Transition 'Clost_buty_EX_glc_D_e_in': bacterialCountPlace 'Clost_buty' should be 'n_cbd1' 
+[ERROR]  FBA Validation: Transition 'Clost_buty_EX_glc_D_e_in': averageBiomassPlace 'Clost_buty_biomass_e' should be 'biomass_e_cbd1' 
+[ERROR]  FBA Validation: Transition 'Clost_buty_EX_glc_D_e_out': bacterialCountPlace 'Clost_buty' should be 'n_cbd1' 
+[ERROR]  FBA Validation: Transition 'Clost_buty_EX_glc_D_e_out': averageBiomassPlace 'Clost_buty_biomass_e' should be 'biomass_e_cbd1' 
+[ERROR]  FBA Validation: Transition 'Clost_buty_EX_lcts_e_out': bacterialCountPlace 'Clost_buty' should be 'n_cbd1' 
+[ERROR]  FBA Validation: Transition 'Clost_buty_EX_lcts_e_out': averageBiomassPlace 'Clost_buty_biomass_e' should be 'biomass_e_cbd1' 
 
 1. Place Validation
 -------------------
 
 [INFO]  Places: Validating places for Escherichia_coli 
-[ERROR]  Places: Missing place 'n_ec' 
-[ERROR]  Places: Missing place 'biomass_e_ec' 
+[ERROR]  Places: Missing place 'n_ecs' 
+[ERROR]  Places: Missing place 'biomass_e_ecs' 
 [INFO]  Places: Validating places for Clostridium_butyricum 
-[ERROR]  Places: Missing place 'n_cb' 
-[ERROR]  Places: Missing place 'biomass_e_cb' 
+[ERROR]  Places: Missing place 'n_cbd1' 
+[ERROR]  Places: Missing place 'biomass_e_cbd1' 
 
 2. Required Transitions Validation
 ----------------------------------
 
 [INFO]  Transitions: Validating transitions for Escherichia_coli 
-[ERROR]  Required Transitions: Missing transition: Starv_ec 
-[ERROR]  Required Transitions: Missing transition: Death_ec 
-[ERROR]  Required Transitions: Missing transition: Dup_ec 
-[ERROR]  Required Transitions: Missing transition: EX_biomass_e_out_ec 
-[ERROR]  Required Transitions: Missing transition: EX_biomass_e_in_ec 
+[ERROR]  Required Transitions: Missing transition: Starv_ecs 
+[ERROR]  Required Transitions: Missing transition: Death_ecs 
+[ERROR]  Required Transitions: Missing transition: Dup_ecs 
+[ERROR]  Required Transitions: Missing transition: EX_biomass_e_out_ecs 
+[ERROR]  Required Transitions: Missing transition: EX_biomass_e_in_ecs 
 [INFO]  Transitions: Validating transitions for Clostridium_butyricum 
-[ERROR]  Required Transitions: Missing transition: Starv_cb 
-[ERROR]  Required Transitions: Missing transition: Death_cb 
-[ERROR]  Required Transitions: Missing transition: Dup_cb 
-[ERROR]  Required Transitions: Missing transition: EX_biomass_e_out_cb 
-[ERROR]  Required Transitions: Missing transition: EX_biomass_e_in_cb 
+[ERROR]  Required Transitions: Missing transition: Starv_cbd1 
+[ERROR]  Required Transitions: Missing transition: Death_cbd1 
+[ERROR]  Required Transitions: Missing transition: Dup_cbd1 
+[ERROR]  Required Transitions: Missing transition: EX_biomass_e_out_cbd1 
+[ERROR]  Required Transitions: Missing transition: EX_biomass_e_in_cbd1 
 
 3. Shared Metabolite Validation
 -------------------------------
@@ -143,8 +143,8 @@ Full arc_df contents
 61   Clost_buty_EX_glc_D_e_out     INPUT           Clost_buty            1
 62    Clost_buty_EX_lcts_e_out     INPUT           Clost_buty            1
                                                                                                                command
-1  FBA[ "Escherichia_coli_str_K_12_substr_MG1655.txt",  "EX_biomass_e"  , 1 , "E_coli"  ,  "E_coli_biomass_e", "true"]
-2  FBA[ "Escherichia_coli_str_K_12_substr_MG1655.txt",  "EX_biomass_e"  , 1 , "E_coli"  ,  "E_coli_biomass_e", "true"]
+1                    FBA[ "Escherichia_coli_SE11.txt",  "EX_biomass_e"  , 1 , "E_coli"  ,  "E_coli_biomass_e", "true"]
+2                    FBA[ "Escherichia_coli_SE11.txt",  "EX_biomass_e"  , 1 , "E_coli"  ,  "E_coli_biomass_e", "true"]
 3                                                   Call["Duplication", FromTable["Bacteria_Parameters.csv", 0, 1], 0]
 4                                                   Call["Duplication", FromTable["Bacteria_Parameters.csv", 0, 1], 0]
 5                                                   Call["Duplication", FromTable["Bacteria_Parameters.csv", 0, 1], 0]
@@ -153,27 +153,27 @@ Full arc_df contents
 8                                                         Call["Death", FromTable["Bacteria_Parameters.csv", 0, 2], 0]
 9                                                         Call["Death", FromTable["Bacteria_Parameters.csv", 0, 2], 0]
 10                                                   Call["Starvation", FromTable["Bacteria_Parameters.csv", 0, 0], 0]
-11 FBA[ "Escherichia_coli_str_K_12_substr_MG1655.txt",  "EX_biomass_e"  , 1 , "E_coli"  ,  "E_coli_biomass_e", "true"]
-12           FBA[ "Escherichia_coli_str_K_12_substr_MG1655.txt",  "EX_glc_D_e"  , 1 , "E_coli"  ,  "E_coli_biomass_e"]
-13            FBA[ "Escherichia_coli_str_K_12_substr_MG1655.txt",  "EX_lcts_e"  , 1 , "E_coli"  ,  "E_coli_biomass_e"]
-14           FBA[ "Escherichia_coli_str_K_12_substr_MG1655.txt",  "EX_glc_D_e"  , 1 , "E_coli"  ,  "E_coli_biomass_e"]
-15            FBA[ "Escherichia_coli_str_K_12_substr_MG1655.txt",  "EX_lcts_e"  , 1 , "E_coli"  ,  "E_coli_biomass_e"]
-16           FBA[ "Escherichia_coli_str_K_12_substr_MG1655.txt",  "EX_glc_D_e"  , 1 , "E_coli"  ,  "E_coli_biomass_e"]
-17           FBA[ "Escherichia_coli_str_K_12_substr_MG1655.txt",  "EX_glc_D_e"  , 1 , "E_coli"  ,  "E_coli_biomass_e"]
-18            FBA[ "Escherichia_coli_str_K_12_substr_MG1655.txt",  "EX_lcts_e"  , 1 , "E_coli"  ,  "E_coli_biomass_e"]
-19            FBA[ "Escherichia_coli_str_K_12_substr_MG1655.txt",  "EX_lcts_e"  , 1 , "E_coli"  ,  "E_coli_biomass_e"]
-20           FBA[ "Escherichia_coli_str_K_12_substr_MG1655.txt",  "EX_glc_D_e"  , 1 , "E_coli"  ,  "E_coli_biomass_e"]
-21           FBA[ "Escherichia_coli_str_K_12_substr_MG1655.txt",  "EX_glc_D_e"  , 1 , "E_coli"  ,  "E_coli_biomass_e"]
-22            FBA[ "Escherichia_coli_str_K_12_substr_MG1655.txt",  "EX_lcts_e"  , 1 , "E_coli"  ,  "E_coli_biomass_e"]
-23            FBA[ "Escherichia_coli_str_K_12_substr_MG1655.txt",  "EX_lcts_e"  , 1 , "E_coli"  ,  "E_coli_biomass_e"]
-24           FBA[ "Escherichia_coli_str_K_12_substr_MG1655.txt",  "EX_glc_D_e"  , 1 , "E_coli"  ,  "E_coli_biomass_e"]
-25           FBA[ "Escherichia_coli_str_K_12_substr_MG1655.txt",  "EX_glc_D_e"  , 1 , "E_coli"  ,  "E_coli_biomass_e"]
-26           FBA[ "Escherichia_coli_str_K_12_substr_MG1655.txt",  "EX_glc_D_e"  , 1 , "E_coli"  ,  "E_coli_biomass_e"]
-27           FBA[ "Escherichia_coli_str_K_12_substr_MG1655.txt",  "EX_glc_D_e"  , 1 , "E_coli"  ,  "E_coli_biomass_e"]
-28            FBA[ "Escherichia_coli_str_K_12_substr_MG1655.txt",  "EX_lcts_e"  , 1 , "E_coli"  ,  "E_coli_biomass_e"]
-29            FBA[ "Escherichia_coli_str_K_12_substr_MG1655.txt",  "EX_lcts_e"  , 1 , "E_coli"  ,  "E_coli_biomass_e"]
-30            FBA[ "Escherichia_coli_str_K_12_substr_MG1655.txt",  "EX_lcts_e"  , 1 , "E_coli"  ,  "E_coli_biomass_e"]
-31            FBA[ "Escherichia_coli_str_K_12_substr_MG1655.txt",  "EX_lcts_e"  , 1 , "E_coli"  ,  "E_coli_biomass_e"]
+11                   FBA[ "Escherichia_coli_SE11.txt",  "EX_biomass_e"  , 1 , "E_coli"  ,  "E_coli_biomass_e", "true"]
+12                             FBA[ "Escherichia_coli_SE11.txt",  "EX_glc_D_e"  , 1 , "E_coli"  ,  "E_coli_biomass_e"]
+13                              FBA[ "Escherichia_coli_SE11.txt",  "EX_lcts_e"  , 1 , "E_coli"  ,  "E_coli_biomass_e"]
+14                             FBA[ "Escherichia_coli_SE11.txt",  "EX_glc_D_e"  , 1 , "E_coli"  ,  "E_coli_biomass_e"]
+15                              FBA[ "Escherichia_coli_SE11.txt",  "EX_lcts_e"  , 1 , "E_coli"  ,  "E_coli_biomass_e"]
+16                             FBA[ "Escherichia_coli_SE11.txt",  "EX_glc_D_e"  , 1 , "E_coli"  ,  "E_coli_biomass_e"]
+17                             FBA[ "Escherichia_coli_SE11.txt",  "EX_glc_D_e"  , 1 , "E_coli"  ,  "E_coli_biomass_e"]
+18                              FBA[ "Escherichia_coli_SE11.txt",  "EX_lcts_e"  , 1 , "E_coli"  ,  "E_coli_biomass_e"]
+19                              FBA[ "Escherichia_coli_SE11.txt",  "EX_lcts_e"  , 1 , "E_coli"  ,  "E_coli_biomass_e"]
+20                             FBA[ "Escherichia_coli_SE11.txt",  "EX_glc_D_e"  , 1 , "E_coli"  ,  "E_coli_biomass_e"]
+21                             FBA[ "Escherichia_coli_SE11.txt",  "EX_glc_D_e"  , 1 , "E_coli"  ,  "E_coli_biomass_e"]
+22                              FBA[ "Escherichia_coli_SE11.txt",  "EX_lcts_e"  , 1 , "E_coli"  ,  "E_coli_biomass_e"]
+23                              FBA[ "Escherichia_coli_SE11.txt",  "EX_lcts_e"  , 1 , "E_coli"  ,  "E_coli_biomass_e"]
+24                             FBA[ "Escherichia_coli_SE11.txt",  "EX_glc_D_e"  , 1 , "E_coli"  ,  "E_coli_biomass_e"]
+25                             FBA[ "Escherichia_coli_SE11.txt",  "EX_glc_D_e"  , 1 , "E_coli"  ,  "E_coli_biomass_e"]
+26                             FBA[ "Escherichia_coli_SE11.txt",  "EX_glc_D_e"  , 1 , "E_coli"  ,  "E_coli_biomass_e"]
+27                             FBA[ "Escherichia_coli_SE11.txt",  "EX_glc_D_e"  , 1 , "E_coli"  ,  "E_coli_biomass_e"]
+28                              FBA[ "Escherichia_coli_SE11.txt",  "EX_lcts_e"  , 1 , "E_coli"  ,  "E_coli_biomass_e"]
+29                              FBA[ "Escherichia_coli_SE11.txt",  "EX_lcts_e"  , 1 , "E_coli"  ,  "E_coli_biomass_e"]
+30                              FBA[ "Escherichia_coli_SE11.txt",  "EX_lcts_e"  , 1 , "E_coli"  ,  "E_coli_biomass_e"]
+31                              FBA[ "Escherichia_coli_SE11.txt",  "EX_lcts_e"  , 1 , "E_coli"  ,  "E_coli_biomass_e"]
 32 FBA[ "Clostridium_butyricum_DSM_10702.txt",  "EX_biomass_e"  , 1 , "Clost_buty"  ,  "Clost_buty_biomass_e", "true"]
 33 FBA[ "Clostridium_butyricum_DSM_10702.txt",  "EX_biomass_e"  , 1 , "Clost_buty"  ,  "Clost_buty_biomass_e", "true"]
 34 FBA[ "Clostridium_butyricum_DSM_10702.txt",  "EX_biomass_e"  , 1 , "Clost_buty"  ,  "Clost_buty_biomass_e", "true"]
@@ -213,79 +213,79 @@ Full arc_df contents
 
   Biomass Exchange Transitions
   ----------------------------
-[ERROR]  Arc Connectivity: No arcs found for ex_biomass_e_out_ec 
-[ERROR]  Arc Connectivity: No arcs found for EX_biomass_e_in_ec 
+[ERROR]  Arc Connectivity: No arcs found for EX_biomass_e_out_ecs 
+[ERROR]  Arc Connectivity: No arcs found for EX_biomass_e_in_ecs 
 
   Metabolite Boundary Transitions
   -------------------------------
-[INFO]  Arc Connectivity: No import transition found for glc__D_e (EX_glc__D_e_in_ec) 
-[INFO]  Arc Connectivity: No export transition found for glc__D_e (EX_glc__D_e_out_ec) 
-[INFO]  Arc Connectivity: No import transition found for lcts_e (EX_lcts_e_in_ec) 
-[INFO]  Arc Connectivity: No export transition found for lcts_e (EX_lcts_e_out_ec) 
+[INFO]  Arc Connectivity: No import transition found for glc__D_e (EX_glc__D_e_in_ecs) 
+[INFO]  Arc Connectivity: No export transition found for glc__D_e (EX_glc__D_e_out_ecs) 
+[INFO]  Arc Connectivity: No import transition found for lcts_e (EX_lcts_e_in_ecs) 
+[INFO]  Arc Connectivity: No export transition found for lcts_e (EX_lcts_e_out_ecs) 
 
   Population Transitions
   ----------------------
-[ERROR]  Arc Connectivity: No arcs found for Dup_ec 
-[ERROR]  Arc Connectivity: No arcs found for Death_ec 
-[ERROR]  Arc Connectivity: No arcs found for Starv_ec 
+[ERROR]  Arc Connectivity: No arcs found for Dup_ecs 
+[ERROR]  Arc Connectivity: No arcs found for Death_ecs 
+[ERROR]  Arc Connectivity: No arcs found for Starv_ecs 
 [INFO]  Arc Connectivity: Validating arc patterns for Clostridium_butyricum 
 
   Biomass Exchange Transitions
   ----------------------------
-[ERROR]  Arc Connectivity: No arcs found for ex_biomass_e_out_cb 
-[ERROR]  Arc Connectivity: No arcs found for EX_biomass_e_in_cb 
+[ERROR]  Arc Connectivity: No arcs found for EX_biomass_e_out_cbd1 
+[ERROR]  Arc Connectivity: No arcs found for EX_biomass_e_in_cbd1 
 
   Metabolite Boundary Transitions
   -------------------------------
-[INFO]  Arc Connectivity: No import transition found for glc__D_e (EX_glc__D_e_in_cb) 
-[INFO]  Arc Connectivity: No export transition found for glc__D_e (EX_glc__D_e_out_cb) 
-[INFO]  Arc Connectivity: No import transition found for lcts_e (EX_lcts_e_in_cb) 
-[INFO]  Arc Connectivity: No export transition found for lcts_e (EX_lcts_e_out_cb) 
+[INFO]  Arc Connectivity: No import transition found for glc__D_e (EX_glc__D_e_in_cbd1) 
+[INFO]  Arc Connectivity: No export transition found for glc__D_e (EX_glc__D_e_out_cbd1) 
+[INFO]  Arc Connectivity: No import transition found for lcts_e (EX_lcts_e_in_cbd1) 
+[INFO]  Arc Connectivity: No export transition found for lcts_e (EX_lcts_e_out_cbd1) 
 
   Population Transitions
   ----------------------
-[ERROR]  Arc Connectivity: No arcs found for Dup_cb 
-[ERROR]  Arc Connectivity: No arcs found for Death_cb 
-[ERROR]  Arc Connectivity: No arcs found for Starv_cb 
+[ERROR]  Arc Connectivity: No arcs found for Dup_cbd1 
+[ERROR]  Arc Connectivity: No arcs found for Death_cbd1 
+[ERROR]  Arc Connectivity: No arcs found for Starv_cbd1 
 
 7. Model Completeness Summary
 -----------------------------
 
-[INFO]  Completeness: Model has 43 errors and 6 warnings 
-[INFO]  Completeness: Estimated model completeness: 53.8% 
+[INFO]  Completeness: Model has 51 errors and 0 warnings 
+[INFO]  Completeness: Estimated model completeness: 49.5% 
 [INFO]  Completeness: Model status: PARTIALLY COMPLETE (significant errors) ⚠ 
 
 8. Fix Suggestions
 ------------------
 
 [INFO]  Fixes: The following fixes are suggested: 
-[INFO]  Fixes: Add missing place 'n_ec' 
-[INFO]  Fixes: Rename place 'e_coli_biomass_e' to 'biomass_e_ec' 
-[INFO]  Fixes: Add missing place 'n_cb' 
-[INFO]  Fixes: Rename place 'e_coli_biomass_e' to 'biomass_e_cb' 
+[INFO]  Fixes: Add missing place 'n_ecs' 
+[INFO]  Fixes: Rename place 'e_coli_biomass_e' to 'biomass_e_ecs' 
+[INFO]  Fixes: Add missing place 'n_cbd1' 
+[INFO]  Fixes: Rename place 'e_coli_biomass_e' to 'biomass_e_cbd1' 
 [INFO]  Fixes: Arc connectivity and multiplicity issues: 
-[INFO]  Fixes: Transition 'EX_biomass_e_out_ec' - missing_arc - Place 'biomass_e_ec': Add output arc to biomass_e with multiplicity 2 
-[INFO]  Fixes: Transition 'dup_ec' - missing_arc - Place 'n_ec': Add output arc to cell count with multiplicity 2 
-[INFO]  Fixes: Transition 'EX_biomass_e_out_cb' - missing_arc - Place 'biomass_e_cb': Add output arc to biomass_e with multiplicity 2 
-[INFO]  Fixes: Transition 'dup_cb' - missing_arc - Place 'n_cb': Add output arc to cell count with multiplicity 2 
+[INFO]  Fixes: Transition 'EX_biomass_e_out_ecs' - missing_arc - Place 'biomass_e_ecs': Add output arc to biomass_e with multiplicity 2 
+[INFO]  Fixes: Transition 'dup_ecs' - missing_arc - Place 'n_ecs': Add output arc to cell count with multiplicity 2 
+[INFO]  Fixes: Transition 'EX_biomass_e_out_cbd1' - missing_arc - Place 'biomass_e_cbd1': Add output arc to biomass_e with multiplicity 2 
+[INFO]  Fixes: Transition 'dup_cbd1' - missing_arc - Place 'n_cbd1': Add output arc to cell count with multiplicity 2 
 [INFO]  Fixes: Additional arc fixes: 
-[INFO]  Fixes: For transition 'EX_biomass_e_out_ec', make these arc changes: 
-[INFO]  Fixes:   • Add output arc to biomass_e with multiplicity 2 with place 'biomass_e_ec' 
-[INFO]  Fixes: For transition 'dup_ec', make these arc changes: 
-[INFO]  Fixes:   • Add output arc to cell count with multiplicity 2 with place 'n_ec' 
-[INFO]  Fixes: For transition 'EX_biomass_e_out_cb', make these arc changes: 
-[INFO]  Fixes:   • Add output arc to biomass_e with multiplicity 2 with place 'biomass_e_cb' 
-[INFO]  Fixes: For transition 'dup_cb', make these arc changes: 
-[INFO]  Fixes:   • Add output arc to cell count with multiplicity 2 with place 'n_cb' 
-[INFO]  Fixes: For transition 'EX_lcts_e_in_ec', make these arc changes: 
+[INFO]  Fixes: For transition 'EX_biomass_e_out_ecs', make these arc changes: 
+[INFO]  Fixes:   • Add output arc to biomass_e with multiplicity 2 with place 'biomass_e_ecs' 
+[INFO]  Fixes: For transition 'dup_ecs', make these arc changes: 
+[INFO]  Fixes:   • Add output arc to cell count with multiplicity 2 with place 'n_ecs' 
+[INFO]  Fixes: For transition 'EX_biomass_e_out_cbd1', make these arc changes: 
+[INFO]  Fixes:   • Add output arc to biomass_e with multiplicity 2 with place 'biomass_e_cbd1' 
+[INFO]  Fixes: For transition 'dup_cbd1', make these arc changes: 
+[INFO]  Fixes:   • Add output arc to cell count with multiplicity 2 with place 'n_cbd1' 
+[INFO]  Fixes: For transition 'EX_lcts_e_in_ecs', make these arc changes: 
 [INFO]  Fixes:   • Add input arc from metabolite with place 'glc__D_e' 
 [INFO]  Fixes:   • Add input arc from metabolite with place 'lcts_e' 
-[INFO]  Fixes: For transition 'EX_lcts_e_out_ec', make these arc changes: 
+[INFO]  Fixes: For transition 'EX_lcts_e_out_ecs', make these arc changes: 
 [INFO]  Fixes:   • Add output arc to metabolite with place 'glc__D_e' 
 [INFO]  Fixes:   • Add output arc to metabolite with place 'lcts_e' 
-[INFO]  Fixes: For transition 'EX_lcts_e_in_cb', make these arc changes: 
+[INFO]  Fixes: For transition 'EX_lcts_e_in_cbd1', make these arc changes: 
 [INFO]  Fixes:   • Add input arc from metabolite with place 'glc__D_e' 
 [INFO]  Fixes:   • Add input arc from metabolite with place 'lcts_e' 
-[INFO]  Fixes: For transition 'EX_lcts_e_out_cb', make these arc changes: 
+[INFO]  Fixes: For transition 'EX_lcts_e_out_cbd1', make these arc changes: 
 [INFO]  Fixes:   • Add output arc to metabolite with place 'glc__D_e' 
 [INFO]  Fixes:   • Add output arc to metabolite with place 'lcts_e' 
