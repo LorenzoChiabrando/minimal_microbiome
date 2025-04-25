@@ -2,9 +2,8 @@
 validate_pnpro <- function(pnpro_path,
                            bacterial_models,
                            metabolite_places,
-                           model_dir,
-                           log_dir,
-                           results_projection = NULL) {
+                           validation_dir,
+                           results_projection) {
   
   # Extract the 2nd abbreviation for each organism in order
   abbrs <- map_chr(bacterial_models, ~ .x$abbreviation[2])
@@ -60,7 +59,6 @@ validate_pnpro <- function(pnpro_path,
       metabolites = map(meta_dir, ~ read_csv(file.path(.x, "metabolites_metadata.csv"))),
       reactions   = map(meta_dir, ~ read_csv(file.path(.x, "reactions_metadata.csv")))
     )
-  
 
   projectable_df <- models_df %>%
     tidyr::unnest(metabolites) %>%
@@ -100,8 +98,8 @@ validate_pnpro <- function(pnpro_path,
     dplyr::select(transition, delay, reaction, abbr)
   
   call_cmds <- tibble(
-    transition = transition_names,
-    delay      = transition_delays
+    transition = t_names,
+    delay      = t_delays
   ) %>%
     dplyr::filter(str_detect(delay, "^Call\\[")) %>%
     dplyr::mutate(
@@ -122,7 +120,6 @@ validate_pnpro <- function(pnpro_path,
       org_index
     )
   
-
   # append biomass reaction for every organism
   biomass_rxns <- tibble(
     abbr    = abbrs,
@@ -165,13 +162,13 @@ validate_pnpro <- function(pnpro_path,
     ) %>%
     dplyr::select(transition, command, reaction, abbr, direction, place)
 
-# 2. Define column‐indices for each function
-func_cols <- c(Starvation = 0L, Duplication = 1L, Death = 2L)
+  # 2. Define column‐indices for each function
+  func_cols <- c(Starvation = 0L, Duplication = 1L, Death = 2L)
 
-# 3. Map function names → transition‐prefixes
-prefix_map <- c(Starvation="Starv", Duplication="Dup", Death="Death")
-
-repaired_call_cmds <- purrr::imap_dfr(abbrs, function(abbr, idx) {
+  # 3. Map function names → transition‐prefixes
+  prefix_map <- c(Starvation="Starv", Duplication="Dup", Death="Death")
+  
+  repaired_call_cmds <- purrr::imap_dfr(abbrs, function(abbr, idx) {
   org_index <- idx - 1L
   
   tibble(
@@ -305,13 +302,13 @@ base_name <- basename(tools::file_path_sans_ext(pnpro_path))
 # raw (partial) arcs
 write_csv(
   arc_df,
-  file.path(log_dir, paste0(base_name, "_arc_df.csv"))
+  file.path(validation_dir, paste0(base_name, "_arc_df.csv"))
 )
 
 # full repaired arcs
 write_csv(
   arc_df_repaired,
-  file.path(log_dir, paste0(base_name, "_arc_df_repaired.csv"))
+  file.path(validation_dir, paste0(base_name, "_arc_df_repaired.csv"))
 )
 
 # ————————————————————————————————————————————

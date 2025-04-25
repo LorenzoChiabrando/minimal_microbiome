@@ -13,6 +13,7 @@ source(paste0(wd, "/functions/setup_models.R"))
 source(paste0(wd, "/functions/process_model.R"))
 source(paste0(wd, "/functions/project_boundary_reactions.R"))
 source(paste0(wd, "/functions/validate_pnpro.R"))
+source(paste0(wd, "/functions/repair_pnpro.R"))
 
 pnpro_path <- file.path(paste0(wd, "/net/Minimal_EcCb.PNPRO"))
 
@@ -50,19 +51,24 @@ results_projection <- project_boundary_reactions(
 )
 
 validation = validate_pnpro(pnpro_path,
-              bacterial_models,
-              metabolite_places,
-              model_dir,
-              log_dir,
-              results_projection = NULL)
+                            bacterial_models,
+                            metabolite_places,
+                            validation_dir = paste0(wd, "/net/validation_data"),
+                            results_projection)
 
-arc_df_repaired <- readr::read_csv(paste0(wd, "/net/validation_logs/Minimal_EcCb_arc_df_repaired.csv"))
+arc_df_repaired <- readr::read_csv(paste0(wd, "/net/validation_data/Minimal_EcCb_arc_df_repaired.csv"))
 # this has columns: transition, direction, place, multiplicity, command
 
-# load each reactions_metadata.csv into a named list
-rx_meta <- bacterial_models %>% 
-  set_names(map_chr(., ~ .x$abbr[2])) %>%
-  map(~ read_csv(file.path("input", .x$FBAmodel, "reactions_metadata.csv")))
+repair_pnpro(arc_df_repaired,
+             project_name = "RepairedModel",
+             gspn_name    = "GSPN",
+             output_file  = paste0(wd, "/net/Minimal_EcCb_repaired.PNPRO"))
+
+reorganize_pnpro(
+  input_file      = "net/Minimal_EcCb_repaired.PNPRO",
+  arc_df_repaired = arc_df_repaired,
+  output_file     = "net/Minimal_EcCb_layout.PNPRO"
+)
 
 ##################
 ## continuing main
