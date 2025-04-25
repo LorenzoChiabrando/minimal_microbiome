@@ -3,10 +3,10 @@ project_boundary_reactions <- function(bacterial_models,
                                        metabolite_places,
                                        output_dir_projections) {
   
-  # 1. Load & validate models and metadata
   models_df <- tibble(model = bacterial_models) %>%
     mutate(
       abbr       = map_chr(model, ~ .x$abbreviation[2]),
+      FBAmodel   = map_chr(model, ~ .x$FBAmodel),
       model_file = file.path("compiled_models", paste0(abbr, "_model.txt")),
       meta_dir   = file.path("input", FBAmodel)
     ) %>%

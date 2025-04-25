@@ -1,56 +1,29 @@
-#' Validate a PNPRO file for FBA-integrated bacterial models
-#'
-#' Applies the standard rules for FBA-driven Petri nets:
-#'  • FBA[...] syntax & model-file existence
-#'  • Place naming (n_<abbr>, biomass_e_<abbr>)
-#'  • Required transitions (Starv_, Death_, Dup_, EX_biomass_e_in_, EX_biomass_e_out_)
-#'  • Shared metabolite places
-#'  • Arc connectivity for every FBA or Call transition
-#'
-#' @param pnpro_path     Path to your .PNPRO file
-#' @param bacterial_models  A list of lists, each with
-#'        $abbr     — character abbreviation (e.g. "ec")
-#'        $FBAmodel — model base name (no `.txt`)
-#' @param metabolite_places  Character vector of expected shared metabolite place IDs
-#' @param model_dir      Directory where you keep compiled_models/*.txt  
-#' @param log_dir        Directory to write validation logs (CSV outputs)
-#' @return Invisibly returns a list with:
-#'         - issues: tibble of validation issues
-#'         - arc_df: tibble of arcs for FBA/Call transitions
+
 validate_pnpro <- function(pnpro_path,
                            bacterial_models,
-                           metabolite_places = character(),
+                           metabolite_places,
                            model_dir,
-                           log_dir) {
-  library(xml2)
-  library(stringr)
-  library(dplyr)
-  library(purrr)
-  library(readr)
+                           log_dir,
+                           results_projection = NULL) {
   
-  issues <- list()
-  log_issue <- function(level, section, message, object = NA_character_) {
-    issues <<- append(issues, list(tibble(
-      level   = level,
-      section = section,
-      message = message,
-      object  = object
-    )))
-  }
+  # Extract the 2nd abbreviation for each organism in order
+  abbrs <- map_chr(bacterial_models, ~ .x$abbreviation[2])
   
-  # Parse XML
-  xml <- tryCatch(read_xml(pnpro_path),
-                  error = function(e) stop("Failed to parse XML: ", e$message))
-  places      <- xml_find_all(xml, "//place")
-  transitions <- xml_find_all(xml, "//transition")
-  place_names       <- xml_attr(places,      "name") %>% tolower()
-  transition_names  <- xml_attr(transitions, "name")
-  transition_delays <- xml_attr(transitions, "delay")
+  # ————————————————————————————————————————————
+  # 0) Read & parse the PNPRO
+  # ————————————————————————————————————————————
+  xml <- read_xml(pnpro_path)
   
-  # Build arc_df for FBA/Call transitions
-  is_call <- str_detect(transition_delays, "^Call\\[")
-  is_fba  <- str_detect(transition_delays, "^FBA\\[")
-  special <- transition_names[is_call | is_fba]
+  # grab all <transition> names/delays
+  tnodes <- xml_find_all(xml, "//transition")
+  t_names  <- xml_attr(tnodes, "name")
+  t_delays <- xml_attr(tnodes, "delay")
+  
+  # build arc_df: only those arcs attached to either Call[…] or FBA[…]
+  is_call <- str_detect(t_delays, "^Call\\[")
+  is_fba  <- str_detect(t_delays, "^FBA\\[")
+  special <- t_names[is_call | is_fba]
+  
   arc_df <- xml_find_all(xml, "//arc") %>%
     map_df(~{
       a <- xml_attrs(.x)
@@ -58,7 +31,7 @@ validate_pnpro <- function(pnpro_path,
         head         = a["head"],
         tail         = a["tail"],
         kind         = a["kind"],
-        multiplicity = as.integer(dplyr::coalesce(a["mult"], "1"))
+        multiplicity = as.integer(coalesce(a["mult"], "1"))
       )
     }) %>%
     filter((kind=="INPUT"  & head %in% special) |
@@ -68,134 +41,285 @@ validate_pnpro <- function(pnpro_path,
       direction    = kind,
       place        = if_else(kind=="INPUT", tail, head),
       multiplicity,
-      command      = transition_delays[match(transition, transition_names)]
+      command      = t_delays[match(transition, t_names)]
     )
   
-  # 0. FBA models exist on-disk
-  for (m in bacterial_models) {
-    fpath <- file.path(model_dir, paste0(m$FBAmodel, ".txt"))
-    if (!file.exists(fpath)) {
-      log_issue("ERROR", "FBA Models",
-                sprintf("Missing model file: %s", fpath))
-    }
-  }
+  # ————————————————————————————————————————————
+  # 1) Re-derive exactly which boundary reactions each species should have
+  #    (same logic as project_boundary_reactions())
+  # ————————————————————————————————————————————
+  models_df <- tibble(model = bacterial_models) %>%
+    mutate(
+      abbr     = map_chr(model, ~ .x$abbreviation[2]),
+      meta_dir = file.path("input", map_chr(model, ~ .x$FBAmodel))
+    )
   
-  # 0b. Validate each FBA[...] transition
-  fba_idx <- which(str_detect(transition_delays, "^FBA\\["))
-  pat <- 'FBA\\[ *"([^"]+)" *, *"([^"]+)" *, *([0-9.]+) *, *"([^"]+)" *, *"([^"]+)"(?: *, *"(true|false)")? *\\]'
-  for (i in fba_idx) {
-    nm    <- transition_names[i]
-    delay <- transition_delays[i]
-    parts <- regmatches(delay, regexec(pat, delay))[[1]]
-    if (length(parts) < 6) {
-      log_issue("ERROR", "FBA Validation",
-                sprintf("Bad syntax in %s: %s", nm, delay), nm)
-      next
-    }
-    # model-file check
-    model_file <- parts[2]
-    if (!any(sapply(bacterial_models,
-                    function(m) paste0(m$FBAmodel, ".txt")==model_file))) {
-      log_issue("ERROR", "FBA Validation",
-                sprintf("Unknown model file '%s' in %s", model_file, nm), nm)
-    }
-    # scaling-constant > 0
-    sc_str <- parts[3]
-    if (!grepl("^[0-9]+(?:\\.[0-9]+)?$", sc_str)) {
-      log_issue("ERROR", "FBA Validation",
-                sprintf("Invalid scaling constant '%s' in %s", sc_str, nm), nm)
+  # read metabolites & reactions metadata
+  models_df <- models_df %>%
+    mutate(
+      metabolites = map(meta_dir, ~ read_csv(file.path(.x, "metabolites_metadata.csv"))),
+      reactions   = map(meta_dir, ~ read_csv(file.path(.x, "reactions_metadata.csv")))
+    )
+  
+
+  projectable_df <- models_df %>%
+    tidyr::unnest(metabolites) %>%
+    dplyr::filter(id %in% metabolite_places) %>%
+    dplyr::select(abbr, met_id = id)
+  
+  # pull out boundary reactions
+  boundary_df <- models_df %>%
+    tidyr::unnest(reactions) %>%
+    dplyr::filter(type=="boundary") %>%
+    dplyr::select(abbr, reaction = abbreviation, equation)
+  
+  # match metabolite ↔ boundary reaction
+  shared_rxns_df <- projectable_df %>%
+    left_join(boundary_df, by="abbr") %>%
+    filter(str_detect(equation, paste0("\\b", met_id, "\\b"))) %>%
+    distinct(abbr, met_id, reaction)
+  
+  # ————————————————————————————————————————————
+  # 2) Parse all your FBA[…] commands out of the PN, keeping exact delay
+  # ————————————————————————————————————————————
+  fba_cmds <- tibble(
+    transition = t_names,
+    delay      = t_delays
+  ) %>%
+    dplyr::filter(str_detect(delay, "^FBA\\[")) %>%
+    dplyr::mutate(
+      # parse model, reaction, scale, countPlace, biomassPlace
+      parts = str_match(
+        delay,
+        'FBA\\[ *"([^"]+)" *, *"([^"]+)" *, *([0-9\\.]+) *, *"([^"]+)" *, *"([^"]+)"'
+      ),
+      model    = parts[,2],
+      reaction = parts[,3],
+      abbr     = str_remove(parts[,5], "^n_")  # get the species abbr
+    ) %>%
+    dplyr::select(transition, delay, reaction, abbr)
+  
+  call_cmds <- tibble(
+    transition = transition_names,
+    delay      = transition_delays
+  ) %>%
+    dplyr::filter(str_detect(delay, "^Call\\[")) %>%
+    dplyr::mutate(
+      # parse: function name, full parameter expr, organism‐index
+      parts = str_match(
+        delay,
+        'Call\\[\\s*"([^"]+)"\\s*,\\s*(.+)\\s*,\\s*([0-9]+)\\s*\\]'
+      ),
+      fun_name   = parts[,2],
+      param_expr = parts[,3],
+      org_index  = as.integer(parts[,4])
+    ) %>%
+    dplyr::select(
+      transition,
+      command    = delay,
+      fun_name,
+      param_expr,
+      org_index
+    )
+  
+
+  # append biomass reaction for every organism
+  biomass_rxns <- tibble(
+    abbr    = abbrs,
+    met_id  = "biomass_e",       # no environmental metabolite
+    reaction= "EX_biomass_e"
+  )
+  
+  shared_rxns_df <- bind_rows(shared_rxns_df, biomass_rxns)
+  
+  # now this will include EX_biomass_e_in_<abbr> & EX_biomass_e_out_<abbr>
+  repaired_fba_cmds <- shared_rxns_df %>%
+    dplyr::mutate(
+      model_file    = paste0(abbr, "_model.txt"),
+      count_place   = paste0("n_",         abbr),
+      biomass_place = paste0("biomass_e_", abbr),
+      scaling       = 1L,
+      is_biomass    = reaction == "EX_biomass_e"
+    ) %>%
+    crossing(direction = c("INPUT","OUTPUT")) %>%
+    dplyr::mutate(
+      transition = paste0(
+        reaction,
+        if_else(direction=="INPUT","_in_","_out_"),
+        abbr
+      ),
+      place = if_else(
+        reaction=="EX_biomass_e", 
+        biomass_place,      # hook biomass reactions to biomass place
+        met_id
+      ),
+      command = sprintf(
+        'FBA["%s","%s",%d,"%s","%s"%s]',
+        model_file,
+        reaction,
+        scaling,
+        count_place,
+        biomass_place,
+        if_else(is_biomass, ', "true"', '')
+      )
+    ) %>%
+    dplyr::select(transition, command, reaction, abbr, direction, place)
+
+# 2. Define column‐indices for each function
+func_cols <- c(Starvation = 0L, Duplication = 1L, Death = 2L)
+
+# 3. Map function names → transition‐prefixes
+prefix_map <- c(Starvation="Starv", Duplication="Dup", Death="Death")
+
+repaired_call_cmds <- purrr::imap_dfr(abbrs, function(abbr, idx) {
+  org_index <- idx - 1L
+  
+  tibble(
+    fun_name  = names(func_cols),
+    col_index = unname(func_cols),
+    org_index = org_index
+  ) %>%
+    dplyr::mutate(
+      # always append the abbr, even for the first organism
+      transition = paste0(prefix_map[fun_name], "_", abbr),
+      command    = sprintf(
+        'Call["%s", FromTable["Bacteria_Parameters.csv", %d, %d], %d]',
+        fun_name, org_index, col_index, org_index
+      )
+    ) %>%
+    dplyr::select(transition, command, fun_name, org_index, col_index)
+})
+
+# ————————————————————————————————————————————
+# 3) Build call_arcs from repaired_call_cmds
+#    (hook each population‐process transition up to its count & biomass places)
+# ————————————————————————————————————————————
+
+call_arcs <- purrr::pmap_dfr(
+  list(
+    transition = repaired_call_cmds$transition,
+    command    = repaired_call_cmds$command,
+    fun_name   = repaired_call_cmds$fun_name,
+    org_index  = repaired_call_cmds$org_index
+  ),
+  function(transition, command, fun_name, org_index) {
+    abbr          <- abbrs[org_index + 1]
+    count_place   <- paste0("n_",         abbr)
+    biomass_place <- paste0("biomass_e_", abbr)
+    
+    switch(fun_name,
+           # Starvation: INPUT from biomass only
+           "Starvation" = tibble(
+             transition, direction = "INPUT", place = biomass_place,
+             multiplicity = 1L, command
+           ),
+           
+           # Duplication: INPUT from count & biomass; OUTPUT back to both (count×2)
+           "Duplication" = bind_rows(
+             tibble(transition, direction = "INPUT",  place = count_place,   multiplicity = 1L, command),
+             tibble(transition, direction = "INPUT",  place = biomass_place, multiplicity = 1L, command),
+             tibble(transition, direction = "OUTPUT", place = count_place,   multiplicity = 2L, command),
+             tibble(transition, direction = "OUTPUT", place = biomass_place, multiplicity = 1L, command)
+           ),
+           
+           # Death: INPUT from count & biomass; OUTPUT to biomass only
+           "Death" = bind_rows(
+             tibble(transition, direction = "INPUT",  place = count_place,   multiplicity = 1L, command),
+             tibble(transition, direction = "INPUT",  place = biomass_place, multiplicity = 1L, command),
+             tibble(transition, direction = "OUTPUT", place = biomass_place, multiplicity = 1L, command)
+           )
+    )
+  }
+)
+
+# ————————————————————————————————————————————
+# 4) Build the FBA arcs according to the connectivity patterns
+# ————————————————————————————————————————————
+fba_arcs <- purrr::pmap_dfr(
+  list(
+    transition = repaired_fba_cmds$transition,
+    reaction   = repaired_fba_cmds$reaction,
+    abbr       = repaired_fba_cmds$abbr,
+    met_place  = repaired_fba_cmds$place,
+    command    = repaired_fba_cmds$command
+  ),
+  function(transition, reaction, abbr, met_place, command) {
+    count_place   <- paste0("n_",         abbr)
+    biomass_place <- paste0("biomass_e_", abbr)
+    
+    if (reaction != "EX_biomass_e") {
+      # Import vs Export
+      if (endsWith(transition, paste0("_in_",  abbr))) {
+        # IMPORT: consume metabolite + population/biomass, then re‐output population/biomass
+        bind_rows(
+          # INPUT arcs
+          tibble(transition, direction="INPUT",  place=met_place,        multiplicity=1L, command),
+          tibble(transition, direction="INPUT",  place=count_place,      multiplicity=1L, command),
+          tibble(transition, direction="INPUT",  place=biomass_place,    multiplicity=1L, command),
+          # OUTPUT arcs
+          tibble(transition, direction="OUTPUT", place=count_place,      multiplicity=1L, command),
+          tibble(transition, direction="OUTPUT", place=biomass_place,    multiplicity=1L, command)
+        )
+      } else {
+        # EXPORT: consume population/biomass, then output metabolite + population/biomass
+        bind_rows(
+          # INPUT arcs
+          tibble(transition, direction="INPUT",  place=count_place,      multiplicity=1L, command),
+          tibble(transition, direction="INPUT",  place=biomass_place,    multiplicity=1L, command),
+          # OUTPUT arcs
+          tibble(transition, direction="OUTPUT", place=met_place,        multiplicity=1L, command),
+          tibble(transition, direction="OUTPUT", place=count_place,      multiplicity=1L, command),
+          tibble(transition, direction="OUTPUT", place=biomass_place,    multiplicity=1L, command)
+        )
+      }
     } else {
-      sc <- as.numeric(sc_str)
-      if (sc <= 0) {
-        log_issue("ERROR", "FBA Validation",
-                  sprintf("Non-positive scaling constant '%s' in %s", sc_str, nm), nm)
+      # Biomass boundary
+      if (endsWith(transition, paste0("_in_",  abbr))) {
+        # BIOMASS IN: consume biomass
+        tibble(transition, direction="INPUT",  place=biomass_place, multiplicity=1L, command)
+      } else {
+        # BIOMASS OUT: consume biomass, produce biomass×2
+        bind_rows(
+          tibble(transition, direction="INPUT",  place=biomass_place, multiplicity=1L, command),
+          tibble(transition, direction="OUTPUT", place=biomass_place, multiplicity=2L, command)
+        )
       }
     }
-    # place-names
-    count_p   <- parts[4]
-    biomass_p <- parts[5]
-    abbr <- NULL
-    for (m in bacterial_models) {
-      if (grepl(m$abbr[2], nm, ignore.case=TRUE) ||
-          grepl(m$FBAmodel, model_file, ignore.case=TRUE)) {
-        abbr <- tolower(m$abbr[2]); break
-      }
-    }
-    if (!is.null(abbr)) {
-      exp_count <- sprintf("n_%s", abbr)
-      exp_biom  <- sprintf("biomass_e_%s", abbr)
-      if (tolower(count_p)   != exp_count)
-        log_issue("ERROR","FBA Validation",
-                  sprintf("Count place '%s' ≠ '%s'", count_p, exp_count), nm)
-      if (tolower(biomass_p) != exp_biom)
-        log_issue("ERROR","FBA Validation",
-                  sprintf("Biomass place '%s' ≠ '%s'", biomass_p, exp_biom), nm)
-    } else {
-      log_issue("WARNING","FBA Validation",
-                sprintf("Could not infer abbreviation for %s", nm), nm)
-    }
   }
-  if (length(fba_idx) == 0) {
-    log_issue("WARNING", "FBA Models", "No FBA[...] transitions found")
-  }
-  
-  # 1. Place naming
-  for (m in bacterial_models) {
-    abbr <- tolower(m$abbr[2])
-    cplace <- sprintf("n_%s", abbr)
-    bplace <- sprintf("biomass_e_%s", abbr)
-    if (!cplace %in% place_names)
-      log_issue("ERROR","Places",sprintf("Missing place '%s'", cplace))
-    if (!bplace %in% place_names)
-      log_issue("ERROR","Places",sprintf("Missing place '%s'", bplace))
-  }
-  
-  # 2. Required transitions
-  for (m in bacterial_models) {
-    abbr <- tolower(m$abbr[2])
-    req  <- c(sprintf("Starv_%s",abbr),
-              sprintf("Death_%s",abbr),
-              sprintf("Dup_%s",abbr),
-              sprintf("EX_biomass_e_in_%s",abbr),
-              sprintf("EX_biomass_e_out_%s",abbr))
-    for (r in req) {
-      if (!tolower(r) %in% tolower(transition_names))
-        log_issue("ERROR","Required Transitions",
-                  sprintf("Missing %s", r))
-    }
-  }
-  
-  # 3. Shared metabolites
-  for (met in metabolite_places) {
-    if (!tolower(met) %in% place_names)
-      log_issue("ERROR","Shared Metabolites",
-                sprintf("Missing metabolite place: %s", met))
-  }
-  
-  # 4. Arc connectivity
-  for (nm in special) {
-    sub <- arc_df %>% filter(transition==nm)
-    if (nrow(sub)==0) {
-      log_issue("ERROR","Arc Connectivity",
-                sprintf("No arcs attached to %s", nm), nm)
-    } else {
-      if (!any(sub$direction=="INPUT"))
-        log_issue("ERROR","Arc Connectivity",
-                  sprintf("%s has no INPUT arc", nm), nm)
-      if (!any(sub$direction=="OUTPUT"))
-        log_issue("ERROR","Arc Connectivity",
-                  sprintf("%s has no OUTPUT arc", nm), nm)
-    }
-  }
-  
-  # compile results
-  issues_df <- bind_rows(issues)
-  
-  # write CSV logs
-  if (!dir.exists(log_dir)) dir.create(log_dir, recursive=TRUE)
-  base <- tools::file_path_sans_ext(basename(pnpro_path))
-  write_csv(issues_df, file.path(log_dir, paste0(base, "_issues.csv")))
-  write_csv(arc_df,    file.path(log_dir, paste0(base, "_arc_df.csv")))
-  
-  invisible(list(issues=issues_df, arc_df=arc_df))
+)
+
+# ————————————————————————————————————————————
+# 5) Combine everything into arc_df_repaired
+# ————————————————————————————————————————————
+arc_df_repaired <- bind_rows(
+  call_arcs,   # repaired Call[…] arcs
+  fba_arcs     # repaired FBA[…] arcs
+) %>%
+  distinct(transition, direction, place, multiplicity, command)
+
+# ————————————————————————————————————————————
+# 6) Write out both raw and repaired arc tables
+# ————————————————————————————————————————————
+base_name <- basename(tools::file_path_sans_ext(pnpro_path))
+
+# raw (partial) arcs
+write_csv(
+  arc_df,
+  file.path(log_dir, paste0(base_name, "_arc_df.csv"))
+)
+
+# full repaired arcs
+write_csv(
+  arc_df_repaired,
+  file.path(log_dir, paste0(base_name, "_arc_df_repaired.csv"))
+)
+
+# ————————————————————————————————————————————
+# 7) Return both data frames
+# ————————————————————————————————————————————
+invisible(list(
+  raw_arcs      = arc_df,
+  repaired_arcs = arc_df_repaired
+))
+
 }

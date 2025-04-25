@@ -1,16 +1,22 @@
 
 wd <- getwd()
 
+source(paste0(wd, "/functions/install_and_setup.R"))
+
 # Load necessary scripts
-sapply(c("/epimod_FBAfunctions/R/FBAgreatmodeClass.R", "/epimod_FBAfunctions/R/class_generation.R", 
-         "/epimod_FBAfunctions/R/readMat.R"), function(f) source(paste0(wd, f)))
+sapply(c("/epimod_FBAfunctions/R/FBAgreatmodeClass.R", 
+         "/epimod_FBAfunctions/R/class_generation.R", 
+         "/epimod_FBAfunctions/R/readMat.R"), 
+       function(f) source(paste0(wd, f)))
 
 source(paste0(wd, "/functions/setup_models.R"))
 source(paste0(wd, "/functions/process_model.R"))
 source(paste0(wd, "/functions/project_boundary_reactions.R"))
 source(paste0(wd, "/functions/validate_pnpro.R"))
 
-c("glc__D_e", "lcts_e")
+pnpro_path <- file.path(paste0(wd, "/net/Minimal_EcCb.PNPRO"))
+
+metabolite_places = c("glc__D_e", "lcts_e")
 
 bacterial_models <- make_bacterial_models(
   model_names    = c("Escherichia_coli_SE11", "Clostridium_butyricum_DSM_10702"),
@@ -37,21 +43,26 @@ lapply(process_results, function(r) {
               ifelse(r$status == "success", "Successfully processed", paste("ERROR -", r$message))))
 })
 
-# assume bacterial_models is your list of models, metabolite_places your vector of metabolite IDs
-results <- project_boundary_reactions(
+results_projection <- project_boundary_reactions(
   bacterial_models   = bacterial_models,
   metabolite_places  = metabolite_places,
   output_dir_projections = paste0(wd, "/hamonisation_projection_info")
 )
 
-# call validation:
-issues <- validate_pnpro(
-  pnpro_path=paste0(wd, "/net/Minimal_EcCb.PNPRO"),
-  bacterial_models=bacterial_models,
-  metabolite_places=metabolite_places,
-  model_dir = "compiled_models",
-  log_dir = paste0(wd, "/net/validation_logs")
-)
+validation = validate_pnpro(pnpro_path,
+              bacterial_models,
+              metabolite_places,
+              model_dir,
+              log_dir,
+              results_projection = NULL)
+
+arc_df_repaired <- readr::read_csv(paste0(wd, "/net/validation_logs/Minimal_EcCb_arc_df_repaired.csv"))
+# this has columns: transition, direction, place, multiplicity, command
+
+# load each reactions_metadata.csv into a named list
+rx_meta <- bacterial_models %>% 
+  set_names(map_chr(., ~ .x$abbr[2])) %>%
+  map(~ read_csv(file.path("input", .x$FBAmodel, "reactions_metadata.csv")))
 
 ##################
 ## continuing main
