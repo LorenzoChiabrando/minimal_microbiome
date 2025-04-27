@@ -1,83 +1,94 @@
 
-wd <- getwd()
+wd <- getwd()    # or however you define your project root
 
 source(paste0(wd, "/functions/install_and_setup.R"))
 
 # Load necessary scripts
 sapply(c("/epimod_FBAfunctions/R/FBAgreatmodeClass.R", 
          "/epimod_FBAfunctions/R/class_generation.R", 
-         "/epimod_FBAfunctions/R/readMat.R"), 
+         "/epimod_FBAfunctions/R/readMat.R", 
+       "/epimod_FBAfunctions/R/ex_bounds_module.R"),
        function(f) source(paste0(wd, f)))
 
 source(paste0(wd, "/functions/setup_models.R"))
-source(paste0(wd, "/functions/process_model.R"))
-source(paste0(wd, "/functions/project_boundary_reactions.R"))
-source(paste0(wd, "/functions/validate_pnpro.R"))
-source(paste0(wd, "/functions/repair_pnpro.R"))
 
-pnpro_path <- file.path(paste0(wd, "/net/Minimal_EcCb.PNPRO"))
+cfg <- yaml::read_yaml(file.path(wd, "net", "config", "hypernode_minimal_doublet.yaml"))
 
-metabolite_places = c("glc__D_e", "lcts_e")
-
-bacterial_models <- make_bacterial_models(
-  model_names    = c("Escherichia_coli_SE11", "Clostridium_butyricum_DSM_10702"),
-  biomass_params = list(
-    list(max=1.172, mean=0.489, min=0.083),
-    list(max=1.5,   mean=0.6,   min=0.1)
-  ),
-  pop_params     = list(
-    list(starv=0.21, dup=1, death=0.018),
-    list(starv=0.21, dup=1, death=0.018)
-  ),
-  initial_counts = c(1e6, 1e6)
+# 1) Pull out the pieces
+model_names    <- vapply(cfg$organisms, `[[`, character(1), "model_name")
+biomass_params <- lapply(cfg$organisms, `[[`, "biomass")
+pop_params     <- lapply(cfg$organisms, `[[`, "population")
+initial_counts <- as.numeric(
+  vapply(cfg$organisms, `[[`, character(1), "initial_count")
 )
 
-write_bac_params(bacterial_models, file.path(wd, "input", "Bacteria_Parameters.csv"))
+# 2) Build the list (derive_abbrs() runs internally)
+bacterial_models <- make_bacterial_models(
+  model_names    = model_names,
+  biomass_params = biomass_params,
+  pop_params     = pop_params,
+  initial_counts = initial_counts
+)
 
-# Process models and display summary
+# 3) Write out Bacteria_Parameters.csv
+write_bac_params(bacterial_models, 
+                 file.path("input", "organisms_parameters.csv"))
+
+# 4) Now you have
+pnpro_path       <- cfg$pnpro_path
+metabolite_places<- cfg$metabolite_places
+
+source(paste0(wd, "/functions/process_model.R"))
+
+# run it on each organism
 process_results <- lapply(bacterial_models, process_model)
-cat("\nProcessing Summary:\n-----------------\n")
-lapply(process_results, function(r) {
-  cat(sprintf("%s %s (%s): %s\n", 
-              ifelse(r$status == "success", "✓", "✗"), 
-              r$organism, r$abbr, 
-              ifelse(r$status == "success", "Successfully processed", paste("ERROR -", r$message))))
-})
+
+invisible(
+  lapply(process_results, function(r) {
+    status_icon <- if (r$status == "success") "✓" else "✗"
+    msg         <- if (r$status == "success")
+      "Successfully processed"
+    else
+      paste("ERROR -", r$message)
+    cat(sprintf("%s  %s (%s): %s\n",
+                status_icon,
+                r$organism, r$abbr,
+                msg))
+  })
+)
+
+source(paste0(wd, "/functions/project_boundary_reactions.R"))
 
 results_projection <- project_boundary_reactions(
   bacterial_models   = bacterial_models,
   metabolite_places  = metabolite_places,
-  output_dir_projections = paste0(wd, "/hamonisation_projection_info")
+  output_dir_projections = paste0(wd, "/net/config/projection_info_hypernode_minimal_doublet")
 )
+
+cat( capture.output(results_projection$bounds), sep = "\n" )
+
+source(paste0(wd, "/functions/validate_pnpro.R"))
 
 validation = validate_pnpro(pnpro_path,
                             bacterial_models,
                             metabolite_places,
-                            validation_dir = paste0(wd, "/net/validation_data"),
+                            validation_dir = paste0(wd, "/net/config/validation_data_hypernode_minimal_doublet"),
                             results_projection)
 
-arc_df_repaired <- readr::read_csv(paste0(wd, "/net/validation_data/Minimal_EcCb_arc_df_repaired.csv"))
-# this has columns: transition, direction, place, multiplicity, command
 
-repair_pnpro(arc_df_repaired,
-             project_name = "RepairedModel",
-             gspn_name    = "GSPN",
-             output_file  = paste0(wd, "/net/Minimal_EcCb_repaired.PNPRO"))
 
-reorganize_pnpro(
-  input_file      = "net/Minimal_EcCb_repaired.PNPRO",
-  arc_df_repaired = arc_df_repaired,
-  output_file     = "net/Minimal_EcCb_layout.PNPRO"
-)
+# build the PNPRO from your repaired arcs
+generate_pnpro(arc_df <- readr::read_csv(paste0(wd, "/net/config/validation_data_hypernode_minimal_doublet/hypernode_minimal_doublet_arc_df_repaired.csv")), 
+               pnpro_out = file.path(wd, "net/hypernode_minimal_doublet.PNPRO"))
 
 ##################
 ## continuing main
 ##################
 
 # Set parameters
-molar <- 10      # mmol/mL 
+not_projected_met_molar <- 1000 # mmol/mL 
 V <- 0.001       # mL (1 microL)
-C <- molar * V   # mmol
+C <- not_projected_met_molar * V   # mmol
 delta <- 1e+10   # density
 
 # Run extraction with bounds
@@ -89,6 +100,7 @@ run_full_ex_bounds(extraction_output = "extracted_ex_reactions.txt", bacteria_fi
 # Process diet medium data
 bounds_file_path <- paste0(wd, "/results_ex_reactions/EX_upper_bounds_nonFBA.csv")
 irr_exchange_bounds <- read.csv(bounds_file_path, head = T)
+
 diet_medium <- process_medium_data(media_wd = paste0(wd, "/epimod_FBAfunctions/inst/diets/vmh"),
                                    medium_name = "EU_average", bacteria_counts = bacteria_counts,
                                    biomass = biomass)

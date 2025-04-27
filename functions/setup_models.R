@@ -44,10 +44,15 @@ make_bacterial_models <- function(model_names,
   })
 }
 
-# Write out your Bacteria_Parameters.csv from the new list
 write_bac_params <- function(bacterial_models, path) {
+  # turn each bac_pop_p list into a 1×3 data.frame of named columns
   df <- do.call(rbind, lapply(bacterial_models, function(x) {
-    as.data.frame(unlist(x$bac_pop_p), stringsAsFactors=FALSE)
+    as.data.frame(as.list(x$bac_pop_p), stringsAsFactors = FALSE)
   }))
-  write.table(df, path, row.names=FALSE, col.names=FALSE, sep=",", quote=FALSE)
+  # now df has one row per organism, columns starv, dup, death
+  write.table(df, path,
+              row.names = FALSE,   # drop the rownames
+              col.names = FALSE,   # drop the header if you really need no header
+              sep = ",",
+              quote = FALSE)
 }

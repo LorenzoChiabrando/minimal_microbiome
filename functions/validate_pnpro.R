@@ -180,7 +180,7 @@ validate_pnpro <- function(pnpro_path,
       # always append the abbr, even for the first organism
       transition = paste0(prefix_map[fun_name], "_", abbr),
       command    = sprintf(
-        'Call["%s", FromTable["Bacteria_Parameters.csv", %d, %d], %d]',
+        'Call["%s", FromTable["organisms_parameters.csv", %d, %d], %d]',
         fun_name, org_index, col_index, org_index
       )
     ) %>%
