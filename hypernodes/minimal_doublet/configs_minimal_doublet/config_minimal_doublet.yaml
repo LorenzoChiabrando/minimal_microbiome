@@ -1,7 +1,5 @@
 # config/models.yaml
 
-pnpro_path: "net/hypernode_minimal_doublet.PNPRO"
-
 metabolite_places:
   - "glc__D_e"
   - "lcts_e"

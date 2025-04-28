@@ -1,5 +1,5 @@
 
-wd <- getwd()    # or however you define your project root
+wd <- getwd()
 
 source(paste0(wd, "/functions/install_and_setup.R"))
 
@@ -10,9 +10,43 @@ sapply(c("/epimod_FBAfunctions/R/FBAgreatmodeClass.R",
        "/epimod_FBAfunctions/R/ex_bounds_module.R"),
        function(f) source(paste0(wd, f)))
 
-source(paste0(wd, "/functions/setup_models.R"))
+hypernode = "minimal_doublet.PNPRO"
 
-cfg <- yaml::read_yaml(file.path(wd, "net", "config", "hypernode_minimal_doublet.yaml"))
+# Create the corresponding directory inside "hypernodes/"
+hypernode_dirname <- tools::file_path_sans_ext(hypernode)
+full_dir_path <- file.path(wd, "hypernodes", hypernode_dirname)
+
+if (!dir.exists(full_dir_path)) {
+  dir.create(full_dir_path, recursive = TRUE)
+  cat(sprintf("Created directory: %s\n", full_dir_path))
+} else {
+  cat(sprintf("Directory already exists: %s\n", full_dir_path))
+}
+
+# List of subdirectory suffixes
+suffixes <- c("configs", "projections", "validations", "functions", "metabolic_networks")
+
+# Generate full paths
+subdirs <- file.path(full_dir_path, paste0(suffixes, "_", hypernode_dirname))
+
+# Create each subdirectory if not existing
+for (subdir in subdirs) {
+  if (!dir.exists(subdir)) {
+    dir.create(subdir, recursive = TRUE)
+    cat(sprintf("Created directory: %s\n", subdir))
+  } else {
+    cat(sprintf("Directory already exists: %s\n", subdir))
+  }
+}
+
+# Correct path to the YAML config under new structure
+cfg <- yaml::read_yaml(file.path(
+  wd, 
+  "hypernodes", 
+  "minimal_doublet", 
+  "configs_minimal_doublet", 
+  "config_minimal_doublet.yaml"
+))
 
 # 1) Pull out the pieces
 model_names    <- vapply(cfg$organisms, `[[`, character(1), "model_name")
@@ -22,6 +56,9 @@ initial_counts <- as.numeric(
   vapply(cfg$organisms, `[[`, character(1), "initial_count")
 )
 
+# Load setup_models
+source(file.path(wd, "functions_library", "setup_models.R"))
+
 # 2) Build the list (derive_abbrs() runs internally)
 bacterial_models <- make_bacterial_models(
   model_names    = model_names,
@@ -30,18 +67,25 @@ bacterial_models <- make_bacterial_models(
   initial_counts = initial_counts
 )
 
-# 3) Write out Bacteria_Parameters.csv
-write_bac_params(bacterial_models, 
-                 file.path("input", "organisms_parameters.csv"))
+# 3) Write out organisms_parameters_minimal_doublet.csv
+write_bac_params(
+  bacterial_models,
+  file.path(
+    wd,
+    "hypernodes",
+    "minimal_doublet",
+    "configs_minimal_doublet",
+    "organisms_parameters_minimal_doublet.csv"
+  )
+)
 
 # 4) Now you have
-pnpro_path       <- cfg$pnpro_path
+pnpro_path       <- paste0(full_dir_path, "/", hypernode)
 metabolite_places<- cfg$metabolite_places
 
-source(paste0(wd, "/functions/process_model.R"))
+source(file.path(wd, "functions_library", "process_model.R"))
 
-# run it on each organism
-process_results <- lapply(bacterial_models, process_model)
+process_results <- lapply(bacterial_models, function(model) process_model(model, hypernode_name = hypernode_dirname))
 
 invisible(
   lapply(process_results, function(r) {
@@ -81,6 +125,11 @@ validation = validate_pnpro(pnpro_path,
 generate_pnpro(arc_df <- readr::read_csv(paste0(wd, "/net/config/validation_data_hypernode_minimal_doublet/hypernode_minimal_doublet_arc_df_repaired.csv")), 
                pnpro_out = file.path(wd, "net/hypernode_minimal_doublet.PNPRO"))
 
+source(paste0(wd, "/functions/layout_generator.R"))
+
+layout_pnpro(input_pnpro = paste0(wd, "/net/hypernode_minimal_doublet.PNPRO"), 
+             output_pnpro = paste0(wd, "/net/hypernode_minimal_doublet_layout.PNPRO"))
+  
 ##################
 ## continuing main
 ##################

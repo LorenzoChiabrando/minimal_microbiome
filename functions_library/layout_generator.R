@@ -4,9 +4,6 @@
 # - Adds community, organism, FBA wrapper, module, and boundary boxes
 # - Arranges places and transitions inside each module in a grid layout
 
-library(dplyr)
-library(xml2)
-
 #' Layout a PNPRO with hypernode/community boxes and auto-arrange nodes
 #'
 #' @param input_pnpro Path to original .PNPRO file

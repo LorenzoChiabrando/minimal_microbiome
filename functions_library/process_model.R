@@ -1,6 +1,5 @@
-
 # Define function to process one model
-process_model <- function(model) {
+process_model <- function(model, hypernode_name) {
   # Extract model information
   organism <- model$organism
   abbr <- model$abbreviation[2]
@@ -10,11 +9,12 @@ process_model <- function(model) {
   cat(sprintf("\nProcessing %s (%s)\n", organism, abbr))
   cat(paste(rep("-", nchar(organism) + nchar(abbr) + 13), collapse = ""), "\n")
   
-  # Construct file paths
-  input_dir <- file.path(wd, "input", FBAmodel)
-  mat_file <- file.path(input_dir, paste0(FBAmodel, ".mat"))
+  # Correct paths
+  mat_file <- file.path(wd, "metabolic_networks_library", paste0(FBAmodel, ".mat"))
+  input_dir <- file.path(wd, "hypernodes", hypernode_name, paste0("metabolic_networks_", hypernode_name), FBAmodel)
+  output_dir <- file.path(input_dir, paste0("compiled_", FBAmodel))
   
-  # Validate input file
+  # Validate .mat file
   if (!file.exists(mat_file)) {
     cat(sprintf("ERROR: Input file not found: %s\n", mat_file))
     return(list(
@@ -25,17 +25,26 @@ process_model <- function(model) {
     ))
   }
   
+  # Create input and output directories if needed
+  if (!dir.exists(input_dir)) dir.create(input_dir, recursive = TRUE)
+  if (!dir.exists(output_dir)) dir.create(output_dir, recursive = TRUE)
+
+  # Copy the .mat file into the model-specific input_dir (if needed)
+  file.copy(mat_file, file.path(input_dir, paste0(FBAmodel, ".mat")))
+  
   # Generate FBA model
   cat(sprintf("Generating FBA model for %s...\n", organism))
   model_obj <- tryCatch({
-    FBA4Greatmod.generation(fba_mat = mat_file, input_dir = input_dir)
+    FBA4Greatmod.generation(
+      fba_mat = file.path(input_dir, paste0(FBAmodel, ".mat")),
+      input_dir = input_dir
+    )
   }, error = function(e) {
     cat(sprintf("ERROR: Failed to generate model: %s\n", e$message))
     return(NULL)
   })
   
-  # If model generation failed, return error
-  if ( is.null(model_obj) ) {
+  if (is.null(model_obj)) {
     return(list(
       status = "error",
       message = "Failed to generate model",
@@ -53,10 +62,7 @@ process_model <- function(model) {
     bioMin = model$biomass$min
   )
   
-  # Save model in compiled_models directory
-  output_dir <- file.path(wd, "compiled_models")
-  if (!dir.exists(output_dir)) dir.create(output_dir, recursive = TRUE)
-  
+  # Save model
   output_file <- file.path(output_dir, paste0(abbr, "_model.txt"))
   capture_output <- capture.output(model_obj)
   writeLines(capture_output, output_file)
@@ -71,3 +77,4 @@ process_model <- function(model) {
     model_file = output_file
   ))
 }
+
