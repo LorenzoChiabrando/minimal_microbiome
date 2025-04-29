@@ -2,8 +2,7 @@
 validate_pnpro <- function(pnpro_path,
                            bacterial_models,
                            metabolite_places,
-                           validation_dir,
-                           results_projection) {
+                           validation_dir) {
   
   # Extract the 2nd abbreviation for each organism in order
   abbrs <- map_chr(bacterial_models, ~ .x$abbreviation[2])

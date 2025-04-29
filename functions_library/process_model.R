@@ -69,12 +69,28 @@ process_model <- function(model, hypernode_name) {
   
   cat(sprintf("Model saved to %s\n", output_file))
   
-  return(list(
+  process_results <- list(
     status = "success",
     message = sprintf("Successfully processed %s (%s)", organism, abbr),
     organism = organism,
     abbr = abbr,
     model_file = output_file
-  ))
+  )
+  
+  # Proper printing
+  status_icon <- if (process_results$status == "success") "✓" else "✗"
+  msg         <- if (process_results$status == "success")
+    "Successfully processed"
+  else
+    paste("ERROR -", process_results$message)
+  
+  cat(sprintf("%s  %s (%s): %s\n",
+              status_icon,
+              process_results$organism,
+              process_results$abbr,
+              msg))
+  
+  return(process_results)
+
 }
 

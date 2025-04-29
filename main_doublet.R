@@ -1,7 +1,7 @@
 
 wd <- getwd()
 
-source(paste0(wd, "/functions/install_and_setup.R"))
+source(paste0(wd, "/functions_library/install_and_setup.R"))
 
 # Load necessary scripts
 sapply(c("/epimod_FBAfunctions/R/FBAgreatmodeClass.R", 
@@ -81,54 +81,34 @@ write_bac_params(
 
 # 4) Now you have
 pnpro_path       <- paste0(full_dir_path, "/", hypernode)
-metabolite_places<- cfg$metabolite_places
+metabolite_places = cfg$metabolite_places
 
 source(file.path(wd, "functions_library", "process_model.R"))
 
 process_results <- lapply(bacterial_models, function(model) process_model(model, hypernode_name = hypernode_dirname))
 
-invisible(
-  lapply(process_results, function(r) {
-    status_icon <- if (r$status == "success") "✓" else "✗"
-    msg         <- if (r$status == "success")
-      "Successfully processed"
-    else
-      paste("ERROR -", r$message)
-    cat(sprintf("%s  %s (%s): %s\n",
-                status_icon,
-                r$organism, r$abbr,
-                msg))
-  })
-)
-
-source(paste0(wd, "/functions/project_boundary_reactions.R"))
+source(file.path(wd, "functions_library", "project_boundary_reactions.R"))
 
 results_projection <- project_boundary_reactions(
   bacterial_models   = bacterial_models,
   metabolite_places  = metabolite_places,
-  output_dir_projections = paste0(wd, "/net/config/projection_info_hypernode_minimal_doublet")
+  output_dir_projections = subdirs[2]
 )
 
 cat( capture.output(results_projection$bounds), sep = "\n" )
 
-source(paste0(wd, "/functions/validate_pnpro.R"))
+source(file.path(wd, "functions_library", "validate_pnpro.R"))
 
 validation = validate_pnpro(pnpro_path,
-                            bacterial_models,
-                            metabolite_places,
-                            validation_dir = paste0(wd, "/net/config/validation_data_hypernode_minimal_doublet"),
-                            results_projection)
+                            bacterial_models = bacterial_models,
+                            metabolite_places = metabolite_places,
+                            validation_dir = file.path(wd, "petri_nets_library", "blank.PNPRO"))
 
-
+source(file.path(wd, "functions_library/generate_pnpro.R"))
 
 # build the PNPRO from your repaired arcs
 generate_pnpro(arc_df <- readr::read_csv(paste0(wd, "/net/config/validation_data_hypernode_minimal_doublet/hypernode_minimal_doublet_arc_df_repaired.csv")), 
                pnpro_out = file.path(wd, "net/hypernode_minimal_doublet.PNPRO"))
-
-source(paste0(wd, "/functions/layout_generator.R"))
-
-layout_pnpro(input_pnpro = paste0(wd, "/net/hypernode_minimal_doublet.PNPRO"), 
-             output_pnpro = paste0(wd, "/net/hypernode_minimal_doublet_layout.PNPRO"))
   
 ##################
 ## continuing main

@@ -1,7 +1,33 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- This project file has been saved by the New GreatSPN Editor, v.100 --><project name="New project" version="121">
   <gspn name="PetriNet" zoom="50">
-    <nodes/>
+    <nodes>
+      <text-box border-color="#000000" fill-color="#f3f6ff" height="20.0" name="community_box_left" text-color="#000000" width="30.0" x="2.0" y="1.3888890000000007">
+
+      </text-box>
+      <text-box border-color="#000000" fill-color="#f3f6ff" height="20.0" name="community_box_right" text-color="#000000" width="30.0" x="72.0" y="1.3888890000000007">
+
+      </text-box>
+      <text-box border-color="#000000" fill-color="#fff3fc" height="10.0" name="boundary_metabolites_box" text-color="#000000" width="5.0" x="49.5" y="6.388888999999999"/>
+      <text-box border-color="#000000" fill-color="#fffcf3" height="15.0" name="abbr_right_fba_wrappers_box" text-color="#000000" width="25.0" x="74.5" y="3.8888890000000007">
+
+      </text-box>
+      <text-box border-color="#000000" fill-color="#fffcf3" height="15.0" name="abbr_left_fba_wrappers_box" text-color="#000000" width="25.0" x="4.5" y="3.8888890000000007">
+
+      </text-box>
+      <text-box border-color="#000000" fill-color="#f9f3ff" height="12.0" name="abbr_right_module_box" text-color="#000000" width="6.0" x="80.0" y="5.388888999999999">
+
+      </text-box>
+      <text-box border-color="#000000" fill-color="#f9f3ff" height="12.0" name="abbr_left_module_box" text-color="#000000" width="6.0" x="10.0" y="5.388888999999999">
+
+      </text-box>
+      <text-box border-color="#000000" fill-color="#f4fff3" height="12.0" name="abbr_right_boundary_transitions_box" text-color="#000000" width="6.0" x="88.0" y="5.388888999999999">
+
+      </text-box>
+      <text-box border-color="#000000" fill-color="#f4fff3" height="12.0" name="abbr_left_boundary_transitions_box" text-color="#000000" width="6.0" x="18.0" y="5.388888999999999">
+
+      </text-box>
+    </nodes>
     <edges/>
   </gspn>
   <measures gspn-name="PetriNet" name="Measures" simplified-UI="false">
