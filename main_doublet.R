@@ -113,8 +113,11 @@ source(file.path(wd, "functions_library/generate_pnpro.R"))
 generate_pnpro(arc_df <- readr::read_csv(paste0(wd, "/hypernodes/", hypernode_dirname, "/validations_", hypernode_dirname, "/", hypernode, "_arc_df_repaired.csv")),
                pnpro_out = paste0(wd, "/hypernodes/", hypernode_dirname, "/", hypernode_dirname, ".PNPRO"))
 
-system(paste0("python", " ", wd, "/functions_library/render_pnpro_layout.py", 
-              " ", "petri_nets_library/blank.PNPRO", " ", "hypernodes/", hypernode_dirname, "/", hypernode_dirname, ".PNPRO"))
+# system(paste0("python", " ", wd, "/functions_library/render_pnpro_layout.py", 
+#               " ", wd, "/petri_nets_library/blank.PNPRO", " ", wd, "/hypernodes/", hypernode_dirname, "/", hypernode_dirname, ".PNPRO"))
+
+system(paste0("python3", " ", wd, "/functions_library/render_pnpro_layout.py", 
+              " ", wd, "/petri_nets_library/blank.PNPRO", " ", wd, "/hypernodes/", hypernode_dirname, "/", hypernode_dirname, ".PNPRO"))
 
 ##################
 ## continuing main
