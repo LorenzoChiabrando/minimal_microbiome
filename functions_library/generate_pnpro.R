@@ -1,3 +1,4 @@
+
 generate_pnpro <- function(arc_df, pnpro_out) {
   # Step 1: Extract unique places and transitions
   places <- unique(arc_df$place)

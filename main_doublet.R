@@ -43,9 +43,9 @@ for (subdir in subdirs) {
 cfg <- yaml::read_yaml(file.path(
   wd, 
   "hypernodes", 
-  "minimal_doublet", 
-  "configs_minimal_doublet", 
-  "config_minimal_doublet.yaml"
+  hypernode_dirname, 
+  paste0("configs_", hypernode_dirname), 
+  paste0("config_", hypernode_dirname, ".yaml")
 ))
 
 # 1) Pull out the pieces
@@ -67,15 +67,15 @@ bacterial_models <- make_bacterial_models(
   initial_counts = initial_counts
 )
 
-# 3) Write out organisms_parameters_minimal_doublet.csv
+# 3) Write out organisms_parameters_<hypernode_dirname>.csv
 write_bac_params(
   bacterial_models,
   file.path(
     wd,
     "hypernodes",
-    "minimal_doublet",
-    "configs_minimal_doublet",
-    "organisms_parameters_minimal_doublet.csv"
+    hypernode_dirname,
+    paste0("configs_", hypernode_dirname),
+    "organisms_parameters.csv"
   )
 )
 
@@ -99,17 +99,23 @@ cat( capture.output(results_projection$bounds), sep = "\n" )
 
 source(file.path(wd, "functions_library", "validate_pnpro.R"))
 
-validation = validate_pnpro(pnpro_path,
+validation = validate_pnpro(pnpro2validate = file.path(wd, "petri_nets_library", "blank.PNPRO"),
+                            metadata_path = paste0(wd, "/hypernodes/", hypernode_dirname, "/metabolic_networks_minimal_doublet"),
                             bacterial_models = bacterial_models,
                             metabolite_places = metabolite_places,
-                            validation_dir = file.path(wd, "petri_nets_library", "blank.PNPRO"))
+                            validation_dir = paste0(wd, "/hypernodes/", hypernode_dirname, "/validations_", 
+                                                    hypernode_dirname),
+                            pnpro_name = paste0(hypernode_dirname, ".PNPRO"))
 
 source(file.path(wd, "functions_library/generate_pnpro.R"))
 
 # build the PNPRO from your repaired arcs
-generate_pnpro(arc_df <- readr::read_csv(paste0(wd, "/net/config/validation_data_hypernode_minimal_doublet/hypernode_minimal_doublet_arc_df_repaired.csv")), 
-               pnpro_out = file.path(wd, "net/hypernode_minimal_doublet.PNPRO"))
-  
+generate_pnpro(arc_df <- readr::read_csv(paste0(wd, "/hypernodes/", hypernode_dirname, "/validations_", hypernode_dirname, "/", hypernode, "_arc_df_repaired.csv")),
+               pnpro_out = paste0(wd, "/hypernodes/", hypernode_dirname, "/", hypernode_dirname, ".PNPRO"))
+
+system(paste0("python", " ", wd, "/functions_library/render_pnpro_layout.py", 
+              " ", "petri_nets_library/blank.PNPRO", " ", "hypernodes/", hypernode_dirname, "/", hypernode_dirname, ".PNPRO"))
+
 ##################
 ## continuing main
 ##################

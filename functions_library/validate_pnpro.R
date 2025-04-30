@@ -1,8 +1,10 @@
 
-validate_pnpro <- function(pnpro_path,
+validate_pnpro <- function(pnpro2validate,
+			   metadata_path,
                            bacterial_models,
                            metabolite_places,
-                           validation_dir) {
+                           validation_dir,
+                           pnpro_name) {
   
   # Extract the 2nd abbreviation for each organism in order
   abbrs <- map_chr(bacterial_models, ~ .x$abbreviation[2])
@@ -10,7 +12,7 @@ validate_pnpro <- function(pnpro_path,
   # ————————————————————————————————————————————
   # 0) Read & parse the PNPRO
   # ————————————————————————————————————————————
-  xml <- read_xml(pnpro_path)
+  xml <- read_xml(pnpro2validate)
   
   # grab all <transition> names/delays
   tnodes <- xml_find_all(xml, "//transition")
@@ -49,7 +51,7 @@ validate_pnpro <- function(pnpro_path,
   models_df <- tibble(model = bacterial_models) %>%
     mutate(
       abbr     = map_chr(model, ~ .x$abbreviation[2]),
-      meta_dir = file.path("input", map_chr(model, ~ .x$FBAmodel))
+      meta_dir = file.path(metadata_path, map_chr(model, ~ .x$FBAmodel))
     )
   
   # read metabolites & reactions metadata
@@ -296,18 +298,17 @@ arc_df_repaired <- bind_rows(
 # ————————————————————————————————————————————
 # 6) Write out both raw and repaired arc tables
 # ————————————————————————————————————————————
-base_name <- basename(tools::file_path_sans_ext(pnpro_path))
 
 # raw (partial) arcs
 write_csv(
   arc_df,
-  file.path(validation_dir, paste0(base_name, "_arc_df.csv"))
+  file.path(validation_dir, paste0(pnpro_name, "_arc_df.csv"))
 )
 
 # full repaired arcs
 write_csv(
   arc_df_repaired,
-  file.path(validation_dir, paste0(base_name, "_arc_df_repaired.csv"))
+  file.path(validation_dir, paste0(pnpro_name, "_arc_df_repaired.csv"))
 )
 
 # ————————————————————————————————————————————

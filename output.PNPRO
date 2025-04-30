@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project name="New project" version="121">
+  <gspn name="PetriNet" zoom="75">
+    <nodes>
+      <text-box name="community_box_left" border-color="#000000" fill-color="#f3f6ff" text-color="#000000" width="30.0" height="20.0" x="2.0" y="1.3888890000000007" />
+      <text-box name="cbd1_left_fba_wrappers_box" border-color="#000000" fill-color="#fffcf3" text-color="#000000" width="25.0" height="15.0" x="4.5" y="3.8888890000000007" />
+      <text-box name="cbd1_left_module_box" border-color="#000000" fill-color="#f9f3ff" text-color="#000000" width="6.0" height="12.0" x="10.0" y="5.388888999999999" />
+      <text-box name="cbd1_left_boundary_transitions_box" border-color="#000000" fill-color="#f4fff3" text-color="#000000" width="6.0" height="12.0" x="18.0" y="5.388888999999999" />
+      <text-box name="community_box_right" border-color="#000000" fill-color="#f3f6ff" text-color="#000000" width="30.0" height="20.0" x="72.0" y="1.3888890000000007" />
+      <text-box name="ecs_right_fba_wrappers_box" border-color="#000000" fill-color="#fffcf3" text-color="#000000" width="25.0" height="15.0" x="74.5" y="3.8888890000000007" />
+      <text-box name="ecs_right_module_box" border-color="#000000" fill-color="#f4fff3" text-color="#000000" width="6.0" height="12.0" x="80.0" y="5.388888999999999" />
+      <text-box name="ecs_right_boundary_transitions_box" border-color="#000000" fill-color="#f9f3ff" text-color="#000000" width="6.0" height="12.0" x="88.0" y="5.388888999999999" />
+      <text-box name="boundary_metabolites_box" border-color="#000000" fill-color="#fff3fc" text-color="#000000" width="5.0" height="10.0" x="49.5" y="6.388888999999999" />
+      <place label-x="0.0" label-y="0.0" name="biomass_e_ecs" x="5.0" y="9.0" />
+      <place label-x="0.0" label-y="0.0" name="n_ecs" x="5.0" y="7.0" />
+      <place label-x="0.0" label-y="0.0" name="biomass_e_cbd1" x="13.0" y="11.0" />
+      <place label-x="0.0" label-y="0.0" name="n_cbd1" x="13.0" y="9.0" />
+      <place label-x="0.0" label-y="0.0" name="glc__D_e" x="49.5" y="7.0" />
+      <place label-x="0.0" label-y="0.0" name="lcts_e" x="49.5" y="9.0" />
+      <transition delay="Call[&quot;Starvation&quot;, FromTable[&quot;organisms_parameters.csv&quot;, 0, 0], 0]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="Starv_ecs" nservers-x="0.5" rotation="0.0" type="EXP" x="8.0" y="14.0" />
+      <transition delay="Call[&quot;Duplication&quot;, FromTable[&quot;organisms_parameters.csv&quot;, 0, 1], 0]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="Dup_ecs" nservers-x="0.5" rotation="0.0" type="EXP" x="6.0" y="12.0" />
+      <transition delay="Call[&quot;Death&quot;, FromTable[&quot;organisms_parameters.csv&quot;, 0, 2], 0]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="Death_ecs" nservers-x="0.5" rotation="0.0" type="EXP" x="10.0" y="12.0" />
+      <transition delay="Call[&quot;Starvation&quot;, FromTable[&quot;organisms_parameters.csv&quot;, 1, 0], 1]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="Starv_cbd1" nservers-x="0.5" rotation="0.0" type="EXP" x="16.0" y="16.0" />
+      <transition delay="Call[&quot;Duplication&quot;, FromTable[&quot;organisms_parameters.csv&quot;, 1, 1], 1]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="Dup_cbd1" nservers-x="0.5" rotation="0.0" type="EXP" x="14.0" y="14.0" />
+      <transition delay="Call[&quot;Death&quot;, FromTable[&quot;organisms_parameters.csv&quot;, 1, 2], 1]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="Death_cbd1" nservers-x="0.5" rotation="0.0" type="EXP" x="18.0" y="14.0" />
+      <transition delay="FBA[&quot;cbd1_model.txt&quot;,&quot;EX_biomass_e&quot;,1,&quot;n_cbd1&quot;,&quot;biomass_e_cbd1&quot;, &quot;true&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_biomass_e_in_cbd1" nservers-x="0.5" rotation="0.0" type="EXP" x="16.0" y="8.0" />
+      <transition delay="FBA[&quot;cbd1_model.txt&quot;,&quot;EX_biomass_e&quot;,1,&quot;n_cbd1&quot;,&quot;biomass_e_cbd1&quot;, &quot;true&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_biomass_e_out_cbd1" nservers-x="0.5" rotation="0.0" type="EXP" x="20.0" y="8.0" />
+      <transition delay="FBA[&quot;cbd1_model.txt&quot;,&quot;EX_glc__D_e&quot;,1,&quot;n_cbd1&quot;,&quot;biomass_e_cbd1&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_glc__D_e_in_cbd1" nservers-x="0.5" rotation="0.0" type="EXP" x="16.0" y="12.0" />
+      <transition delay="FBA[&quot;cbd1_model.txt&quot;,&quot;EX_glc__D_e&quot;,1,&quot;n_cbd1&quot;,&quot;biomass_e_cbd1&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_glc__D_e_out_cbd1" nservers-x="0.5" rotation="0.0" type="EXP" x="20.0" y="12.0" />
+      <transition delay="FBA[&quot;cbd1_model.txt&quot;,&quot;EX_lcts_e&quot;,1,&quot;n_cbd1&quot;,&quot;biomass_e_cbd1&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_lcts_e_in_cbd1" nservers-x="0.5" rotation="0.0" type="EXP" x="16.0" y="16.0" />
+      <transition delay="FBA[&quot;cbd1_model.txt&quot;,&quot;EX_lcts_e&quot;,1,&quot;n_cbd1&quot;,&quot;biomass_e_cbd1&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_lcts_e_out_cbd1" nservers-x="0.5" rotation="0.0" type="EXP" x="20.0" y="16.0" />
+      <transition delay="FBA[&quot;ecs_model.txt&quot;,&quot;EX_biomass_e&quot;,1,&quot;n_ecs&quot;,&quot;biomass_e_ecs&quot;, &quot;true&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_biomass_e_in_ecs" nservers-x="0.5" rotation="0.0" type="EXP" x="24.0" y="10.0" />
+      <transition delay="FBA[&quot;ecs_model.txt&quot;,&quot;EX_biomass_e&quot;,1,&quot;n_ecs&quot;,&quot;biomass_e_ecs&quot;, &quot;true&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_biomass_e_out_ecs" nservers-x="0.5" rotation="0.0" type="EXP" x="28.0" y="10.0" />
+      <transition delay="FBA[&quot;ecs_model.txt&quot;,&quot;EX_glc__D_e&quot;,1,&quot;n_ecs&quot;,&quot;biomass_e_ecs&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_glc__D_e_in_ecs" nservers-x="0.5" rotation="0.0" type="EXP" x="24.0" y="14.0" />
+      <transition delay="FBA[&quot;ecs_model.txt&quot;,&quot;EX_glc__D_e&quot;,1,&quot;n_ecs&quot;,&quot;biomass_e_ecs&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_glc__D_e_out_ecs" nservers-x="0.5" rotation="0.0" type="EXP" x="28.0" y="14.0" />
+      <transition delay="FBA[&quot;ecs_model.txt&quot;,&quot;EX_lcts_e&quot;,1,&quot;n_ecs&quot;,&quot;biomass_e_ecs&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_lcts_e_in_ecs" nservers-x="0.5" rotation="0.0" type="EXP" x="24.0" y="18.0" />
+      <transition delay="FBA[&quot;ecs_model.txt&quot;,&quot;EX_lcts_e&quot;,1,&quot;n_ecs&quot;,&quot;biomass_e_ecs&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_lcts_e_out_ecs" nservers-x="0.5" rotation="0.0" type="EXP" x="28.0" y="18.0" />
+      </nodes>
+    <edges>
+      <arc head="Starv_ecs" tail="biomass_e_ecs" kind="INPUT" />
+      <arc head="Dup_ecs" tail="n_ecs" kind="INPUT" />
+      <arc head="Dup_ecs" tail="biomass_e_ecs" kind="INPUT" />
+      <arc head="n_ecs" tail="Dup_ecs" kind="OUTPUT" mult="2" />
+      <arc head="biomass_e_ecs" tail="Dup_ecs" kind="OUTPUT" />
+      <arc head="Death_ecs" tail="n_ecs" kind="INPUT" />
+      <arc head="Death_ecs" tail="biomass_e_ecs" kind="INPUT" />
+      <arc head="biomass_e_ecs" tail="Death_ecs" kind="OUTPUT" />
+      <arc head="Starv_cbd1" tail="biomass_e_cbd1" kind="INPUT" />
+      <arc head="Dup_cbd1" tail="n_cbd1" kind="INPUT" />
+      <arc head="Dup_cbd1" tail="biomass_e_cbd1" kind="INPUT" />
+      <arc head="n_cbd1" tail="Dup_cbd1" kind="OUTPUT" mult="2" />
+      <arc head="biomass_e_cbd1" tail="Dup_cbd1" kind="OUTPUT" />
+      <arc head="Death_cbd1" tail="n_cbd1" kind="INPUT" />
+      <arc head="Death_cbd1" tail="biomass_e_cbd1" kind="INPUT" />
+      <arc head="biomass_e_cbd1" tail="Death_cbd1" kind="OUTPUT" />
+      <arc head="EX_biomass_e_in_cbd1" tail="biomass_e_cbd1" kind="INPUT" />
+      <arc head="EX_biomass_e_out_cbd1" tail="biomass_e_cbd1" kind="INPUT" />
+      <arc head="biomass_e_cbd1" tail="EX_biomass_e_out_cbd1" kind="OUTPUT" mult="2" />
+      <arc head="EX_glc__D_e_in_cbd1" tail="glc__D_e" kind="INPUT" />
+      <arc head="EX_glc__D_e_in_cbd1" tail="n_cbd1" kind="INPUT" />
+      <arc head="EX_glc__D_e_in_cbd1" tail="biomass_e_cbd1" kind="INPUT" />
+      <arc head="n_cbd1" tail="EX_glc__D_e_in_cbd1" kind="OUTPUT" />
+      <arc head="biomass_e_cbd1" tail="EX_glc__D_e_in_cbd1" kind="OUTPUT" />
+      <arc head="EX_glc__D_e_out_cbd1" tail="n_cbd1" kind="INPUT" />
+      <arc head="EX_glc__D_e_out_cbd1" tail="biomass_e_cbd1" kind="INPUT" />
+      <arc head="glc__D_e" tail="EX_glc__D_e_out_cbd1" kind="OUTPUT" />
+      <arc head="n_cbd1" tail="EX_glc__D_e_out_cbd1" kind="OUTPUT" />
+      <arc head="biomass_e_cbd1" tail="EX_glc__D_e_out_cbd1" kind="OUTPUT" />
+      <arc head="EX_lcts_e_in_cbd1" tail="lcts_e" kind="INPUT" />
+      <arc head="EX_lcts_e_in_cbd1" tail="n_cbd1" kind="INPUT" />
+      <arc head="EX_lcts_e_in_cbd1" tail="biomass_e_cbd1" kind="INPUT" />
+      <arc head="n_cbd1" tail="EX_lcts_e_in_cbd1" kind="OUTPUT" />
+      <arc head="biomass_e_cbd1" tail="EX_lcts_e_in_cbd1" kind="OUTPUT" />
+      <arc head="EX_lcts_e_out_cbd1" tail="n_cbd1" kind="INPUT" />
+      <arc head="EX_lcts_e_out_cbd1" tail="biomass_e_cbd1" kind="INPUT" />
+      <arc head="lcts_e" tail="EX_lcts_e_out_cbd1" kind="OUTPUT" />
+      <arc head="n_cbd1" tail="EX_lcts_e_out_cbd1" kind="OUTPUT" />
+      <arc head="biomass_e_cbd1" tail="EX_lcts_e_out_cbd1" kind="OUTPUT" />
+      <arc head="EX_biomass_e_in_ecs" tail="biomass_e_ecs" kind="INPUT" />
+      <arc head="EX_biomass_e_out_ecs" tail="biomass_e_ecs" kind="INPUT" />
+      <arc head="biomass_e_ecs" tail="EX_biomass_e_out_ecs" kind="OUTPUT" mult="2" />
+      <arc head="EX_glc__D_e_in_ecs" tail="glc__D_e" kind="INPUT" />
+      <arc head="EX_glc__D_e_in_ecs" tail="n_ecs" kind="INPUT" />
+      <arc head="EX_glc__D_e_in_ecs" tail="biomass_e_ecs" kind="INPUT" />
+      <arc head="n_ecs" tail="EX_glc__D_e_in_ecs" kind="OUTPUT" />
+      <arc head="biomass_e_ecs" tail="EX_glc__D_e_in_ecs" kind="OUTPUT" />
+      <arc head="EX_glc__D_e_out_ecs" tail="n_ecs" kind="INPUT" />
+      <arc head="EX_glc__D_e_out_ecs" tail="biomass_e_ecs" kind="INPUT" />
+      <arc head="glc__D_e" tail="EX_glc__D_e_out_ecs" kind="OUTPUT" />
+      <arc head="n_ecs" tail="EX_glc__D_e_out_ecs" kind="OUTPUT" />
+      <arc head="biomass_e_ecs" tail="EX_glc__D_e_out_ecs" kind="OUTPUT" />
+      <arc head="EX_lcts_e_in_ecs" tail="lcts_e" kind="INPUT" />
+      <arc head="EX_lcts_e_in_ecs" tail="n_ecs" kind="INPUT" />
+      <arc head="EX_lcts_e_in_ecs" tail="biomass_e_ecs" kind="INPUT" />
+      <arc head="n_ecs" tail="EX_lcts_e_in_ecs" kind="OUTPUT" />
+      <arc head="biomass_e_ecs" tail="EX_lcts_e_in_ecs" kind="OUTPUT" />
+      <arc head="EX_lcts_e_out_ecs" tail="n_ecs" kind="INPUT" />
+      <arc head="EX_lcts_e_out_ecs" tail="biomass_e_ecs" kind="INPUT" />
+      <arc head="lcts_e" tail="EX_lcts_e_out_ecs" kind="OUTPUT" />
+      <arc head="n_ecs" tail="EX_lcts_e_out_ecs" kind="OUTPUT" />
+      <arc head="biomass_e_ecs" tail="EX_lcts_e_out_ecs" kind="OUTPUT" />
+      </edges>
+    </gspn>
+  <measures gspn-name="PetriNet" name="Measures" simplified-UI="false">
+    <assignments />
+    <greatspn />
+    <formulas>
+      <formula comment="Basic statistics of the toolchain execution." language="STAT" />
+      <formula comment="All the basic Petri net measures" language="ALL" />
+      </formulas>
+    </measures>
+  </project>
