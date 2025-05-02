@@ -1,147 +1,129 @@
 
+# 0) Setup
 wd <- getwd()
+source(file.path(wd, "functions_library", "install_and_setup.R"))
 
-source(paste0(wd, "/functions_library/install_and_setup.R"))
+# Load core FBA functions
+fba_scripts <- c("FBAgreatmodeClass.R", "class_generation.R", "readMat.R")
+invisible(lapply(fba_scripts, function(f) {
+  source(file.path(wd, "epimod_FBAfunctions", "R", f))
+}))
 
-# Load necessary scripts
-sapply(c("/epimod_FBAfunctions/R/FBAgreatmodeClass.R", 
-         "/epimod_FBAfunctions/R/class_generation.R", 
-         "/epimod_FBAfunctions/R/readMat.R", 
-       "/epimod_FBAfunctions/R/ex_bounds_module.R"),
-       function(f) source(paste0(wd, f)))
+# 1) Define hypernode
+hypernode       <- "minimal_doublet.PNPRO"
+hypernode_name  <- tools::file_path_sans_ext(hypernode)
+hypernode_root  <- file.path(wd, "hypernodes", hypernode_name)
 
-hypernode = "minimal_doublet.PNPRO"
-
-# Create the corresponding directory inside "hypernodes/"
-hypernode_dirname <- tools::file_path_sans_ext(hypernode)
-full_dir_path <- file.path(wd, "hypernodes", hypernode_dirname)
-
-if (!dir.exists(full_dir_path)) {
-  dir.create(full_dir_path, recursive = TRUE)
-  cat(sprintf("Created directory: %s\n", full_dir_path))
-} else {
-  cat(sprintf("Directory already exists: %s\n", full_dir_path))
+# 2) Create the three canonical subfolders
+dirs <- c("config", "src", "output")
+for (d in dirs) {
+  dir.create(file.path(hypernode_root, d), recursive = TRUE, showWarnings = FALSE)
+  cat("Ensured directory:", file.path(hypernode_root, d), "\n")
 }
 
-# List of subdirectory suffixes
-suffixes <- c("configs", "projections", "validations", "functions", "metabolic_networks")
+config_dir <- file.path(hypernode_root, "config")
+src_dir    <- file.path(hypernode_root, "src")
+out_dir    <- file.path(hypernode_root, "output")
 
-# Generate full paths
-subdirs <- file.path(full_dir_path, paste0(suffixes, "_", hypernode_dirname))
-
-# Create each subdirectory if not existing
-for (subdir in subdirs) {
-  if (!dir.exists(subdir)) {
-    dir.create(subdir, recursive = TRUE)
-    cat(sprintf("Created directory: %s\n", subdir))
-  } else {
-    cat(sprintf("Directory already exists: %s\n", subdir))
-  }
-}
-
-# Correct path to the YAML config under new structure
+# 3) Read hypernode-specific YAML
 cfg <- yaml::read_yaml(file.path(
-  wd, 
-  "hypernodes", 
-  hypernode_dirname, 
-  paste0("configs_", hypernode_dirname), 
-  paste0("config_", hypernode_dirname, ".yaml")
+  config_dir,
+  paste0("config_", hypernode_name, ".yaml")
 ))
 
-# 1) Pull out the pieces
+# 4) Extract parameters
 model_names    <- vapply(cfg$organisms, `[[`, character(1), "model_name")
 biomass_params <- lapply(cfg$organisms, `[[`, "biomass")
 pop_params     <- lapply(cfg$organisms, `[[`, "population")
-initial_counts <- as.numeric(
-  vapply(cfg$organisms, `[[`, character(1), "initial_count")
-)
+initial_counts <- as.numeric(vapply(cfg$organisms, `[[`, character(1), "initial_count"))
+metabolite_places <- cfg$metabolite_places
 
-# Load setup_models
+# 5) Build organism models and dump parameters
 source(file.path(wd, "functions_library", "setup_models.R"))
-
-# 2) Build the list (derive_abbrs() runs internally)
 bacterial_models <- make_bacterial_models(
-  model_names    = model_names,
-  biomass_params = biomass_params,
-  pop_params     = pop_params,
-  initial_counts = initial_counts
+  model_names, biomass_params, pop_params, initial_counts
 )
 
-# 3) Write out organisms_parameters_<hypernode_dirname>.csv
 write_bac_params(
   bacterial_models,
-  file.path(
-    wd,
-    "hypernodes",
-    hypernode_dirname,
-    paste0("configs_", hypernode_dirname),
-    "organisms_parameters.csv"
-  )
+  file.path(config_dir, "organisms_parameters.csv")
 )
 
-# 4) Now you have
-pnpro_path       <- paste0(full_dir_path, "/", hypernode)
-metabolite_places = cfg$metabolite_places
-
+# 6) Process each model
 source(file.path(wd, "functions_library", "process_model.R"))
-
-process_results <- lapply(bacterial_models, function(model) process_model(model, hypernode_name = hypernode_dirname))
-
-source(file.path(wd, "functions_library", "project_boundary_reactions.R"))
-
-results_projection <- project_boundary_reactions(
-  bacterial_models   = bacterial_models,
-  metabolite_places  = metabolite_places,
-  output_dir_projections = subdirs[2]
+process_results <- lapply(
+  bacterial_models,
+  function(m) process_model(m, hypernode_name = hypernode_name)
 )
 
-cat( capture.output(results_projection$bounds), sep = "\n" )
+# 7) Project boundary reactions → single output folder
+source(file.path(wd, "functions_library", "project_boundary_reactions.R"))
+proj_res <- project_boundary_reactions(
+  bacterial_models      = bacterial_models,
+  metabolite_places     = metabolite_places,
+  output_dir_projections = out_dir
+)
+cat(capture.output(proj_res$bounds), sep = "\n")
 
+# 8) Validate PNPRO → same output folder
 source(file.path(wd, "functions_library", "validate_pnpro.R"))
+validation <- validate_pnpro(
+  pnpro2validate    = file.path(wd, "petri_nets_library", "blank.PNPRO"),
+  metadata_path     = hypernode_root,
+  bacterial_models  = bacterial_models,
+  metabolite_places = metabolite_places,
+  validation_dir    = out_dir,
+  pnpro_name        = hypernode
+)
 
-validation = validate_pnpro(pnpro2validate = file.path(wd, "petri_nets_library", "blank.PNPRO"),
-                            metadata_path = paste0(wd, "/hypernodes/", hypernode_dirname, "/metabolic_networks_minimal_doublet"),
-                            bacterial_models = bacterial_models,
-                            metabolite_places = metabolite_places,
-                            validation_dir = paste0(wd, "/hypernodes/", hypernode_dirname, "/validations_", 
-                                                    hypernode_dirname),
-                            pnpro_name = paste0(hypernode_dirname, ".PNPRO"))
+# 9) Generate the final PNPRO → output folder
+source(file.path(wd, "functions_library", "generate_pnpro.R"))
+generate_pnpro(
+  arc_df   = readr::read_csv(
+    file.path(out_dir, paste0(hypernode, "_arc_df_repaired.csv"))
+  ),
+  pnpro_out = file.path(out_dir, hypernode)
+)
 
-source(file.path(wd, "functions_library/generate_pnpro.R"))
+# 10) Render layout
+system(paste(
+  "python3",
+  shQuote(file.path(wd, "functions_library", "render_pnpro_layout.py")),
+  shQuote(file.path(wd, "petri_nets_library", "blank.PNPRO")),
+  shQuote(file.path(out_dir, hypernode))
+))
 
-# build the PNPRO from your repaired arcs
-generate_pnpro(arc_df <- readr::read_csv(paste0(wd, "/hypernodes/", hypernode_dirname, "/validations_", hypernode_dirname, "/", hypernode, "_arc_df_repaired.csv")),
-               pnpro_out = paste0(wd, "/hypernodes/", hypernode_dirname, "/", hypernode_dirname, ".PNPRO"))
+# 1) Read the complete JSON file into a list
+cfg <- fromJSON(file.path(config_dir, "boundary_conditions.json"), simplifyVector = TRUE)
 
-# system(paste0("python", " ", wd, "/functions_library/render_pnpro_layout.py", 
-#               " ", wd, "/petri_nets_library/blank.PNPRO", " ", wd, "/hypernodes/", hypernode_dirname, "/", hypernode_dirname, ".PNPRO"))
+# 2) Extract global parameters
+background_met <- cfg$background_met
+volume                   <- cfg$volume
+cell_density             <- cfg$cell_density
 
-system(paste0("python3", " ", wd, "/functions_library/render_pnpro_layout.py", 
-              " ", wd, "/petri_nets_library/blank.PNPRO", " ", wd, "/hypernodes/", hypernode_dirname, "/", hypernode_dirname, ".PNPRO"))
+C = background_met * volume
+
+# 3) Build a data.frame of exchange bounds
+exchange_bounds <- as.data.frame(cfg$exchange_bounds, stringsAsFactors = FALSE)
+
+# 4) (Optional) Convert columns to appropriate types
+exchange_bounds$value <- as.numeric(exchange_bounds$value)
 
 ##################
 ## continuing main
 ##################
 
-# Set parameters
-not_projected_met_molar <- 1000 # mmol/mL 
-V <- 0.001       # mL (1 microL)
-C <- not_projected_met_molar * V   # mmol
-delta <- 1e+10   # density
-
 # Run extraction with bounds
-run_full_ex_bounds(extraction_output = "extracted_ex_reactions.txt", bacteria_files = bacteria_files,
-                   output_dir_projections = "results_ex_reactions", bacteria_counts = bacteria_counts,
-                   fba_upper_bound = rep(1000, length(joint_reactions)), fba_reactions = joint_reactions,
+source(file.path(wd, "epimod_FBAfunctions", "R", "ex_bounds_module.R"))
+run_full_ex_bounds(extraction_output = "extracted_ex_reactions.txt", 
+                   bacteria_files = bacteria_files,
+                   output_dir_projections = "results_ex_reactions", 
+                   bacteria_counts = bacteria_counts,
+                   fba_upper_bound = rep(1000, length(joint_reactions)), 
+                   fba_reactions = joint_reactions,
                    not_shared_base_bound = C, reaction_version = "r")
 
-# Process diet medium data
-bounds_file_path <- paste0(wd, "/results_ex_reactions/EX_upper_bounds_nonFBA.csv")
-irr_exchange_bounds <- read.csv(bounds_file_path, head = T)
-
-diet_medium <- process_medium_data(media_wd = paste0(wd, "/epimod_FBAfunctions/inst/diets/vmh"),
-                                   medium_name = "EU_average", bacteria_counts = bacteria_counts,
-                                   biomass = biomass)
+irr_exchange_bounds <- read.csv(paste0(wd, "/results_ex_reactions/EX_upper_bounds_nonFBA.csv"), head = T)
 
 # Update bounds with diet data
 result_df <- irr_exchange_bounds
@@ -172,14 +154,12 @@ R_funct_content[7] <- paste0("  y_ini <- c(", bacteria_counts, ", ", bacteria_co
 writeLines(R_funct_content, R_funct_file_path)
 
 # Generate model
-start_time <- Sys.time()
 model.generation(net_fname = paste0(wd, "/net/", model_name, ".PNPRO"),
                  transitions_fname = paste0(wd, "/input/General_functions.cpp"),
                  fba_fname = paste0(wd, "/results/", mn_name, ".txt"))
 system(paste0("mv ", paste(c(model_name, model_name, model_name, model_name, model_name), 
                            c(".def", ".fbainfo", ".net", ".PlaceTransition", ".solver"), 
                            sep="", collapse=" "), " ", wd, "/net/"))
-cat("Model generation time:", difftime(Sys.time(), start_time, units="mins"), "minutes\n")
 
 # Analyze model
 start_time <- Sys.time()
@@ -194,4 +174,3 @@ model.analysis(
                  paste0(wd, "/results_ex_reactions/EX_upper_bounds_FBA.csv"),
                  paste0(wd, "/results_ex_reactions/EX_upper_bounds_nonFBA.csv"))
 )
-cat("Model analysis time:", difftime(Sys.time(), start_time, units="mins"), "minutes\n")

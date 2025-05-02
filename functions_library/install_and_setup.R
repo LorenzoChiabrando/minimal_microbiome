@@ -3,7 +3,7 @@
 
 # ---- 1. CRAN packages to install ----
 cran_pkgs <- c(
-  "dplyr", "R.matlab", "ggplot2", "stringr", "purrr",
+  "dplyr", "R.matlab", "ggplot2", "stringr", "purrr", "jsonlite",
   "tidyr", "patchwork", "scales", "fdatest", "xml2", "yaml",
   "rlang", "parallel", "foreach", "doParallel", "glue", "readr"
 )

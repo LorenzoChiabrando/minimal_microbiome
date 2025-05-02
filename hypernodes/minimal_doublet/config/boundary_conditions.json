@@ -1,0 +1,980 @@
+{
+  // Global reactor and cell‐density parameters
+  // -----------------------------------------------------
+  // Maximum uptake/secretion flux bound for metabolites
+  // not explicitly modelled in FBA [mmol per gDW per hour]
+  "background_met": 1000.0,
+
+  // Reactor/compartment volume [mL]
+  "volume": 0.001,
+
+  // Cell density δ: maximum cells per unit volume at carrying
+  // capacity (physical‐space constraint) [cells per mL]
+  "cell_density": 1e10,
+
+  // Specific exchange‐reaction bounds for this medium:
+  // each entry gives the reaction ID, category, and bound value
+  
+  "exchange_bounds": [
+    {
+      "reaction": "EX_glc__D_e",
+      "type": "simple sugars and starch",
+      "value": -0.03947
+    },
+    {
+      "reaction": "EX_gal_e",
+      "type": "simple sugars and starch",
+      "value": -0.03947
+    },
+    {
+      "reaction": "EX_man_e",
+      "type": "simple sugars and starch",
+      "value": -0.03947
+    },
+    {
+      "reaction": "EX_mnl_e",
+      "type": "simple sugars and starch",
+      "value": -0.03947
+    },
+    {
+      "reaction": "EX_fuc__L_e",
+      "type": "simple sugars and starch",
+      "value": -0.03947
+    },
+    {
+      "reaction": "EX_glcn_e",
+      "type": "simple sugars and starch",
+      "value": -0.03947
+    },
+    {
+      "reaction": "EX_rmn_e",
+      "type": "simple sugars and starch",
+      "value": -0.03947
+    },
+    {
+      "reaction": "EX_arab__L_e",
+      "type": "simple sugars and starch",
+      "value": -0.04737
+    },
+    {
+      "reaction": "EX_drib_e",
+      "type": "simple sugars and starch",
+      "value": -0.04737
+    },
+    {
+      "reaction": "EX_rib__D_e",
+      "type": "simple sugars and starch",
+      "value": -0.04737
+    },
+    {
+      "reaction": "EX_xyl__D_e",
+      "type": "simple sugars and starch",
+      "value": -0.04737
+    },
+    {
+      "reaction": "EX_oxa_e",
+      "type": "simple sugars and starch",
+      "value": -0.11842
+    },
+    {
+      "reaction": "EX_lcts_e",
+      "type": "simple sugars and starch",
+      "value": -0.01974
+    },
+    {
+      "reaction": "EX_malt_e",
+      "type": "simple sugars and starch",
+      "value": -0.01974
+    },
+    {
+      "reaction": "EX_sucr_e",
+      "type": "simple sugars and starch",
+      "value": -0.01974
+    },
+    {
+      "reaction": "EX_melib_e",
+      "type": "simple sugars and starch",
+      "value": -0.01974
+    },
+    {
+      "reaction": "EX_cellb_e",
+      "type": "simple sugars and starch",
+      "value": -0.01974
+    },
+    {
+      "reaction": "EX_tre_e",
+      "type": "simple sugars and starch",
+      "value": -0.01974
+    },
+    {
+      "reaction": "EX_strch1_e",
+      "type": "simple sugars and starch",
+      "value": -0.06818
+    },
+    {
+      "reaction": "EX_amylopect900_e",
+      "type": "fiber",
+      "value": -0.0003472222
+    },
+    {
+      "reaction": "EX_amylose300_e",
+      "type": "fiber",
+      "value": -0.0010416667
+    },
+    {
+      "reaction": "EX_arabinan101_e",
+      "type": "fiber",
+      "value": -0.0036836935
+    },
+    {
+      "reaction": "EX_arabinogal_e",
+      "type": "fiber",
+      "value": -0.0004854997
+    },
+    {
+      "reaction": "EX_arabinoxyl_e",
+      "type": "fiber",
+      "value": -0.0067934783
+    },
+    {
+      "reaction": "EX_bglc_e",
+      "type": "fiber",
+      "value": -1.5625e-06
+    },
+    {
+      "reaction": "EX_cellul_e",
+      "type": "fiber",
+      "value": -0.000625
+    },
+    {
+      "reaction": "EX_dextran40_e",
+      "type": "fiber",
+      "value": -0.00390625
+    },
+    {
+      "reaction": "EX_galmannan_e",
+      "type": "fiber",
+      "value": -0.0003125
+    },
+    {
+      "reaction": "EX_glcmannan_e",
+      "type": "fiber",
+      "value": -0.0007284382
+    },
+    {
+      "reaction": "EX_homogal_e",
+      "type": "fiber",
+      "value": -0.0028409091
+    },
+    {
+      "reaction": "EX_inulin_e",
+      "type": "fiber",
+      "value": -0.0104166667
+    },
+    {
+      "reaction": "EX_kestopt_e",
+      "type": "fiber",
+      "value": -0.0625
+    },
+    {
+      "reaction": "EX_levan1000_e",
+      "type": "fiber",
+      "value": -0.0003125
+    },
+    {
+      "reaction": "EX_lmn30_e",
+      "type": "fiber",
+      "value": -0.0104166667
+    },
+    {
+      "reaction": "EX_lichn_e",
+      "type": "fiber",
+      "value": -0.0018382353
+    },
+    {
+      "reaction": "EX_pect_e",
+      "type": "fiber",
+      "value": -0.000739645
+    },
+    {
+      "reaction": "EX_pullulan1200_e",
+      "type": "fiber",
+      "value": -0.0002604167
+    },
+    {
+      "reaction": "EX_raffin_e",
+      "type": "fiber",
+      "value": -0.1041666667
+    },
+    {
+      "reaction": "EX_rhamnogalurI_e",
+      "type": "fiber",
+      "value": -0.0003210616
+    },
+    {
+      "reaction": "EX_rhamnogalurII_e",
+      "type": "fiber",
+      "value": -0.0059148265
+    },
+    {
+      "reaction": "EX_starch1200_e",
+      "type": "fiber",
+      "value": -0.0002604167
+    },
+    {
+      "reaction": "EX_xylan_e",
+      "type": "fiber",
+      "value": -0.0007102273
+    },
+    {
+      "reaction": "EX_xyluglc_e",
+      "type": "fiber",
+      "value": -0.0002912395
+    },
+    {
+      "reaction": "EX_arachd_e",
+      "type": "fat",
+      "value": -0.001664
+    },
+    {
+      "reaction": "EX_chsterol_e",
+      "type": "fat",
+      "value": -0.002479
+    },
+    {
+      "reaction": "EX_glyc_e",
+      "type": "fat",
+      "value": -0.899827
+    },
+    {
+      "reaction": "EX_hdca_e",
+      "type": "fat",
+      "value": -0.198185
+    },
+    {
+      "reaction": "EX_hdcea_e",
+      "type": "fat",
+      "value": -0.018258
+    },
+    {
+      "reaction": "EX_lnlc_e",
+      "type": "fat",
+      "value": -0.179555
+    },
+    {
+      "reaction": "EX_lnlnca_e",
+      "type": "fat",
+      "value": -0.008783
+    },
+    {
+      "reaction": "EX_lnlncg_e",
+      "type": "fat",
+      "value": -0.008783
+    },
+    {
+      "reaction": "EX_ocdca_e",
+      "type": "fat",
+      "value": -0.084641
+    },
+    {
+      "reaction": "EX_ocdcea_e",
+      "type": "fat",
+      "value": -0.340722
+    },
+    {
+      "reaction": "EX_octa_e",
+      "type": "fat",
+      "value": -0.006471
+    },
+    {
+      "reaction": "EX_ttdca_e",
+      "type": "fat",
+      "value": -0.034338
+    },
+    {
+      "reaction": "EX_ala__L_e",
+      "type": "protein",
+      "value": -1.0
+    },
+    {
+      "reaction": "EX_ser__L_e",
+      "type": "protein",
+      "value": -1.0
+    },
+    {
+      "reaction": "EX_cys__L_e",
+      "type": "protein",
+      "value": -1.0
+    },
+    {
+      "reaction": "EX_arg__L_e",
+      "type": "protein",
+      "value": -0.15
+    },
+    {
+      "reaction": "EX_ile__L_e",
+      "type": "protein",
+      "value": -0.15
+    },
+    {
+      "reaction": "EX_leu__L_e",
+      "type": "protein",
+      "value": -0.15
+    },
+    {
+      "reaction": "EX_lys__L_e",
+      "type": "protein",
+      "value": -0.15
+    },
+    {
+      "reaction": "EX_his__L_e",
+      "type": "protein",
+      "value": -0.15
+    },
+    {
+      "reaction": "EX_asn__L_e",
+      "type": "protein",
+      "value": -0.225
+    },
+    {
+      "reaction": "EX_asp__L_e",
+      "type": "protein",
+      "value": -0.225
+    },
+    {
+      "reaction": "EX_thr__L_e",
+      "type": "protein",
+      "value": -0.225
+    },
+    {
+      "reaction": "EX_glu__L_e",
+      "type": "protein",
+      "value": -0.18
+    },
+    {
+      "reaction": "EX_met__L_e",
+      "type": "protein",
+      "value": -0.18
+    },
+    {
+      "reaction": "EX_gln__L_e",
+      "type": "protein",
+      "value": -0.18
+    },
+    {
+      "reaction": "EX_pro__L_e",
+      "type": "protein",
+      "value": -0.18
+    },
+    {
+      "reaction": "EX_val__L_e",
+      "type": "protein",
+      "value": -0.18
+    },
+    {
+      "reaction": "EX_phe__L_e",
+      "type": "protein",
+      "value": -1.0
+    },
+    {
+      "reaction": "EX_tyr__L_e",
+      "type": "protein",
+      "value": -1.0
+    },
+    {
+      "reaction": "EX_gly_e",
+      "type": "protein",
+      "value": -0.45
+    },
+    {
+      "reaction": "EX_trp__L_e",
+      "type": "protein",
+      "value": -0.08182
+    },
+    {
+      "reaction": "EX_thm_e",
+      "type": "minerals and vitamins",
+      "value": -1.0
+    },
+    {
+      "reaction": "EX_ribflv_e",
+      "type": "minerals and vitamins",
+      "value": -1.0
+    },
+    {
+      "reaction": "EX_nac_e",
+      "type": "minerals and vitamins",
+      "value": -1.0
+    },
+    {
+      "reaction": "EX_btn_e",
+      "type": "minerals and vitamins",
+      "value": -1.0
+    },
+    {
+      "reaction": "EX_pnto__R_e",
+      "type": "minerals and vitamins",
+      "value": -1.0
+    },
+    {
+      "reaction": "EX_pydxn_e",
+      "type": "minerals and vitamins",
+      "value": -1.0
+    },
+    {
+      "reaction": "EX_pydx_e",
+      "type": "minerals and vitamins",
+      "value": -1.0
+    },
+    {
+      "reaction": "EX_pydam_e",
+      "type": "minerals and vitamins",
+      "value": -1.0
+    },
+    {
+      "reaction": "EX_fol_e",
+      "type": "minerals and vitamins",
+      "value": -1.0
+    },
+    {
+      "reaction": "EX_adpcbl_e",
+      "type": "minerals and vitamins",
+      "value": -1.0
+    },
+    {
+      "reaction": "EX_pheme_e",
+      "type": "minerals and vitamins",
+      "value": -1.0
+    },
+    {
+      "reaction": "EX_cbl1_e",
+      "type": "minerals and vitamins",
+      "value": -1.0
+    },
+    {
+      "reaction": "EX_chol_e",
+      "type": "minerals and vitamins",
+      "value": -1.0
+    },
+    {
+      "reaction": "EX_h2s_e",
+      "type": "minerals and vitamins",
+      "value": -1.0
+    },
+    {
+      "reaction": "EX_so4_e",
+      "type": "minerals and vitamins",
+      "value": -1.0
+    },
+    {
+      "reaction": "EX_spmd_e",
+      "type": "minerals and vitamins",
+      "value": -1.0
+    },
+    {
+      "reaction": "EX_na1_e",
+      "type": "minerals and vitamins",
+      "value": -1.0
+    },
+    {
+      "reaction": "EX_ca2_e",
+      "type": "minerals and vitamins",
+      "value": -1.0
+    },
+    {
+      "reaction": "EX_cobalt2_e",
+      "type": "minerals and vitamins",
+      "value": -1.0
+    },
+    {
+      "reaction": "EX_cl_e",
+      "type": "minerals and vitamins",
+      "value": -1.0
+    },
+    {
+      "reaction": "EX_k_e",
+      "type": "minerals and vitamins",
+      "value": -1.0
+    },
+    {
+      "reaction": "EX_fe2_e",
+      "type": "minerals and vitamins",
+      "value": -1.0
+    },
+    {
+      "reaction": "EX_fe3_e",
+      "type": "minerals and vitamins",
+      "value": -1.0
+    },
+    {
+      "reaction": "EX_fe3dcit_e",
+      "type": "minerals and vitamins",
+      "value": -1.0
+    },
+    {
+      "reaction": "EX_mg2_e",
+      "type": "minerals and vitamins",
+      "value": -1.0
+    },
+    {
+      "reaction": "EX_mn2_e",
+      "type": "minerals and vitamins",
+      "value": -1.0
+    },
+    {
+      "reaction": "EX_mobd_e",
+      "type": "minerals and vitamins",
+      "value": -1.0
+    },
+    {
+      "reaction": "EX_cu2_e",
+      "type": "minerals and vitamins",
+      "value": -1.0
+    },
+    {
+      "reaction": "EX_zn2_e",
+      "type": "minerals and vitamins",
+      "value": -1.0
+    },
+    {
+      "reaction": "EX_sel_e",
+      "type": "minerals and vitamins",
+      "value": -1.0
+    },
+    {
+      "reaction": "EX_pime_e",
+      "type": "minerals and vitamins",
+      "value": -1.0
+    },
+    {
+      "reaction": "EX_mqn8_e",
+      "type": "minerals and vitamins",
+      "value": -1.0
+    },
+    {
+      "reaction": "EX_meoh_e",
+      "type": "minerals and vitamins",
+      "value": -10.0
+    },
+    {
+      "reaction": "EX_h2o_e",
+      "type": "minerals and vitamins",
+      "value": -10.0
+    },
+    {
+      "reaction": "EX_12dgr180_e",
+      "type": "essential",
+      "value": -0.1
+    },
+    {
+      "reaction": "EX_26dap__M_e",
+      "type": "essential",
+      "value": -0.1
+    },
+    {
+      "reaction": "EX_2dmmq8_e",
+      "type": "essential",
+      "value": -0.1
+    },
+    {
+      "reaction": "EX_2obut_e",
+      "type": "essential",
+      "value": -0.1
+    },
+    {
+      "reaction": "EX_3mop_e",
+      "type": "essential",
+      "value": -0.1
+    },
+    {
+      "reaction": "EX_4abz_e",
+      "type": "essential",
+      "value": -0.1
+    },
+    {
+      "reaction": "EX_4hbz_e",
+      "type": "essential",
+      "value": -0.1
+    },
+    {
+      "reaction": "EX_ac_e",
+      "type": "essential",
+      "value": -0.1
+    },
+    {
+      "reaction": "EX_acgam_e",
+      "type": "essential",
+      "value": -0.1
+    },
+    {
+      "reaction": "EX_acmana_e",
+      "type": "essential",
+      "value": -0.1
+    },
+    {
+      "reaction": "EX_acnam_e",
+      "type": "essential",
+      "value": -0.1
+    },
+    {
+      "reaction": "EX_ade_e",
+      "type": "essential",
+      "value": -0.1
+    },
+    {
+      "reaction": "EX_adn_e",
+      "type": "essential",
+      "value": -0.1
+    },
+    {
+      "reaction": "EX_adocbl_e",
+      "type": "micronutrient",
+      "value": 10.0
+    },
+    {
+      "reaction": "EX_ala__D_e",
+      "type": "essential",
+      "value": -0.1
+    },
+    {
+      "reaction": "EX_amet_e",
+      "type": "essential",
+      "value": -0.1
+    },
+    {
+      "reaction": "EX_amp_e",
+      "type": "essential",
+      "value": -1.0
+    },
+    {
+      "reaction": "EX_arab__D_e",
+      "type": "essential",
+      "value": -0.1
+    },
+    {
+      "reaction": "EX_cgly_e",
+      "type": "essential",
+      "value": -0.1
+    },
+    {
+      "reaction": "EX_chor_e",
+      "type": "essential",
+      "value": -0.1
+    },
+    {
+      "reaction": "EX_cit_e",
+      "type": "essential",
+      "value": -0.1
+    },
+    {
+      "reaction": "EX_csn_e",
+      "type": "essential",
+      "value": -0.1
+    },
+    {
+      "reaction": "EX_dad__2_e",
+      "type": "essential",
+      "value": -0.1
+    },
+    {
+      "reaction": "EX_dcyt_e",
+      "type": "essential",
+      "value": -0.1
+    },
+    {
+      "reaction": "EX_ddca_e",
+      "type": "essential",
+      "value": -0.1
+    },
+    {
+      "reaction": "EX_dgsn_e",
+      "type": "essential",
+      "value": -0.1
+    },
+    {
+      "reaction": "EX_fald_e",
+      "type": "essential",
+      "value": -0.1
+    },
+    {
+      "reaction": "EX_for_e",
+      "type": "essential",
+      "value": -0.1
+    },
+    {
+      "reaction": "EX_glyc3p_e",
+      "type": "essential",
+      "value": -0.1
+    },
+    {
+      "reaction": "EX_gsn_e",
+      "type": "essential",
+      "value": -0.1
+    },
+    {
+      "reaction": "EX_gthox_e",
+      "type": "essential",
+      "value": -0.1
+    },
+    {
+      "reaction": "EX_gthrd_e",
+      "type": "essential",
+      "value": -0.1
+    },
+    {
+      "reaction": "EX_gua_e",
+      "type": "essential",
+      "value": -0.1
+    },
+    {
+      "reaction": "EX_h_e",
+      "type": "essential",
+      "value": -0.1
+    },
+    {
+      "reaction": "EX_hxan_e",
+      "type": "essential",
+      "value": -0.1
+    },
+    {
+      "reaction": "EX_lanost_e",
+      "type": "essential",
+      "value": -0.1
+    },
+    {
+      "reaction": "EX_mqn7_e",
+      "type": "essential",
+      "value": -0.1
+    },
+    {
+      "reaction": "EX_ncam_e",
+      "type": "essential",
+      "value": -0.1
+    },
+    {
+      "reaction": "EX_nmn_e",
+      "type": "essential",
+      "value": -0.1
+    },
+    {
+      "reaction": "EX_no2_e",
+      "type": "essential",
+      "value": -0.1
+    },
+    {
+      "reaction": "EX_pi_e",
+      "type": "micronutrient",
+      "value": 10.0
+    },
+    {
+      "reaction": "EX_q8_e",
+      "type": "essential",
+      "value": -0.1
+    },
+    {
+      "reaction": "EX_sheme_e",
+      "type": "essential",
+      "value": -0.1
+    },
+    {
+      "reaction": "EX_thymd_e",
+      "type": "essential",
+      "value": -0.1
+    },
+    {
+      "reaction": "EX_ura_e",
+      "type": "essential",
+      "value": -0.1
+    },
+    {
+      "reaction": "EX_xan_e",
+      "type": "essential",
+      "value": -0.1
+    },
+    {
+      "reaction": "EX_glu__D_e",
+      "type": "essential",
+      "value": -0.1
+    },
+    {
+      "reaction": "EX_chtbs_e",
+      "type": "essential",
+      "value": -0.1
+    },
+    {
+      "reaction": "EX_metsox__S__L_e",
+      "type": "essential",
+      "value": -0.1
+    },
+    {
+      "reaction": "EX_gam_e",
+      "type": "essential",
+      "value": -0.1
+    },
+    {
+      "reaction": "EX_indole_e",
+      "type": "essential",
+      "value": -0.1
+    },
+    {
+      "reaction": "EX_coa_e",
+      "type": "essential",
+      "value": -0.1
+    },
+    {
+      "reaction": "EX_fum_e",
+      "type": "essential",
+      "value": -0.1
+    },
+    {
+      "reaction": "EX_succ_e",
+      "type": "essential",
+      "value": -0.1
+    },
+    {
+      "reaction": "EX_no3_e",
+      "type": "essential",
+      "value": -0.1
+    },
+    {
+      "reaction": "EX_ins_e",
+      "type": "essential",
+      "value": -0.1
+    },
+    {
+      "reaction": "EX_uri_e",
+      "type": "essential",
+      "value": -0.1
+    },
+    {
+      "reaction": "EX_lac__L_e",
+      "type": "essential",
+      "value": -0.1
+    },
+    {
+      "reaction": "EX_glypro_e",
+      "type": "essential",
+      "value": -0.1
+    },
+    {
+      "reaction": "EX_urea_e",
+      "type": "essential",
+      "value": -0.1
+    },
+    {
+      "reaction": "EX_duri_e",
+      "type": "essential",
+      "value": -0.1
+    },
+    {
+      "reaction": "EX_h2_e",
+      "type": "essential",
+      "value": -0.1
+    },
+    {
+      "reaction": "EX_mal__L_e",
+      "type": "essential",
+      "value": -0.1
+    },
+    {
+      "reaction": "EX_orot_e",
+      "type": "essential",
+      "value": -0.1
+    },
+    {
+      "reaction": "EX_glymet_e",
+      "type": "essential",
+      "value": -0.1
+    },
+    {
+      "reaction": "EX_glyleu_e",
+      "type": "essential",
+      "value": -0.1
+    },
+    {
+      "reaction": "EX_pydx5p_e",
+      "type": "essential",
+      "value": -0.1
+    },
+    {
+      "reaction": "EX_so3_e",
+      "type": "essential",
+      "value": -0.1
+    },
+    {
+      "reaction": "EX_nh4_e",
+      "type": "essential",
+      "value": -1.0
+    },
+    {
+      "reaction": "EX_crn_e",
+      "type": "unmapped",
+      "value": -50.0
+    },
+    {
+      "reaction": "EX_elaid_e",
+      "type": "unmapped",
+      "value": -50.0
+    },
+    {
+      "reaction": "EX_dlnlcg_e",
+      "type": "unmapped",
+      "value": -50.0
+    },
+    {
+      "reaction": "EX_adrn_e",
+      "type": "unmapped",
+      "value": -50.0
+    },
+    {
+      "reaction": "EX_hco3_e",
+      "type": "unmapped",
+      "value": -50.0
+    },
+    {
+      "reaction": "EX_sprm_e",
+      "type": "unmapped",
+      "value": -50.0
+    },
+    {
+      "reaction": "EX_carn_e",
+      "type": "unmapped",
+      "value": -50.0
+    },
+    {
+      "reaction": "EX_7thf_e",
+      "type": "unmapped",
+      "value": -50.0
+    },
+    {
+      "reaction": "EX_Lcystin_e",
+      "type": "unmapped",
+      "value": -50.0
+    },
+    {
+      "reaction": "EX_hista_e",
+      "type": "unmapped",
+      "value": -50.0
+    },
+    {
+      "reaction": "EX_orn_e",
+      "type": "unmapped",
+      "value": -50.0
+    },
+    {
+      "reaction": "EX_ptrc_e",
+      "type": "unmapped",
+      "value": -50.0
+    },
+    {
+      "reaction": "EX_creat_e",
+      "type": "unmapped",
+      "value": -50.0
+    },
+    {
+      "reaction": "EX_cytd_e",
+      "type": "unmapped",
+      "value": -50.0
+    }
+  ]
+}

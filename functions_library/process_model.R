@@ -11,7 +11,7 @@ process_model <- function(model, hypernode_name) {
   
   # Correct paths
   mat_file <- file.path(wd, "metabolic_networks_library", paste0(FBAmodel, ".mat"))
-  input_dir <- file.path(wd, "hypernodes", hypernode_name, paste0("metabolic_networks_", hypernode_name), FBAmodel)
+  input_dir <- file.path(wd, "hypernodes", hypernode_name, FBAmodel)
   output_dir <- file.path(input_dir, paste0("compiled_", FBAmodel))
   
   # Validate .mat file
