@@ -15,7 +15,7 @@ organisms:
       starv: 0.21
       dup:   1.00
       death: 0.018
-    initial_count: 1e6
+    initial_count: 1e+06
 
   - model_name: "Clostridium_butyricum_DSM_10702"
     label:      "Clostridium butyricum DSM 10702"
@@ -27,5 +27,5 @@ organisms:
       starv: 0.21
       dup:   1.00
       death: 0.018
-    initial_count: 1e6
+    initial_count: 1e+06
 

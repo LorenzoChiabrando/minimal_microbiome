@@ -1,217 +1,196 @@
-# @Author: Mandringo02
-
 # ============================================================
 #  File: ex_bounds_module.R
-#  Description: Un modulo in R che estrae le reazioni EX_ da
-#               file di testo e le elabora per generare 
-#               file CSV con vincoli calcolati dinamicamente.
+#
+#  Description:
+#    This R module supports the configuration of boundary constraints
+#    for hybrid metabolic models by:
+#      1. Extracting boundary reactions from model-specific metadata files
+#      2. Generating CSV files with upper bounds for each reaction variant,
+#         using cell-population-normalized scaling logic.
+#
+#    Convention:
+#      - "_r": treated as import; assigned an upper bound.
+#      - "_f": treated as export; assigned an upper bound.
+#
+#    For projected reactions:
+#      - "_r" → ub = projected_base_lb / total_cell_count
+#      - "_f" → ub = projected_base_ub
+#
+#    For not-projected reactions:
+#      - "_r" → ub = not_projected_base_lb / total_cell_count
+#      - "_f" → ub = not_projected_base_ub
 # ============================================================
 
 # ------------------------------------------------------------------
-# 1) EXTRACT EX_ REACTIONS
-#    Legge la prima riga di ciascun file in 'files' (un vettore 
-#    di percorsi), divide per spazio, filtra le reazioni che 
-#    iniziano con "EX_" e le scrive in 'output_file' con "_r" e "_f"
+# 1) EXTRACT BOUNDARY REACTIONS
 # ------------------------------------------------------------------
-extract_ex_reactions <- function(
-  files,
-  output_file = file.path(getwd(), "all_ex_reactions.txt")
-) {
-  # Inizializza un vettore vuoto per memorizzare tutte le reazioni EX_
-  all_ex_reactions <- character()
-  
-  # Itera su ciascun file in 'files'
+
+extract_boundary_reactions <- function(files, output_file) {
+  all_reactions <- character()
   for (f in files) {
-    if (!file.exists(f)) {
-      warning(paste("File not found:", f, "- skipping."))
+    model_dir <- dirname(f)
+    metadata_file <- file.path(model_dir, "reactions_metadata.csv")
+    if (!file.exists(metadata_file)) {
+      warning("Metadata not found for: ", f)
       next
     }
-    # Legge solo la prima riga
-    first_line <- readLines(f, n = 1, warn = FALSE)
-    if (length(first_line) == 0) {
-      # Se il file è vuoto o non ha una prima riga, salta
+    meta <- read.csv(metadata_file, stringsAsFactors = FALSE)
+    if (!all(c("type", "abbreviation") %in% names(meta))) {
+      warning("Missing required columns in metadata for: ", f)
       next
     }
-    
-    # Divide la riga in base agli spazi
-    reactions <- unlist(strsplit(first_line, " "))
-    
-    # Filtra solo le reazioni che iniziano con "EX_"
-    ex_filtered <- reactions[grepl("^EX_", reactions)]
-    
-    # Accumula nel vettore principale
-    all_ex_reactions <- c(all_ex_reactions, ex_filtered)
+    boundary_filtered <- meta$abbreviation[meta$type == "boundary"]
+    all_reactions <- c(all_reactions, boundary_filtered)
   }
-  
-  # Rimuove eventuali duplicati e ordina
-  all_ex_reactions <- unique(all_ex_reactions)
-  all_ex_reactions <- sort(all_ex_reactions)
-  
-  # Crea (o sovrascrive) il file di output
+  all_reactions <- sort(unique(all_reactions))
   con <- file(output_file, open = "w")
-  
-  # Per ciascuna reazione EX_, scrivi le versioni "_r" e "_f"
-  for (rxn in all_ex_reactions) {
+  for (rxn in all_reactions) {
     writeLines(paste0(rxn, "_r"), con = con)
     writeLines(paste0(rxn, "_f"), con = con)
   }
   close(con)
-  
-  message("Le reazioni EX_ uniche sono state scritte in: ", output_file)
+  message("Boundary reactions written to: ", output_file)
 }
 
+# ------------------------------------------------------------------
+# 2) PROCESS BOUNDARY REACTIONS TO GENERATE FLUX BOUNDS
+# ------------------------------------------------------------------
 
-# ------------------------------------------------------------------
-# 2) PROCESS EX_ REACTIONS TO CREATE CSV FILES
-#    Questa funzione legge un file ('reaction_file') contenente righe 
-#    del tipo "EX_something_r" o "EX_something_f". 
-#    Vengono generati due CSV:
-#      - FBA CSV:   contiene solo le reazioni le cui *base* 
-#                   sono in 'fba_reactions'. Per queste, si imposta 
-#                   SEMPRE la versione "_f" con l'upper bound 'fba_upper_bound'.
-#      - nonFBA CSV: contiene le altre reazioni (non presenti in 'fba_reactions'),
-#                    a cui vengono applicati i filtri (in base al parametro 
-#                    reaction_versions) e il vincolo = not_shared_base_bound / bacteria_count.
-# ------------------------------------------------------------------
-process_ex_reactions <- function(
-  reaction_file,
-  bacteria_files,
-  output_dir           = getwd(),
-  fba_reactions        = character(),
-  bacteria_counts      = c(1),
-  not_shared_base_bound   = 1000,
-  fba_upper_bound      = 0.015,
-  reaction_versions    = c("both", "r", "f")  # parametro che controlla le direzioni per le non-FBA
+process_boundary_reactions <- function(
+    output_file,
+    bacterial_models,
+    output_dir,
+    bacteria_counts,
+    projected_base_lb,
+    not_projected_base_lb,
+    projected_base_ub,
+    not_projected_base_ub,
+    reaction_versions = c("both", "r", "f")
 ) {
-  # Forza uno dei tre valori consentiti per reaction_versions
   reaction_versions <- match.arg(reaction_versions)
+  n_bact <- length(bacterial_models)
+  if (!file.exists(output_file)) stop("Reactions list not found: ", output_file)
+  if (length(bacteria_counts) != n_bact) stop("Mismatch in bacteria_counts length.")
+  if (!dir.exists(output_dir)) dir.create(output_dir, recursive = TRUE)
   
-  n_bact <- length(bacteria_files)
-  if (n_bact < 1) {
-    stop("Devi fornire almeno un modello batterico in 'bacteria_files'.")
-  }
-  if (!file.exists(reaction_file)) {
-    stop("Il file delle reazioni non esiste: ", reaction_file)
-  }
-  if (length(bacteria_counts) != n_bact) {
-    stop("La lunghezza di 'bacteria_counts' deve essere uguale a quella di 'bacteria_files'.")
-  }
-  if (length(not_shared_base_bound) != 1 && length(not_shared_base_bound) != n_bact) {
-    stop("'not_shared_base_bound' deve essere un singolo numero o un vettore della stessa lunghezza dei batteri.")
-  }
-  if (length(fba_upper_bound) != 1 && length(fba_upper_bound) != n_bact) {
-    stop("'fba_upper_bound' deve essere un singolo numero o un vettore della stessa lunghezza dei batteri.")
-  }
+  reaction_metadata_all <- do.call(rbind, lapply(bacterial_models, function(model) {
+    meta_path <- file.path("hypernodes", hypernode_name, "biounits", model$FBAmodel, "reactions_metadata.csv")
+    if (!file.exists(meta_path)) stop("Missing metadata for model: ", model$FBAmodel)
+    meta <- read.csv(meta_path, stringsAsFactors = FALSE)
+    meta$FBAmodel <- model$FBAmodel
+    meta
+  }))
   
-  if (!dir.exists(output_dir)) {
-    dir.create(output_dir, recursive = TRUE)
-  }
+  cat("✅ Total reactions in combined metadata:", nrow(reaction_metadata_all), "\n")
+  cat("✅ Unique abbreviations in metadata:", length(unique(reaction_metadata_all$abbreviation)), "\n")
+  print(head(unique(reaction_metadata_all$abbreviation), 10))
   
-  output_ub_fba_path    <- file.path(output_dir, "EX_upper_bounds_FBA.csv")
-  output_ub_nonfba_path <- file.path(output_dir, "EX_upper_bounds_nonFBA.csv")
+  model_names <- sapply(bacterial_models, function(m) m$FBAmodel)
+  names(bacteria_counts) <- model_names
   
-  f_fba    <- file(output_ub_fba_path, "w")
-  f_nonfba <- file(output_ub_nonfba_path, "w")
+  reactions <- readLines(output_file, warn = FALSE)
   
-  # Per le non-FBA, "replica" il valore base se necessario
-  if (length(not_shared_base_bound) == 1) {
-    base_values <- rep(not_shared_base_bound, n_bact)
-  } else {
-    base_values <- not_shared_base_bound
-  }
+  cat("✅ Total reactions read from file:", length(reactions), "\n")
+  print(head(reactions, 10))
   
-  first_line <- paste(c("base_upper_bounds", base_values), collapse = ",")
-  writeLines(first_line, con = f_nonfba)
+  get_base_name <- function(rxn) sub("(_r|_f)$", "", rxn)
   
-  # Funzione per ottenere il nome base (senza _r o _f)
-  get_base_name <- function(rxn) {
-    sub("(_r|_f)$", "", rxn)
-  }
+  get_base_name <- function(rxn) sub("(_r|_f)$", "", rxn)
+  base_rxns <- unique(sapply(reactions, get_base_name))
   
-  # Legge tutte le reazioni dal file
-  reactions <- readLines(reaction_file, warn = FALSE)
+  matches <- base_rxns %in% reaction_metadata_all$abbreviation
+  cat("✅ Reactions with metadata match:", sum(matches), "/", length(base_rxns), "\n")
   
-  # Itera sulle reazioni
+  projected <- list()
+  not_projected <- list()
+  
   for (reaction in reactions) {
-    # Salta eventuali reazioni non desiderate (es. EX_biomass_e)
     if (grepl("EX_biomass_e", reaction)) next
-    
-    # Ottieni il nome base della reazione
     base_rxn <- get_base_name(reaction)
+    rxn_type <- ifelse(grepl("_f$", reaction), "f", "r")
     
-    # Se la reazione è una FBA (cioè, la sua base è in fba_reactions)
-    if (base_rxn %in% fba_reactions) {
-      # Per le FBA si vuole SEMPRE processare la versione _f
-      if (!grepl("_f$", reaction)) next
-      # Imposta l'upper bound per la FBA
-      ub_values <- numeric(n_bact)
-      for (i in seq_len(n_bact)) {
-        ub_values[i] <- if (length(fba_upper_bound) == 1) {
-          fba_upper_bound
-        } else {
-          fba_upper_bound[i]
-        }
-      }
-      line_to_write <- paste(c(reaction, ub_values), collapse = ",")
-      writeLines(line_to_write, con = f_fba)
+    if ((reaction_versions == "r" && rxn_type == "f") ||
+        (reaction_versions == "f" && rxn_type == "r")) next
+    
+    used_models <- unique(reaction_metadata_all$FBAmodel[reaction_metadata_all$abbreviation == base_rxn])
+    relevant_counts <- bacteria_counts[used_models]
+    total_count <- sum(relevant_counts)
+    if (total_count == 0) next
+    
+    if (base_rxn %in% reaction_metadata_all$abbreviation) {
+      value <- if (rxn_type == "r") projected_base_lb / total_count else projected_base_ub
+      projected[[length(projected) + 1]] <- data.frame(reaction = reaction, bound = value, stringsAsFactors = FALSE)
     } else {
-      # Per le non-FBA applica il filtro reaction_versions
-      if (reaction_versions == "r" && grepl("_f$", reaction)) next
-      if (reaction_versions == "f" && grepl("_r$", reaction)) next
-      
-      # Imposta l'upper bound per le reazioni non-FBA
-      ub_values <- numeric(n_bact)
-      for (i in seq_len(n_bact)) {
-        ub_values[i] <- if (length(not_shared_base_bound) == 1) {
-          not_shared_base_bound / bacteria_counts[i]
-        } else {
-          not_shared_base_bound[i] / bacteria_counts[i]
-        }
-      }
-      line_to_write <- paste(c(reaction, ub_values), collapse = ",")
-      writeLines(line_to_write, con = f_nonfba)
+      value <- if (rxn_type == "r") not_projected_base_lb / total_count else not_projected_base_ub
+      not_projected[[length(not_projected) + 1]] <- data.frame(reaction = reaction, bound = value, stringsAsFactors = FALSE)
     }
   }
   
-  # Chiude i file di output
-  close(f_fba)
-  close(f_nonfba)
+  df_proj <- do.call(rbind, projected)
+  df_nonproj <- do.call(rbind, not_projected)
   
-  message("Elaborazione completata.\n  FBA file:    ", output_ub_fba_path,
-          "\n  nonFBA file: ", output_ub_nonfba_path)
+  # ------------------------------------------------------------------
+  # Diagnostics before writing files
+  # ------------------------------------------------------------------
+  
+  cat("📊 Diagnostics: Projected Reactions\n")
+  cat("  Total:", nrow(df_proj), "\n")
+  cat("  Unique:", length(unique(df_proj$reaction)), "\n")
+  cat("  _r type:", sum(grepl("_r$", df_proj$reaction)), "\n")
+  cat("  _f type:", sum(grepl("_f$", df_proj$reaction)), "\n")
+  print(head(df_proj, 5))
+  
+  cat("\n📊 Diagnostics: Not Projected Reactions\n")
+  cat("  Total:", nrow(df_nonproj), "\n")
+  cat("  Unique:", length(unique(df_nonproj$reaction)), "\n")
+  cat("  _r type:", sum(grepl("_r$", df_nonproj$reaction)), "\n")
+  cat("  _f type:", sum(grepl("_f$", df_nonproj$reaction)), "\n")
+  print(head(df_nonproj, 5))
+  
+  write.table(df_proj, file = file.path(output_dir, "ub_bounds_projected.csv"),
+              sep = ",", row.names = FALSE, col.names = FALSE, quote = FALSE)
+  write.table(df_nonproj, file = file.path(output_dir, "ub_bounds_not_projected.csv"),
+              sep = ",", row.names = FALSE, col.names = FALSE, quote = FALSE)
+  
+  message("✔ Written:\n - ub_bounds_projected.csv\n - ub_bounds_not_projected.csv")
 }
 
+# ------------------------------------------------------------------
+# 3) MASTER RUNNER FUNCTION
+# ------------------------------------------------------------------
 
-# ------------------------------------------------------------------
-# 3) COMBINED FUNCTION
-#    Una chiamata unica che esegue entrambe le operazioni:
-#      - Estrazione delle reazioni EX_ dai file di testo
-#      - Elaborazione delle reazioni per creare i file CSV
-# ------------------------------------------------------------------
 run_full_ex_bounds <- function(
-  extraction_output  = "all_ex_reactions.txt",
-  bacteria_files,
-  output_dir         = getwd(),
-  fba_reactions      = character(),
-  bacteria_counts    = c(1),
-  not_shared_base_bound = 1000,
-  fba_upper_bound    = 0.015,
-  reaction_versions  = c("both", "r", "f")
+    hypernode_name,
+    bacterial_models,
+    projected_base_lb,
+    projected_base_ub,
+    not_projected_base_lb,
+    not_projected_base_ub,
+    reaction_versions
 ) {
-  extract_ex_reactions(
-    files       = bacteria_files,
-    output_file = file.path(output_dir, extraction_output)
-  )
+  bacteria_counts <- sapply(bacterial_models, function(x) x$initial_count)
+  names(bacteria_counts) <- sapply(bacterial_models, function(x) x$FBAmodel)
   
-  process_ex_reactions(
-    reaction_file      = file.path(output_dir, extraction_output),
-    bacteria_files     = bacteria_files,
-    output_dir         = output_dir,
-    fba_reactions      = fba_reactions,
-    bacteria_counts    = bacteria_counts,
-    not_shared_base_bound = not_shared_base_bound,
-    fba_upper_bound    = fba_upper_bound,
-    reaction_versions  = reaction_versions 
+  output_dir_projections <- file.path(getwd(), "hypernodes", hypernode_name, "output")
+  output_file <- file.path(output_dir_projections, "extracted_boundary_reactions.txt")
+  
+  txt <- sapply(bacterial_models, function(x) x$txt_file)
+  names(txt) <- sapply(bacterial_models, function(x) x$FBAmodel)
+  files <- mapply(function(model, file) {
+    file.path("hypernodes", hypernode_name, "biounits", model, file)
+  }, names(txt), txt, USE.NAMES = TRUE)
+  
+  extract_boundary_reactions(files = files, output_file = output_file)
+  
+  process_boundary_reactions(
+    output_file = output_file,
+    bacterial_models = bacterial_models,
+    output_dir = output_dir_projections,
+    bacteria_counts = bacteria_counts,
+    projected_base_lb = projected_base_lb,
+    not_projected_base_lb = not_projected_base_lb,
+    projected_base_ub = projected_base_ub,
+    not_projected_base_ub = not_projected_base_ub,
+    reaction_versions = reaction_versions
   )
 }
-

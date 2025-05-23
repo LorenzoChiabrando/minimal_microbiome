@@ -1,10 +1,10 @@
 
 validate_pnpro <- function(pnpro2validate,
-			   metadata_path,
+                           hypernode_root,
                            bacterial_models,
                            metabolite_places,
-                           validation_dir,
-                           pnpro_name) {
+                           out_dir,
+                           hypernode_name) {
   
   # Extract the 2nd abbreviation for each organism in order
   abbrs <- map_chr(bacterial_models, ~ .x$abbreviation[2])
@@ -51,14 +51,14 @@ validate_pnpro <- function(pnpro2validate,
   models_df <- tibble(model = bacterial_models) %>%
     mutate(
       abbr     = map_chr(model, ~ .x$abbreviation[2]),
-      meta_dir = file.path(metadata_path, map_chr(model, ~ .x$FBAmodel))
+      meta_dir = file.path(hypernode_root, "biounits", map_chr(model, ~ .x$FBAmodel))
     )
   
   # read metabolites & reactions metadata
   models_df <- models_df %>%
     mutate(
-      metabolites = map(meta_dir, ~ read_csv(file.path(.x, "metabolites_metadata.csv"))),
-      reactions   = map(meta_dir, ~ read_csv(file.path(.x, "reactions_metadata.csv")))
+      metabolites = map(meta_dir, ~ read_csv(file.path(.x, "metabolites_metadata.csv"), show_col_types = FALSE)),
+      reactions   = map(meta_dir, ~ read_csv(file.path(.x, "reactions_metadata.csv"), show_col_types = FALSE))
     )
 
   projectable_df <- models_df %>%
@@ -73,10 +73,10 @@ validate_pnpro <- function(pnpro2validate,
     dplyr::select(abbr, reaction = abbreviation, equation)
   
   # match metabolite ↔ boundary reaction
-  shared_rxns_df <- projectable_df %>%
-    left_join(boundary_df, by="abbr") %>%
-    filter(str_detect(equation, paste0("\\b", met_id, "\\b"))) %>%
-    distinct(abbr, met_id, reaction)
+shared_rxns_df <- projectable_df %>%
+  left_join(boundary_df, by = "abbr", relationship = "many-to-many") %>%
+  filter(str_detect(equation, paste0("\\b", met_id, "\\b"))) %>%
+  distinct(abbr, met_id, reaction)
   
   # ————————————————————————————————————————————
   # 2) Parse all your FBA[…] commands out of the PN, keeping exact delay
@@ -302,13 +302,13 @@ arc_df_repaired <- bind_rows(
 # raw (partial) arcs
 write_csv(
   arc_df,
-  file.path(validation_dir, paste0(pnpro_name, "_arc_df.csv"))
+  file.path(out_dir, "raw_arcs.csv")
 )
 
 # full repaired arcs
 write_csv(
   arc_df_repaired,
-  file.path(validation_dir, paste0(pnpro_name, "_arc_df_repaired.csv"))
+  file.path(out_dir, "repaired_arcs.csv")
 )
 
 # ————————————————————————————————————————————

@@ -11,8 +11,7 @@ process_model <- function(model, hypernode_name) {
   
   # Correct paths
   mat_file <- file.path(wd, "metabolic_networks_library", paste0(FBAmodel, ".mat"))
-  input_dir <- file.path(wd, "hypernodes", hypernode_name, FBAmodel)
-  output_dir <- file.path(input_dir, paste0("compiled_", FBAmodel))
+  input_dir <- file.path(wd, "hypernodes", hypernode_name, "biounits", FBAmodel)
   
   # Validate .mat file
   if (!file.exists(mat_file)) {
@@ -27,7 +26,6 @@ process_model <- function(model, hypernode_name) {
   
   # Create input and output directories if needed
   if (!dir.exists(input_dir)) dir.create(input_dir, recursive = TRUE)
-  if (!dir.exists(output_dir)) dir.create(output_dir, recursive = TRUE)
 
   # Copy the .mat file into the model-specific input_dir (if needed)
   file.copy(mat_file, file.path(input_dir, paste0(FBAmodel, ".mat")))
@@ -63,7 +61,7 @@ process_model <- function(model, hypernode_name) {
   )
   
   # Save model
-  output_file <- file.path(output_dir, paste0(abbr, "_model.txt"))
+  output_file <- file.path(input_dir, paste0(abbr, "_model.txt"))
   capture_output <- capture.output(model_obj)
   writeLines(capture_output, output_file)
   

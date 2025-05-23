@@ -5,6 +5,10 @@
   // not explicitly modelled in FBA [mmol per gDW per hour]
   "background_met": 1000.0,
 
+  // FBA projected defualt upper bounds
+  "fba_upper_bound": 1000.0,
+  "fba_lower_bound": -1000.0,
+
   // Reactor/compartment volume [mL]
   "volume": 0.001,
 

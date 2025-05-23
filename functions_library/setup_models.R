@@ -8,7 +8,6 @@ derive_abbrs <- function(model_name) {
   
   # candidate 1: everything before the first underscore
   abbrs <- c(abbrs, parts[1])
-  
   # candidate 2: first letters of each part
   abbrs <- c(abbrs, paste0(substr(parts, 1,1), collapse=""))
   
@@ -35,8 +34,8 @@ make_bacterial_models <- function(model_names,
     list(
       FBAmodel     = mn,
       organism     = gsub("_", " ", mn),
-      abbreviation = abbrs,            # we pass the vector of candidates
-      txt_file     = mn,
+      abbreviation = abbrs, 
+      txt_file     = paste0(abbrs[2], "_model.txt"),
       biomass      = biomass_params[[i]],
       bac_pop_p    = pop_params[[i]],
       initial_count= initial_counts[i]
@@ -45,7 +44,7 @@ make_bacterial_models <- function(model_names,
 }
 
 write_bac_params <- function(bacterial_models, path) {
-  # turn each bac_pop_p list into a 1×3 data.frame of named columns
+  # turn each bac_pop_p list into a 1*3 data.frame of named columns
   df <- do.call(rbind, lapply(bacterial_models, function(x) {
     as.data.frame(as.list(x$bac_pop_p), stringsAsFactors = FALSE)
   }))
