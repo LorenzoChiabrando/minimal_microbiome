@@ -28,7 +28,7 @@ for (p in deps) {
   install.packages(p,
                    repos        = "https://cloud.r-project.org",
                    dependencies = TRUE)
-}  # ensures devtools dependencies are R4.x–compatible :contentReference[oaicite:1]{index=1}
+}
 
 # ---- 4. Install all other CRAN packages ----
 invisible(lapply(cran_pkgs, install_if_missing))

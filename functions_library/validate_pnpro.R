@@ -1,13 +1,13 @@
 
 validate_pnpro <- function(pnpro2validate,
                            hypernode_root,
-                           bacterial_models,
-                           metabolite_places,
+                           biounit_models,
+                           boundary_metabolites,
                            out_dir,
                            hypernode_name) {
   
-  # Extract the 2nd abbreviation for each organism in order
-  abbrs <- map_chr(bacterial_models, ~ .x$abbreviation[2])
+  # Extract the 2nd abbreviation for each biounits in order
+  abbrs <- map_chr(biounit_models, ~ .x$abbreviation[2])
   
   # ————————————————————————————————————————————
   # 0) Read & parse the PNPRO
@@ -48,7 +48,7 @@ validate_pnpro <- function(pnpro2validate,
   # 1) Re-derive exactly which boundary reactions each species should have
   #    (same logic as project_boundary_reactions())
   # ————————————————————————————————————————————
-  models_df <- tibble(model = bacterial_models) %>%
+  models_df <- tibble(model = biounit_models) %>%
     mutate(
       abbr     = map_chr(model, ~ .x$abbreviation[2]),
       meta_dir = file.path(hypernode_root, "biounits", map_chr(model, ~ .x$FBAmodel))
@@ -63,7 +63,7 @@ validate_pnpro <- function(pnpro2validate,
 
   projectable_df <- models_df %>%
     tidyr::unnest(metabolites) %>%
-    dplyr::filter(id %in% metabolite_places) %>%
+    dplyr::filter(id %in% boundary_metabolites) %>%
     dplyr::select(abbr, met_id = id)
   
   # pull out boundary reactions
@@ -104,7 +104,7 @@ shared_rxns_df <- projectable_df %>%
   ) %>%
     dplyr::filter(str_detect(delay, "^Call\\[")) %>%
     dplyr::mutate(
-      # parse: function name, full parameter expr, organism‐index
+      # parse: function name, full parameter expr, biounits‐index
       parts = str_match(
         delay,
         'Call\\[\\s*"([^"]+)"\\s*,\\s*(.+)\\s*,\\s*([0-9]+)\\s*\\]'
@@ -121,7 +121,7 @@ shared_rxns_df <- projectable_df %>%
       org_index
     )
   
-  # append biomass reaction for every organism
+  # append biomass reaction for every biounits
   biomass_rxns <- tibble(
     abbr    = abbrs,
     met_id  = "biomass_e",       # no environmental metabolite
@@ -178,10 +178,10 @@ shared_rxns_df <- projectable_df %>%
     org_index = org_index
   ) %>%
     dplyr::mutate(
-      # always append the abbr, even for the first organism
+      # always append the abbr, even for the first biounits
       transition = paste0(prefix_map[fun_name], "_", abbr),
       command    = sprintf(
-        'Call["%s", FromTable["organisms_parameters.csv", %d, %d], %d]',
+        'Call["%s", FromTable["population_parameters.csv", %d, %d], %d]',
         fun_name, org_index, col_index, org_index
       )
     ) %>%

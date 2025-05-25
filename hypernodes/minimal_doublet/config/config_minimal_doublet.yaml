@@ -1,10 +1,10 @@
 # config/models.yaml
 
-metabolite_places:
+boundary_metabolites:
   - "glc__D_e"
   - "lcts_e"
 
-organisms:
+cellular_units:
   - model_name: "Escherichia_coli_SE11"
     label:      "Escherichia coli SE11"
     biomass:

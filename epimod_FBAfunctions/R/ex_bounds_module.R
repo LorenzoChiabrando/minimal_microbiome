@@ -2,195 +2,170 @@
 #  File: ex_bounds_module.R
 #
 #  Description:
-#    This R module supports the configuration of boundary constraints
-#    for hybrid metabolic models by:
-#      1. Extracting boundary reactions from model-specific metadata files
-#      2. Generating CSV files with upper bounds for each reaction variant,
-#         using cell-population-normalized scaling logic.
-#
-#    Convention:
-#      - "_r": treated as import; assigned an upper bound.
-#      - "_f": treated as export; assigned an upper bound.
-#
-#    For projected reactions:
-#      - "_r" → ub = projected_base_lb / total_cell_count
-#      - "_f" → ub = projected_base_ub
-#
-#    For not-projected reactions:
-#      - "_r" → ub = not_projected_base_lb / total_cell_count
-#      - "_f" → ub = not_projected_base_ub
+#    Configures flux constraints for boundary reactions in hybrid
+#    Petri net models by reading annotated metadata and population
+#    dynamics. Defines:
+#      - Projected bounds (modeled as places)
+#      - Not-projected bounds (modeled as constraints)
 # ============================================================
 
-# ------------------------------------------------------------------
-# 1) EXTRACT BOUNDARY REACTIONS
-# ------------------------------------------------------------------
-
-extract_boundary_reactions <- function(files, output_file) {
-  all_reactions <- character()
-  for (f in files) {
-    model_dir <- dirname(f)
-    metadata_file <- file.path(model_dir, "reactions_metadata.csv")
-    if (!file.exists(metadata_file)) {
-      warning("Metadata not found for: ", f)
-      next
-    }
-    meta <- read.csv(metadata_file, stringsAsFactors = FALSE)
-    if (!all(c("type", "abbreviation") %in% names(meta))) {
-      warning("Missing required columns in metadata for: ", f)
-      next
-    }
-    boundary_filtered <- meta$abbreviation[meta$type == "boundary"]
-    all_reactions <- c(all_reactions, boundary_filtered)
-  }
-  all_reactions <- sort(unique(all_reactions))
-  con <- file(output_file, open = "w")
-  for (rxn in all_reactions) {
-    writeLines(paste0(rxn, "_r"), con = con)
-    writeLines(paste0(rxn, "_f"), con = con)
-  }
-  close(con)
-  message("Boundary reactions written to: ", output_file)
-}
-
-# ------------------------------------------------------------------
-# 2) PROCESS BOUNDARY REACTIONS TO GENERATE FLUX BOUNDS
-# ------------------------------------------------------------------
-
 process_boundary_reactions <- function(
-    output_file,
-    bacterial_models,
+    hypernode_name,
+    biounit_models,
     output_dir,
     bacteria_counts,
     projected_base_lb,
-    not_projected_base_lb,
     projected_base_ub,
+    not_projected_base_lb,
     not_projected_base_ub,
-    reaction_versions = c("both", "r", "f")
+    projected_reactions_df
 ) {
-  reaction_versions <- match.arg(reaction_versions)
-  n_bact <- length(bacterial_models)
-  if (!file.exists(output_file)) stop("Reactions list not found: ", output_file)
-  if (length(bacteria_counts) != n_bact) stop("Mismatch in bacteria_counts length.")
-  if (!dir.exists(output_dir)) dir.create(output_dir, recursive = TRUE)
-  
-  reaction_metadata_all <- do.call(rbind, lapply(bacterial_models, function(model) {
+  # Load and expand boundary reactions
+  metadata_all <- do.call(rbind, lapply(biounit_models, function(model) {
     meta_path <- file.path("hypernodes", hypernode_name, "biounits", model$FBAmodel, "reactions_metadata.csv")
-    if (!file.exists(meta_path)) stop("Missing metadata for model: ", model$FBAmodel)
     meta <- read.csv(meta_path, stringsAsFactors = FALSE)
     meta$FBAmodel <- model$FBAmodel
+    meta$txt_file <- model$txt_file
     meta
   }))
   
-  cat("✅ Total reactions in combined metadata:", nrow(reaction_metadata_all), "\n")
-  cat("✅ Unique abbreviations in metadata:", length(unique(reaction_metadata_all$abbreviation)), "\n")
-  print(head(unique(reaction_metadata_all$abbreviation), 10))
+  metadata_all <- subset(metadata_all, type == "boundary")
   
-  model_names <- sapply(bacterial_models, function(m) m$FBAmodel)
-  names(bacteria_counts) <- model_names
+  expanded <- do.call(rbind, lapply(seq_len(nrow(metadata_all)), function(i) {
+    row <- metadata_all[i, , drop = FALSE]
+    base_rxn <- row$abbreviation
+    data.frame(
+      reaction     = rep(base_rxn, 2),
+      abbreviation = c(paste0(base_rxn, "_r"), paste0(base_rxn, "_f")),
+      name         = c(paste0(row$name, " (reverse)"), paste0(row$name, " (forward)")),
+      equation     = c(paste("IMPORT:", row$equation), paste("EXPORT:", row$equation)),
+      subtype      = rep(row$subtype, 2),
+      FBAmodel     = rep(row$FBAmodel, 2),
+      txt_file     = rep(row$txt_file, 2),
+      upper_bound  = c(abs(row$lowbnd), row$uppbnd),
+      stringsAsFactors = FALSE
+    )
+  }))
   
-  reactions <- readLines(output_file, warn = FALSE)
+  expanded$projected <- mapply(function(rxn, org) {
+    isTRUE(any(projected_reactions_df$reaction == rxn & projected_reactions_df$FBAmodel == org))
+  }, expanded$abbreviation, expanded$FBAmodel)
   
-  cat("✅ Total reactions read from file:", length(reactions), "\n")
-  print(head(reactions, 10))
+  cat("Total reactions in expanded:", nrow(expanded), "\n")
+  cat("Marked as projected:", sum(expanded$projected), "\n")
+  print(head(expanded[expanded$projected, ], 5))
   
-  get_base_name <- function(rxn) sub("(_r|_f)$", "", rxn)
-  
-  get_base_name <- function(rxn) sub("(_r|_f)$", "", rxn)
-  base_rxns <- unique(sapply(reactions, get_base_name))
-  
-  matches <- base_rxns %in% reaction_metadata_all$abbreviation
-  cat("✅ Reactions with metadata match:", sum(matches), "/", length(base_rxns), "\n")
-  
+  # Compute bounds
   projected <- list()
-  not_projected <- list()
+  non_projected <- list()
   
-  for (reaction in reactions) {
-    if (grepl("EX_biomass_e", reaction)) next
-    base_rxn <- get_base_name(reaction)
-    rxn_type <- ifelse(grepl("_f$", reaction), "f", "r")
+  for (i in seq_len(nrow(expanded))) {
+    row <- expanded[i, ]
+    if (grepl("EX_biomass_e", row$abbreviation)) next
     
-    if ((reaction_versions == "r" && rxn_type == "f") ||
-        (reaction_versions == "f" && rxn_type == "r")) next
+    rxn_type <- if (grepl("_f$", row$abbreviation)) "f" else "r"
     
-    used_models <- unique(reaction_metadata_all$FBAmodel[reaction_metadata_all$abbreviation == base_rxn])
-    relevant_counts <- bacteria_counts[used_models]
-    total_count <- sum(relevant_counts)
-    if (total_count == 0) next
-    
-    if (base_rxn %in% reaction_metadata_all$abbreviation) {
-      value <- if (rxn_type == "r") projected_base_lb / total_count else projected_base_ub
-      projected[[length(projected) + 1]] <- data.frame(reaction = reaction, bound = value, stringsAsFactors = FALSE)
+    if (row$projected) {
+      upper_bound <- if (rxn_type == "r") abs(projected_base_lb) else projected_base_ub
+      projected[[length(projected) + 1]] <- data.frame(
+        reaction     = row$abbreviation,
+        FBAmodel     = row$FBAmodel,
+        upper_bound  = upper_bound,
+        stringsAsFactors = FALSE
+      )
     } else {
-      value <- if (rxn_type == "r") not_projected_base_lb / total_count else not_projected_base_ub
-      not_projected[[length(not_projected) + 1]] <- data.frame(reaction = reaction, bound = value, stringsAsFactors = FALSE)
+      if (rxn_type == "r") {
+        if (row$subtype == "exchange") {
+          # Shared resource: divide by total cell count of all organisms using it
+          match_rows <- expanded[expanded$abbreviation == row$abbreviation & !expanded$projected, ]
+          orgs <- unique(match_rows$FBAmodel)
+          total_count <- sum(bacteria_counts[orgs])
+          upper_bound <- abs(not_projected_base_lb / total_count)
+        } else {
+          # Organism-specific: divide only by this organism's count
+          cell_count <- bacteria_counts[row$FBAmodel]
+          upper_bound <- abs(not_projected_base_lb / cell_count)
+        }
+      } else {
+        upper_bound <- not_projected_base_ub
+      }
+      
+      non_projected[[length(non_projected) + 1]] <- data.frame(
+        reaction     = row$abbreviation,
+        FBAmodel     = row$FBAmodel,
+        upper_bound  = upper_bound,
+        stringsAsFactors = FALSE
+      )
     }
   }
   
-  df_proj <- do.call(rbind, projected)
-  df_nonproj <- do.call(rbind, not_projected)
+  df_proj <- if (length(projected)) do.call(rbind, projected) else data.frame()
+  df_nonproj <- if (length(non_projected)) do.call(rbind, non_projected) else data.frame()
   
-  # ------------------------------------------------------------------
-  # Diagnostics before writing files
-  # ------------------------------------------------------------------
-  
-  cat("📊 Diagnostics: Projected Reactions\n")
-  cat("  Total:", nrow(df_proj), "\n")
-  cat("  Unique:", length(unique(df_proj$reaction)), "\n")
-  cat("  _r type:", sum(grepl("_r$", df_proj$reaction)), "\n")
-  cat("  _f type:", sum(grepl("_f$", df_proj$reaction)), "\n")
-  print(head(df_proj, 5))
-  
-  cat("\n📊 Diagnostics: Not Projected Reactions\n")
-  cat("  Total:", nrow(df_nonproj), "\n")
-  cat("  Unique:", length(unique(df_nonproj$reaction)), "\n")
-  cat("  _r type:", sum(grepl("_r$", df_nonproj$reaction)), "\n")
-  cat("  _f type:", sum(grepl("_f$", df_nonproj$reaction)), "\n")
-  print(head(df_nonproj, 5))
-  
-  write.table(df_proj, file = file.path(output_dir, "ub_bounds_projected.csv"),
+  write.table(df_proj, file.path(output_dir, "ub_bounds_projected.csv"),
               sep = ",", row.names = FALSE, col.names = FALSE, quote = FALSE)
-  write.table(df_nonproj, file = file.path(output_dir, "ub_bounds_not_projected.csv"),
+  write.table(df_nonproj, file.path(output_dir, "ub_bounds_not_projected.csv"),
               sep = ",", row.names = FALSE, col.names = FALSE, quote = FALSE)
   
-  message("✔ Written:\n - ub_bounds_projected.csv\n - ub_bounds_not_projected.csv")
+  message("✔ Bounds generated:\n - ub_bounds_projected.csv\n - ub_bounds_not_projected.csv")
 }
 
 # ------------------------------------------------------------------
-# 3) MASTER RUNNER FUNCTION
+# Master function to set bounds using metadata and projection
 # ------------------------------------------------------------------
 
 run_full_ex_bounds <- function(
     hypernode_name,
-    bacterial_models,
+    biounit_models,
     projected_base_lb,
     projected_base_ub,
     not_projected_base_lb,
-    not_projected_base_ub,
-    reaction_versions
+    not_projected_base_ub
 ) {
-  bacteria_counts <- sapply(bacterial_models, function(x) x$initial_count)
-  names(bacteria_counts) <- sapply(bacterial_models, function(x) x$FBAmodel)
+  output_dir <- file.path(getwd(), "hypernodes", hypernode_name, "output")
+  if (!dir.exists(output_dir)) dir.create(output_dir, recursive = TRUE)
   
-  output_dir_projections <- file.path(getwd(), "hypernodes", hypernode_name, "output")
-  output_file <- file.path(output_dir_projections, "extracted_boundary_reactions.txt")
+  bacteria_counts <- sapply(biounit_models, function(x) x$initial_count)
+  names(bacteria_counts) <- sapply(biounit_models, function(x) x$FBAmodel)
   
-  txt <- sapply(bacterial_models, function(x) x$txt_file)
-  names(txt) <- sapply(bacterial_models, function(x) x$FBAmodel)
-  files <- mapply(function(model, file) {
-    file.path("hypernodes", hypernode_name, "biounits", model, file)
-  }, names(txt), txt, USE.NAMES = TRUE)
+  # Load projection info
+  reaction_bounds_path <- file.path(output_dir, "reaction_bounds.csv")
+  if (!file.exists(reaction_bounds_path)) stop("Missing: ", reaction_bounds_path)
+  reaction_bounds_df <- read.csv(reaction_bounds_path, stringsAsFactors = FALSE)
   
-  extract_boundary_reactions(files = files, output_file = output_file)
+  # Map abbreviations to full FBAmodel names
+  abbr_map <- setNames(
+    sapply(biounit_models, function(x) x$FBAmodel),
+    sapply(biounit_models, function(x) x$abbreviation[2])
+  )
   
+  # Build _r/_f projection table with resolved FBAmodel
+  projected_reactions_df <- do.call(rbind, lapply(seq_len(nrow(reaction_bounds_df)), function(i) {
+    row <- reaction_bounds_df[i, ]
+    full_model <- abbr_map[[row$organism]]
+    if (is.null(full_model)) {
+      warning("No FBAmodel found for abbreviation: ", row$organism)
+      return(NULL)
+    }
+    data.frame(
+      reaction = c(paste0(row$reaction, "_r"), paste0(row$reaction, "_f")),
+      type     = c("r", "f"),
+      FBAmodel = rep(full_model, 2),
+      bound    = c(row$lower_bound, row$upper_bound),
+      stringsAsFactors = FALSE
+    )
+  }))
+  
+  # Launch constraint assignment
   process_boundary_reactions(
-    output_file = output_file,
-    bacterial_models = bacterial_models,
-    output_dir = output_dir_projections,
-    bacteria_counts = bacteria_counts,
-    projected_base_lb = projected_base_lb,
-    not_projected_base_lb = not_projected_base_lb,
-    projected_base_ub = projected_base_ub,
-    not_projected_base_ub = not_projected_base_ub,
-    reaction_versions = reaction_versions
+    hypernode_name          = hypernode_name,
+    biounit_models        = biounit_models,
+    output_dir              = output_dir,
+    bacteria_counts         = bacteria_counts,
+    projected_base_lb       = projected_base_lb,
+    projected_base_ub       = projected_base_ub,
+    not_projected_base_lb   = not_projected_base_lb,
+    not_projected_base_ub   = not_projected_base_ub,
+    projected_reactions_df  = projected_reactions_df
   )
 }

@@ -1,4 +1,3 @@
-
 # Generate a shortlist of plausible abbreviations for one model name
 derive_abbrs <- function(model_name) {
   # drop any trailing “_model”
@@ -18,13 +17,13 @@ derive_abbrs <- function(model_name) {
   unique(tolower(abbrs))
 }
 
-# Build your bacterial_models list
-make_bacterial_models <- function(model_names,
-                                  biomass_params,
-                                  pop_params,
-                                  initial_counts) {
+# Build a general-purpose list of FBA-compatible biounits
+make_biounit_models <- function(model_names,
+                                biomass_params,
+                                population_params,
+                                initial_counts) {
   stopifnot(length(model_names) == length(biomass_params),
-            length(model_names) == length(pop_params),
+            length(model_names) == length(population_params),
             length(model_names) == length(initial_counts))
   
   lapply(seq_along(model_names), function(i) {
@@ -32,26 +31,28 @@ make_bacterial_models <- function(model_names,
     abbrs <- derive_abbrs(mn)
     
     list(
-      FBAmodel     = mn,
-      organism     = gsub("_", " ", mn),
-      abbreviation = abbrs, 
-      txt_file     = paste0(abbrs[2], "_model.txt"),
-      biomass      = biomass_params[[i]],
-      bac_pop_p    = pop_params[[i]],
-      initial_count= initial_counts[i]
+      FBAmodel            = mn,
+      unit            = gsub("_", " ", mn),
+      abbreviation        = abbrs,
+      txt_file            = paste0(abbrs[2], "_model.txt"),
+      biomass             = biomass_params[[i]],
+      population_settings = population_params[[i]],
+      initial_count       = initial_counts[i]
     )
   })
 }
 
-write_bac_params <- function(bacterial_models, path) {
-  # turn each bac_pop_p list into a 1*3 data.frame of named columns
-  df <- do.call(rbind, lapply(bacterial_models, function(x) {
-    as.data.frame(as.list(x$bac_pop_p), stringsAsFactors = FALSE)
+# Write population dynamics parameters (e.g., starvation, duplication, death)
+write_population_params <- function(biounit_models, path) {
+  # Turn each population_settings list into a 1×3 data.frame
+  df <- do.call(rbind, lapply(biounit_models, function(unit) {
+    as.data.frame(as.list(unit$population_settings), stringsAsFactors = FALSE)
   }))
-  # now df has one row per organism, columns starv, dup, death
+  
+  # Save as plain CSV (no headers, no row names)
   write.table(df, path,
-              row.names = FALSE,   # drop the rownames
-              col.names = FALSE,   # drop the header if you really need no header
+              row.names = FALSE,
+              col.names = FALSE,
               sep = ",",
               quote = FALSE)
 }

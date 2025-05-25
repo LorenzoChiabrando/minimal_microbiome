@@ -37,65 +37,87 @@ FBAmat.read = function(fba_mat, input_dir){
     mod.react_rev = as.vector(dat.mat[[which(mod.var=="lb")]]) < 0
   }
   
-  # Helper function to generate reaction equations from the stoichiometric matrix
-  generate_reaction_equations <- function(S, met_ids, rxn_ids) {
-    equations <- character(length(rxn_ids))
+  #' Generate human-readable reaction equations based on stoichiometry and flux bounds
+  #'
+  #' @param S Stoichiometric matrix (metabolites × reactions)
+  #' @param met_ids Character vector of metabolite IDs
+  #' @param rxn_ids Character vector of reaction IDs
+  #' @param lb Numeric vector of lower bounds for each reaction
+  #' @param ub Numeric vector of upper bounds for each reaction
+  #'
+  #' @return A character vector of formatted equations, one per reaction
+  generate_reaction_equations <- function(S, met_ids, rxn_ids, lb, ub) {
+    n_rxns <- length(rxn_ids)
+    equations <- character(n_rxns)
     
-    for (j in seq_along(rxn_ids)) {
-      # Find non-zero coefficients for this reaction
+    for (j in seq_len(n_rxns)) {
       coefs <- S[, j]
-      participating_mets <- which(coefs != 0)
+      participating <- which(coefs != 0)
       
-      if (length(participating_mets) == 0) {
+      # Skip if no non-zero stoichiometry
+      if (length(participating) == 0) {
         equations[j] <- ""
         next
       }
       
-      # Separate reactants and products
-      reactants <- participating_mets[coefs[participating_mets] < 0]
-      products <- participating_mets[coefs[participating_mets] > 0]
+      # ------------------------
+      # Structure: Reactants and Products
+      # ------------------------
       
-      # Format reactants
-      reactants_str <- ""
-      if (length(reactants) > 0) {
-        reactants_str <- paste(
-          sapply(reactants, function(i) {
+      reactants <- participating[coefs[participating] < 0]
+      products  <- participating[coefs[participating] > 0]
+      
+      # Format each side as a string with coefficients
+      format_side <- function(indices, coefs) {
+        if (length(indices) == 0) return("")
+        paste(
+          sapply(indices, function(i) {
             coef <- abs(coefs[i])
-            if (coef == 1) {
-              return(met_ids[i])
-            } else {
-              return(paste(coef, met_ids[i], sep = " "))
-            }
+            if (coef == 1) met_ids[i] else paste(coef, met_ids[i])
           }),
           collapse = " + "
         )
       }
       
-      # Format products
-      products_str <- ""
-      if (length(products) > 0) {
-        products_str <- paste(
-          sapply(products, function(i) {
-            coef <- coefs[i]
-            if (coef == 1) {
-              return(met_ids[i])
-            } else {
-              return(paste(coef, met_ids[i], sep = " "))
-            }
-          }),
-          collapse = " + "
-        )
-      }
+      lhs <- format_side(reactants, coefs)
+      rhs <- format_side(products,  coefs)
       
-      # Determine if reaction is reversible based on bounds
-      if (is.reversible <- any(S[, j] < 0) && any(S[, j] > 0)) {
-        arrow <- " <==> "
+      # ------------------------
+      # Flux Constraints → Arrow Direction
+      # ------------------------
+      
+      # The arrow used in the equation reflects the *permitted flux direction*
+      # based on bounds — even if only products are present (as in EX reactions)
+      
+      arrow <- if (lb[j] < 0 && ub[j] > 0) {
+        "<=>"
+      } else if (lb[j] >= 0 && ub[j] > 0) {
+        "-->"
+      } else if (ub[j] <= 0 && lb[j] < 0) {
+        "<--"
       } else {
-        arrow <- " --> "
+        # degenerate or undefined case
+        " ?? "
       }
       
-      # Combine to form the full equation
-      equations[j] <- paste0(reactants_str, arrow, products_str)
+      # ------------------------
+      # Handle edge cases like EX reactions with only one metabolite
+      # ------------------------
+      
+      # Examples:
+      # - if lhs is empty and rhs is "ala__L_e", then write: --> ala__L_e
+      # - if lhs is "ala__L_e" and rhs is empty, then: ala__L_e -->
+      # - if both sides empty: "??"
+      
+      if (lhs == "" && rhs != "") {
+        equations[j] <- paste0(arrow, " ", rhs)
+      } else if (lhs != "" && rhs == "") {
+        equations[j] <- paste0(lhs, " ", arrow)
+      } else if (lhs == "" && rhs == "") {
+        equations[j] <- paste0(rxn_ids[j], " ", arrow)
+      } else {
+        equations[j] <- paste(lhs, arrow, rhs)
+      }
     }
     
     return(equations)
@@ -147,7 +169,7 @@ FBAmat.read = function(fba_mat, input_dir){
   met_id <- gsub("\\]", "", met_id)
   
   # Generate reaction equations
-  equations <- generate_reaction_equations(S, met_id, react_id)
+  equations <- generate_reaction_equations(S, met_id, react_id, lb, ub)
   
   # Extract gene-reaction associations
   if ("rxnGeneMat" %in% mod.var) {

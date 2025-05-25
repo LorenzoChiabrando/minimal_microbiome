@@ -1,9 +1,9 @@
-project_boundary_reactions <- function(bacterial_models,
-                                       metabolite_places,
+project_boundary_reactions <- function(biounit_models,
+                                       boundary_metabolites,
                                        out_dir,
                                        hypernode_name) {
   # Build dataframe describing each model
-  models_df <- tibble(model = bacterial_models) %>%
+  models_df <- tibble(model = biounit_models) %>%
     mutate(
       abbr       = map_chr(model, ~ .x$abbreviation[2]),
       FBAmodel   = map_chr(model, ~ .x$FBAmodel),
@@ -25,7 +25,7 @@ project_boundary_reactions <- function(bacterial_models,
   # Match projectable metabolites to boundary reactions
   shared_rxns_df <- models_df %>%
     unnest(metabolites) %>%
-    filter(id %in% metabolite_places) %>%
+    filter(id %in% boundary_metabolites) %>%
     distinct(abbr, id) %>%
     left_join(boundary_df, by = "abbr", relationship = "many-to-many") %>%
     filter(str_detect(equation, str_c("\\b", id, "\\b"))) %>%
@@ -131,4 +131,3 @@ project_boundary_reactions <- function(bacterial_models,
     bounds              = bounds_tbl
   ))
 }
-

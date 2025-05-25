@@ -1,18 +1,26 @@
+# -----------------------------------------------------------------------------
+# functions_hypernode_template.R
+#
+# Template for hypernode R functions.
+# Run generate_R_from_pnpro() to fill in the two stub vectors below.
+# -----------------------------------------------------------------------------
 
+# init.gen: generate the initial marking for your PNPRO places
 init.gen <- function() {
-  # places' names
-  yini.names <- c("E_coli", "E_coli_biomass_e", "lcts_e", "glc_D_e", "Clost_buty", "Clost_buty_biomass_e")
+  # place names, in PNPRO order
+  yini.names <- c('biomass_e_ecs', 'n_ecs', 'biomass_e_cbd1', 'n_cbd1', 'glc__D_e', 'lcts_e')
   
-  # initial marking
-  y_ini <- c(1000, 1, 10, 10, 500, 1)
+  # initial marking vector (same length as yini.names)
+  y_ini <- c(0.489, 1e+06, 0.6, 1e+06, 1, 1)
   
+  # assign names & enforce PNPRO order
   names(y_ini) <- yini.names
-  y_ini = y_ini[yini.names]
+  y_ini <- c(0.489, 1e+06, 0.6, 1e+06, 1, 1)
   
   return(y_ini)
 }
 
-psensitivty = function(n, min, max, dup, death) {
-  starv = runif(n, min, max)
-  return(matrix(c(starv, dup, death), ncol = 3))
-}
+# --------------------------------------------------------------
+# (You can add other functions below that will use init.gen(), 
+#  or additional functions for sensitivity, ect.
+# --------------------------------------------------------------
