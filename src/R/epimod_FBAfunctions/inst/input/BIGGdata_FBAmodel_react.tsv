@@ -1,0 +1,1370 @@
+"abbreviation"	"equation"	"lowbnd"	"uppbnd"	"obj_coef"
+"12DGR180ti"	"12dgr180_e --> 12dgr180_c"	0	1000	0
+"13PPDHr"	"3hppnl_c + h_c + nadh_c <==> 13ppd_c + nad_c"	-1000	1000	0
+"13PPDt"	"13ppd_e <==> 13ppd_c"	-1000	1000	0
+"23DHMPO"	"23dhmp_c + nadp_c <==> h_c + 3h3mop_c + nadph_c"	-1000	1000	0
+"23PDE2"	"h2o_c + 23cump_c --> h_c + 3ump_c"	0	1000	0
+"23PDE4"	"h2o_c + 23ccmp_c --> h_c + 3cmp_c"	0	1000	0
+"23PDE7"	"h2o_c + 23camp_c --> h_c + 3amp_c"	0	1000	0
+"23PDE9"	"h2o_c + 23cgmp_c --> h_c + 3gmp_c"	0	1000	0
+"26DAPLLATi"	"h_c + h2o_c + thdp_c + glu_L_c --> 26dap_LL_c + akg_c"	0	1000	0
+"2AHBUTI"	"2ahbut_c <==> 3h3mop_c"	-1000	1000	0
+"2MBCOATA"	"2mbcoa_c + ACP_c <==> coa_c + 2mbutACP_c"	-1000	1000	0
+"2MBUTt2r"	"2mbut_e + h_e <==> h_c + 2mbut_c"	-1000	1000	0
+"2MECOAOX"	"2mbcoa_c + fad_c <==> fadh2_c + 2mb2coa_c"	-1000	1000	0
+"34DHPHAt2r"	"h_e + 34dhpha_e <==> h_c + 34dhpha_c"	-1000	1000	0
+"3BTCOAI"	"3btcoa_c <==> b2coa_c"	-1000	1000	0
+"3HAD100"	"3hdecACP_c --> h2o_c + tdec2eACP_c"	0	1000	0
+"3HAD10M11"	"10m3hundecACP_c --> h2o_c + 10mtundec2eACP_c"	0	1000	0
+"3HAD10M12"	"10m3hddcaACP_c --> h2o_c + 10mtddec2eACP_c"	0	1000	0
+"3HAD11M12"	"11m3hddcaACP_c --> h2o_c + 11mtddec2eACP_c"	0	1000	0
+"3HAD120"	"3hddecACP_c --> h2o_c + tddec2eACP_c"	0	1000	0
+"3HAD12M13"	"12m3htridecACP_c --> h2o_c + 12mttritec2eACP_c"	0	1000	0
+"3HAD12M14"	"12m3hmyrsACP_c --> h2o_c + 12mtmrs2eACP_c"	0	1000	0
+"3HAD13M14"	"13m3hmyrsACP_c --> h2o_c + 13mtmrs2eACP_c"	0	1000	0
+"3HAD140"	"3hmrsACP_c --> h2o_c + tmrs2eACP_c"	0	1000	0
+"3HAD14M15"	"14m3hpentdecACP_c --> h2o_c + 14mtpentdec2eACP_c"	0	1000	0
+"3HAD14M16"	"14m3hpalmACP_c --> h2o_c + 14mtpalm2eACP_c"	0	1000	0
+"3HAD15M16"	"15m3hpalmACP_c --> h2o_c + 15mtpalm2eACP_c"	0	1000	0
+"3HAD160"	"3hpalmACP_c --> h2o_c + tpalm2eACP_c"	0	1000	0
+"3HAD180"	"3hoctaACP_c --> h2o_c + toctd2eACP_c"	0	1000	0
+"3HAD40"	"3haACP_c --> h2o_c + but2eACP_c"	0	1000	0
+"3HAD4M5"	"4m3hpentACP_c --> h2o_c + 4mtpent2eACP_c"	0	1000	0
+"3HAD4M6"	"4m3hhexACP_c --> h2o_c + 4mthex2eACP_c"	0	1000	0
+"3HAD5M6"	"5m3hhexACP_c --> h2o_c + 5mthex2eACP_c"	0	1000	0
+"3HAD60"	"3hhexACP_c --> h2o_c + thex2eACP_c"	0	1000	0
+"3HAD6M7"	"6m3hheptACP_c --> h2o_c + 6mthept2eACP_c"	0	1000	0
+"3HAD6M8"	"6m3hocACP_c --> h2o_c + 6mtoct2eACP_c"	0	1000	0
+"3HAD7M8"	"7m3hocACP_c --> h2o_c + 7mtoct2eACP_c"	0	1000	0
+"3HAD80"	"3hoctACP_c --> h2o_c + toct2eACP_c"	0	1000	0
+"3HAD8M10"	"8m3hdcaACP_c --> h2o_c + 8mtdec2eACP_c"	0	1000	0
+"3HAD8M9"	"8m3hnonACP_c --> h2o_c + 8mtnon2eACP_c"	0	1000	0
+"3HAD9M10"	"9m3hdcaACP_c --> h2o_c + 9mtdec2eACP_c"	0	1000	0
+"3HBCD"	"4hbutcoa_c <==> h2o_c + 3btcoa_c"	-1000	1000	0
+"3HBCOAE"	"3hbcoa_c <==> 3hbcoa_R_c"	-1000	1000	0
+"3HBCOAHL"	"h2o_c + 3hibutcoa_c --> h_c + coa_c + 3hmp_c"	0	1000	0
+"3MOBS"	"h_c + coa_c + 3c3hmp_c <==> h2o_c + accoa_c + 3mob_c"	-1000	1000	0
+"3OAR100"	"h_c + nadph_c + 3odecACP_c <==> nadp_c + 3hdecACP_c"	-1000	1000	0
+"3OAR10M11"	"h_c + nadph_c + 10m3oundecACP_c <==> nadp_c + 10m3hundecACP_c"	-1000	1000	0
+"3OAR10M12"	"h_c + nadph_c + 10m3oddcaACP_c <==> nadp_c + 10m3hddcaACP_c"	-1000	1000	0
+"3OAR11M12"	"h_c + nadph_c + 11m3oddcaACP_c <==> nadp_c + 11m3hddcaACP_c"	-1000	1000	0
+"3OAR120"	"h_c + nadph_c + 3oddecACP_c <==> nadp_c + 3hddecACP_c"	-1000	1000	0
+"3OAR12M13"	"h_c + nadph_c + 12m3otridecACP_c <==> nadp_c + 12m3htridecACP_c"	-1000	1000	0
+"3OAR12M14"	"h_c + nadph_c + 12m3omyrsACP_c <==> nadp_c + 12m3hmyrsACP_c"	-1000	1000	0
+"3OAR13M14"	"h_c + nadph_c + 13m3omyrsACP_c <==> nadp_c + 13m3hmyrsACP_c"	-1000	1000	0
+"3OAR140"	"h_c + nadph_c + 3omrsACP_c <==> nadp_c + 3hmrsACP_c"	-1000	1000	0
+"3OAR14M15"	"h_c + nadph_c + 14m3opentdecACP_c <==> nadp_c + 14m3hpentdecACP_c"	-1000	1000	0
+"3OAR14M16"	"h_c + nadph_c + 14m3opalmACP_c <==> nadp_c + 14m3hpalmACP_c"	-1000	1000	0
+"3OAR15M16"	"h_c + nadph_c + 15m3opalmACP_c <==> nadp_c + 15m3hpalmACP_c"	-1000	1000	0
+"3OAR160"	"h_c + nadph_c + 3opalmACP_c <==> nadp_c + 3hpalmACP_c"	-1000	1000	0
+"3OAR180"	"h_c + nadph_c + 3ooctdACP_c <==> nadp_c + 3hoctaACP_c"	-1000	1000	0
+"3OAR40"	"h_c + nadph_c + actACP_c <==> nadp_c + 3haACP_c"	-1000	1000	0
+"3OAR4M5"	"h_c + nadph_c + 4m3opentACP_c <==> nadp_c + 4m3hpentACP_c"	-1000	1000	0
+"3OAR4M6"	"h_c + nadph_c + 4m3ohexACP_c <==> nadp_c + 4m3hhexACP_c"	-1000	1000	0
+"3OAR5M6"	"h_c + nadph_c + 5m3ohexACP_c <==> nadp_c + 5m3hhexACP_c"	-1000	1000	0
+"3OAR60"	"h_c + nadph_c + 3ohexACP_c <==> nadp_c + 3hhexACP_c"	-1000	1000	0
+"3OAR6M7"	"h_c + nadph_c + 6m3oheptACP_c <==> nadp_c + 6m3hheptACP_c"	-1000	1000	0
+"3OAR6M8"	"h_c + nadph_c + 6m3oocACP_c <==> nadp_c + 6m3hocACP_c"	-1000	1000	0
+"3OAR7M8"	"h_c + nadph_c + 7m3oocACP_c <==> nadp_c + 7m3hocACP_c"	-1000	1000	0
+"3OAR80"	"h_c + nadph_c + 3ooctACP_c <==> nadp_c + 3hoctACP_c"	-1000	1000	0
+"3OAR8M10"	"h_c + nadph_c + 8m3odcaACP_c <==> nadp_c + 8m3hdcaACP_c"	-1000	1000	0
+"3OAR8M9"	"h_c + nadph_c + 8m3ononACP_c <==> nadp_c + 8m3hnonACP_c"	-1000	1000	0
+"3OAR9M10"	"h_c + nadph_c + 9m3odcaACP_c <==> nadp_c + 9m3hdcaACP_c"	-1000	1000	0
+"3OAS100"	"h_c + malACP_c + ocACP_c --> ACP_c + 3odecACP_c + co2_c"	0	1000	0
+"3OAS10M11"	"h_c + malACP_c + 10mundecACP_c --> ACP_c + 12m3otridecACP_c + co2_c"	0	1000	0
+"3OAS10M12"	"h_c + malACP_c + 10mddcaACP_c --> ACP_c + 12m3omyrsACP_c + co2_c"	0	1000	0
+"3OAS11M12"	"h_c + malACP_c + 11mddcaACP_c --> ACP_c + 13m3omyrsACP_c + co2_c"	0	1000	0
+"3OAS120"	"h_c + malACP_c + dcaACP_c --> ACP_c + 3oddecACP_c + co2_c"	0	1000	0
+"3OAS12M13"	"h_c + malACP_c + 12mtridecACP_c --> ACP_c + 14m3opentdecACP_c + co2_c"	0	1000	0
+"3OAS12M14"	"h_c + malACP_c + 12mmyrsACP_c --> ACP_c + 14m3opalmACP_c + co2_c"	0	1000	0
+"3OAS13M14"	"h_c + malACP_c + 13mmyrsACP_c --> ACP_c + 15m3opalmACP_c + co2_c"	0	1000	0
+"3OAS140"	"h_c + malACP_c + ddcaACP_c --> ACP_c + 3omrsACP_c + co2_c"	0	1000	0
+"3OAS160"	"h_c + malACP_c + myrsACP_c --> ACP_c + 3opalmACP_c + co2_c"	0	1000	0
+"3OAS180"	"h_c + malACP_c + palmACP_c --> ACP_c + 3ooctdACP_c + co2_c"	0	1000	0
+"3OAS2M3"	"h_c + malACP_c + 2mpropACP_c --> ACP_c + 4m3opentACP_c + co2_c"	0	1000	0
+"3OAS3M4"	"h_c + malACP_c + 3mbutACP_c --> ACP_c + 5m3ohexACP_c + co2_c"	0	1000	0
+"3OAS4M3O6"	"h_c + 2mbutACP_c + malACP_c --> ACP_c + 4m3ohexACP_c + co2_c"	0	1000	0
+"3OAS4M5"	"h_c + malACP_c + 4mpentACP_c --> ACP_c + 6m3oheptACP_c + co2_c"	0	1000	0
+"3OAS4M6"	"h_c + malACP_c + 4mhexACP_c --> ACP_c + 6m3oocACP_c + co2_c"	0	1000	0
+"3OAS5M6"	"h_c + malACP_c + 5mhexACP_c --> ACP_c + 7m3oocACP_c + co2_c"	0	1000	0
+"3OAS60"	"h_c + malACP_c + butACP_c --> ACP_c + 3ohexACP_c + co2_c"	0	1000	0
+"3OAS6M7"	"h_c + malACP_c + 6mheptACP_c --> ACP_c + 8m3ononACP_c + co2_c"	0	1000	0
+"3OAS6M8"	"h_c + malACP_c + 6mocACP_c --> ACP_c + 8m3odcaACP_c + co2_c"	0	1000	0
+"3OAS7M8"	"h_c + malACP_c + 7mocACP_c --> ACP_c + 9m3odcaACP_c + co2_c"	0	1000	0
+"3OAS80"	"h_c + malACP_c + hexACP_c --> ACP_c + 3ooctACP_c + co2_c"	0	1000	0
+"3OAS8M10"	"h_c + malACP_c + 8mdcaACP_c --> ACP_c + 10m3oddcaACP_c + co2_c"	0	1000	0
+"3OAS8M9"	"h_c + malACP_c + 8mnonACP_c --> ACP_c + 10m3oundecACP_c + co2_c"	0	1000	0
+"3OAS9M10"	"h_c + malACP_c + 9mdcaACP_c --> ACP_c + 11m3oddcaACP_c + co2_c"	0	1000	0
+"4HBNOX"	"nad_c + 4hdxbutn_c <==> h_c + nadh_c + sucsal_c"	-1000	1000	0
+"4HPHACDC"	"4hphac_c --> co2_c + pcresol_c"	0	1000	0
+"4HPHACDC2"	"h_c + 34dhpha_c --> co2_c + 4mcat_c"	0	1000	0
+"4HTHRS"	"h2o_c + phthr_c --> 4hthr_c + pi_c"	0	1000	0
+"4MCATt2r"	"h_e + 4mcat_e <==> h_c + 4mcat_c"	-1000	1000	0
+"5AIZCDC"	"h_c + 5aizc_c --> co2_c + air_c"	0	1000	0
+"5APTLPO"	"5aptn_c + lipoate_c <==> h_c + pro_D_c + C02147_c"	-1000	1000	0
+"5APTNt2r"	"h_e + 5aptn_e <==> h_c + 5aptn_c"	-1000	1000	0
+"5C2O3EDDC"	"h_c + 5c2o3ed_c --> co2_c + 2hh24dd_c"	0	1000	0
+"5DOAN"	"h2o_c + dad_5_c --> 5drib_c + ade_c"	0	1000	0
+"5GLUP5T1"	"glu_L_c + HC00955_c <==> h2o_c + HC01577_c"	-1000	1000	0
+"5GLUP5T2"	"h_c + glu_L_c + HC00955_c --> h2o_c + co2_c + HC01700_c"	0	1000	0
+"6PHBG"	"h2o_c + salc6p_c --> 2hymeph_c + g6p_c"	0	1000	0
+"6PHBG2"	"h2o_c + salc6p_c --> 2hymeph_c + g6p_B_c"	0	1000	0
+"A5PISO"	"ru5p_D_c <==> ara5p_c"	-1000	1000	0
+"AACGLYDH"	"nad_c + h2o_c + aacald_c <==> (2) h_c + nadh_c + gly_c"	-1000	1000	0
+"AACOAT"	"coa_c + atp_c + acac_c --> aacoa_c + amp_c + ppi_c"	0	1000	0
+"AACPS7"	"ACP_c + atp_c + ddca_c --> ddcaACP_c + amp_c + ppi_c"	0	1000	0
+"AB6PGH"	"h2o_c + arbt6p_c --> g6p_c + hqn_c"	0	1000	0
+"AB6PGH2"	"h2o_c + arbt6p_c --> g6p_B_c + hqn_c"	0	1000	0
+"ABTA"	"akg_c + 4abut_c --> glu_L_c + sucsal_c"	0	1000	0
+"ABUTD"	"nad_c + h2o_c + 4abutn_c --> (2) h_c + nadh_c + 4abut_c"	0	1000	0
+"ABUTR"	"nadp_c + h2o_c + 4abutn_c <==> (2) h_c + nadph_c + 4abut_c"	-1000	1000	0
+"ABUTt2r"	"h_e + 4abut_e <==> h_c + 4abut_c"	-1000	1000	0
+"ACACT1r"	"(2) accoa_c <==> coa_c + aacoa_c"	-1000	1000	0
+"ACACT2r"	"accoa_c + btcoa_c <==> coa_c + 3ohcoa_c"	-1000	1000	0
+"ACACT3r"	"accoa_c + hxcoa_c <==> coa_c + 3oocoa_c"	-1000	1000	0
+"ACACT4r"	"accoa_c + occoa_c <==> coa_c + 3odcoa_c"	-1000	1000	0
+"ACACT5r"	"accoa_c + dcacoa_c <==> coa_c + 3oddcoa_c"	-1000	1000	0
+"ACACT6r"	"accoa_c + ddcacoa_c <==> coa_c + 3otdcoa_c"	-1000	1000	0
+"ACACT7r"	"accoa_c + tdcoa_c <==> coa_c + 3ohdcoa_c"	-1000	1000	0
+"ACALD"	"nad_c + coa_c + acald_c <==> h_c + nadh_c + accoa_c"	-1000	1000	0
+"ACALDt"	"acald_e <==> acald_c"	-1000	1000	0
+"ACBIPGT"	"h_c + adocbip_c + gtp_c --> ppi_c + agdpcbi_c"	0	1000	0
+"ACCOACL"	"accoa_c + btn_co2_c --> apoC_Lys_btn_c + malcoa_c"	0	1000	0
+"ACCOAT"	"accoa_c + 4hdxbutn_c <==> 4hbutcoa_c + ac_c"	-1000	1000	0
+"ACEDIPIT"	"akg_c + n6all26d_c <==> glu_L_c + acamoxm_c"	-1000	1000	0
+"ACGAMT"	"uacgam_c + udcpp_c --> ump_c + unaga_c"	0	1000	0
+"ACGApts"	"acgam_e + pep_c --> acgam6p_c + pyr_c"	0	1000	0
+"ACGK"	"atp_c + acglu_c --> acg5p_c + adp_c"	0	1000	0
+"ACGS"	"glu_L_c + accoa_c --> h_c + coa_c + acglu_c"	0	1000	0
+"ACHBPL"	"hethmpp_c + 2obut_c <==> 2ahbut_c + thmpp_c"	-1000	1000	0
+"ACKr"	"atp_c + ac_c <==> adp_c + actp_c"	-1000	1000	0
+"ACLS_a"	"h_c + pyr_c + thmpp_c --> co2_c + hethmpp_c"	0	1000	0
+"ACLS_b"	"thmpp_c + alac_S_c <==> pyr_c + hethmpp_c"	-1000	1000	0
+"ACNML"	"acnam_c --> pyr_c + acmana_c"	0	1000	0
+"ACOAAGPAT140"	"tdcoa_c + 1tdecg3p_c --> coa_c + pa140_c"	0	1000	0
+"ACOAAGPAT160"	"pmtcoa_c + 1hdecg3p_c --> coa_c + pa160_c"	0	1000	0
+"ACOAAGPAT180"	"stcoa_c + 1odecg3p_c --> coa_c + pa180_c"	0	1000	0
+"ACOAAGPATAI15"	"1aipdecg3p_c + aipdcoa_c --> h_c + coa_c + paai15_c"	0	1000	0
+"ACOAAGPATAI17"	"1aihpdecg3p_c + aihpdcoa_c --> coa_c + paai17_c"	0	1000	0
+"ACOAAGPATI14"	"itdcoa_c + 1itdecg3p_c --> h_c + coa_c + pai14_c"	0	1000	0
+"ACOAAGPATI15"	"ipdcoa_c + 1ipdecg3p_c --> h_c + coa_c + pai15_c"	0	1000	0
+"ACOAAGPATI16"	"ihdcoa_c + 1ihdecg3p_c --> h_c + coa_c + pai16_c"	0	1000	0
+"ACOAAGPATI17"	"ihpdcoa_c + 1ihpdecg3p_c --> coa_c + pai17_c"	0	1000	0
+"ACOAD1i"	"h_c + nadh_c + b2coa_c --> nad_c + btcoa_c"	0	1000	0
+"ACOAD20"	"(2) 2mbcoa_c + o2_c --> (2) h2o_c + (2) 2mb2coa_c"	0	1000	0
+"ACOADH2"	"o2_c + (2) ibcoa_c --> (2) h2o_c + (2) 2mp2coa_c"	0	1000	0
+"ACOATA"	"ACP_c + accoa_c <==> coa_c + acACP_c"	-1000	1000	0
+"ACOCT"	"cbp_c + acorn_c --> pi_c + Naccitr_L_c"	0	1000	0
+"ACODAr"	"h2o_c + acorn_c <==> ac_c + orn_c"	-1000	1000	0
+"ACONT"	"cit_c <==> icit_c"	-1000	1000	0
+"ACONTa"	"cit_c <==> h2o_c + acon_C_c"	-1000	1000	0
+"ACONTb"	"h2o_c + acon_C_c <==> icit_c"	-1000	1000	0
+"ACOTA"	"akg_c + acorn_c <==> glu_L_c + acg5sa_c"	-1000	1000	0
+"ACPS1"	"coa_c + apoACP_c --> h_c + ACP_c + pap_c"	0	1000	0
+"ACTNDH"	"nad_c + coa_c + actn_R_c <==> h_c + nadh_c + accoa_c + acald_c"	-1000	1000	0
+"ACtr"	"ac_e <==> ac_c"	-1000	1000	0
+"ADA"	"h_c + h2o_c + adn_c --> nh4_c + ins_c"	0	1000	0
+"ADCL"	"4adcho_c --> h_c + pyr_c + 4abz_c"	0	1000	0
+"ADCPS1"	"atp_c + adcobhex_c + appl_c --> h_c + pi_c + adp_c + adocbi_c"	0	1000	0
+"ADCPS2"	"atp_c + adcobhex_c + applp_c --> h_c + pi_c + adocbip_c + adp_c"	0	1000	0
+"ADCS"	"chor_c + gln_L_c --> glu_L_c + 4adcho_c"	0	1000	0
+"ADCYRS"	"(4) h2o_c + (4) atp_c + (4) gln_L_c + adcobdam_c --> (4) h_c + (4) glu_L_c + (4) pi_c + (4) adp_c + adcobhex_c"	0	1000	0
+"ADD"	"h_c + h2o_c + ade_c --> nh4_c + hxan_c"	0	1000	0
+"ADK1"	"atp_c + amp_c <==> (2) adp_c"	-1000	1000	0
+"ADK10"	"amp_c + dttp_c <==> adp_c + dtdp_c"	-1000	1000	0
+"ADK11"	"amp_c + dutp_c <==> adp_c + dudp_c"	-1000	1000	0
+"ADK2"	"amp_c + pppi_c <==> ppi_c + adp_c"	-1000	1000	0
+"ADK3"	"amp_c + gtp_c <==> adp_c + gdp_c"	-1000	1000	0
+"ADK5"	"amp_c + ctp_c <==> adp_c + cdp_c"	-1000	1000	0
+"ADK7"	"amp_c + datp_c <==> adp_c + dadp_c"	-1000	1000	0
+"ADK8"	"amp_c + dctp_c <==> adp_c + dcdp_c"	-1000	1000	0
+"ADK9"	"amp_c + dgtp_c <==> adp_c + dgdp_c"	-1000	1000	0
+"ADMDCr"	"h_c + amet_c <==> co2_c + ametam_c"	-1000	1000	0
+"ADOCBIK"	"atp_c + adocbi_c --> h_c + adocbip_c + adp_c"	0	1000	0
+"ADOCBIK2"	"gtp_c + adocbi_c --> h_c + adocbip_c + gdp_c"	0	1000	0
+"ADOCBLS"	"agdpcbi_c + rdmbzi_c --> h_c + adocbl_c + gmp_c"	0	1000	0
+"ADOCBLabc"	"h2o_c + atp_c + adocbl_e --> h_c + pi_c + adp_c + adocbl_c"	0	1000	0
+"ADPRDP"	"h2o_c + adprib_c --> (2) h_c + amp_c + r5p_c"	0	1000	0
+"ADPT"	"ade_c + prpp_c --> amp_c + ppi_c"	0	1000	0
+"ADSL1r"	"dcamp_c <==> amp_c + fum_c"	-1000	1000	0
+"ADSL2r"	"25aics_c <==> fum_c + aicar_c"	-1000	1000	0
+"ADSS"	"gtp_c + asp_L_c + imp_c --> (2) h_c + pi_c + gdp_c + dcamp_c"	0	1000	0
+"AEPPT"	"pyr_c + 2aeppn_c --> ala_L_c + ppaca_c"	0	1000	0
+"AGDC"	"h2o_c + acgam6p_c --> ac_c + gam6p_c"	0	1000	0
+"AGMT"	"h2o_c + agm_c --> ptrc_c + urea_c"	0	1000	0
+"AGPAT120"	"ddcaACP_c + 1ddecg3p_c --> ACP_c + pa120_c"	0	1000	0
+"AGPAT140"	"myrsACP_c + 1tdecg3p_c --> ACP_c + pa140_c"	0	1000	0
+"AGPAT141"	"1tdec7eg3p_c + tdeACP_c --> ACP_c + pa141_c"	0	1000	0
+"AGPAT160"	"palmACP_c + 1hdecg3p_c --> ACP_c + pa160_c"	0	1000	0
+"AGPAT161"	"1hdec9eg3p_c + hdeACP_c --> ACP_c + pa161_c"	0	1000	0
+"AGPAT180"	"1odecg3p_c + ocdcaACP_c --> ACP_c + pa180_c"	0	1000	0
+"AGPAT181"	"1odec11eg3p_c + octeACP_c --> ACP_c + pa181_c"	0	1000	0
+"AGPR"	"nadp_c + pi_c + acg5sa_c <==> h_c + nadph_c + acg5p_c"	-1000	1000	0
+"AGTi"	"ala_L_c + glx_c --> gly_c + pyr_c"	0	1000	0
+"AHCYSNS_r"	"h2o_c + ahcys_c <==> ade_c + rhcys_c"	-1000	1000	0
+"AHMMPS"	"h2o_c + air_c --> pi_c + (0.5) o2_c + 4ahmmp_c + gcald_c"	0	1000	0
+"AHSERL2"	"achms_c + h2s_c --> h_c + ac_c + hcys_L_c"	0	1000	0
+"AHSERL3"	"achms_c + trdrd_c + tsul_c <==> h_c + ac_c + hcys_L_c + trdox_c + so3_c"	-1000	1000	0
+"AICART"	"aicar_c + 10fthf_c <==> fprica_c + thf_c"	-1000	1000	0
+"AIHDUDPMG"	"udpg_c + 12daihdglyc_c <==> h_c + udp_c + m12dahglyc_c"	-1000	1000	0
+"AIHDUPDG"	"udpg_c + m12dahglyc_c <==> h_c + udp_c + diglcpgai17_c"	-1000	1000	0
+"AIHPDCOATA"	"coa_c + 14mpalmACP_c <==> ACP_c + aihpdcoa_c"	-1000	1000	0
+"AIPDCOATA"	"coa_c + 12mmyrsACP_c <==> ACP_c + aipdcoa_c"	-1000	1000	0
+"AIPDUDPG"	"udpg_c + m12dapglyc_c <==> h_c + udp_c + diglcpgai15_c"	-1000	1000	0
+"AIPDUDPMG"	"udpg_c + 12daipdglyc_c <==> h_c + udp_c + m12dapglyc_c"	-1000	1000	0
+"AIRC4"	"air_c + atp_c + hco3_c --> h_c + pi_c + 5aizc_c + adp_c"	0	1000	0
+"AKP1"	"(3) h2o_c + ahdt_c --> (2) h_c + (3) pi_c + dhnpt_c"	0	1000	0
+"ALAALA"	"atp_c + (2) ala_D_c --> h_c + pi_c + adp_c + alaala_c"	0	1000	0
+"ALAASP1c"	"h2o_c + alaasp_c <==> asp_L_c + ala_L_c"	-1000	1000	0
+"ALAASPabc"	"h2o_c + atp_c + alaasp_e --> h_c + pi_c + adp_c + alaasp_c"	0	1000	0
+"ALACI"	"alac_S_c <==> 33hmeoxobut_c"	-1000	1000	0
+"ALAD_L"	"nad_c + h2o_c + ala_L_c --> h_c + nadh_c + pyr_c + nh4_c"	0	1000	0
+"ALAGLN1c"	"h2o_c + alagln_c <==> gln_L_c + ala_L_c"	-1000	1000	0
+"ALAGLNabc"	"h2o_c + atp_c + alagln_e --> h_c + pi_c + adp_c + alagln_c"	0	1000	0
+"ALAGLU1c"	"h2o_c + alaglu_c <==> glu_L_c + ala_L_c"	-1000	1000	0
+"ALAGLUabc"	"h2o_c + atp_c + alaglu_e --> h_c + pi_c + adp_c + alaglu_c"	0	1000	0
+"ALAGLY1c"	"h2o_c + alagly_c <==> gly_c + ala_L_c"	-1000	1000	0
+"ALAGLYabc"	"h2o_c + atp_c + alagly_e --> h_c + pi_c + adp_c + alagly_c"	0	1000	0
+"ALAHIS1c"	"h2o_c + alahis_c <==> ala_L_c + his_L_c"	-1000	1000	0
+"ALAHISabc"	"h2o_c + atp_c + alahis_e --> h_c + pi_c + adp_c + alahis_c"	0	1000	0
+"ALALEU1c"	"h2o_c + alaleu_c <==> ala_L_c + leu_L_c"	-1000	1000	0
+"ALALEUabc"	"h2o_c + atp_c + alaleu_e --> h_c + pi_c + adp_c + alaleu_c"	0	1000	0
+"ALAPGPL"	"(45) atp_c + (45) ala_D_c + prl45tca_c --> (45) h2o_c + (45) amp_c + (45) ppi_c + prl45tcaala_c"	0	1000	0
+"ALAR"	"ala_L_c <==> ala_D_c"	-1000	1000	0
+"ALATHR1c"	"h2o_c + alathr_c <==> ala_L_c + thr_L_c"	-1000	1000	0
+"ALATHRabc"	"h2o_c + atp_c + alathr_e --> h_c + pi_c + adp_c + alathr_c"	0	1000	0
+"ALAt2r"	"h_e + ala_L_e <==> h_c + ala_L_c"	-1000	1000	0
+"ALCD19"	"h_c + nadh_c + glyald_c <==> nad_c + glyc_c"	-1000	1000	0
+"ALCD2x"	"nad_c + etoh_c <==> h_c + nadh_c + acald_c"	-1000	1000	0
+"ALDD2x"	"nad_c + h2o_c + acald_c --> (2) h_c + nadh_c + ac_c"	0	1000	0
+"ALDD8x"	"nad_c + h2o_c + glyald_c --> (2) h_c + nadh_c + glyc_R_c"	0	1000	0
+"ALLTNt2r"	"h_e + alltn_e <==> h_c + alltn_c"	-1000	1000	0
+"ALPHNH"	"(3) h_c + h2o_c + allphn_c --> (2) co2_c + (2) nh4_c"	0	1000	0
+"ALTRH"	"altrn_c --> h2o_c + 2ddglcn_c"	0	1000	0
+"AMAA"	"h2o_c + acmama_c --> ala_L_c + acmam_c"	0	1000	0
+"AMANAPEr"	"acmanap_c <==> acgam6p_c"	-1000	1000	0
+"AMANK"	"atp_c + acmana_c --> h_c + adp_c + acmanap_c"	0	1000	0
+"AMMQT7rev"	"h_c + ahcys_c + mqn7_c --> amet_c + 2dmmq7_c"	0	1000	0
+"AMMQT8r"	"amet_c + 2dmmq8_c <==> h_c + ahcys_c + mqn8_c"	-1000	1000	0
+"AMPMS2"	"nad_c + h2o_c + air_c --> (3) h_c + nadh_c + 4ampm_c + (2) for_c"	0	1000	0
+"AMPTASECG"	"h2o_c + cgly_c --> gly_c + cys_L_c"	0	1000	0
+"AMPTASEGC"	"h2o_c + glycys_c --> gly_c + cys_L_c"	0	1000	0
+"ANS"	"chor_c + gln_L_c --> h_c + glu_L_c + pyr_c + anth_c"	0	1000	0
+"ANS2"	"nh4_c + chor_c --> h_c + h2o_c + pyr_c + anth_c"	0	1000	0
+"AOBUTDs"	"h_c + 2aobut_c --> co2_c + aact_c"	0	1000	0
+"APAT"	"h2o_c + thdp_c + accoa_c <==> coa_c + acamoxm_c"	-1000	1000	0
+"APPLDH"	"h_c + nadh_c + aact_c --> nad_c + appl_c"	0	1000	0
+"APRAUR"	"h_c + nadph_c + 5apru_c --> nadp_c + 5aprbu_c"	0	1000	0
+"ARBTpts"	"pep_c + arbt_e --> arbt6p_c + pyr_c"	0	1000	0
+"ARBabc"	"h2o_c + atp_c + arab_L_e --> h_c + pi_c + adp_c + arab_L_c"	0	1000	0
+"ARGDC"	"h_c + arg_L_c --> co2_c + agm_c"	0	1000	0
+"ARGSL"	"argsuc_c <==> fum_c + arg_L_c"	-1000	1000	0
+"ARGSSr"	"atp_c + asp_L_c + citr_L_c <==> h_c + amp_c + ppi_c + argsuc_c"	-1000	1000	0
+"ARGt2"	"h_e + arg_L_e --> h_c + arg_L_c"	0	1000	0
+"ASAD"	"nadp_c + pi_c + aspsa_c <==> h_c + nadph_c + 4pasp_c"	-1000	1000	0
+"ASNS1"	"h2o_c + atp_c + gln_L_c + asp_L_c --> h_c + glu_L_c + amp_c + ppi_c + asn_L_c"	0	1000	0
+"ASNS2"	"atp_c + nh4_c + asp_L_c --> h_c + amp_c + ppi_c + asn_L_c"	0	1000	0
+"ASNt2r"	"h_e + asn_L_e <==> h_c + asn_L_c"	-1000	1000	0
+"ASO3t"	"aso3_e <==> aso3_c"	-1000	1000	0
+"ASO4t"	"aso4_e <==> aso4_c"	-1000	1000	0
+"ASPCT"	"cbp_c + asp_L_c --> h_c + pi_c + cbasp_c"	0	1000	0
+"ASPKi"	"atp_c + asp_L_c --> adp_c + 4pasp_c"	0	1000	0
+"ASPO1"	"h2o_c + o2_c + asp_L_c --> nh4_c + h2o2_c + oaa_c"	0	1000	0
+"ASPO5"	"fum_c + asp_L_c --> h_c + iasp_c + succ_c"	0	1000	0
+"ASPO6"	"o2_c + asp_L_c --> h_c + h2o2_c + iasp_c"	0	1000	0
+"ASPO7"	"asp_L_c + fmn_c --> h_c + iasp_c + fmnh2_c"	0	1000	0
+"ASPT"	"asp_L_c --> nh4_c + fum_c"	0	1000	0
+"ASPTA"	"akg_c + asp_L_c <==> glu_L_c + oaa_c"	-1000	1000	0
+"ASPt2r"	"h_e + asp_L_e <==> h_c + asp_L_c"	-1000	1000	0
+"ATPPRT"	"atp_c + prpp_c --> ppi_c + prbatp_c"	0	1000	0
+"ATPS4"	"(4) h_e + pi_c + adp_c --> (3) h_c + h2o_c + atp_c"	0	1000	0
+"BACCLi"	"ppi_c + btamp_c --> h_c + atp_c + btn_c"	0	1000	0
+"BCOAACT"	"acac_c + btcoa_c <==> aacoa_c + but_c"	-1000	1000	0
+"BDH"	"nad_c + bhb_c <==> h_c + nadh_c + acac_c"	-1000	1000	0
+"BGLA"	"h2o_c + cellb_c --> (2) glc_D_c"	0	1000	0
+"BGLA1"	"h2o_c + 6pgg_c --> g6p_c + glc_D_c"	0	1000	0
+"BGLAr"	"h2o_c + cellb_c <==> (2) glc_bD_c"	-1000	1000	0
+"BHBtp"	"bhb_e <==> bhb_c"	-1000	1000	0
+"BPNT"	"h2o_c + pap_c --> pi_c + amp_c"	0	1000	0
+"BTCOADH"	"(2) h_c + (2) nadh_c + b2coa_c + fdxox_c <==> (2) nad_c + btcoa_c + fdxrd_c"	-1000	1000	0
+"BTNCLi"	"atp_c + apoC_Lys_btn_c + hco3_c --> h_c + pi_c + btn_co2_c + adp_c"	0	1000	0
+"BTNabc"	"h2o_c + atp_c + btn_e --> h_c + pi_c + adp_c + btn_c"	0	1000	0
+"BTS4"	"amet_c + dtbt_c + s_c --> h_c + dad_5_c + btn_c + met_L_c"	0	1000	0
+"BUTKr"	"atp_c + but_c <==> adp_c + butpi_c"	-1000	1000	0
+"BUTSO3abc"	"h2o_c + atp_c + butso3_e --> h_c + pi_c + adp_c + butso3_c"	0	1000	0
+"BUTt2r"	"h_e + but_e <==> h_c + but_c"	-1000	1000	0
+"CAt4i"	"h_c + ca2_e --> h_e + ca2_c"	0	1000	0
+"CBIAT"	"h_c + atp_c + cbi_c <==> adocbi_c + pppi_c"	-1000	1000	0
+"CBL1abc"	"h2o_c + atp_c + cbl1_e --> h_c + pi_c + adp_c + cbl1_c"	0	1000	0
+"CBL2abc"	"h2o_c + atp_c + cbl2_e --> h_c + pi_c + adp_c + cbl2_c"	0	1000	0
+"CBPS"	"h2o_c + (2) atp_c + gln_L_c + hco3_c --> (2) h_c + glu_L_c + pi_c + (2) adp_c + cbp_c"	0	1000	0
+"CD2abc1"	"h2o_c + atp_c + cd2_c --> h_c + pi_c + adp_c + cd2_e"	0	1000	0
+"CDPGLYCGPT"	"acbdma14gapuc_c + (45) cdpglyc_c <==> (45) h_c + prl45tca_c + (45) cmp_c"	-1000	1000	0
+"CDPMEK"	"atp_c + 4c2me_c --> h_c + adp_c + 2p4c2me_c"	0	1000	0
+"CELBpts"	"pep_c + cellb_e --> pyr_c + 6pgg_c"	0	1000	0
+"CGLYabc"	"h2o_c + atp_c + cgly_e --> h_c + pi_c + adp_c + cgly_c"	0	1000	0
+"CH4St"	"ch4s_c <==> ch4s_e"	-1000	1000	0
+"CHORM"	"chor_c --> pphn_c"	0	1000	0
+"CHORS"	"3psme_c --> pi_c + chor_c"	0	1000	0
+"CHRPL"	"chor_c --> pyr_c + 4hbz_c"	0	1000	0
+"CINNMR"	"fdxrd_c + cinnm_c <==> fdxox_c + pppn_c"	-1000	1000	0
+"CITL"	"cit_c --> ac_c + oaa_c"	0	1000	0
+"CLPNS140"	"(2) pg140_c <==> glyc_c + clpn140_c"	-1000	1000	0
+"CLPNS160"	"(2) pg160_c <==> glyc_c + clpn160_c"	-1000	1000	0
+"CLPNS180"	"(2) pg180_c <==> glyc_c + clpn180_c"	-1000	1000	0
+"CLPNSAI15"	"(2) pgai15_c <==> glyc_c + clpnai15_c"	-1000	1000	0
+"CLPNSAI17"	"(2) pgai17_c <==> glyc_c + clpnai17_c"	-1000	1000	0
+"CLPNSI14"	"(2) pgi14_c <==> glyc_c + clpni14_c"	-1000	1000	0
+"CLPNSI15"	"(2) pgi15_c <==> glyc_c + clpni15_c"	-1000	1000	0
+"CLPNSI16"	"(2) pgi16_c <==> glyc_c + clpni16_c"	-1000	1000	0
+"CLPNSI17"	"(2) pgi17_c <==> glyc_c + clpni17_c"	-1000	1000	0
+"CO2t"	"co2_e <==> co2_c"	-1000	1000	0
+"COBALTt5"	"cobalt2_c <==> cobalt2_e"	-1000	1000	0
+"CPC2MT"	"amet_c + copre2_c --> h_c + ahcys_c + copre3_c"	0	1000	0
+"CPC3MT"	"amet_c + copre3_c --> ahcys_c + copre4_c"	0	1000	0
+"CPC4MT"	"amet_c + copre4_c --> h_c + ahcys_c + copre5_c"	0	1000	0
+"CPC5MT"	"h2o_c + amet_c + copre5_c --> h_c + acald_c + ahcys_c + copre6_c"	0	1000	0
+"CPC6MT"	"(2) amet_c + codhpre6_c --> h_c + co2_c + (2) ahcys_c + copre8_c"	0	1000	0
+"CPC6R"	"h_c + nadph_c + copre6_c --> nadp_c + codhpre6_c"	0	1000	0
+"CPC8MM"	"copre8_c <==> cobya_c"	-1000	1000	0
+"CPPPGO2"	"(2) amet_c + cpppg3_c --> (2) co2_c + (2) dad_5_c + (2) met_L_c + pppg9_c"	0	1000	0
+"CRO4t3"	"h_e + cro4_c <==> h_c + cro4_e"	-1000	1000	0
+"CSNt2"	"h_e + csn_e --> h_c + csn_c"	0	1000	0
+"CTPS1"	"atp_c + nh4_c + utp_c --> (2) h_c + pi_c + adp_c + ctp_c"	0	1000	0
+"CTPS2"	"h2o_c + atp_c + gln_L_c + utp_c --> (2) h_c + glu_L_c + pi_c + adp_c + ctp_c"	0	1000	0
+"CYRDAAT"	"h_c + atp_c + co1dam_c --> adcobdam_c + pppi_c"	0	1000	0
+"CYRDAR"	"nadh_c + (2) co2dam_c --> h_c + nad_c + (2) co1dam_c"	0	1000	0
+"CYRDAS"	"h2o_c + (2) atp_c + (2) gln_L_c + cobya_c --> h_c + (2) glu_L_c + ppi_c + (2) adp_c + co2dam_c"	0	1000	0
+"CYSS"	"h2s_c + acser_c --> h_c + ac_c + cys_L_c"	0	1000	0
+"CYSS3r"	"trdrd_c + tsul_c + acser_c <==> h_c + ac_c + trdox_c + so3_c + cys_L_c"	-1000	1000	0
+"CYSTL"	"h2o_c + cyst_L_c --> pyr_c + nh4_c + hcys_L_c"	0	1000	0
+"CYSt2r"	"h_e + cys_L_e <==> h_c + cys_L_c"	-1000	1000	0
+"CYTD"	"h_c + h2o_c + cytd_c --> nh4_c + uri_c"	0	1000	0
+"CYTDK1"	"atp_c + cytd_c --> h_c + adp_c + cmp_c"	0	1000	0
+"CYTDK2"	"gtp_c + cytd_c --> h_c + gdp_c + cmp_c"	0	1000	0
+"CYTDK3"	"cytd_c + itp_c --> h_c + cmp_c + idp_c"	0	1000	0
+"CYTDK4"	"utp_c + cytd_c --> h_c + udp_c + cmp_c"	0	1000	0
+"CYTK1"	"atp_c + cmp_c <==> adp_c + cdp_c"	-1000	1000	0
+"CYTK2"	"atp_c + dcmp_c <==> adp_c + dcdp_c"	-1000	1000	0
+"Cuabc"	"h2o_c + atp_c + cu2_e --> h_c + pi_c + adp_c + cu2_c"	0	1000	0
+"Cut1"	"h2o_c + atp_c + cu2_c --> h_c + pi_c + adp_c + cu2_e"	0	1000	0
+"DADA"	"h_c + h2o_c + dad_2_c --> nh4_c + din_c"	0	1000	0
+"DAGK120"	"atp_c + 12dgr120_c --> h_c + adp_c + pa120_c"	0	1000	0
+"DAGK140"	"atp_c + 12dgr140_c --> h_c + adp_c + pa140_c"	0	1000	0
+"DAGK141"	"atp_c + 12dgr141_c --> h_c + adp_c + pa141_c"	0	1000	0
+"DAGK160"	"atp_c + 12dgr160_c --> h_c + adp_c + pa160_c"	0	1000	0
+"DAGK161"	"atp_c + 12dgr161_c --> h_c + adp_c + pa161_c"	0	1000	0
+"DAGK180"	"12dgr180_c + atp_c --> h_c + adp_c + pa180_c"	0	1000	0
+"DAGK181"	"atp_c + 12dgr181_c --> h_c + adp_c + pa181_c"	0	1000	0
+"DALAt2r"	"h_e + ala_D_e <==> h_c + ala_D_c"	-1000	1000	0
+"DAPDAi"	"h2o_c + n6all26d_c --> 26dap_LL_c + ac_c"	0	1000	0
+"DAPDC"	"h_c + 26dap_M_c --> co2_c + lys_L_c"	0	1000	0
+"DAPE"	"26dap_LL_c <==> 26dap_M_c"	-1000	1000	0
+"DASYN120"	"h_c + ctp_c + pa120_c --> ppi_c + cdpdddecg_c"	0	1000	0
+"DASYN140"	"h_c + pa140_c + ctp_c --> ppi_c + cdpdtdecg_c"	0	1000	0
+"DASYN141"	"h_c + ctp_c + pa141_c --> ppi_c + cdpdtdec7eg_c"	0	1000	0
+"DASYN160"	"h_c + pa160_c + ctp_c --> ppi_c + cdpdhdecg_c"	0	1000	0
+"DASYN161"	"h_c + ctp_c + pa161_c --> ppi_c + cdpdhdec9eg_c"	0	1000	0
+"DASYN180"	"h_c + pa180_c + ctp_c --> ppi_c + cdpdodecg_c"	0	1000	0
+"DASYN181"	"h_c + ctp_c + pa181_c --> ppi_c + cdpdodec11eg_c"	0	1000	0
+"DASYNAI15"	"h_c + paai15_c + ctp_c --> ppi_c + cdpdaipdecg_c"	0	1000	0
+"DASYNAI17"	"h_c + paai17_c + ctp_c --> ppi_c + cdpdaihpdecg_c"	0	1000	0
+"DASYNI14"	"h_c + pai14_c + ctp_c --> ppi_c + cdpditdecg_c"	0	1000	0
+"DASYNI15"	"h_c + pai15_c + ctp_c --> ppi_c + cdpdipdecg_c"	0	1000	0
+"DASYNI16"	"h_c + pai16_c + ctp_c --> ppi_c + cdpdihdecg_c"	0	1000	0
+"DASYNI17"	"h_c + pai17_c + ctp_c --> ppi_c + cdpdihpdecg_c"	0	1000	0
+"DB4PS"	"ru5p_D_c --> h_c + for_c + db4p_c"	0	1000	0
+"DCMPDA"	"h_c + h2o_c + dcmp_c <==> nh4_c + dump_c"	-1000	1000	0
+"DCYTD"	"h_c + h2o_c + dcyt_c --> nh4_c + duri_c"	0	1000	0
+"DDGLCNt2r"	"h_e + 2ddglcn_e <==> h_c + 2ddglcn_c"	-1000	1000	0
+"DDPA"	"h2o_c + pep_c + e4p_c --> pi_c + 2dda7p_c"	0	1000	0
+"DDPGA"	"4h2oglt_c <==> pyr_c + glx_c"	-1000	1000	0
+"DGK1"	"atp_c + dgmp_c <==> adp_c + dgdp_c"	-1000	1000	0
+"DGSNt2r"	"h_e + dgsn_e <==> h_c + dgsn_c"	-1000	1000	0
+"DHAD1"	"23dhmb_c --> h2o_c + 3mob_c"	0	1000	0
+"DHAD2"	"23dhmp_c --> h2o_c + 3mop_c"	0	1000	0
+"DHDPRy"	"h_c + nadph_c + 23dhdp_c --> nadp_c + thdp_c"	0	1000	0
+"DHDPS"	"pyr_c + aspsa_c --> h_c + (2) h2o_c + 23dhdp_c"	0	1000	0
+"DHFOR2"	"nadp_c + dhf_c <==> nadph_c + fol_c"	-1000	1000	0
+"DHFR"	"h_c + nadph_c + dhf_c <==> nadp_c + thf_c"	-1000	1000	0
+"DHFS"	"glu_L_c + atp_c + dhpt_c --> h_c + pi_c + adp_c + dhf_c"	0	1000	0
+"DHNAOT4"	"h_c + dhna_c + octdp_c --> co2_c + ppi_c + 2dmmql8_c"	0	1000	0
+"DHNAOT7"	"nadh_c + co2_c + ppi_c + 2dmmq7_c --> nad_c + dhna_c + hepdp_c"	0	1000	0
+"DHNPA"	"dhnpt_c --> gcald_c + 2ahhmp_c"	0	1000	0
+"DHNPA2"	"dhnpt_c --> gcald_c + 6hmhpt_c"	0	1000	0
+"DHORD2"	"dhor_S_c + q8_c --> orot_c + q8h2_c"	0	1000	0
+"DHORD5"	"mqn8_c + dhor_S_c --> orot_c + mql8_c"	0	1000	0
+"DHORDfum"	"fum_c + dhor_S_c --> succ_c + orot_c"	0	1000	0
+"DHORDi"	"o2_c + dhor_S_c --> h2o2_c + orot_c"	0	1000	0
+"DHORTS"	"h2o_c + dhor_S_c <==> h_c + cbasp_c"	-1000	1000	0
+"DHPM1"	"h2o_c + 56dura_c --> h_c + cala_c"	0	1000	0
+"DHPM2"	"h2o_c + 56dthm_c --> h_c + 3uib_c"	0	1000	0
+"DHPPDA"	"h_c + h2o_c + 25dhpp_c --> nh4_c + 5apru_c"	0	1000	0
+"DHPS"	"4abz_c + 2ahhmp_c --> h2o_c + dhpt_c"	0	1000	0
+"DHPS2"	"4abz_c + 6hmhptpp_c --> ppi_c + dhpt_c"	0	1000	0
+"DHQS"	"2dda7p_c --> pi_c + 3dhq_c"	0	1000	0
+"DHQTi"	"3dhq_c --> h2o_c + 3dhsk_c"	0	1000	0
+"DMATT"	"dmpp_c + ipdp_c --> ppi_c + grdp_c"	0	1000	0
+"DMPPS"	"h_c + nadh_c + h2mb4p_c --> nad_c + h2o_c + dmpp_c"	0	1000	0
+"DMPPS2r"	"h_c + nadph_c + h2mb4p_c <==> nadp_c + h2o_c + dmpp_c"	-1000	1000	0
+"DMQMT"	"amet_c + 2omhmbl_c --> h_c + ahcys_c + q8h2_c"	0	1000	0
+"DMSOR1"	"mql8_c + dmso_c --> h2o_c + mqn8_c + dms_c"	0	1000	0
+"DMSOR2"	"2dmmql8_c + dmso_c --> h2o_c + 2dmmq8_c + dms_c"	0	1000	0
+"DM_4HBA"	"4hba_c --> "	0	1000	0
+"DM_5DRIB"	"5drib_c --> "	0	1000	0
+"DM_5MTR"	"5mtr_c --> "	0	1000	0
+"DM_GCALD"	"gcald_c --> "	0	1000	0
+"DM_HQN"	"hqn_c --> "	0	1000	0
+"DM_atp_c"	"h2o_c + atp_c --> h_c + pi_c + adp_c"	0	1000	0
+"DM_btn"	"btn_c --> "	0	1000	0
+"DM_clpn140_c"	"clpn140_c --> "	0	1000	0
+"DM_clpn160_c"	"clpn160_c --> "	0	1000	0
+"DM_clpn180_c"	"clpn180_c --> "	0	1000	0
+"DM_clpnai15_c"	"clpnai15_c --> "	0	1000	0
+"DM_clpnai17_c"	"clpnai17_c --> "	0	1000	0
+"DM_clpni15_c"	"clpni15_c --> "	0	1000	0
+"DM_clpni16_c"	"clpni16_c --> "	0	1000	0
+"DM_clpni17_c"	"clpni17_c --> "	0	1000	0
+"DM_dad_5"	"dad_5_c --> "	0	1000	0
+"DM_dhptd_c"	"dhptd_c <==> "	-1000	1000	0
+"DM_teich_45_BS_c"	"teich_45_BS_c --> "	0	1000	0
+"DPCOAK"	"atp_c + dpcoa_c --> h_c + coa_c + adp_c"	0	1000	0
+"DPRr"	"h_c + nadph_c + 2dhp_c <==> nadp_c + pant_R_c"	-1000	1000	0
+"DRBK"	"atp_c + drib_c --> h_c + adp_c + 2dr5p_c"	0	1000	0
+"DRIBabc"	"h2o_c + atp_c + drib_e --> h_c + pi_c + adp_c + drib_c"	0	1000	0
+"DRPAr"	"2dr5p_c <==> acald_c + g3p_c"	-1000	1000	0
+"DTMPK"	"atp_c + dtmp_c --> adp_c + dtdp_c"	0	1000	0
+"DURAD"	"nadp_c + 56dura_c <==> h_c + nadph_c + ura_c"	-1000	1000	0
+"DURAD2"	"nadp_c + 56dthm_c <==> h_c + nadph_c + thym_c"	-1000	1000	0
+"DURIPP"	"pi_c + duri_c <==> ura_c + 2dr1p_c"	-1000	1000	0
+"DUTPDP"	"h2o_c + dutp_c --> h_c + ppi_c + dump_c"	0	1000	0
+"DXPRIr"	"h_c + nadph_c + dxyl5p_c <==> nadp_c + 2me4p_c"	-1000	1000	0
+"DXPS"	"h_c + pyr_c + g3p_c --> co2_c + dxyl5p_c"	0	1000	0
+"D_GLY3PRi"	"nadp_c + h2o_c + g3p_c --> (2) h_c + nadph_c + 3pg_c"	0	1000	0
+"D_LACD"	"(2) ficytC_c + lac_D_c --> (2) h_c + pyr_c + (2) focytC_c"	0	1000	0
+"D_LACt2"	"h_e + lac_D_e <==> h_c + lac_D_c"	-1000	1000	0
+"E4PD"	"nad_c + h2o_c + e4p_c <==> (2) h_c + nadh_c + 4per_c"	-1000	1000	0
+"EAR10M12x"	"h_c + nadh_c + 10mtddec2eACP_c --> nad_c + 10mddcaACP_c"	0	1000	0
+"EAR11M12"	"h_c + nadph_c + 11mtddec2eACP_c --> nadp_c + 11mddcaACP_c"	0	1000	0
+"EAR12M14"	"h_c + nadph_c + 12mtmrs2eACP_c --> nadp_c + 12mmyrsACP_c"	0	1000	0
+"EAR13M14x"	"h_c + nadh_c + 13mtmrs2eACP_c --> nad_c + 13mmyrsACP_c"	0	1000	0
+"EAR14M16x"	"h_c + nadh_c + 14mtpalm2eACP_c --> nad_c + 14mpalmACP_c"	0	1000	0
+"EAR15M16x"	"h_c + nadh_c + 15mtpalm2eACP_c --> nad_c + 15mpalmACP_c"	0	1000	0
+"EAR4M6x"	"h_c + nadh_c + 4mthex2eACP_c --> nad_c + 4mhexACP_c"	0	1000	0
+"EAR5M6x"	"h_c + nadh_c + 5mthex2eACP_c --> nad_c + 5mhexACP_c"	0	1000	0
+"EAR6M8"	"h_c + nadph_c + 6mtoct2eACP_c --> nadp_c + 6mocACP_c"	0	1000	0
+"EAR7M8"	"h_c + nadph_c + 7mtoct2eACP_c --> nadp_c + 7mocACP_c"	0	1000	0
+"EAR8M10"	"h_c + nadph_c + 8mtdec2eACP_c --> nadp_c + 8mdcaACP_c"	0	1000	0
+"EAR9M10"	"h_c + nadph_c + 9mtdec2eACP_c --> nadp_c + 9mdcaACP_c"	0	1000	0
+"ECOAH12"	"h2o_c + 2mp2coa_c --> 3hibutcoa_c"	0	1000	0
+"ECOAH1R"	"3hbcoa_R_c <==> h2o_c + b2coa_c"	-1000	1000	0
+"ECOAH9"	"h2o_c + 2mb2coa_c <==> 3hmbcoa_c"	-1000	1000	0
+"EDA_R"	"2ddg6p_c <==> pyr_c + g3p_c"	-1000	1000	0
+"EHGLAT"	"akg_c + e4hglu_c --> glu_L_c + 4h2oglt_c"	0	1000	0
+"ENO"	"2pg_c <==> h2o_c + pep_c"	-1000	1000	0
+"ETHAAL"	"etha_c --> acald_c + nh4_c"	0	1000	0
+"ETHAt2"	"h_e + etha_e --> h_c + etha_c"	0	1000	0
+"ETHSO3abc"	"h2o_c + atp_c + ethso3_e --> h_c + pi_c + adp_c + ethso3_c"	0	1000	0
+"ETOHt"	"etoh_e <==> etoh_c"	-1000	1000	0
+"EX_12dgr180_e"	"12dgr180_e <==> "	-1000	1000	0
+"EX_13ppd_e"	"13ppd_e <==> "	-1000	1000	0
+"EX_2ddglcn_e"	"2ddglcn_e <==> "	-1000	1000	0
+"EX_2mbut_e"	"2mbut_e <==> "	-1000	1000	0
+"EX_34dhpha_e"	"34dhpha_e <==> "	-1000	1000	0
+"EX_4abut_e"	"4abut_e <==> "	-1000	1000	0
+"EX_4hphac_e"	"4hphac_e <==> "	-1000	1000	0
+"EX_4mcat_e"	"4mcat_e <==> "	-1000	1000	0
+"EX_5aptn_e"	"5aptn_e <==> "	-1000	1000	0
+"EX_Lcyst_e"	"Lcyst_e <==> "	-1000	1000	0
+"EX_ac_e"	"ac_e <==> "	-1000	1000	0
+"EX_acald_e"	"acald_e <==> "	-1000	1000	0
+"EX_acgam_e"	"acgam_e <==> "	-1000	1000	0
+"EX_adpcbl_e"	"adocbl_e <==> "	-1000	1000	0
+"EX_ala_D_e"	"ala_D_e <==> "	-1000	1000	0
+"EX_ala_L_e"	"ala_L_e <==> "	-1000	1000	0
+"EX_alaasp_e"	"alaasp_e <==> "	-1000	1000	0
+"EX_alagln_e"	"alagln_e <==> "	-1000	1000	0
+"EX_alaglu_e"	"alaglu_e <==> "	-1000	1000	0
+"EX_alagly_e"	"alagly_e <==> "	-1000	1000	0
+"EX_alahis_e"	"alahis_e <==> "	-1000	1000	0
+"EX_alaleu_e"	"alaleu_e <==> "	-1000	1000	0
+"EX_alathr_e"	"alathr_e <==> "	-1000	1000	0
+"EX_alltn_e"	"alltn_e <==> "	-1000	1000	0
+"EX_arab_L_e"	"arab_L_e <==> "	-1000	1000	0
+"EX_arbt_e"	"arbt_e <==> "	-1000	1000	0
+"EX_arg_L_e"	"arg_L_e <==> "	-1000	1000	0
+"EX_asn_L_e"	"asn_L_e <==> "	-1000	1000	0
+"EX_aso3_e"	"aso3_e <==> "	-1000	1000	0
+"EX_aso4_e"	"aso4_e <==> "	-1000	1000	0
+"EX_asp_L_e"	"asp_L_e <==> "	-1000	1000	0
+"EX_bhb_e"	"bhb_e <==> "	-1000	1000	0
+"EX_biomass_e"	"biomass_c <==> "	-1000	1000	0
+"EX_btn_e"	"btn_e <==> "	-1000	1000	0
+"EX_but_e"	"but_e <==> "	-1000	1000	0
+"EX_butso3_e"	"butso3_e <==> "	-1000	1000	0
+"EX_ca2_e"	"ca2_e <==> "	-1000	1000	0
+"EX_cbl1_e"	"cbl1_e <==> "	-1000	1000	0
+"EX_cbl2_e"	"cbl2_e <==> "	-1000	1000	0
+"EX_cd2_e"	"cd2_e <==> "	-1000	1000	0
+"EX_cellb_e"	"cellb_e <==> "	-1000	1000	0
+"EX_cgly_e"	"cgly_e <==> "	-1000	1000	0
+"EX_ch4s_e"	"ch4s_e <==> "	-1000	1000	0
+"EX_cl_e"	"cl_e <==> "	-1000	1000	0
+"EX_co2_e"	"co2_e <==> "	-1000	1000	0
+"EX_cobalt2_e"	"cobalt2_e <==> "	-1000	1000	0
+"EX_cro4_e"	"cro4_e <==> "	-1000	1000	0
+"EX_csn_e"	"csn_e <==> "	-1000	1000	0
+"EX_cu2_e"	"cu2_e <==> "	-1000	1000	0
+"EX_cys_L_e"	"cys_L_e <==> "	-1000	1000	0
+"EX_dgsn_e"	"dgsn_e <==> "	-1000	1000	0
+"EX_drib_e"	"drib_e <==> "	-1000	1000	0
+"EX_etha_e"	"etha_e <==> "	-1000	1000	0
+"EX_ethso3_e"	"ethso3_e <==> "	-1000	1000	0
+"EX_etoh_e"	"etoh_e <==> "	-1000	1000	0
+"EX_fe2_e"	"fe2_e <==> "	-1000	1000	0
+"EX_fe3_e"	"fe3_e <==> "	-1000	1000	0
+"EX_fecrm_e"	"fecrm_e <==> "	-1000	1000	0
+"EX_for_e"	"for_e <==> "	-1000	1000	0
+"EX_fru_e"	"fru_e <==> "	-1000	1000	0
+"EX_gal_e"	"gal_e <==> "	-1000	1000	0
+"EX_galt_e"	"galt_e <==> "	-1000	1000	0
+"EX_gam_e"	"gam_e <==> "	-1000	1000	0
+"EX_gcald_e"	"gcald_e <==> "	-1000	1000	0
+"EX_glc_D_e"	"glc_D_e <==> "	-1000	1000	0
+"EX_gln_L_e"	"gln_L_e <==> "	-1000	1000	0
+"EX_glu_L_e"	"glu_L_e <==> "	-1000	1000	0
+"EX_gly_e"	"gly_e <==> "	-1000	1000	0
+"EX_glyasn_e"	"glyasn_e <==> "	-1000	1000	0
+"EX_glyasp_e"	"glyasp_e <==> "	-1000	1000	0
+"EX_glyb_e"	"glyb_e <==> "	-1000	1000	0
+"EX_glyc3p_e"	"glyc3p_e <==> "	-1000	1000	0
+"EX_glycys_e"	"glycys_e <==> "	-1000	1000	0
+"EX_glygln_e"	"glygln_e <==> "	-1000	1000	0
+"EX_glyglu_e"	"glyglu_e <==> "	-1000	1000	0
+"EX_glyleu_e"	"glyleu_e <==> "	-1000	1000	0
+"EX_glymet_e"	"glymet_e <==> "	-1000	1000	0
+"EX_glyphe_e"	"glyphe_e <==> "	-1000	1000	0
+"EX_glypro_e"	"glypro_e <==> "	-1000	1000	0
+"EX_glytyr_e"	"glytyr_e <==> "	-1000	1000	0
+"EX_h_e"	"h_e <==> "	-1000	1000	0
+"EX_h2_e"	"h2_e <==> "	-1000	1000	0
+"EX_h2o_e"	"h2o_e <==> "	-1000	1000	0
+"EX_h2s_e"	"h2s_e <==> "	-1000	1000	0
+"EX_hdca_e"	"hdca_e <==> "	-1000	1000	0
+"EX_hexs_e"	"hexs_e <==> "	-1000	1000	0
+"EX_hg2_e"	"hg2_e <==> "	-1000	1000	0
+"EX_his_L_e"	"his_L_e <==> "	-1000	1000	0
+"EX_hxan_e"	"hxan_e <==> "	-1000	1000	0
+"EX_ile_L_e"	"ile_L_e <==> "	-1000	1000	0
+"EX_ind3ac_e"	"ind3ac_e <==> "	-1000	1000	0
+"EX_ind3ppa_e"	"ind3ppa_e <==> "	-1000	1000	0
+"EX_isetac_e"	"isetac_e <==> "	-1000	1000	0
+"EX_isobut_e"	"isobut_e <==> "	-1000	1000	0
+"EX_isocapr_e"	"isocapr_e <==> "	-1000	1000	0
+"EX_isoval_e"	"isoval_e <==> "	-1000	1000	0
+"EX_k_e"	"k_e <==> "	-1000	1000	0
+"EX_lac_D_e"	"lac_D_e <==> "	-1000	1000	0
+"EX_lac_L_e"	"lac_L_e <==> "	-1000	1000	0
+"EX_lcts_e"	"lcts_e <==> "	-1000	1000	0
+"EX_leu_L_e"	"leu_L_e <==> "	-1000	1000	0
+"EX_lys_L_e"	"lys_L_e <==> "	-1000	1000	0
+"EX_malt_e"	"malt_e <==> "	-1000	1000	0
+"EX_man_e"	"man_e <==> "	-1000	1000	0
+"EX_met_D_e"	"met_D_e <==> "	-1000	1000	0
+"EX_met_L_e"	"met_L_e <==> "	-1000	1000	0
+"EX_metala_e"	"metala_e <==> "	-1000	1000	0
+"EX_metsox_R_L_e"	"metsox_R_L_e <==> "	-1000	1000	0
+"EX_metsox_S_L_e"	"metsox_S_L_e <==> "	-1000	1000	0
+"EX_mg2_e"	"mg2_e <==> "	-1000	1000	0
+"EX_mn2_e"	"mn2_e <==> "	-1000	1000	0
+"EX_mnl_e"	"mnl_e <==> "	-1000	1000	0
+"EX_mobd_e"	"mobd_e <==> "	-1000	1000	0
+"EX_mops_e"	"mops_e <==> "	-1000	1000	0
+"EX_mqn7_e"	"mqn7_e <==> "	-1000	1000	0
+"EX_mso3_e"	"mso3_e <==> "	-1000	1000	0
+"EX_na1_e"	"na1_e <==> "	-1000	1000	0
+"EX_nac_e"	"nac_e <==> "	-1000	1000	0
+"EX_nh4_e"	"nh4_e <==> "	-1000	1000	0
+"EX_no2_e"	"no2_e <==> "	-1000	1000	0
+"EX_o2_e"	"o2_e <==> "	-1000	1000	0
+"EX_ocdca_e"	"ocdca_e <==> "	-1000	1000	0
+"EX_orn_e"	"orn_e <==> "	-1000	1000	0
+"EX_oxa_e"	"oxa_e <==> "	-1000	1000	0
+"EX_pac_e"	"pac_e <==> "	-1000	1000	0
+"EX_pb_e"	"pb_e <==> "	-1000	1000	0
+"EX_pcresol_e"	"pcresol_e <==> "	-1000	1000	0
+"EX_phe_L_e"	"phe_L_e <==> "	-1000	1000	0
+"EX_phpyr_e"	"phpyr_e <==> "	-1000	1000	0
+"EX_pi_e"	"pi_e <==> "	-1000	1000	0
+"EX_pnto_R_e"	"pnto_R_e <==> "	-1000	1000	0
+"EX_ppa_e"	"ppa_e <==> "	-1000	1000	0
+"EX_pppn_e"	"pppn_e <==> "	-1000	1000	0
+"EX_pro_L_e"	"pro_L_e <==> "	-1000	1000	0
+"EX_ptrc_e"	"ptrc_e <==> "	-1000	1000	0
+"EX_pydx_e"	"pydx_e <==> "	-1000	1000	0
+"EX_pydxn_e"	"pydxn_e <==> "	-1000	1000	0
+"EX_pyr_e"	"pyr_e <==> "	-1000	1000	0
+"EX_rib_D_e"	"rib_D_e <==> "	-1000	1000	0
+"EX_ribflv_e"	"ribflv_e <==> "	-1000	1000	0
+"EX_salcn_e"	"salcn_e <==> "	-1000	1000	0
+"EX_sbt_D_e"	"sbt_D_e <==> "	-1000	1000	0
+"EX_ser_L_e"	"ser_L_e <==> "	-1000	1000	0
+"EX_so4_e"	"so4_e <==> "	-1000	1000	0
+"EX_spmd_e"	"spmd_e <==> "	-1000	1000	0
+"EX_succ_e"	"succ_e <==> "	-1000	1000	0
+"EX_sucr_e"	"sucr_e <==> "	-1000	1000	0
+"EX_sulfac_e"	"sulfac_e <==> "	-1000	1000	0
+"EX_taur_e"	"taur_e <==> "	-1000	1000	0
+"EX_thm_e"	"thm_e <==> "	-1000	1000	0
+"EX_thr_L_e"	"thr_L_e <==> "	-1000	1000	0
+"EX_tma_e"	"tma_e <==> "	-1000	1000	0
+"EX_tre_e"	"tre_e <==> "	-1000	1000	0
+"EX_trp_L_e"	"trp_L_e <==> "	-1000	1000	0
+"EX_ttdca_e"	"ttdca_e <==> "	-1000	1000	0
+"EX_tyr_L_e"	"tyr_L_e <==> "	-1000	1000	0
+"EX_ura_e"	"ura_e <==> "	-1000	1000	0
+"EX_urea_e"	"urea_e <==> "	-1000	1000	0
+"EX_val_L_e"	"val_L_e <==> "	-1000	1000	0
+"EX_xan_e"	"xan_e <==> "	-1000	1000	0
+"EX_xyl_D_e"	"xyl_D_e <==> "	-1000	1000	0
+"EX_zn2_e"	"zn2_e <==> "	-1000	1000	0
+"FACOAL140"	"coa_c + atp_c + ttdca_c <==> amp_c + ppi_c + tdcoa_c"	-1000	1000	0
+"FACOAL160"	"coa_c + atp_c + hdca_c <==> amp_c + ppi_c + pmtcoa_c"	-1000	1000	0
+"FACOAL161"	"coa_c + atp_c + hdcea_c <==> amp_c + ppi_c + hdcoa_c"	-1000	1000	0
+"FACOAL180"	"coa_c + atp_c + ocdca_c <==> amp_c + ppi_c + stcoa_c"	-1000	1000	0
+"FACOAL181"	"coa_c + atp_c + ocdcea_c <==> amp_c + ppi_c + odecoa_c"	-1000	1000	0
+"FACOALAI15"	"coa_c + atp_c + fa4_c <==> amp_c + ppi_c + aipdcoa_c"	-1000	1000	0
+"FACOALAI17"	"coa_c + atp_c + fa12_c <==> amp_c + ppi_c + aihpdcoa_c"	-1000	1000	0
+"FACOALI14"	"coa_c + atp_c + fa1_c <==> amp_c + ppi_c + itdcoa_c"	-1000	1000	0
+"FACOALI15"	"coa_c + atp_c + fa3_c <==> amp_c + ppi_c + ipdcoa_c"	-1000	1000	0
+"FACOALI16"	"coa_c + atp_c + fa6_c <==> amp_c + ppi_c + ihdcoa_c"	-1000	1000	0
+"FACOALI17"	"coa_c + atp_c + fa11_c <==> amp_c + ppi_c + ihpdcoa_c"	-1000	1000	0
+"FBA"	"fdp_c <==> g3p_c + dhap_c"	-1000	1000	0
+"FBA2"	"f1p_c <==> glyald_c + dhap_c"	-1000	1000	0
+"FBA3"	"s17bp_c <==> e4p_c + dhap_c"	-1000	1000	0
+"FBP"	"h2o_c + fdp_c --> pi_c + f6p_c"	0	1000	0
+"FCLTc"	"fe2_c + ppp9_c --> (2) h_c + pheme_c"	0	1000	0
+"FDH"	"nad_c + for_c --> nadh_c + co2_c"	0	1000	0
+"FDH2"	"(3) h_c + for_c + q8_c --> (2) h_e + co2_c + q8h2_c"	0	1000	0
+"FDNADOX_H"	"nad_c + fdxrd_c <==> nadh_c + h_e + fdxox_c"	-1000	1000	0
+"FE2abc"	"h2o_c + atp_c + fe2_e --> h_c + pi_c + adp_c + fe2_c"	0	1000	0
+"FE3abc"	"h2o_c + atp_c + fe3_e --> h_c + pi_c + adp_c + fe3_c"	0	1000	0
+"FECRMabc"	"h2o_c + atp_c + fecrm_e --> h_c + pi_c + adp_c + fecrm_c"	0	1000	0
+"FMNAT"	"h_c + atp_c + fmn_c --> fad_c + ppi_c"	0	1000	0
+"FOLD3"	"4abz_c + 2ahhmd_c --> ppi_c + dhpt_c"	0	1000	0
+"FORTHFC"	"(2) h_c + 5forthf_c <==> nh4_c + methf_c"	-1000	1000	0
+"FORt2r"	"h_e + for_e <==> h_c + for_c"	-1000	1000	0
+"FPGS"	"(4) glu_L_c + atp_c + thf_c --> h_c + (3) h2o_c + pi_c + adp_c + 5thf_c"	0	1000	0
+"FPGS7"	"(4) glu_L_c + atp_c + 10fthf_c --> h_c + (3) h2o_c + pi_c + adp_c + 10fthf5glu_c"	0	1000	0
+"FPGS_tm"	"glu_L_c + atp_c + thf_c --> h_c + pi_c + adp_c + thfglu_c"	0	1000	0
+"FRD2"	"fum_c + mql8_c --> mqn8_c + succ_c"	0	1000	0
+"FRD3"	"fum_c + 2dmmql8_c --> 2dmmq8_c + succ_c"	0	1000	0
+"FRD7"	"fum_c + q8h2_c --> succ_c + q8_c"	0	1000	0
+"FRTT"	"ipdp_c + frdp_c --> ppi_c + ggdp_c"	0	1000	0
+"FRUK"	"atp_c + f1p_c --> h_c + adp_c + fdp_c"	0	1000	0
+"FRUpts"	"pep_c + fru_e --> pyr_c + f1p_c"	0	1000	0
+"FT"	"ipdp_c + frdp_c --> ppi_c + ttc_ggdp_c"	0	1000	0
+"FTHFCL"	"atp_c + 5fthf_c --> pi_c + adp_c + methf_c"	0	1000	0
+"FTHFL"	"atp_c + thf_c + for_c --> pi_c + adp_c + 10fthf_c"	0	1000	0
+"FUM"	"h2o_c + fum_c <==> mal_L_c"	-1000	1000	0
+"FXXRDO"	"(3) h2o_c + h2s_c + (3) fdxox_c <==> (2) h_c + so3_c + (3) fdxrd_c"	-1000	1000	0
+"G1PACT"	"accoa_c + gam1p_c --> h_c + coa_c + acgam1p_c"	0	1000	0
+"G1PTT"	"h_c + dttp_c + g1p_c --> ppi_c + dtdpglu_c"	0	1000	0
+"G1SAT"	"glu1sa_c <==> 5aop_c"	-1000	1000	0
+"G3PAT120"	"ddcaACP_c + glyc3p_c --> ACP_c + 1ddecg3p_c"	0	1000	0
+"G3PAT140"	"myrsACP_c + glyc3p_c --> ACP_c + 1tdecg3p_c"	0	1000	0
+"G3PAT141"	"tdeACP_c + glyc3p_c --> ACP_c + 1tdec7eg3p_c"	0	1000	0
+"G3PAT160"	"palmACP_c + glyc3p_c --> ACP_c + 1hdecg3p_c"	0	1000	0
+"G3PAT161"	"hdeACP_c + glyc3p_c --> ACP_c + 1hdec9eg3p_c"	0	1000	0
+"G3PAT180"	"ocdcaACP_c + glyc3p_c --> ACP_c + 1odecg3p_c"	0	1000	0
+"G3PAT181"	"octeACP_c + glyc3p_c --> ACP_c + 1odec11eg3p_c"	0	1000	0
+"G3PATAI15"	"h_c + aipdcoa_c + glyc3p_c --> coa_c + 1aipdecg3p_c"	0	1000	0
+"G3PATAI17"	"aihpdcoa_c + glyc3p_c --> coa_c + 1aihpdecg3p_c"	0	1000	0
+"G3PATI14"	"h_c + itdcoa_c + glyc3p_c --> coa_c + 1itdecg3p_c"	0	1000	0
+"G3PATI15"	"h_c + ipdcoa_c + glyc3p_c --> coa_c + 1ipdecg3p_c"	0	1000	0
+"G3PATI16"	"h_c + ihdcoa_c + glyc3p_c --> coa_c + 1ihdecg3p_c"	0	1000	0
+"G3PATI17"	"ihpdcoa_c + glyc3p_c --> coa_c + 1ihpdecg3p_c"	0	1000	0
+"G3PCT"	"h_c + ctp_c + glyc3p_c --> ppi_c + cdpglyc_c"	0	1000	0
+"G3PD1"	"nad_c + glyc3p_c <==> h_c + nadh_c + dhap_c"	-1000	1000	0
+"G3PD2"	"nadp_c + glyc3p_c <==> h_c + nadph_c + dhap_c"	-1000	1000	0
+"G5SADs"	"glu5sa_c --> h_c + h2o_c + 1pyr5c_c"	0	1000	0
+"G6PDA"	"h2o_c + gam6p_c --> nh4_c + f6p_c"	0	1000	0
+"G6PI"	"g6p_c <==> g6p_B_c"	-1000	1000	0
+"G6PI3"	"g6p_B_c <==> f6p_c"	-1000	1000	0
+"GALT"	"h_c + utp_c + gal1p_c <==> ppi_c + udpgal_c"	-1000	1000	0
+"GALTpts"	"pep_c + galt_e --> pyr_c + galt1p_c"	0	1000	0
+"GALU"	"h_c + utp_c + g1p_c <==> ppi_c + udpg_c"	-1000	1000	0
+"GALabc"	"h2o_c + atp_c + gal_e --> h_c + pi_c + adp_c + gal_c"	0	1000	0
+"GAMpts"	"pep_c + gam_e --> pyr_c + gam6p_c"	0	1000	0
+"GAPD"	"nad_c + pi_c + g3p_c <==> h_c + nadh_c + 13dpg_c"	-1000	1000	0
+"GAPD_NADP"	"nadp_c + pi_c + g3p_c <==> h_c + nadph_c + 13dpg_c"	-1000	1000	0
+"GARFTi"	"10fthf_c + gar_c --> h_c + thf_c + fgam_c"	0	1000	0
+"GART"	"atp_c + for_c + gar_c --> h_c + pi_c + adp_c + fgam_c"	0	1000	0
+"GCALDD"	"nad_c + h2o_c + gcald_c --> (2) h_c + nadh_c + glyclt_c"	0	1000	0
+"GCALDL"	"co2_c + gcald_c --> h_c + hpyr_c"	0	1000	0
+"GCALDt"	"gcald_e <==> gcald_c"	-1000	1000	0
+"GCCa"	"h_c + gly_c + lpro_c --> co2_c + alpro_c"	0	1000	0
+"GCCb"	"thf_c + alpro_c --> nh4_c + dhlpro_c + mlthf_c"	0	1000	0
+"GCCc"	"nad_c + dhlpro_c --> h_c + nadh_c + lpro_c"	0	1000	0
+"GF6PTA"	"gln_L_c + f6p_c --> glu_L_c + gam6p_c"	0	1000	0
+"GGTA"	"glu_L_c + cgly_c --> h2o_c + gthrd_c"	0	1000	0
+"GGTT"	"ipdp_c + ggdp_c --> ppi_c + pendp_c"	0	1000	0
+"GHMT2r"	"thf_c + ser_L_c <==> h2o_c + gly_c + mlthf_c"	-1000	1000	0
+"GK1"	"atp_c + gmp_c <==> adp_c + gdp_c"	-1000	1000	0
+"GK2"	"datp_c + gmp_c <==> gdp_c + dadp_c"	-1000	1000	0
+"GLCP3"	"h_c + pi_c + glycogen_c <==> g1p_c + glycogenb_c"	-1000	1000	0
+"GLCS3"	"glycogenb_c + adpglc_c <==> adp_c + glycogen_c"	-1000	1000	0
+"GLCabc"	"h2o_c + atp_c + glc_D_e --> h_c + pi_c + adp_c + glc_D_c"	0	1000	0
+"GLCpts"	"pep_c + glc_D_e --> g6p_c + pyr_c"	0	1000	0
+"GLGC"	"h_c + atp_c + g1p_c --> ppi_c + adpglc_c"	0	1000	0
+"GLNS"	"glu_L_c + atp_c + nh4_c --> h_c + pi_c + adp_c + gln_L_c"	0	1000	0
+"GLNt2r"	"h_e + gln_L_e <==> h_c + gln_L_c"	-1000	1000	0
+"GLTPD"	"nad_c + galt1p_c <==> h_c + nadh_c + tag6p_D_c"	-1000	1000	0
+"GLUDxi"	"nad_c + h2o_c + glu_L_c --> h_c + nadh_c + akg_c + nh4_c"	0	1000	0
+"GLUN"	"h2o_c + gln_L_c --> glu_L_c + nh4_c"	0	1000	0
+"GLUOX"	"nadp_c + (2) glu_L_c <==> h_c + nadph_c + akg_c + gln_L_c"	-1000	1000	0
+"GLUPRT"	"h2o_c + gln_L_c + prpp_c --> glu_L_c + ppi_c + pram_c"	0	1000	0
+"GLUR"	"glu_D_c <==> glu_L_c"	-1000	1000	0
+"GLUSy"	"h_c + nadph_c + akg_c + gln_L_c --> nadp_c + (2) glu_L_c"	0	1000	0
+"GLUTRR"	"h_c + nadph_c + glutrna_c --> nadp_c + glu1sa_c + trnaglu_c"	0	1000	0
+"GLUTRS"	"glu_L_c + atp_c + trnaglu_c --> amp_c + ppi_c + glutrna_c"	0	1000	0
+"GLUt2r"	"h_e + glu_L_e <==> h_c + glu_L_c"	-1000	1000	0
+"GLXCL"	"h_c + (2) glx_c --> co2_c + 2h3oppan_c"	0	1000	0
+"GLXO1"	"nad_c + h2o_c + glx_c --> (2) h_c + nadh_c + oxa_c"	0	1000	0
+"GLYASN1c"	"h2o_c + glyasn_c <==> gly_c + asn_L_c"	-1000	1000	0
+"GLYASNabc"	"h2o_c + atp_c + glyasn_e --> h_c + pi_c + adp_c + glyasn_c"	0	1000	0
+"GLYASP1c"	"h2o_c + glyasp_c <==> gly_c + asp_L_c"	-1000	1000	0
+"GLYASPabc"	"h2o_c + atp_c + glyasp_e --> h_c + pi_c + adp_c + glyasp_c"	0	1000	0
+"GLYB_R"	"(2) h_c + nadh_c + pi_c + glyb_c --> nad_c + h2o_c + actp_c + tma_c"	0	1000	0
+"GLYBabc"	"h2o_c + atp_c + glyb_e --> h_c + pi_c + adp_c + glyb_c"	0	1000	0
+"GLYBt2r"	"h_e + glyb_e <==> h_c + glyb_c"	-1000	1000	0
+"GLYC3Pabc"	"h2o_c + atp_c + glyc3p_e --> h_c + pi_c + adp_c + glyc3p_c"	0	1000	0
+"GLYCLTDxr"	"nad_c + glyclt_c <==> h_c + nadh_c + glx_c"	-1000	1000	0
+"GLYCTO1"	"o2_c + glyclt_c --> glx_c + h2o2_c"	0	1000	0
+"GLYCTO2"	"q8_c + glyclt_c --> glx_c + q8h2_c"	0	1000	0
+"GLYCTO3"	"mqn8_c + glyclt_c --> glx_c + mql8_c"	0	1000	0
+"GLYCTO4"	"2dmmq8_c + glyclt_c --> glx_c + 2dmmql8_c"	0	1000	0
+"GLYCYSabc"	"h2o_c + atp_c + glycys_e --> h_c + pi_c + adp_c + glycys_c"	0	1000	0
+"GLYGLN1c"	"h2o_c + glygln_c <==> gly_c + gln_L_c"	-1000	1000	0
+"GLYGLNabc"	"h2o_c + atp_c + glygln_e --> h_c + pi_c + adp_c + glygln_c"	0	1000	0
+"GLYGLU1c"	"h2o_c + glyglu_c <==> glu_L_c + gly_c"	-1000	1000	0
+"GLYGLUabc"	"h2o_c + atp_c + glyglu_e --> h_c + pi_c + adp_c + glyglu_c"	0	1000	0
+"GLYK"	"atp_c + glyc_c --> h_c + adp_c + glyc3p_c"	0	1000	0
+"GLYLEUHYDROc"	"h2o_c + glyleu_c <==> gly_c + leu_L_c"	-1000	1000	0
+"GLYLEUPEPT1tc"	"h_e + glyleu_e --> h_c + glyleu_c"	0	1000	0
+"GLYMET1c"	"h2o_c + glymet_c <==> gly_c + met_L_c"	-1000	1000	0
+"GLYMETabc"	"h2o_c + atp_c + glymet_e --> h_c + pi_c + adp_c + glymet_c"	0	1000	0
+"GLYOX"	"h2o_c + lgt_S_c --> h_c + lac_D_c + gthrd_c"	0	1000	0
+"GLYPHEHYc"	"h2o_c + glyphe_c <==> gly_c + phe_L_c"	-1000	1000	0
+"GLYPHEabc"	"h2o_c + atp_c + glyphe_e --> h_c + pi_c + adp_c + glyphe_c"	0	1000	0
+"GLYPROPRO1c"	"h2o_c + glypro_c <==> gly_c + pro_L_c"	-1000	1000	0
+"GLYPROabc"	"h2o_c + atp_c + glypro_e --> h_c + pi_c + adp_c + glypro_c"	0	1000	0
+"GLYR"	"(2) h_c + nadh_c + pi_c + gly_c --> nad_c + h2o_c + actp_c + nh4_c"	0	1000	0
+"GLYTYR1c"	"h2o_c + glytyr_c <==> gly_c + tyr_L_c"	-1000	1000	0
+"GLYTYRabc"	"h2o_c + atp_c + glytyr_e --> h_c + pi_c + adp_c + glytyr_c"	0	1000	0
+"GLYt2r"	"h_e + gly_e <==> h_c + gly_c"	-1000	1000	0
+"GMPS2"	"h2o_c + atp_c + gln_L_c + xmp_c --> (2) h_c + glu_L_c + amp_c + ppi_c + gmp_c"	0	1000	0
+"GPDDA1"	"h2o_c + g3pc_c --> h_c + glyc3p_c + chol_c"	0	1000	0
+"GPDDA2"	"h2o_c + g3pe_c --> h_c + etha_c + glyc3p_c"	0	1000	0
+"GPDDA4"	"h2o_c + g3pg_c --> h_c + glyc_c + glyc3p_c"	0	1000	0
+"GRTT"	"ipdp_c + grdp_c --> ppi_c + frdp_c"	0	1000	0
+"GTPCI"	"h2o_c + gtp_c --> h_c + ahdt_c + for_c"	0	1000	0
+"GTPCII"	"(3) h2o_c + gtp_c --> (2) h_c + ppi_c + for_c + 25dhpp_c"	0	1000	0
+"GTPDPK"	"atp_c + gtp_c --> h_c + amp_c + gdptp_c"	0	1000	0
+"GUAD"	"h_c + h2o_c + gua_c --> nh4_c + xan_c"	0	1000	0
+"GUAPRT"	"prpp_c + gua_c --> ppi_c + gmp_c"	0	1000	0
+"H2CO3D"	"h2o_c + co2_c <==> h_c + hco3_c"	-1000	1000	0
+"H2Ot"	"h2o_e <==> h2o_c"	-1000	1000	0
+"H2St"	"h2s_e <==> h2s_c"	-1000	1000	0
+"H2td"	"h2_c <==> h2_e"	-1000	1000	0
+"HACD1"	"h_c + nadh_c + aacoa_c <==> nad_c + 3hbcoa_c"	-1000	1000	0
+"HACD9"	"nad_c + 3hmbcoa_c <==> h_c + nadh_c + 2maacoa_c"	-1000	1000	0
+"HBZOPT"	"4hbz_c + octdp_c --> ppi_c + 3ophb_c"	0	1000	0
+"HCITS"	"h2o_c + akg_c + accoa_c --> h_c + coa_c + hcit_c"	0	1000	0
+"HDCAtr"	"hdca_e <==> hdca_c"	-1000	1000	0
+"HDG3PACT"	"ihdcoa_c + glyc3p_c <==> coa_c + 1hdecg3p_c"	-1000	1000	0
+"HETT"	"hepdp_c + ipdp_c --> ppi_c + octdp_c"	0	1000	0
+"HETZK"	"atp_c + 4mhetz_c --> h_c + adp_c + 4mpetz_c"	0	1000	0
+"HEX1"	"atp_c + glc_D_c --> h_c + g6p_c + adp_c"	0	1000	0
+"HEX7"	"atp_c + fru_c --> h_c + adp_c + f6p_c"	0	1000	0
+"HEXSabc"	"h2o_c + atp_c + hexs_e --> h_c + pi_c + adp_c + hexs_c"	0	1000	0
+"HEXTT"	"ipdp_c + hexdp_c --> ppi_c + hepdp_c"	0	1000	0
+"HG2abc"	"h2o_c + atp_c + hg2_c --> h_c + pi_c + adp_c + hg2_e"	0	1000	0
+"HIBDkt"	"nad_c + 3hmp_c --> h_c + nadh_c + mmtsa_c"	0	1000	0
+"HISTD"	"(2) nad_c + h2o_c + histd_c --> (3) h_c + (2) nadh_c + his_L_c"	0	1000	0
+"HISTDOX"	"nad_c + histd_c <==> h_c + nadh_c + histl_L_c"	-1000	1000	0
+"HISTLOX"	"nad_c + h2o_c + histl_L_c --> (2) h_c + nadh_c + his_L_c"	0	1000	0
+"HISTP"	"h2o_c + hisp_c --> pi_c + histd_c"	0	1000	0
+"HISt2r"	"h_e + his_L_e <==> h_c + his_L_c"	-1000	1000	0
+"HKt"	"h2o_c + atp_c + k_e --> h_e + pi_c + adp_c + k_c"	0	1000	0
+"HMBS"	"h2o_c + (4) ppbng_c --> (4) nh4_c + hmbil_c"	0	1000	0
+"HMPK1"	"atp_c + 4ahmmp_c --> h_c + adp_c + 4ampm_c"	0	1000	0
+"HPACt2r"	"h_e + 4hphac_e <==> h_c + 4hphac_c"	-1000	1000	0
+"HPPK"	"atp_c + 2ahhmp_c --> h_c + amp_c + 2ahhmd_c"	0	1000	0
+"HPPK2"	"atp_c + 6hmhpt_c --> h_c + amp_c + 6hmhptpp_c"	0	1000	0
+"HPYRR3x"	"h_c + nadh_c + nh4_c + hpyr_c --> nad_c + h2o_c + ser_L_c"	0	1000	0
+"HSDx"	"nad_c + hom_L_c <==> h_c + nadh_c + aspsa_c"	-1000	1000	0
+"HSDy"	"nadp_c + hom_L_c <==> h_c + nadph_c + aspsa_c"	-1000	1000	0
+"HSK"	"atp_c + hom_L_c --> h_c + adp_c + phom_c"	0	1000	0
+"HSST"	"hom_L_c + succoa_c --> coa_c + suchms_c"	0	1000	0
+"HSTPTr"	"akg_c + hisp_c <==> glu_L_c + imacp_c"	-1000	1000	0
+"HXAND"	"nad_c + h2o_c + hxan_c --> h_c + nadh_c + xan_c"	0	1000	0
+"HXPRT"	"hxan_c + prpp_c --> ppi_c + imp_c"	0	1000	0
+"HYD4"	"fdxrd_c --> fdxox_c + h2_c"	0	1000	0
+"HYXNt"	"hxan_e <==> hxan_c"	-1000	1000	0
+"IAHDGK"	"atp_c + 12daihdglyc_c --> h_c + adp_c + paai17_c"	0	1000	0
+"IAPDGK"	"atp_c + 12daipdglyc_c --> h_c + adp_c + paai15_c"	0	1000	0
+"IBCOATA"	"ACP_c + ibcoa_c <==> coa_c + 2mpropACP_c"	-1000	1000	0
+"ICDHx"	"nad_c + icit_c <==> nadh_c + akg_c + co2_c"	-1000	1000	0
+"ICHORT"	"h2o_c + ichor_c --> pyr_c + 23ddhb_c"	0	1000	0
+"IG3PS"	"gln_L_c + prlp_c --> h_c + glu_L_c + aicar_c + eig3p_c"	0	1000	0
+"IGPDH"	"eig3p_c --> h2o_c + imacp_c"	0	1000	0
+"IHDCOATA"	"coa_c + 14mpentdecACP_c <==> ACP_c + ihdcoa_c"	-1000	1000	0
+"IHDGK"	"atp_c + 12dihdglyc_c --> h_c + adp_c + pai17_c"	0	1000	0
+"IHDUDPG"	"udpg_c + m12dihglyc_c <==> h_c + udp_c + diglcpgi17_c"	-1000	1000	0
+"IHDUDPMG"	"udpg_c + 12dihdglyc_c <==> h_c + udp_c + m12dihglyc_c"	-1000	1000	0
+"IHPDCOATA"	"coa_c + 15mpalmACP_c <==> ACP_c + ihpdcoa_c"	-1000	1000	0
+"IHXDGK"	"atp_c + 12dixdglyc_c --> h_c + adp_c + pai16_c"	0	1000	0
+"ILETA"	"akg_c + ile_L_c <==> glu_L_c + 3mop_c"	-1000	1000	0
+"ILE_ST"	"nad_c + h2o_c + 3mop_c --> h_c + nadh_c + 2mbut_c + co2_c"	0	1000	0
+"ILEt2r"	"h_e + ile_L_e <==> h_c + ile_L_c"	-1000	1000	0
+"IMACTD"	"nad_c + h2o_c + im4act_c --> (2) h_c + nadh_c + im4ac_c"	0	1000	0
+"IMPC"	"h2o_c + imp_c <==> fprica_c"	-1000	1000	0
+"IMPD"	"nad_c + h2o_c + imp_c --> h_c + nadh_c + xmp_c"	0	1000	0
+"IND3ACt2r"	"h_e + ind3ac_e <==> h_c + ind3ac_c"	-1000	1000	0
+"IND3PPAt2r"	"h_e + ind3ppa_e <==> h_c + ind3ppa_c"	-1000	1000	0
+"IOR2"	"h_c + coa_c + fdxox_c + phpyr_c <==> co2_c + fdxrd_c + phaccoa_c"	-1000	1000	0
+"IOR3"	"h_c + coa_c + fdxox_c + 34hpp_c <==> co2_c + fdxrd_c + hphaccoa_c"	-1000	1000	0
+"IPDCOATA"	"coa_c + 13mmyrsACP_c <==> ACP_c + ipdcoa_c"	-1000	1000	0
+"IPDGK"	"atp_c + 12dipdglyc_c --> h_c + adp_c + pai15_c"	0	1000	0
+"IPDPS"	"h_c + nadh_c + h2mb4p_c --> nad_c + h2o_c + ipdp_c"	0	1000	0
+"IPDPS2"	"h_c + nadph_c + h2mb4p_c --> nadp_c + h2o_c + ipdp_c"	0	1000	0
+"IPDPUPT"	"(7) ipdp_c + ttc_ggdp_c --> (7) ppi_c + udcpdp_c"	0	1000	0
+"IPDUDPG"	"udpg_c + m12dipglyc_c <==> h_c + udp_c + diglcpgi15_c"	-1000	1000	0
+"IPDUDPMG"	"udpg_c + 12dipdglyc_c <==> h_c + udp_c + m12dipglyc_c"	-1000	1000	0
+"IPMDr"	"nad_c + 3c2hmp_c <==> h_c + nadh_c + 3c4mop_c"	-1000	1000	0
+"IPPMIa"	"3c2hmp_c <==> h2o_c + 2ippm_c"	-1000	1000	0
+"IPPMIb"	"h2o_c + 2ippm_c <==> 3c3hmp_c"	-1000	1000	0
+"ISETACabc"	"h2o_c + atp_c + isetac_e --> h_c + pi_c + adp_c + isetac_c"	0	1000	0
+"ISOBUTt2r"	"h_e + isobut_e <==> h_c + isobut_c"	-1000	1000	0
+"ISOCAPRt2r"	"h_e + isocapr_e <==> h_c + isocapr_c"	-1000	1000	0
+"ISOVALt2r"	"h_e + isoval_e <==> h_c + isoval_c"	-1000	1000	0
+"ITDCOATA"	"coa_c + 12mtridecACP_c <==> ACP_c + itdcoa_c"	-1000	1000	0
+"ITDGK"	"atp_c + 12ditdglyc_c --> h_c + adp_c + pai14_c"	0	1000	0
+"ITDUDPG"	"udpg_c + m12ditglyc_c <==> h_c + udp_c + diglcpgi14_c"	-1000	1000	0
+"ITDUDPMG"	"udpg_c + 12ditdglyc_c <==> h_c + udp_c + m12ditglyc_c"	-1000	1000	0
+"IVCOATA"	"ACP_c + ivcoa_c <==> coa_c + 3mbutACP_c"	-1000	1000	0
+"IXDUDPG"	"udpg_c + m12dixglyc_c <==> h_c + udp_c + diglcpgi16_c"	-1000	1000	0
+"IXDUDPMG"	"udpg_c + 12dixdglyc_c <==> h_c + udp_c + m12dixglyc_c"	-1000	1000	0
+"KARA1"	"nadp_c + 23dhmb_c <==> h_c + nadph_c + alac_S_c"	-1000	1000	0
+"KARA2"	"h_c + nadph_c + 2ahbut_c <==> 23dhmp_c + nadp_c"	-1000	1000	0
+"KARA3"	"nadp_c + 23dhmb_c <==> h_c + nadph_c + 33hmeoxobut_c"	-1000	1000	0
+"KAS14"	"h_c + malACP_c + acACP_c --> ACP_c + actACP_c + co2_c"	0	1000	0
+"KAS_HP"	"(2) h_c + nadph_c + malACP_c + myrsACP_c --> nadp_c + ACP_c + 3hpalmACP_c + co2_c"	0	1000	0
+"Kt3r"	"h_e + k_c <==> h_c + k_e"	-1000	1000	0
+"L2A6ODs"	"l2a6o_c --> h_c + h2o_c + thdp_c"	0	1000	0
+"LARGNAT"	"oaa_c + Largn_c <==> asp_L_c + pphn_c"	-1000	1000	0
+"LCTSt"	"h_e + lcts_e <==> h_c + lcts_c"	-1000	1000	0
+"LCYSTabc"	"h2o_c + atp_c + Lcyst_e --> h_c + pi_c + adp_c + Lcyst_c"	0	1000	0
+"LDH_D"	"nad_c + lac_D_c <==> h_c + nadh_c + pyr_c"	-1000	1000	0
+"LDH_D2"	"q8_c + lac_D_c --> pyr_c + q8h2_c"	0	1000	0
+"LDH_L"	"nad_c + lac_L_c <==> h_c + nadh_c + pyr_c"	-1000	1000	0
+"LEUO"	"(2) h2o_c + (3) leu_L_c --> co2_c + (3) nh4_c + (2) isocapr_c + isoval_c"	0	1000	0
+"LEUTA"	"akg_c + leu_L_c <==> glu_L_c + 4mop_c"	-1000	1000	0
+"LEU_ST"	"nad_c + h2o_c + 4mop_c --> h_c + nadh_c + co2_c + isoval_c"	0	1000	0
+"LEUt2r"	"h_e + leu_L_e <==> h_c + leu_L_c"	-1000	1000	0
+"LGTHL"	"gthrd_c + mthgxl_c --> lgt_S_c"	0	1000	0
+"LPLIPAL1A120"	"h2o_c + 1ddecg3p_c --> h_c + ddca_c + glyc3p_c"	0	1000	0
+"LPLIPAL1A140"	"h2o_c + 1tdecg3p_c --> h_c + ttdca_c + glyc3p_c"	0	1000	0
+"LPLIPAL1A141"	"h2o_c + 1tdec7eg3p_c --> h_c + glyc3p_c + ttdcea_c"	0	1000	0
+"LPLIPAL1A160"	"h2o_c + 1hdecg3p_c --> h_c + hdca_c + glyc3p_c"	0	1000	0
+"LPLIPAL1A161"	"h2o_c + 1hdec9eg3p_c --> h_c + hdcea_c + glyc3p_c"	0	1000	0
+"LPLIPAL1A180"	"h2o_c + 1odecg3p_c --> h_c + ocdca_c + glyc3p_c"	0	1000	0
+"LPLIPAL1A181"	"h2o_c + 1odec11eg3p_c --> h_c + ocdcea_c + glyc3p_c"	0	1000	0
+"LPLIPAL1E120"	"h2o_c + 1agpe120_c --> h_c + ddca_c + g3pe_c"	0	1000	0
+"LPLIPAL1E140"	"h2o_c + 1agpe140_c --> h_c + ttdca_c + g3pe_c"	0	1000	0
+"LPLIPAL1E141"	"h2o_c + 1agpe141_c --> h_c + g3pe_c + ttdcea_c"	0	1000	0
+"LPLIPAL1E160"	"h2o_c + 1agpe160_c --> h_c + hdca_c + g3pe_c"	0	1000	0
+"LPLIPAL1E161"	"h2o_c + 1agpe161_c --> h_c + hdcea_c + g3pe_c"	0	1000	0
+"LPLIPAL1E180"	"h2o_c + 1agpe180_c --> h_c + ocdca_c + g3pe_c"	0	1000	0
+"LPLIPAL1E181"	"h2o_c + 1agpe181_c --> h_c + ocdcea_c + g3pe_c"	0	1000	0
+"LPLIPAL1G120"	"h2o_c + 1agpg120_c --> h_c + ddca_c + g3pg_c"	0	1000	0
+"LPLIPAL1G140"	"h2o_c + 1agpg140_c --> h_c + ttdca_c + g3pg_c"	0	1000	0
+"LPLIPAL1G141"	"h2o_c + 1agpg141_c --> h_c + g3pg_c + ttdcea_c"	0	1000	0
+"LPLIPAL1G160"	"h2o_c + 1agpg160_c --> h_c + hdca_c + g3pg_c"	0	1000	0
+"LPLIPAL1G161"	"h2o_c + 1agpg161_c --> h_c + hdcea_c + g3pg_c"	0	1000	0
+"LPLIPAL1G180"	"h2o_c + 1agpg180_c --> h_c + ocdca_c + g3pg_c"	0	1000	0
+"LPLIPAL1G181"	"h2o_c + 1agpg181_c --> h_c + ocdcea_c + g3pg_c"	0	1000	0
+"LPLIPAL2A120"	"h2o_c + 2ddecg3p_c --> (2) h_c + ddca_c + glyc3p_c"	0	1000	0
+"LPLIPAL2A140"	"h2o_c + 2tdecg3p_c --> (2) h_c + ttdca_c + glyc3p_c"	0	1000	0
+"LPLIPAL2A141"	"h2o_c + 2tdec7eg3p_c --> (2) h_c + glyc3p_c + ttdcea_c"	0	1000	0
+"LPLIPAL2A160"	"h2o_c + 2hdecg3p_c --> (2) h_c + hdca_c + glyc3p_c"	0	1000	0
+"LPLIPAL2A161"	"h2o_c + 2hdec9eg3p_c --> (2) h_c + hdcea_c + glyc3p_c"	0	1000	0
+"LPLIPAL2A180"	"h2o_c + 2odecg3p_c --> (2) h_c + ocdca_c + glyc3p_c"	0	1000	0
+"LPLIPAL2A181"	"h2o_c + 2odec11eg3p_c --> (2) h_c + ocdcea_c + glyc3p_c"	0	1000	0
+"LPLIPAL2E120"	"h2o_c + 2agpe120_c --> h_c + ddca_c + g3pe_c"	0	1000	0
+"LPLIPAL2E140"	"h2o_c + 2agpe140_c --> h_c + ttdca_c + g3pe_c"	0	1000	0
+"LPLIPAL2E141"	"h2o_c + 2agpe141_c --> h_c + g3pe_c + ttdcea_c"	0	1000	0
+"LPLIPAL2E160"	"h2o_c + 2agpe160_c --> h_c + hdca_c + g3pe_c"	0	1000	0
+"LPLIPAL2E161"	"h2o_c + 2agpe161_c --> h_c + hdcea_c + g3pe_c"	0	1000	0
+"LPLIPAL2E180"	"h2o_c + 2agpe180_c --> h_c + ocdca_c + g3pe_c"	0	1000	0
+"LPLIPAL2E181"	"h2o_c + 2agpe181_c --> h_c + ocdcea_c + g3pe_c"	0	1000	0
+"LPLIPAL2G120"	"h2o_c + 2agpg120_c --> h_c + ddca_c + g3pg_c"	0	1000	0
+"LPLIPAL2G140"	"h2o_c + 2agpg140_c --> h_c + ttdca_c + g3pg_c"	0	1000	0
+"LPLIPAL2G141"	"h2o_c + 2agpg141_c --> h_c + g3pg_c + ttdcea_c"	0	1000	0
+"LPLIPAL2G160"	"h2o_c + 2agpg160_c --> h_c + hdca_c + g3pg_c"	0	1000	0
+"LPLIPAL2G161"	"h2o_c + 2agpg161_c --> h_c + hdcea_c + g3pg_c"	0	1000	0
+"LPLIPAL2G180"	"h2o_c + 2agpg180_c --> h_c + ocdca_c + g3pg_c"	0	1000	0
+"LPLIPAL2G181"	"h2o_c + 2agpg181_c --> h_c + ocdcea_c + g3pg_c"	0	1000	0
+"LTHRK"	"atp_c + thr_L_c --> h_c + adp_c + thrp_c"	0	1000	0
+"LYSAM"	"lys_L_c <==> 36dahx_c"	-1000	1000	0
+"LYSDC"	"h_c + lys_L_c --> co2_c + 15dap_c"	0	1000	0
+"LYSt2r"	"h_e + lys_L_e <==> h_c + lys_L_c"	-1000	1000	0
+"L_AROND"	"nad_c + Largn_c <==> nadh_c + co2_c + tyr_L_c"	-1000	1000	0
+"L_LACD2"	"q8_c + lac_L_c --> pyr_c + q8h2_c"	0	1000	0
+"L_LACD3"	"mqn8_c + lac_L_c --> pyr_c + mql8_c"	0	1000	0
+"L_LACDr"	"(2) ficytC_c + lac_L_c <==> (2) h_c + pyr_c + (2) focytC_c"	-1000	1000	0
+"L_LACt2r"	"h_e + lac_L_e <==> h_c + lac_L_c"	-1000	1000	0
+"M1PD"	"nad_c + mnl1p_c <==> h_c + nadh_c + f6p_c"	-1000	1000	0
+"MACCOAT"	"coa_c + 2maacoa_c --> accoa_c + ppcoa_c"	0	1000	0
+"MADGBG"	"h2o_c + madg_c <==> glc_D_c + meoh_c"	-1000	1000	0
+"MALT"	"h2o_c + malt_c --> (2) glc_D_c"	0	1000	0
+"MALT6PH"	"h2o_c + malt6p_c --> g6p_c + glc_D_c"	0	1000	0
+"MALTATr"	"accoa_c + malt_c <==> coa_c + acmalt_c"	-1000	1000	0
+"MALTabc"	"h2o_c + atp_c + malt_e --> h_c + pi_c + adp_c + malt_c"	0	1000	0
+"MALTpts"	"pep_c + malt_e --> pyr_c + malt6p_c"	0	1000	0
+"MAN1PT2"	"h_c + gdp_c + man1p_c --> pi_c + gdpmann_c"	0	1000	0
+"MAN6PI"	"man6p_c <==> f6p_c"	-1000	1000	0
+"MANpts"	"pep_c + man_e --> pyr_c + man6p_c"	0	1000	0
+"MBDGBG"	"h2o_c + mbdg_c <==> glc_D_c + meoh_c"	-1000	1000	0
+"MCITD"	"2mcit_c --> h2o_c + 2mcacn_c"	0	1000	0
+"MCITL2"	"micit_c <==> pyr_c + succ_c"	-1000	1000	0
+"MCITS"	"h2o_c + oaa_c + ppcoa_c --> h_c + coa_c + 2mcit_c"	0	1000	0
+"MCOATA"	"ACP_c + malcoa_c <==> coa_c + malACP_c"	-1000	1000	0
+"ME1"	"nad_c + mal_L_c --> nadh_c + co2_c + pyr_c"	0	1000	0
+"MECDPDH2"	"nadh_c + 2mecdp_c --> nad_c + h2o_c + h2mb4p_c"	0	1000	0
+"MECDPS"	"2p4c2me_c --> cmp_c + 2mecdp_c"	0	1000	0
+"MEPCT"	"h_c + ctp_c + 2me4p_c --> ppi_c + 4c2me_c"	0	1000	0
+"METALA1c"	"h2o_c + metala_c <==> ala_L_c + met_L_c"	-1000	1000	0
+"METALAabc"	"h2o_c + atp_c + metala_e --> h_c + pi_c + adp_c + metala_c"	0	1000	0
+"METAT"	"h2o_c + atp_c + met_L_c --> pi_c + ppi_c + amet_c"	0	1000	0
+"METDabc"	"h2o_c + atp_c + met_D_e --> h_c + pi_c + adp_c + met_D_c"	0	1000	0
+"METFR"	"nadp_c + 5mthf_c <==> (2) h_c + nadph_c + mlthf_c"	-1000	1000	0
+"METGL"	"h2o_c + met_L_c --> 2obut_c + nh4_c + ch4s_c"	0	1000	0
+"METSOX1abc"	"h2o_c + atp_c + metsox_S_L_e --> h_c + pi_c + adp_c + metsox_S_L_c"	0	1000	0
+"METSOX2abc"	"h2o_c + atp_c + metsox_R_L_e --> h_c + pi_c + adp_c + metsox_R_L_c"	0	1000	0
+"METSOXR1r"	"trdrd_c + metsox_S_L_c <==> h2o_c + trdox_c + met_L_c"	-1000	1000	0
+"METSr"	"hcys_L_c + 5mthf_c <==> h_c + thf_c + met_L_c"	-1000	1000	0
+"METabc"	"h2o_c + atp_c + met_L_e --> h_c + pi_c + adp_c + met_L_c"	0	1000	0
+"MG2abc"	"h2o_c + atp_c + mg2_e --> h_c + pi_c + adp_c + mg2_c"	0	1000	0
+"MGSA"	"dhap_c --> pi_c + mthgxl_c"	0	1000	0
+"MGt5"	"mg2_c <==> mg2_e"	-1000	1000	0
+"MICITDr"	"h2o_c + 2mcacn_c <==> micit_c"	-1000	1000	0
+"MK7te"	"mqn7_e --> mqn7_c"	0	1000	0
+"MLTP4"	"pi_c + malt_c <==> glc_D_c + g1p_B_c"	-1000	1000	0
+"MMTSAO"	"nad_c + coa_c + mmtsa_c --> nadh_c + co2_c + ppcoa_c"	0	1000	0
+"MNLpts"	"pep_c + mnl_e --> pyr_c + mnl1p_c"	0	1000	0
+"MNt2"	"h_e + mn2_e --> h_c + mn2_c"	0	1000	0
+"MOBDabc"	"h2o_c + atp_c + mobd_e --> h_c + pi_c + adp_c + mobd_c"	0	1000	0
+"MOHMT"	"h2o_c + 3mob_c + mlthf_c --> thf_c + 2dhp_c"	0	1000	0
+"MOPSabc"	"h2o_c + atp_c + mops_e --> h_c + pi_c + adp_c + mops_c"	0	1000	0
+"MSO3abc"	"h2o_c + atp_c + mso3_e --> h_c + pi_c + adp_c + mso3_c"	0	1000	0
+"MTAN"	"h2o_c + 5mta_c --> ade_c + 5mtr_c"	0	1000	0
+"MTHFC"	"h2o_c + methf_c <==> h_c + 10fthf_c"	-1000	1000	0
+"MTHFD"	"nadp_c + mlthf_c <==> nadph_c + methf_c"	-1000	1000	0
+"MUCCYCI"	"h_c + ccmuac_c <==> mucl_c"	-1000	1000	0
+"MUDPDGT"	"udpg_c + m12dmglyc_c <==> h_c + udp_c + diglcpg140_c"	-1000	1000	0
+"MUDPMGT"	"udpg_c + 12dgr140_c <==> h_c + udp_c + m12dmglyc_c"	-1000	1000	0
+"NACt2r"	"h_c + nac_c <==> h_e + nac_e"	-1000	1000	0
+"NADH10"	"h_c + nadh_c + mqn8_c --> nad_c + mql8_c"	0	1000	0
+"NADH5"	"h_c + nadh_c + q8_c --> nad_c + q8h2_c"	0	1000	0
+"NADH9"	"h_c + nadh_c + 2dmmq8_c --> nad_c + 2dmmql8_c"	0	1000	0
+"NADK"	"nad_c + atp_c --> h_c + nadp_c + adp_c"	0	1000	0
+"NADK2"	"nad_c + dttp_c --> h_c + nadp_c + dtdp_c"	0	1000	0
+"NADS1"	"atp_c + nh4_c + dnad_c --> h_c + nad_c + amp_c + ppi_c"	0	1000	0
+"NADS2"	"h2o_c + atp_c + gln_L_c + dnad_c --> h_c + nad_c + glu_L_c + amp_c + ppi_c"	0	1000	0
+"NAPRT"	"h_c + prpp_c + nac_c --> ppi_c + nicrnt_c"	0	1000	0
+"NAt3_1"	"h_e + na1_c <==> h_c + na1_e"	-1000	1000	0
+"NDPK1"	"atp_c + gdp_c <==> gtp_c + adp_c"	-1000	1000	0
+"NDPK2"	"atp_c + udp_c <==> adp_c + utp_c"	-1000	1000	0
+"NDPK3"	"atp_c + cdp_c <==> adp_c + ctp_c"	-1000	1000	0
+"NDPK4"	"atp_c + dtdp_c <==> adp_c + dttp_c"	-1000	1000	0
+"NDPK5"	"atp_c + dgdp_c <==> adp_c + dgtp_c"	-1000	1000	0
+"NDPK6"	"atp_c + dudp_c <==> adp_c + dutp_c"	-1000	1000	0
+"NDPK7"	"atp_c + dcdp_c <==> adp_c + dctp_c"	-1000	1000	0
+"NDPK8"	"atp_c + dadp_c <==> adp_c + datp_c"	-1000	1000	0
+"NDPK9"	"atp_c + idp_c <==> adp_c + itp_c"	-1000	1000	0
+"NH4tb"	"nh4_e <==> nh4_c"	-1000	1000	0
+"NNAM"	"h2o_c + ncam_c --> nh4_c + nac_c"	0	1000	0
+"NNATr"	"h_c + atp_c + nicrnt_c --> ppi_c + dnad_c"	0	1000	0
+"NNDMBRT"	"nicrnt_c + dmbzid_c --> h_c + nac_c + 5prdmbz_c"	0	1000	0
+"NNDPR"	"(2) h_c + prpp_c + quln_c --> co2_c + ppi_c + nicrnt_c"	0	1000	0
+"NO3t7"	"no2_c + no3_e --> no2_e + no3_c"	0	1000	0
+"NP1_r"	"h_c + nac_c + r1p_c <==> pi_c + nicrns_c"	-1000	1000	0
+"NP2MSUCCS"	"fum_c + 2mnptl_c --> np2msucc_c"	0	1000	0
+"NT5C"	"h2o_c + nicrnt_c --> pi_c + nicrns_c"	0	1000	0
+"NTD1"	"h2o_c + dump_c --> pi_c + duri_c"	0	1000	0
+"NTD10"	"h2o_c + xmp_c --> pi_c + xtsn_c"	0	1000	0
+"NTD11"	"h2o_c + imp_c --> pi_c + ins_c"	0	1000	0
+"NTD2"	"h2o_c + ump_c --> pi_c + uri_c"	0	1000	0
+"NTD3"	"h2o_c + dcmp_c --> pi_c + dcyt_c"	0	1000	0
+"NTD4"	"h2o_c + cmp_c --> pi_c + cytd_c"	0	1000	0
+"NTD5"	"h2o_c + dtmp_c --> pi_c + thymd_c"	0	1000	0
+"NTD5_a"	"h2o_c + nmn_c --> pi_c + rnam_c"	0	1000	0
+"NTD6"	"h2o_c + damp_c --> pi_c + dad_2_c"	0	1000	0
+"NTD7"	"h2o_c + amp_c --> pi_c + adn_c"	0	1000	0
+"NTD8"	"h2o_c + dgmp_c --> pi_c + dgsn_c"	0	1000	0
+"NTD9"	"h2o_c + gmp_c --> pi_c + gsn_c"	0	1000	0
+"NTRIR2x"	"(5) h_c + (3) nadh_c + no2_c --> (3) nad_c + (2) h2o_c + nh4_c"	0	1000	0
+"NTRIR2y"	"(5) h_c + (3) nadph_c + no2_c --> (3) nadp_c + (2) h2o_c + nh4_c"	0	1000	0
+"O2t"	"o2_e <==> o2_c"	-1000	1000	0
+"OBDHc"	"nad_c + coa_c + 2obut_c --> nadh_c + co2_c + ppcoa_c"	0	1000	0
+"OBTFL"	"coa_c + 2obut_c --> for_c + ppcoa_c"	0	1000	0
+"OCBT"	"cbp_c + orn_c <==> h_c + pi_c + citr_L_c"	-1000	1000	0
+"OCDCAtr"	"ocdca_e <==> ocdca_c"	-1000	1000	0
+"OCOAT1r"	"acac_c + succoa_c <==> aacoa_c + succ_c"	-1000	1000	0
+"OHPHM"	"amet_c + 2ohph_c --> h_c + ahcys_c + 2omph_c"	0	1000	0
+"OIVD1r"	"nad_c + coa_c + 4mop_c <==> nadh_c + co2_c + ivcoa_c"	-1000	1000	0
+"OIVD2"	"nad_c + coa_c + 3mob_c --> nadh_c + co2_c + ibcoa_c"	0	1000	0
+"OIVD3"	"nad_c + coa_c + 3mop_c --> nadh_c + 2mbcoa_c + co2_c"	0	1000	0
+"OMBZLM"	"amet_c + 2ombzl_c --> h_c + ahcys_c + 2ommbl_c"	0	1000	0
+"OMMBLHX3"	"nad_c + (3) h2o_c + (2) atp_c + 2ommbl_c --> (3) h_c + nadh_c + (2) pi_c + (2) adp_c + 2omhmbl_c"	0	1000	0
+"OMPDC"	"h_c + orot5p_c --> co2_c + ump_c"	0	1000	0
+"OMPHHX3"	"nad_c + (3) h2o_c + (2) atp_c + 2omph_c --> (3) h_c + nadh_c + (2) pi_c + (2) adp_c + 2ombzl_c"	0	1000	0
+"OOR2r"	"co2_c + fdxrd_c + succoa_c <==> h_c + akg_c + coa_c + fdxox_c"	-1000	1000	0
+"OPHBDC"	"h_c + 3ophb_c --> co2_c + 2oph_c"	0	1000	0
+"OPHHX3"	"nad_c + (3) h2o_c + (2) atp_c + 2oph_c --> (3) h_c + nadh_c + (2) pi_c + (2) adp_c + 2ohph_c"	0	1000	0
+"ORNCD"	"orn_c --> nh4_c + pro_L_c"	0	1000	0
+"ORNTAC"	"glu_L_c + acorn_c <==> acglu_c + orn_c"	-1000	1000	0
+"OROTPT"	"prpp_c + orot_c --> ppi_c + orot5p_c"	0	1000	0
+"OXAte"	"oxa_c --> oxa_e"	0	1000	0
+"OXOAEL"	"h2o_c + 5odhf2a_c --> h_c + 3oxoadp_c"	0	1000	0
+"P5CD"	"nad_c + (2) h2o_c + 1pyr5c_c --> h_c + nadh_c + glu_L_c"	0	1000	0
+"P5CRyr"	"nadp_c + pro_L_c <==> (2) h_c + nadph_c + 1pyr5c_c"	-1000	1000	0
+"PAAI17P"	"h2o_c + paai17_c --> pi_c + 12daihdglyc_c"	0	1000	0
+"PACCOAL2r"	"coa_c + 4hphac_c + atp_c <==> amp_c + ppi_c + hphaccoa_c"	-1000	1000	0
+"PACCOALr"	"coa_c + atp_c + pac_c <==> amp_c + ppi_c + phaccoa_c"	-1000	1000	0
+"PACt2r"	"h_e + pac_e <==> h_c + pac_c"	-1000	1000	0
+"PAI17P"	"h2o_c + pai17_c --> pi_c + 12dihdglyc_c"	0	1000	0
+"PANTS"	"atp_c + pant_R_c + ala_B_c --> h_c + amp_c + ppi_c + pnto_R_c"	0	1000	0
+"PAPA180"	"h2o_c + pa180_c --> 12dgr180_c + pi_c"	0	1000	0
+"PAPPT2"	"udcpp_c + uGgla_c --> ump_c + uaGgla_c"	0	1000	0
+"PAPPT3"	"udcpp_c + ugmda_c --> ump_c + uagmda_c"	0	1000	0
+"PBUTT"	"pi_c + btcoa_c <==> coa_c + butpi_c"	-1000	1000	0
+"PBt"	"h2o_c + atp_c + pb_c --> h_c + pi_c + adp_c + pb_e"	0	1000	0
+"PC"	"atp_c + pyr_c + hco3_c --> h_c + pi_c + adp_c + oaa_c"	0	1000	0
+"PC11M"	"amet_c + pre4_c --> h_c + ahcys_c + pre5_c"	0	1000	0
+"PC17M"	"amet_c + pre3b_c --> (3) h_c + ahcys_c + pre4_c"	0	1000	0
+"PC6AR"	"h_c + nadph_c + pre6a_c --> nadp_c + pre6b_c"	0	1000	0
+"PC6YM"	"(2) amet_c + pre6b_c --> (2) h_c + co2_c + (2) ahcys_c + pre8_c"	0	1000	0
+"PC8XM"	"h_c + pre8_c --> hgbyr_c"	0	1000	0
+"PCRESOLt2r"	"h_e + pcresol_e <==> h_c + pcresol_c"	-1000	1000	0
+"PDHa"	"h_c + pyr_c + lpam_c --> co2_c + adhlam_c"	0	1000	0
+"PDHbr"	"coa_c + adhlam_c <==> accoa_c + dhlam_c"	-1000	1000	0
+"PDHc"	"nad_c + dhlam_c --> h_c + nadh_c + lpam_c"	0	1000	0
+"PDX5PO"	"o2_c + pdx5p_c --> h2o2_c + pydx5p_c"	0	1000	0
+"PDX5PO2"	"nad_c + pdx5p_c --> h_c + nadh_c + pydx5p_c"	0	1000	0
+"PEPGLY"	"h_c + uaagmda_c + PGPm1_c --> co2_c + udcpdp_c + PGP_c"	0	1000	0
+"PFK"	"atp_c + f6p_c --> h_c + adp_c + fdp_c"	0	1000	0
+"PFK_ppi"	"ppi_c + f6p_c --> h_c + pi_c + fdp_c"	0	1000	0
+"PFK_2"	"atp_c + tag6p_D_c --> h_c + adp_c + tagdp_D_c"	0	1000	0
+"PFK_3"	"atp_c + s7p_c --> h_c + adp_c + s17bp_c"	0	1000	0
+"PFL"	"coa_c + pyr_c --> accoa_c + for_c"	0	1000	0
+"PGAMT"	"gam1p_c <==> gam6p_c"	-1000	1000	0
+"PGCDr"	"nad_c + 3pg_c <==> h_c + nadh_c + 3php_c"	-1000	1000	0
+"PGI"	"g6p_c <==> f6p_c"	-1000	1000	0
+"PGK"	"atp_c + 3pg_c <==> adp_c + 13dpg_c"	-1000	1000	0
+"PGLYCP"	"h2o_c + 2pglyc_c --> pi_c + glyclt_c"	0	1000	0
+"PGM"	"2pg_c <==> 3pg_c"	-1000	1000	0
+"PGMT"	"g1p_c <==> g6p_c"	-1000	1000	0
+"PGMT2"	"g1p_B_c <==> g6p_B_c"	-1000	1000	0
+"PGPGT"	"(45) udpg_c + prl45tca_c <==> (45) h_c + (45) udp_c + prl45tcaglc_c"	-1000	1000	0
+"PGPP120"	"h2o_c + pgp120_c --> pi_c + pg120_c"	0	1000	0
+"PGPP140"	"h2o_c + pgp140_c --> pi_c + pg140_c"	0	1000	0
+"PGPP141"	"h2o_c + pgp141_c --> pi_c + pg141_c"	0	1000	0
+"PGPP160"	"h2o_c + pgp160_c --> pi_c + pg160_c"	0	1000	0
+"PGPP161"	"h2o_c + pgp161_c --> pi_c + pg161_c"	0	1000	0
+"PGPP180"	"h2o_c + pgp180_c --> pi_c + pg180_c"	0	1000	0
+"PGPP181"	"h2o_c + pgp181_c --> pi_c + pg181_c"	0	1000	0
+"PGPPAI15"	"h2o_c + pgpai15_c --> pi_c + pgai15_c"	0	1000	0
+"PGPPAI17"	"h2o_c + pgpai17_c --> pi_c + pgai17_c"	0	1000	0
+"PGPPI14"	"h2o_c + pgpi14_c --> pi_c + pgi14_c"	0	1000	0
+"PGPPI15"	"h2o_c + pgpi15_c --> pi_c + pgi15_c"	0	1000	0
+"PGPPI16"	"h2o_c + pgpi16_c --> pi_c + pgi16_c"	0	1000	0
+"PGPPI17"	"h2o_c + pgpi17_c --> pi_c + pgi17_c"	0	1000	0
+"PGSA120"	"cdpdddecg_c + glyc3p_c --> h_c + cmp_c + pgp120_c"	0	1000	0
+"PGSA140"	"cdpdtdecg_c + glyc3p_c --> h_c + cmp_c + pgp140_c"	0	1000	0
+"PGSA141"	"cdpdtdec7eg_c + glyc3p_c --> h_c + cmp_c + pgp141_c"	0	1000	0
+"PGSA160"	"cdpdhdecg_c + glyc3p_c --> h_c + cmp_c + pgp160_c"	0	1000	0
+"PGSA161"	"cdpdhdec9eg_c + glyc3p_c --> h_c + cmp_c + pgp161_c"	0	1000	0
+"PGSA180"	"cdpdodecg_c + glyc3p_c --> h_c + cmp_c + pgp180_c"	0	1000	0
+"PGSA181"	"cdpdodec11eg_c + glyc3p_c --> h_c + cmp_c + pgp181_c"	0	1000	0
+"PGSAAI15"	"cdpdaipdecg_c + glyc3p_c --> h_c + cmp_c + pgpai15_c"	0	1000	0
+"PGSAAI17"	"cdpdaihpdecg_c + glyc3p_c --> h_c + cmp_c + pgpai17_c"	0	1000	0
+"PGSAI14"	"cdpditdecg_c + glyc3p_c --> h_c + cmp_c + pgpi14_c"	0	1000	0
+"PGSAI15"	"cdpdipdecg_c + glyc3p_c --> h_c + cmp_c + pgpi15_c"	0	1000	0
+"PGSAI16"	"cdpdihdecg_c + glyc3p_c --> h_c + cmp_c + pgpi16_c"	0	1000	0
+"PGSAI17"	"cdpdihpdecg_c + glyc3p_c --> h_c + cmp_c + pgpi17_c"	0	1000	0
+"PHETA1"	"akg_c + phe_L_c <==> glu_L_c + phpyr_c"	-1000	1000	0
+"PHEt2r"	"h_e + phe_L_e <==> h_c + phe_L_c"	-1000	1000	0
+"PHPB2i"	"h_c + nadph_c + aacoa_c --> nadp_c + 3hbcoa_c"	0	1000	0
+"PHPYRt2r"	"h_e + phpyr_e <==> h_c + phpyr_c"	-1000	1000	0
+"PIabc"	"h2o_c + atp_c + pi_e --> h_c + (2) pi_c + adp_c"	0	1000	0
+"PIt7"	"(3) na1_e + pi_e <==> pi_c + (3) na1_c"	-1000	1000	0
+"PLACD"	"plac_c --> h2o_c + cinnm_c"	0	1000	0
+"PLACOR"	"nad_c + plac_c <==> h_c + nadh_c + phpyr_c"	-1000	1000	0
+"PMANM"	"man1p_c <==> man6p_c"	-1000	1000	0
+"PMDPHT"	"h2o_c + 5aprbu_c --> pi_c + 4r5au_c"	0	1000	0
+"PMPK"	"atp_c + 4ampm_c --> adp_c + 2mahmp_c"	0	1000	0
+"PMTCOATA"	"coa_c + palmACP_c <==> ACP_c + pmtcoa_c"	-1000	1000	0
+"PNP"	"pi_c + rnam_c <==> h_c + ncam_c + r1p_c"	-1000	1000	0
+"PNTK"	"atp_c + pnto_R_c --> h_c + adp_c + 4ppan_c"	0	1000	0
+"PNTOabc"	"h2o_c + atp_c + pnto_R_e --> h_c + pi_c + adp_c + pnto_R_c"	0	1000	0
+"POR4"	"accoa_c + co2_c + fdxrd_c <==> h_c + coa_c + pyr_c + fdxox_c"	-1000	1000	0
+"PPA"	"h2o_c + ppi_c --> h_c + (2) pi_c"	0	1000	0
+"PPAKr"	"adp_c + ppap_c <==> atp_c + ppa_c"	-1000	1000	0
+"PPAt2"	"ppa_c --> ppa_e"	0	1000	0
+"PPAt2i"	"h_e + ppa_e --> h_c + ppa_c"	0	1000	0
+"PPBNGS"	"(2) 5aop_c --> h_c + (2) h2o_c + ppbng_c"	0	1000	0
+"PPCDC"	"h_c + 4ppcys_c --> co2_c + pan4p_c"	0	1000	0
+"PPDK"	"pi_c + atp_c + pyr_c --> h_c + amp_c + ppi_c + pep_c"	0	1000	0
+"PPM"	"r1p_c <==> r5p_c"	-1000	1000	0
+"PPNCL3"	"atp_c + cys_L_c + 4ppan_c --> h_c + amp_c + ppi_c + 4ppcys_c"	0	1000	0
+"PPND"	"nad_c + pphn_c --> nadh_c + co2_c + 34hpp_c"	0	1000	0
+"PPND2"	"nadp_c + pphn_c --> nadph_c + co2_c + 34hpp_c"	0	1000	0
+"PPNDH"	"h_c + pphn_c --> h2o_c + co2_c + phpyr_c"	0	1000	0
+"PPPGO3"	"(3) fum_c + pppg9_c --> (3) succ_c + ppp9_c"	0	1000	0
+"PPPNt2r"	"h_e + pppn_e <==> h_c + pppn_c"	-1000	1000	0
+"PPS"	"h2o_c + atp_c + pyr_c --> (2) h_c + pi_c + amp_c + pep_c"	0	1000	0
+"PPTT"	"ipdp_c + pendp_c --> ppi_c + hexdp_c"	0	1000	0
+"PRAGS"	"gly_c + atp_c + pram_c --> h_c + pi_c + adp_c + gar_c"	0	1000	0
+"PRAIS"	"atp_c + fpram_c --> (2) h_c + pi_c + air_c + adp_c"	0	1000	0
+"PRAMPC"	"h2o_c + prbamp_c --> prfp_c"	0	1000	0
+"PRASCSi"	"5aizc_c + atp_c + asp_L_c --> h_c + pi_c + adp_c + 25aics_c"	0	1000	0
+"PRATPP"	"h2o_c + prbatp_c --> h_c + ppi_c + prbamp_c"	0	1000	0
+"PRFGS"	"h2o_c + atp_c + gln_L_c + fgam_c --> h_c + glu_L_c + pi_c + adp_c + fpram_c"	0	1000	0
+"PRMICI"	"prfp_c <==> prlp_c"	-1000	1000	0
+"PRO1x"	"nad_c + pro_L_c --> (2) h_c + nadh_c + 1pyr5c_c"	0	1000	0
+"PROD2"	"fad_c + pro_L_c --> h_c + fadh2_c + 1pyr5c_c"	0	1000	0
+"PROD3"	"fad_c + 4hpro_LT_c <==> h_c + fadh2_c + 1p3h5c_c"	-1000	1000	0
+"PROLR"	"pro_L_c <==> pro_D_c"	-1000	1000	0
+"PRO_DR"	"h_c + nadh_c + pro_D_c --> nad_c + 5aptn_c"	0	1000	0
+"PROabc"	"h2o_c + atp_c + pro_L_e --> h_c + pi_c + adp_c + pro_L_c"	0	1000	0
+"PRPPS"	"atp_c + r5p_c <==> h_c + amp_c + prpp_c"	-1000	1000	0
+"PSCVT"	"pep_c + skm5p_c <==> pi_c + 3psme_c"	-1000	1000	0
+"PSD120"	"h_c + ps120_c --> co2_c + pe120_c"	0	1000	0
+"PSD140"	"h_c + ps140_c --> co2_c + pe140_c"	0	1000	0
+"PSD160"	"h_c + ps160_c --> co2_c + pe160_c"	0	1000	0
+"PSD180"	"h_c + ps180_c --> co2_c + pe180_c"	0	1000	0
+"PSDAI17"	"h_c + psai17_c --> co2_c + peai17_c"	0	1000	0
+"PSDI17"	"h_c + psi17_c --> co2_c + pei17_c"	0	1000	0
+"PSERT"	"glu_L_c + 3php_c --> akg_c + pser_L_c"	0	1000	0
+"PSP_L"	"h2o_c + pser_L_c --> pi_c + ser_L_c"	0	1000	0
+"PSSA120"	"cdpdddecg_c + ser_L_c --> h_c + cmp_c + ps120_c"	0	1000	0
+"PSSA140"	"cdpdtdecg_c + ser_L_c --> h_c + cmp_c + ps140_c"	0	1000	0
+"PSSA160"	"cdpdhdecg_c + ser_L_c --> h_c + cmp_c + ps160_c"	0	1000	0
+"PSSA180"	"cdpdodecg_c + ser_L_c --> h_c + cmp_c + ps180_c"	0	1000	0
+"PSSAAI17"	"cdpdaihpdecg_c + ser_L_c --> h_c + cmp_c + psai17_c"	0	1000	0
+"PSSAI17"	"cdpdihpdecg_c + ser_L_c --> h_c + cmp_c + psi17_c"	0	1000	0
+"PTA2"	"pi_c + ppcoa_c --> coa_c + ppap_c"	0	1000	0
+"PTAr"	"accoa_c + pi_c <==> coa_c + actp_c"	-1000	1000	0
+"PTPAT"	"h_c + atp_c + pan4p_c --> ppi_c + dpcoa_c"	0	1000	0
+"PTRCabc"	"h2o_c + atp_c + ptrc_e --> h_c + pi_c + adp_c + ptrc_c"	0	1000	0
+"PUDPDGT"	"udpg_c + m12dpglyc_c <==> h_c + udp_c + diglcpg160_c"	-1000	1000	0
+"PUDPMGT"	"udpg_c + 12dgr160_c <==> h_c + udp_c + m12dpglyc_c"	-1000	1000	0
+"PUNP1"	"pi_c + adn_c <==> ade_c + r1p_c"	-1000	1000	0
+"PUNP2"	"pi_c + dad_2_c <==> ade_c + 2dr1p_c"	-1000	1000	0
+"PUNP3"	"pi_c + gsn_c <==> gua_c + r1p_c"	-1000	1000	0
+"PUNP4"	"pi_c + dgsn_c <==> 2dr1p_c + gua_c"	-1000	1000	0
+"PUNP5"	"pi_c + ins_c <==> hxan_c + r1p_c"	-1000	1000	0
+"PUNP6"	"pi_c + din_c <==> hxan_c + 2dr1p_c"	-1000	1000	0
+"PUNP7"	"pi_c + xtsn_c <==> xan_c + r1p_c"	-1000	1000	0
+"PYDAMK"	"atp_c + pydam_c --> h_c + adp_c + pyam5p_c"	0	1000	0
+"PYDXK"	"atp_c + pydx_c --> h_c + adp_c + pydx5p_c"	0	1000	0
+"PYDXNK"	"atp_c + pydxn_c --> h_c + adp_c + pdx5p_c"	0	1000	0
+"PYDXNtr"	"pydxn_e <==> pydxn_c"	-1000	1000	0
+"PYDXtr"	"pydx_e <==> pydx_c"	-1000	1000	0
+"PYK"	"h_c + pep_c + adp_c --> atp_c + pyr_c"	0	1000	0
+"PYRt2r"	"h_e + pyr_e <==> h_c + pyr_c"	-1000	1000	0
+"QULNS"	"iasp_c + dhap_c --> (2) h2o_c + pi_c + quln_c"	0	1000	0
+"R05224"	"h2o_c + (2) atp_c + (2) gln_L_c + hgbyr_c --> h_c + (2) glu_L_c + ppi_c + (2) adp_c + hgbam_c"	0	1000	0
+"RB5PE"	"ru5p_L_c <==> xu5p_L_c"	-1000	1000	0
+"RBFK"	"atp_c + ribflv_c --> h_c + adp_c + fmn_c"	0	1000	0
+"RBFSa"	"db4p_c + 4r5au_c --> (2) h2o_c + pi_c + dmlz_c"	0	1000	0
+"RBFSb"	"(2) dmlz_c --> 4r5au_c + ribflv_c"	0	1000	0
+"RBK"	"atp_c + rib_D_c --> h_c + adp_c + r5p_c"	0	1000	0
+"RBP4E"	"ru5p_L_c <==> xu5p_D_c"	-1000	1000	0
+"RE1944C"	"lipoate_c + atp_c <==> ppi_c + CE5656_c"	-1000	1000	0
+"RHCCE"	"rhcys_c --> hcys_L_c + dhptd_c"	0	1000	0
+"RIBABCte"	"h2o_c + atp_c + rib_D_c --> h_c + pi_c + adp_c + rib_D_e"	0	1000	0
+"RIBFLVt2r"	"h_e + ribflv_e <==> h_c + ribflv_c"	-1000	1000	0
+"RIBabc"	"h2o_c + atp_c + rib_D_e --> h_c + pi_c + adp_c + rib_D_c"	0	1000	0
+"RNDR1"	"adp_c + trdrd_c --> h2o_c + dadp_c + trdox_c"	0	1000	0
+"RNDR2"	"gdp_c + trdrd_c --> h2o_c + dgdp_c + trdox_c"	0	1000	0
+"RNDR3"	"cdp_c + trdrd_c --> h2o_c + dcdp_c + trdox_c"	0	1000	0
+"RNDR4"	"trdrd_c + udp_c --> h2o_c + dudp_c + trdox_c"	0	1000	0
+"RNTR1"	"atp_c + trdrd_c --> h2o_c + datp_c + trdox_c"	0	1000	0
+"RNTR2"	"gtp_c + trdrd_c --> h2o_c + dgtp_c + trdox_c"	0	1000	0
+"RNTR3"	"ctp_c + trdrd_c --> h2o_c + dctp_c + trdox_c"	0	1000	0
+"RNTR4"	"trdrd_c + utp_c --> h2o_c + dutp_c + trdox_c"	0	1000	0
+"RPE"	"ru5p_D_c <==> xu5p_D_c"	-1000	1000	0
+"RPI"	"r5p_c <==> ru5p_D_c"	-1000	1000	0
+"RZ5PP"	"h2o_c + 5prdmbz_c --> pi_c + rdmbzi_c"	0	1000	0
+"SALCS2"	"ichor_c --> pyr_c + salc_c"	0	1000	0
+"SALCpts"	"pep_c + salcn_e --> salc6p_c + pyr_c"	0	1000	0
+"SBTPD"	"nad_c + sbt6p_c <==> h_c + nadh_c + f6p_c"	-1000	1000	0
+"SBTpts"	"pep_c + sbt_D_e --> pyr_c + sbt6p_c"	0	1000	0
+"SELNPS"	"h2o_c + atp_c + seln_c --> pi_c + amp_c + selnp_c"	0	1000	0
+"SERATi"	"accoa_c + ser_L_c --> coa_c + acser_c"	0	1000	0
+"SERt2r"	"h_e + ser_L_e <==> h_c + ser_L_c"	-1000	1000	0
+"SGAT"	"stcoa_c + glyc3p_c --> coa_c + 1odecg3p_c"	0	1000	0
+"SHCHCC2"	"cobalt2_c + scl_c --> h_c + copre2_c"	0	1000	0
+"SHCHD2"	"nad_c + dscl_c --> h_c + nadh_c + scl_c"	0	1000	0
+"SHCHF"	"fe2_c + scl_c --> (3) h_c + sheme_c"	0	1000	0
+"SHK3Dr"	"h_c + nadph_c + 3dhsk_c <==> nadp_c + skm_c"	-1000	1000	0
+"SHKK"	"atp_c + skm_c --> h_c + adp_c + skm5p_c"	0	1000	0
+"SHSL2"	"h2s_c + suchms_c --> h_c + hcys_L_c + succ_c"	0	1000	0
+"SO4t2"	"h_e + so4_e <==> h_c + so4_c"	-1000	1000	0
+"SPMDabc"	"h2o_c + atp_c + spmd_e --> h_c + pi_c + adp_c + spmd_c"	0	1000	0
+"SPMS"	"ametam_c + ptrc_c --> h_c + 5mta_c + spmd_c"	0	1000	0
+"SPTc"	"pyr_c + ser_L_c <==> ala_L_c + hpyr_c"	-1000	1000	0
+"SSALxr"	"nad_c + h2o_c + sucsal_c <==> (2) h_c + nadh_c + succ_c"	-1000	1000	0
+"SSALyr"	"nadp_c + h2o_c + sucsal_c <==> (2) h_c + nadph_c + succ_c"	-1000	1000	0
+"STCOATA"	"coa_c + ocdcaACP_c <==> ACP_c + stcoa_c"	-1000	1000	0
+"SUCCt2r"	"h_e + succ_e <==> h_c + succ_c"	-1000	1000	0
+"SUCpts"	"pep_c + sucr_e --> pyr_c + suc6p_c"	0	1000	0
+"SUDPDGT"	"udpg_c + m12dsglyc_c --> h_c + udp_c + diglcpg180_c"	0	1000	0
+"SUDPMGT"	"12dgr180_c + udpg_c --> h_c + udp_c + m12dsglyc_c"	0	1000	0
+"SULFACabc"	"h2o_c + atp_c + sulfac_e --> h_c + pi_c + adp_c + sulfac_c"	0	1000	0
+"TALA"	"g3p_c + s7p_c <==> e4p_c + f6p_c"	-1000	1000	0
+"TARTD"	"tartr_L_c --> h2o_c + oaa_c"	0	1000	0
+"TAURabc"	"h2o_c + atp_c + taur_e --> h_c + pi_c + adp_c + taur_c"	0	1000	0
+"TDCOATA"	"coa_c + myrsACP_c <==> ACP_c + tdcoa_c"	-1000	1000	0
+"TDG3PACT"	"tdcoa_c + glyc3p_c <==> coa_c + 1tdecg3p_c"	-1000	1000	0
+"TDPDRE"	"dtdp4d6dg_c --> dtdp4d6dm_c"	0	1000	0
+"TDPDRRr"	"h_c + nadph_c + dtdp4d6dm_c <==> nadp_c + dtdprmn_c"	-1000	1000	0
+"TDPGDH"	"dtdpglu_c --> h2o_c + dtdp4d6dg_c"	0	1000	0
+"TECA1S180"	"(24) cdpglyc_c + diglcpg180_c <==> (24) h_c + (24) cmp_c + sttca1_c"	-1000	1000	0
+"TECA1SAI17"	"diglcpgai17_c + (24) cdpglyc_c <==> (24) h_c + (24) cmp_c + ai17tca1_c"	-1000	1000	0
+"TECA1SI17"	"(24) cdpglyc_c + diglcpgi17_c <==> (24) h_c + (24) cmp_c + i17tca1_c"	-1000	1000	0
+"TECA2S180"	"(24) udpg_c + sttca1_c <==> (24) h_c + (24) udp_c + sttcaglc_c"	-1000	1000	0
+"TECA2SAI17"	"(24) udpg_c + ai17tca1_c <==> (24) h_c + (24) udp_c + ai17tcaglc_c"	-1000	1000	0
+"TECA2SI17"	"(24) udpg_c + i17tca1_c <==> (24) h_c + (24) udp_c + i17tcaglc_c"	-1000	1000	0
+"TECA3S140"	"(24) atp_c + (24) ala_D_c + myrstca1_c --> (24) h2o_c + (24) amp_c + (24) ppi_c + myrstcaala_D_c"	0	1000	0
+"TECA3S160"	"(24) atp_c + (24) ala_D_c + palmtca1_c --> (24) h2o_c + (24) amp_c + (24) ppi_c + palmtcaala_D_c"	0	1000	0
+"TECA3S180"	"(24) atp_c + (24) ala_D_c + sttca1_c --> (24) h2o_c + (24) amp_c + (24) ppi_c + sttcaala_D_c"	0	1000	0
+"TECA3SAI15"	"(24) atp_c + (24) ala_D_c + ai15tca1_c --> (24) h2o_c + (24) amp_c + (24) ppi_c + ai15tcaala_D_c"	0	1000	0
+"TECA3SAI17"	"(24) atp_c + (24) ala_D_c + ai17tca1_c --> (24) h2o_c + (24) amp_c + (24) ppi_c + ai17tcaala_D_c"	0	1000	0
+"TECA3SI14"	"(24) atp_c + (24) ala_D_c + i14tca1_c --> (24) h2o_c + (24) amp_c + (24) ppi_c + i14tcaala_D_c"	0	1000	0
+"TECA3SI15"	"(24) atp_c + (24) ala_D_c + i15tca1_c --> (24) h2o_c + (24) amp_c + (24) ppi_c + i15tcaala_D_c"	0	1000	0
+"TECA3SI16"	"(24) atp_c + (24) ala_D_c + i16tca1_c --> (24) h2o_c + (24) amp_c + (24) ppi_c + i16tcaala_D_c"	0	1000	0
+"TECA3SI17"	"(24) atp_c + (24) ala_D_c + i17tca1_c --> (24) h2o_c + (24) amp_c + (24) ppi_c + i17tcaala_D_c"	0	1000	0
+"TECA4S"	"h2o_c + (30) udpg_c + (30) udpacgal_c <==> (30) ump_c + (30) udp_c + tcam_c"	-1000	1000	0
+"TECA5S180"	"(24) uacgam_c + sttca1_c <==> (24) h_c + (24) udp_c + sttcaacgam_c"	-1000	1000	0
+"TECA5SAI17"	"(24) uacgam_c + ai17tca1_c <==> (24) h_c + (24) udp_c + ai17tcaacgam_c"	-1000	1000	0
+"TECA5SI17"	"(24) uacgam_c + i17tca1_c <==> (24) h_c + (24) udp_c + i17tcaacgam_c"	-1000	1000	0
+"TECAAE"	"prl45tcaala_c + PGPm1_c <==> udcpp_c + glyc45tcaala_D_c"	-1000	1000	0
+"TECAGE"	"PGPm1_c + prl45tcaglc_c <==> udcpp_c + glyc45tcaglc_c"	-1000	1000	0
+"TECAUE"	"prl45tca_c + PGPm1_c <==> udcpp_c + glyc45tca_c"	-1000	1000	0
+"TEICH45"	"(45) udpacgal_c + (45) udpglcur_c <==> (45) h_c + (45) ump_c + (45) udp_c + teich_45_BS_c"	-1000	1000	0
+"TGBPA"	"tagdp_D_c <==> g3p_c + dhap_c"	-1000	1000	0
+"THIORDXi"	"trdrd_c + h2o2_c --> (2) h2o_c + trdox_c"	0	1000	0
+"THMt3"	"h_c + thm_e <==> h_e + thm_c"	-1000	1000	0
+"THRAr"	"thr_L_c <==> gly_c + acald_c"	-1000	1000	0
+"THRD"	"nad_c + thr_L_c --> h_c + nadh_c + 2aobut_c"	0	1000	0
+"THRD_L"	"thr_L_c --> 2obut_c + nh4_c"	0	1000	0
+"THRPD"	"h_c + thrp_c --> co2_c + applp_c"	0	1000	0
+"THRS"	"h2o_c + phom_c --> pi_c + thr_L_c"	0	1000	0
+"THRt2r"	"h_e + thr_L_e <==> h_c + thr_L_c"	-1000	1000	0
+"THZPSN"	"atp_c + cys_L_c + dxyl5p_c + tyr_L_c --> h_c + h2o_c + co2_c + amp_c + ppi_c + ala_L_c + 4hba_c + 4mpetz_c"	0	1000	0
+"TKT1"	"r5p_c + xu5p_D_c <==> g3p_c + s7p_c"	-1000	1000	0
+"TKT2"	"e4p_c + xu5p_D_c <==> g3p_c + f6p_c"	-1000	1000	0
+"TMAOR1"	"h_c + mql8_c + tmao_c --> h2o_c + mqn8_c + tma_c"	0	1000	0
+"TMAOR2"	"h_c + 2dmmql8_c + tmao_c --> h2o_c + 2dmmq8_c + tma_c"	0	1000	0
+"TMAt2r"	"h_e + tma_e <==> h_c + tma_c"	-1000	1000	0
+"TMDPK"	"atp_c + thm_c --> h_c + amp_c + thmpp_c"	0	1000	0
+"TMDPP"	"pi_c + thymd_c <==> thym_c + 2dr1p_c"	-1000	1000	0
+"TMDS"	"dump_c + mlthf_c --> dhf_c + dtmp_c"	0	1000	0
+"TMK"	"atp_c + thm_c --> h_c + adp_c + thmmp_c"	0	1000	0
+"TMN"	"h2o_c + thm_c --> h_c + 4ahmmp_c + 4mhetz_c"	0	1000	0
+"TMPK"	"atp_c + thmmp_c --> adp_c + thmpp_c"	0	1000	0
+"TMPPP"	"h_c + 4mpetz_c + 2mahmp_c --> ppi_c + thmmp_c"	0	1000	0
+"TPI"	"dhap_c <==> g3p_c"	-1000	1000	0
+"TRDOXOX"	"h2o_c + trdox_c + peptmet_L_c <==> trdrd_c + peptmetox_L_c"	-1000	1000	0
+"TRDRr"	"h_c + nadph_c + trdox_c <==> nadp_c + trdrd_c"	-1000	1000	0
+"TRE6PH"	"h2o_c + tre6p_c --> g6p_c + glc_D_c"	0	1000	0
+"TREGLUDR2"	"pi_c + tre_c <==> glc_D_c + g1p_B_c"	-1000	1000	0
+"TREpts"	"pep_c + tre_e --> pyr_c + tre6p_c"	0	1000	0
+"TRPDA_H"	"h_c + nadh_c + trp_L_c --> nad_c + nh4_c + ind3ppa_c"	0	1000	0
+"TRPt2r"	"h_e + trp_L_e <==> h_c + trp_L_c"	-1000	1000	0
+"TRSARr"	"h_c + nadh_c + 2h3oppan_c <==> nad_c + glyc_R_c"	-1000	1000	0
+"TRSARry"	"h_c + nadph_c + 2h3oppan_c --> nadp_c + glyc_R_c"	0	1000	0
+"TTDCAtr"	"ttdca_e <==> ttdca_c"	-1000	1000	0
+"TYRTA"	"akg_c + tyr_L_c <==> glu_L_c + 34hpp_c"	-1000	1000	0
+"TYRt2r"	"h_e + tyr_L_e <==> h_c + tyr_L_c"	-1000	1000	0
+"UAAGDS"	"atp_c + 26dap_M_c + uamag_c --> h_c + pi_c + adp_c + ugmd_c"	0	1000	0
+"UACMAMAT"	"unaga_c + uacmam_c <==> h_c + udp_c + acbdma14gapuc_c"	-1000	1000	0
+"UAG2E"	"uacgam_c <==> uacmam_c"	-1000	1000	0
+"UAG2EMA"	"h2o_c + uacgam_c <==> h_c + acmana_c + udp_c"	-1000	1000	0
+"UAG4E"	"uacgam_c <==> udpacgal_c"	-1000	1000	0
+"UAGCVT_r"	"uacgam_c + pep_c <==> pi_c + uaccg_c"	-1000	1000	0
+"UAGDP"	"h_c + utp_c + acgam1p_c --> ppi_c + uacgam_c"	0	1000	0
+"UAGPT2"	"uacgam_c + uaGgla_c --> h_c + udp_c + uaaGgla_c"	0	1000	0
+"UAGPT3"	"uacgam_c + uagmda_c --> h_c + udp_c + uaagmda_c"	0	1000	0
+"UAMAGS"	"atp_c + glu_D_c + uama_c --> h_c + pi_c + adp_c + uamag_c"	0	1000	0
+"UAMAS"	"atp_c + ala_L_c + uamr_c --> h_c + pi_c + adp_c + uama_c"	0	1000	0
+"UAPGR"	"h_c + nadph_c + uaccg_c --> nadp_c + uamr_c"	0	1000	0
+"UDCPDP"	"h2o_c + udcpdp_c --> h_c + pi_c + udcpp_c"	0	1000	0
+"UDPG4E"	"udpg_c <==> udpgal_c"	-1000	1000	0
+"UDPGDr"	"(2) nad_c + h2o_c + udpg_c <==> (3) h_c + (2) nadh_c + udpglcur_c"	-1000	1000	0
+"UGMDDS"	"atp_c + alaala_c + ugmd_c --> h_c + pi_c + adp_c + ugmda_c"	0	1000	0
+"UMPK"	"atp_c + ump_c <==> adp_c + udp_c"	-1000	1000	0
+"UP4GH"	"h2o_c + up4g_c <==> (2) h_c + ump_c + utp_c"	-1000	1000	0
+"UPP3MT"	"(2) amet_c + uppg3_c --> h_c + (2) ahcys_c + dscl_c"	0	1000	0
+"UPP3S"	"hmbil_c --> h2o_c + uppg3_c"	0	1000	0
+"UPPDC1"	"(4) h_c + uppg3_c --> (4) co2_c + cpppg3_c"	0	1000	0
+"UPPRT"	"prpp_c + ura_c --> ppi_c + ump_c"	0	1000	0
+"URAt2"	"h_e + ura_e --> h_c + ura_c"	0	1000	0
+"UREAt"	"urea_e <==> urea_c"	-1000	1000	0
+"URIDK3"	"atp_c + dump_c <==> adp_c + dudp_c"	-1000	1000	0
+"URIK1"	"atp_c + uri_c --> h_c + ump_c + adp_c"	0	1000	0
+"URIK2"	"gtp_c + uri_c --> h_c + ump_c + gdp_c"	0	1000	0
+"URIK3"	"uri_c + itp_c --> h_c + ump_c + idp_c"	0	1000	0
+"URIK9"	"dttp_c + uri_c --> h_c + ump_c + dtdp_c"	0	1000	0
+"UTPATPT"	"amp_c + utp_c <==> adp_c + udp_c"	-1000	1000	0
+"VALO"	"(4) h2o_c + (5) val_L_c --> h_c + co2_c + (5) nh4_c + (6) isobut_c"	0	1000	0
+"VALTA"	"akg_c + val_L_c <==> glu_L_c + 3mob_c"	-1000	1000	0
+"VAL_ST"	"nad_c + h2o_c + 3mob_c --> h_c + nadh_c + co2_c + isobut_c"	0	1000	0
+"VALt2r"	"h_e + val_L_e <==> h_c + val_L_c"	-1000	1000	0
+"XANt2"	"h_e + xan_e --> h_c + xan_c"	0	1000	0
+"XPPT"	"prpp_c + xan_c --> ppi_c + xmp_c"	0	1000	0
+"XYLI1"	"xyl_D_c <==> xylu_D_c"	-1000	1000	0
+"XYLI2"	"glc_D_c <==> fru_c"	-1000	1000	0
+"XYLK"	"atp_c + xylu_D_c --> h_c + adp_c + xu5p_D_c"	0	1000	0
+"XYLt"	"xyl_D_e <==> xyl_D_c"	-1000	1000	0
+"YUMPS"	"r5p_c + ura_c <==> h2o_c + psd5p_c"	-1000	1000	0
+"ZN2t4"	"h_e + k_e + zn2_c <==> h_c + zn2_e + k_c"	-1000	1000	0
+"dreplication"	" --> dnarep_c"	0	1000	0
+"pbiosynthesis"	" --> proteinsynth_c"	0	1000	0
+"r0060"	"ser_L_c --> pyr_c + nh4_c"	0	1000	0
+"r0120"	"h2o_c + gtp_c --> HC01651_c"	0	1000	0
+"r0127"	"h2o_c + asn_L_c --> nh4_c + asp_L_c"	0	1000	0
+"r0339"	"atp_c + glyc_R_c --> h_c + adp_c + 3pg_c"	0	1000	0
+"r0345"	"atp_c + damp_c <==> adp_c + dadp_c"	-1000	1000	0
+"r0502"	"nad_c + h2o_c + xan_c --> h_c + nadh_c + urate_c"	0	1000	0
+"r0570"	"2dr1p_c <==> 2dr5p_c"	-1000	1000	0
+"r0671"	"ctp_c + cys_L_c + 4ppan_c --> h_c + ppi_c + cmp_c + 4ppcys_c"	0	1000	0
+"r0708"	"h2o_c + ahdt_c --> HC01710_c"	0	1000	0
+"r0775"	"h2o_c + HC01651_c --> h_c + for_c + HC01652_c"	0	1000	0
+"r0777"	"HC01652_c --> HC01710_c"	0	1000	0
+"r0792"	"nad_c + 5mthf_c <==> (2) h_c + nadh_c + mlthf_c"	-1000	1000	0
+"r1144"	"glu_L_e + na1_e --> glu_L_c + na1_c"	0	1000	0
+"r1162"	"h2o_c + atp_c + so4_c --> h_c + pi_c + adp_c + so4_e"	0	1000	0
+"r1667"	"orn_c + arg_L_e <==> arg_L_c + orn_e"	-1000	1000	0
+"r2137"	"cl_e <==> cl_c"	-1000	1000	0
+"rtranscription"	" --> rnatrans_c"	0	1000	0
+"sink_PGPm1_c"	"PGPm1_c <==> "	-1000	1000	0
+"sink_dmbzid"	"dmbzid_c <==> "	-1000	1000	0
+"sink_gthrd_c"	"gthrd_c <==> "	-1000	1000	0
+"biomass205"	"(0.0079397) nad_c + (0.0079397) nadp_c + (37.16) h2o_c + (0.26101) glu_L_c + (0.0079397) ACP_c + (0.0079397) coa_c + (0.0079397) fad_c + (0.40933) gly_c + (41.2914) atp_c + (0.042403) gtp_c + (0.0079397) thmpp_c + (0.26101) gln_L_c + (0.013437) dttp_c + (0.026124) ctp_c + (0.013437) datp_c + (0.013437) dctp_c + (0.013437) dgtp_c + (0.0079397) amet_c + (0.0079397) adocbl_c + (0.14833) asp_L_c + (0.26756) ala_L_c + (0.0079397) ptrc_c + (0.0079397) 10fthf_c + (0.0079397) thf_c + (0.081948) his_L_c + (0.34746) leu_L_c + (0.18684) thr_L_c + (0.0079397) 2dmmq8_c + (0.0079397) mqn8_c + (0.056954) cys_L_c + (0.1934) arg_L_c + (0.14833) asn_L_c + (0.1135) met_L_c + (0.0079397) ca2_c + (0.0085871) pg180_c + (0.0085871) clpn180_c + (0.0085871) pgai17_c + (0.0085871) clpnai17_c + (0.0085871) pgi17_c + (0.0085871) clpni17_c + (0.0079397) cobalt2_c + (0.028225) utp_c + (0.0079397) cu2_c + (0.3237) lys_L_c + (0.0079397) q8_c + (0.0079397) fe2_c + (0.0079397) pheme_c + (0.0079397) fe3_c + (0.0079397) gthrd_c + (0.21675) ser_L_c + (0.17619) phe_L_c + (0.16103) pro_L_c + (0.11104) tyr_L_c + (0.0079397) k_c + (0.27043) ile_L_c + (0.0018061) udcpdp_c + (0.0079397) 5mthf_c + (0.0079397) mg2_c + (0.0079397) mn2_c + (0.0079397) pydx5p_c + (0.0018061) PGP_c + (0.0085871) pe180_c + (0.0085871) peai17_c + (0.0085871) pei17_c + (0.0079397) ribflv_c + (0.0079397) sheme_c + (0.0079397) so4_c + (0.0079397) spmd_c + (0.0018061) sttca1_c + (0.0018061) ai17tca1_c + (0.0018061) i17tca1_c + (0.0018061) sttcaglc_c + (0.0018061) ai17tcaglc_c + (0.0018061) i17tcaglc_c + (0.0018061) sttcaala_D_c + (0.0018061) ai17tcaala_D_c + (0.0018061) i17tcaala_D_c + (0.0018061) tcam_c + (0.0018061) sttcaacgam_c + (0.0018061) ai17tcaacgam_c + (0.0018061) i17tcaacgam_c + (0.0018061) glyc45tcaala_D_c + (0.0018061) glyc45tcaglc_c + (0.0018061) glyc45tca_c + (0.054496) trp_L_c + (0.30772) val_L_c + (0.0079397) zn2_c + dnarep_c + proteinsynth_c + (0.0079397) cl_c + rnatrans_c --> (41.257) h_c + (41.2491) pi_c + (0.18489) ppi_c + (41.257) adp_c + (0.0079397) apoACP_c + (0.0079397) cbi_c + biomass_c + (0.0079397) dmbzid_c + (0.0072242) PGPm1_c"	0	1000	1
+"sink_pheme_c"	"pheme_c <==> "	-1000	1000	0

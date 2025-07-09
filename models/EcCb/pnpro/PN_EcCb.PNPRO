@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- This project file has been saved by the New GreatSPN Editor, v.100 --><project name="New project" version="121">
+  <gspn name="PetriNet" zoom="150">
+    <nodes>
+      <text-box bold="true" border-color="#000000" fill-color="#f7ffc0" height="9.625" name="__textBox0" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" x="11.0" y="7.1875"/>
+      <text-box bold="true" border-color="#000000" fill-color="#c8ffc0" height="9.25" name="__textBox1" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" width="2.0" x="26.0" y="7.375"/>
+      <text-box bold="true" border-color="#000000" fill-color="#c8ffc0" height="9.25" name="copy___textBox1" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" width="2.0" x="25.0" y="19.375"/>
+      <text-box bold="true" border-color="#000000" fill-color="#f7ffc0" height="9.625" name="copy___textBox0" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" x="11.0" y="19.1875"/>
+      <place label-x="-0.5" label-y="-2.0" name="N_c1" text-size="VERY_SMALL" x="12.0" y="11.0"/>
+      <place label-x="-0.5" label-y="-2.5" name="N_c2" text-size="VERY_SMALL" x="12.0" y="23.0"/>
+      <transition delay="Call[&quot;Duplication&quot;, FromTable[&quot;Bacteria_Parameters.csv&quot;, 0, 1], 0]" delay-x="-6.0" delay-y="-7.5" label-y="-1.0" name="Dup_s_c1" nservers-x="0.5" rotation="4.71238898038469" text-size="VERY_SMALL" type="EXP" x="16.55" y="8.0"/>
+      <transition delay="Call[&quot;Death&quot;, FromTable[&quot;Bacteria_Parameters.csv&quot;, 0, 2], 0]" delay-x="-8.0" delay-y="-11.5" label-x="2.5" label-y="1.0" name="Death_s_c1" nservers-x="0.5" rotation="4.71238898038469" text-size="VERY_SMALL" type="EXP" x="18.55" y="14.0"/>
+      <transition delay="Call[&quot;Starvation&quot;, FromTable[&quot;Bacteria_Parameters.csv&quot;, 0, 0], 0]" delay-x="-11.0" delay-y="-6.5" name="Starv_s_c1" nservers-x="0.5" text-size="VERY_SMALL" type="EXP" x="21.55" y="8.0"/>
+      <place label-x="-4.5" label-y="1.0" name="biomass_e_c1" text-size="VERY_SMALL" x="21.0" y="11.0"/>
+      <place label-x="-3.5" label-y="0.5" name="biomass_e_c2" text-size="VERY_SMALL" x="19.0" y="23.0"/>
+      <transition delay="FBA[ &quot;Escherichia_coli_SE11.txt&quot;,  &quot;EX_biomass_e&quot;  , 1 , &quot;N_c1&quot;  ,  &quot;biomass_e_c1&quot;, &quot;true&quot;]" delay-x="-16.0" delay-y="-5.0" label-x="5.0" label-y="0.0" name="EX_biomass_in_s_c1" nservers-x="0.5" text-size="VERY_SMALL" type="EXP" x="26.55" y="9.0"/>
+      <transition delay="FBA[ &quot;Escherichia_coli_SE11.txt&quot;,  &quot;EX_biomass_e&quot;  , 1 , &quot;N_c1&quot;  ,  &quot;biomass_e_c1&quot;, &quot;true&quot;]" delay-x="-16.0" delay-y="-9.0" label-x="5.5" label-y="0.0" name="EX_biomass_out_s_c1" nservers-x="0.5" text-size="VERY_SMALL" type="EXP" x="26.55" y="14.0"/>
+      <transition delay=" Call[&quot;Duplication&quot;, FromTable[&quot;Bacteria_Parameters.csv&quot;, 1,1], 1]" delay-x="-14.0" delay-y="10.5" label-y="-1.0" name="Dup_s_c2" nservers-x="0.5" rotation="4.71238898038469" text-size="VERY_SMALL" type="EXP" x="16.55" y="20.0"/>
+      <transition delay="Call[&quot;Starvation&quot;, FromTable[&quot;Bacteria_Parameters.csv&quot;, 1, 0], 1]" delay-x="-19.0" delay-y="11.5" name="Starv_s_c2" nservers-x="0.5" text-size="VERY_SMALL" type="EXP" x="21.55" y="20.0"/>
+      <transition delay="Call[&quot;Death&quot;, FromTable[&quot;Bacteria_Parameters.csv&quot;, 1, 2], 1] " delay-x="-14.0" delay-y="6.5" label-x="2.5" label-y="1.0" name="Death_s_c2" nservers-x="0.5" rotation="4.71238898038469" text-size="VERY_SMALL" type="EXP" x="16.55" y="26.0"/>
+      <transition delay="FBA[&quot;Clostridium_butyricum_DSM_10702.txt&quot;,  &quot;EX_biomass_e&quot;  , 1 , &quot;N_c2&quot;  ,  &quot;biomass_e_c2&quot;, &quot;true&quot;]" delay-x="-23.0" delay-y="14.0" label-x="5.0" label-y="0.0" name="EX_biomass_in_s_c2" nservers-x="0.5" text-size="VERY_SMALL" type="EXP" x="25.55" y="20.0"/>
+      <transition delay="FBA[&quot;Clostridium_butyricum_DSM_10702.txt&quot;,  &quot;EX_biomass_e&quot;  , 1 , &quot;N_c2&quot;  ,  &quot;biomass_e_c2&quot;, &quot;true&quot;]" delay-x="-23.0" delay-y="10.0" label-x="5.0" label-y="0.0" name="EX_biomass_out_s_c2" nservers-x="0.5" text-size="VERY_SMALL" type="EXP" x="25.55" y="25.0"/>
+    </nodes>
+    <edges>
+      <arc head="Dup_s_c1" kind="INPUT" mult="2" mult-k="0.50009765625" tail="N_c1"/>
+      <arc head="N_c1" kind="OUTPUT" tail="Dup_s_c1">
+        <point x="17.0" y="11.5"/>
+      </arc>
+      <arc head="biomass_e_c1" kind="OUTPUT" tail="Dup_s_c1">
+        <point x="18.5" y="12.0"/>
+      </arc>
+      <arc head="Dup_s_c1" kind="INPUT" tail="biomass_e_c1">
+        <point x="20.0" y="10.0"/>
+      </arc>
+      <arc head="Death_s_c1" kind="INPUT" tail="N_c1">
+        <point x="15.0" y="14.5"/>
+      </arc>
+      <arc head="Death_s_c1" kind="INPUT" tail="biomass_e_c1">
+        <point x="20.5" y="13.5"/>
+      </arc>
+      <arc head="biomass_e_c1" kind="OUTPUT" tail="Death_s_c1">
+        <point x="21.5" y="15.0"/>
+      </arc>
+      <arc head="EX_biomass_in_s_c1" kind="INPUT" tail="biomass_e_c1">
+        <point x="24.5" y="10.5"/>
+      </arc>
+      <arc head="biomass_e_c1" kind="OUTPUT" mult="2" mult-x="0.08331072833310671" mult-y="1.5" tail="EX_biomass_out_s_c1">
+        <point x="24.0" y="15.0"/>
+      </arc>
+      <arc head="EX_biomass_out_s_c1" kind="INPUT" tail="biomass_e_c1">
+        <point x="25.5" y="12.0"/>
+      </arc>
+      <arc head="Starv_s_c1" kind="INPUT" tail="biomass_e_c1"/>
+      <arc head="Dup_s_c2" kind="INPUT" mult="2" tail="N_c2">
+        <point x="13.5" y="21.5"/>
+      </arc>
+      <arc head="Death_s_c2" kind="INPUT" tail="N_c2">
+        <point x="13.0" y="27.0"/>
+      </arc>
+      <arc head="N_c2" kind="OUTPUT" tail="Dup_s_c2">
+        <point x="17.0" y="23.0"/>
+      </arc>
+      <arc head="biomass_e_c2" kind="OUTPUT" tail="Dup_s_c2">
+        <point x="18.5" y="23.0"/>
+      </arc>
+      <arc head="Dup_s_c2" kind="INPUT" tail="biomass_e_c2">
+        <point x="20.0" y="21.5"/>
+      </arc>
+      <arc head="Death_s_c2" kind="INPUT" tail="biomass_e_c2">
+        <point x="18.0" y="25.5"/>
+      </arc>
+      <arc head="biomass_e_c2" kind="OUTPUT" tail="Death_s_c2">
+        <point x="20.0" y="26.5"/>
+      </arc>
+      <arc head="Starv_s_c2" kind="INPUT" tail="biomass_e_c2"/>
+      <arc head="EX_biomass_in_s_c2" kind="INPUT" tail="biomass_e_c2"/>
+      <arc head="biomass_e_c2" kind="OUTPUT" mult="2" tail="EX_biomass_out_s_c2"/>
+      <arc head="EX_biomass_out_s_c2" kind="INPUT" tail="biomass_e_c2">
+        <point x="22.5" y="27.0"/>
+      </arc>
+    </edges>
+  </gspn>
+  <measures gspn-name="PetriNet" name="Measures" simplified-UI="false">
+    <assignments/>
+    <greatspn/>
+    <formulas>
+      <formula comment="Basic statistics of the toolchain execution." language="STAT"/>
+      <formula comment="All the basic Petri net measures" language="ALL"/>
+    </formulas>
+  </measures>
+</project>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- This project file has been saved by the New GreatSPN Editor, v.100 --><project name="New project" version="121">
+  <gspn name="PetriNet">
+    <nodes>
+      <place label-x="3.0" label-y="1.0" name="E_coli" x="13.0" y="16.0"/>
+      <place label-x="-5.0" label-y="-0.5" name="E_coli_biomass_e" x="23.0" y="16.0"/>
+      <transition delay="Call[&quot;Starvation&quot;, FromTable[&quot;Bacteria_Parameters.csv&quot;, 0, 0], 0]" delay-x="-0.5" delay-y="-3.5" label-x="-2.5" label-y="0.0" name="Starv" nservers-x="0.5" rotation="-0.0" type="EXP" x="24.55" y="11.0"/>
+      <transition delay="Call[&quot;Duplication&quot;, FromTable[&quot;Bacteria_Parameters.csv&quot;, 0, 1], 0]" delay-x="-6.5" delay-y="-5.5" name="Dup" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="18.55" y="11.0"/>
+      <transition delay="Call[&quot;Death&quot;, FromTable[&quot;Bacteria_Parameters.csv&quot;, 0, 2], 0]" delay-x="-7.0" delay-y="4.0" label-y="1.5" name="Death" nservers-x="0.5" rotation="1.5707963267948966" type="EXP" x="18.55" y="21.0"/>
+      <transition delay="FBA[ &quot;Escherichia_coli_str_K_12_substr_MG1655.txt&quot;,  &quot;EX_biomass_e&quot;  , 1 , &quot;E_coli&quot;  ,  &quot;E_coli_biomass_e&quot;, &quot;true&quot;]" delay-x="2.0" delay-y="0.5" label-x="7.5" label-y="-1.0" name="E_coli_EX_biomass_e_out" nservers-x="0.5" rotation="6.283185307179586" type="EXP" x="27.55" y="19.0"/>
+      <transition delay="FBA[ &quot;Escherichia_coli_str_K_12_substr_MG1655.txt&quot;,  &quot;EX_biomass_e&quot;  , 1 , &quot;E_coli&quot;  ,  &quot;E_coli_biomass_e&quot;, &quot;true&quot;]" delay-x="2.0" delay-y="0.5" label-x="7.0" label-y="-1.0" name="E_coli_EX_biomass_e_in" nservers-x="0.5" rotation="6.283185307179586" superpos-x="14.5" superpos-y="-1.5" type="EXP" x="27.55" y="13.0"/>
+      <text-box bold="true" border-color="#000000" fill-color="#fffcf3" height="15.0" horiz-pos="4" name="copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy___textBox0" rotation="-0.0" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" width="15.0" x="11.5" y="9.5"/>
+      <text-box bold="true" border-color="#000000" fill-color="#c0ffd0" height="15.0" horiz-pos="4" name="copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy_copy___textBox0" rotation="-0.0" shadow="true" shape="ROUND_RECTANGLE" text-color="#000000" width="1.5" x="28.0" y="9.5"/>
+    </nodes>
+    <edges>
+      <arc head="E_coli_EX_biomass_e_in" kind="INPUT" tail="E_coli_biomass_e">
+        <point x="26.0" y="14.0"/>
+      </arc>
+      <arc head="E_coli_biomass_e" kind="OUTPUT" mult="2" mult-x="-1.294359879838698" mult-y="0.5" tail="E_coli_EX_biomass_e_out">
+        <point x="26.0" y="20.0"/>
+      </arc>
+      <arc head="E_coli_biomass_e" kind="OUTPUT" tail="Dup">
+        <point x="22.0" y="13.5"/>
+      </arc>
+      <arc head="Dup" kind="INPUT" tail="E_coli_biomass_e">
+        <point x="20.5" y="15.0"/>
+      </arc>
+      <arc head="E_coli" kind="OUTPUT" mult="2" mult-x="-1.1152669104540927" mult-y="-0.3077427526625307" tail="Dup">
+        <point x="15.5" y="13.5"/>
+      </arc>
+      <arc head="Dup" kind="INPUT" tail="E_coli">
+        <point x="17.0" y="15.0"/>
+      </arc>
+      <arc head="Death" kind="INPUT" tail="E_coli_biomass_e">
+        <point x="22.0" y="20.5"/>
+      </arc>
+      <arc head="E_coli_biomass_e" kind="OUTPUT" tail="Death">
+        <point x="20.5" y="19.0"/>
+      </arc>
+      <arc head="Death" kind="INPUT" tail="E_coli">
+        <point x="15.5" y="20.5"/>
+      </arc>
+      <arc head="Starv" kind="INPUT" tail="E_coli_biomass_e">
+        <point x="23.5" y="14.5"/>
+      </arc>
+      <arc head="E_coli_EX_biomass_e_out" kind="INPUT" tail="E_coli_biomass_e">
+        <point x="27.0" y="18.0"/>
+      </arc>
+    </edges>
+  </gspn>
+  <measures gspn-name="PetriNet" name="Measures" simplified-UI="false">
+    <assignments/>
+    <greatspn/>
+    <formulas>
+      <formula comment="Basic statistics of the toolchain execution." language="STAT"/>
+      <formula comment="All the basic Petri net measures" language="ALL"/>
+    </formulas>
+  </measures>
+</project>

@@ -1,0 +1,31 @@
+# config/models.yaml
+
+boundary_metabolites:
+  - "glc__D_e"
+  - "lcts_e"
+
+cellular_units:
+  - model_name: "Escherichia_coli_SE11"
+    label:      "Escherichia coli SE11"
+    biomass:
+      max:  1.172
+      mean: 0.489
+      min:  0.083
+    population:
+      starv: 0.21
+      dup:   1.00
+      death: 0.018
+    initial_count: 1e+06
+
+  - model_name: "Clostridium_butyricum_DSM_10702"
+    label:      "Clostridium butyricum DSM 10702"
+    biomass:
+      max:  1.500
+      mean: 0.600
+      min:  0.100
+    population:
+      starv: 0.21
+      dup:   1.00
+      death: 0.018
+    initial_count: 1e+06
+

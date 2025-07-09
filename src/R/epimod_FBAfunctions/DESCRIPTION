@@ -1,0 +1,18 @@
+Package: epimodFBAfunctions
+Type: Package
+Title: Supporting epimod for the integration of FBA models. 
+Version: 1.0
+Authors@R: 
+    c(person("Simone", "Pernice", , "simone.pernice@unito.it", role = c("cre","aut"),
+           comment = c(ORCID = "YOUR-ORCID-ID")),
+      person("Riccardo", "Aucello", , "riccardo.aucello@unito.it", role = c("aut"),
+           comment = c(ORCID = "YOUR-ORCID-ID")),
+    person("Francesca", "Cordero", , "fcordero@unito.it", role = c("aut"),
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+           )
+Description: Supporting epimod for the integration of FBA models.
+License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a license
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Imports: R.matlab, stringr
