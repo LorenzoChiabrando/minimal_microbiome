@@ -5,7 +5,7 @@
 cran_pkgs <- c(
   "dplyr", "R.matlab", "ggplot2", "stringr", "purrr", "jsonlite",
   "tidyr", "patchwork", "scales", "fdatest", "xml2", "yaml", "Rcpp",
-  "rlang", "parallel", "foreach", "doParallel", "glue", "readr"
+  "rlang", "parallel", "foreach", "doParallel", "glue", "readr", "sensobol"
 )
 
 # ---- 2. Helper: install if missing ----
