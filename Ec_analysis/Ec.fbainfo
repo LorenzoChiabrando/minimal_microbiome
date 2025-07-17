@@ -1,0 +1,24 @@
+[
+  {
+    "Transition": "EX_biomass_e_in_ecsk1sm",
+    "LPfile": "ecsk1sm_model.txt",
+    "Reaction": "EX_biomass_e",
+    "Multiplicity": 1,
+    "BacteriaCountPlace": "n_ecsk1sm",
+    "BacteriaBiomassPlace": "biomass_e_ecsk1sm",
+    "InputPlaces": ["biomass_e_ecsk1sm"],
+    "OutputPlaces": [],
+    "IsBiomass": true
+  },
+  {
+    "Transition": "EX_biomass_e_out_ecsk1sm",
+    "LPfile": "ecsk1sm_model.txt",
+    "Reaction": "EX_biomass_e",
+    "Multiplicity": 1,
+    "BacteriaCountPlace": "n_ecsk1sm",
+    "BacteriaBiomassPlace": "biomass_e_ecsk1sm",
+    "InputPlaces": ["biomass_e_ecsk1sm"],
+    "OutputPlaces": ["biomass_e_ecsk1sm"],
+    "IsBiomass": true
+  }
+]

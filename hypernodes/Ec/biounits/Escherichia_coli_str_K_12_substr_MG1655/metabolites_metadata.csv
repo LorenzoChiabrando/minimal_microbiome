@@ -1,0 +1,1626 @@
+"id","name","compartment","is_core","is_boundary","is_external_boundary","is_internal_boundary","primary_class","boundary_subtype"
+"10fthf5glu_c","10-formyltetrahydrofolate-[Glu](5)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"10fthf_c","10-Formyltetrahydrofolate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"10m3hddcaACP_c","10-methyl-3-hydroxy-dodecanoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"10m3hundecACP_c","10-methyl-3-hydroxy-undecanoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"10m3oddcaACP_c","10-methyl-3-oxo-dodecanoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"10m3oundecACP_c","10-methyl-3-oxo-undecanoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"10mddcaACP_c","10-methyl-dodecanoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"10mtddec2eACP_c","10-methyl-trans-dodec-2-enoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"10mtundec2eACP_c","10-methyl-trans-undec-2-enoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"10mundecACP_c","10-methyl-undecanoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"11m3hddcaACP_c","11-methyl-3-hydroxy-dodecanoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"11m3oddcaACP_c","11-methyl-3-oxo-dodecanoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"11mddcaACP_c","11-methyl-dodecanoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"11mtddec2eACP_c","11-methyl-trans-dodec-2-enoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"12daihdglyc_c","1,2-Dianteisoheptadecanoyl-sn-glycerol","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"12daipdglyc_c","1,2-Dianteisopentadecanoyl-sn-glycerol","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"12dgr120_c","1,2-Diacyl-sn-glycerol (didodecanoyl, n-C12:0)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"12dgr140_c","1,2-Diacyl-sn-glycerol (ditetradecanoyl, n-C14:0)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"12dgr141_c","1,2-Diacyl-sn-glycerol (ditetradec-7-enoyl, n-C14:1)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"12dgr160_c","1,2-Diacyl-sn-glycerol (dihexadecanoyl, n-C16:0)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"12dgr161_c","1,2-Diacyl-sn-glycerol (dihexadec-9-enoyl, n-C16:1)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"12dgr180_c","1,2-Diacyl-sn-glycerol (dioctadecanoyl, n-C18:0)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"12dgr181_c","1,2-Diacyl-sn-glycerol (dioctadec-11-enoyl, n-C18:1)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"12dihdglyc_c","1,2-Diisoheptadecanoyl-sn-glycerol","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"12dipdglyc_c","1,2-Diisopentadecanoyl-sn-glycerol","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"12ditdglyc_c","1,2-Diisotetradecanoyl-sn-glycerol","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"12dixdglyc_c","1,2-Diisohexadecanoyl-sn-glycerol","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"12m3hmyrsACP_c","12-methyl-3-hydroxy-tetra-decanoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"12m3htridecACP_c","12-methyl-3-hydroxy-tridecanoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"12m3omyrsACP_c","12-methyl-3-oxo-tetra-decanoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"12m3otridecACP_c","12-methyl-3-oxo-tridecanoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"12mmyrsACP_c","12-methyl-tetra-decanoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"12mtmrs2eACP_c","12-methyl-trans-tetra-dec-2-enoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"12mtridecACP_c","12-methyl-tridecanoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"12mttritec2eACP_c","12-methyl-trans-tridec-2-enoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"12ppd__S_c","(S)-propane-1,2-diol","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"12ppd__S_e","(S)-propane-1,2-diol","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"13dpg_c","3-Phospho-D-glyceroyl phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"13m3hmyrsACP_c","13-methyl-3-hydroxy-tetra-decanoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"13m3omyrsACP_c","13-methyl-3-oxo-tetra-decanoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"13mmyrsACP_c","13-methyl-tetra-decanoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"13mtmrs2eACP_c","13-methyl-trans-tetra-dec-2-enoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"14m3hpalmACP_c","14-methyl-3-hydroxy-hexa-decanoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"14m3hpentdecACP_c","14-methyl-3-hydroxy-pentadecanoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"14m3opalmACP_c","14-methyl-3-oxo-hexa-decanoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"14m3opentdecACP_c","14-methyl-3-oxo-pentadecanoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"14mpalmACP_c","14-methyl-hexa-decanoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"14mpentdecACP_c","14-methyl-pentadecanoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"14mtpalm2eACP_c","14-methyl-trans-hexa-dec-2-enoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"14mtpentdec2eACP_c","14-methyl-trans-pentadec-2-enoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"15dap_c","1,5-Diaminopentane","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"15dap_e","1,5-Diaminopentane","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"15m3hpalmACP_c","15-methyl-3-hydroxy-hexa-decanoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"15m3opalmACP_c","15-methyl-3-oxo-hexa-decanoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"15mpalmACP_c","15-methyl-hexa-decanoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"15mtpalm2eACP_c","15-methyl-trans-hexa-dec-2-enoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"1agpe120_c","1-Acyl-sn-glycero-3-phosphoethanolamine (n-C12:0)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"1agpe140_c","1-Acyl-sn-glycero-3-phosphoethanolamine (n-C14:0)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"1agpe141_c","1-Acyl-sn-glycero-3-phosphoethanolamine (n-C14:1)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"1agpe160_c","1-Acyl-sn-glycero-3-phosphoethanolamine (n-C16:0)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"1agpe161_c","1-Acyl-sn-glycero-3-phosphoethanolamine (n-C16:1)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"1agpe180_c","1-Acyl-sn-glycero-3-phosphoethanolamine (n-C18:0)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"1agpe181_c","1-Acyl-sn-glycero-3-phosphoethanolamine (n-C18:1)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"1agpg120_c","1-Acyl-sn-glycero-3-phosphoglycerol (n-C12:0)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"1agpg140_c","1-Acyl-sn-glycero-3-phosphoglycerol (n-C14:0)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"1agpg141_c","1-Acyl-sn-glycero-3-phosphoglycerol (n-C14:1)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"1agpg160_c","1-Acyl-sn-glycero-3-phosphoglycerol (n-C16:0)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"1agpg161_c","1-Acyl-sn-glycero-3-phosphoglycerol (n-C16:1)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"1agpg180_c","1-Acyl-sn-glycero-3-phosphoglycerol (n-C18:0)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"1agpg181_c","1-Acyl-sn-glycero-3-phosphoglycerol (n-C18:1)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"1aihpdecg3p_c","1-anteisoheptadecanoyl-sn-glycerol 3-phosphate (14-methyl-hexadecanoyl, anteiso-C17)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"1aipdecg3p_c","1-anteisopentadecanoyl-sn-glycerol 3-phosphate (12-methyl-tetradecanoyl, anteiso-C15)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"1ddecg3p_c","1-acyl-sn-glycerol 3-phosphate(2-)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"1hdec9eg3p_c","1-hexadec-9-enoyl-sn-glycerol 3-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"1hdecg3p_c","1-hexadecanoyl-sn-glycerol 3-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"1ihdecg3p_c","1-isohexadecanoyl-sn-glycerol 3-phosphate (14-methyl-pentadecanoyl, iso-C16)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"1ihpdecg3p_c","1-isoheptadecanoyl-sn-glycerol 3-phosphate (15-methyl-hexadecanoyl, iso-C17)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"1ipdecg3p_c","1-isopentadecanoyl-sn-glycerol 3-phosphate (13-methyl-tetradecanoyl, iso-C15)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"1itdecg3p_c","1-isotetradecanoyl-sn-glycerol 3-phosphate (12-methyl-tridecanoyl, iso-C14)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"1odec11eg3p_c","1-octadec-11-enoyl-sn-glycerol 3-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"1odecg3p_c","1-octadecanoyl-sn-glycerol 3-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"1p3h5c_c","L-1-Pyrroline-3-hydroxy-5-carboxylate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"1pipdn2c_c","1-piperideine-2-carboxylate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"1pyr5c_c","1-Pyrroline-5-carboxylate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"1tdec7eg3p_c","1-tetradec-7-enoyl-sn-glycerol 3-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"1tdecg3p_c","1-tetradecanoyl-sn-glycerol 3-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"23camp_c","2,3-Cyclic AMP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"23ccmp_c","2,3-Cyclic CMP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"23cgmp_c","2,3-Cyclic GMP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"23cump_c","2,3-cyclic UMP(1-)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"23ddhb_c","2,3-Dihydro-2,3-dihydroxybenzoate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"23dhb_c","2,3-Dihydroxybenzoate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"23dhba_c","(2,3-Dihydroxybenzoyl)adenylate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"23dhdp_c","2,3-Dihydrodipicolinate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"23dhmb_c","(R)-2,3-Dihydroxy-3-methylbutanoate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"23dhmp_c","(R)-2,3-Dihydroxy-3-methylpentanoate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"23doguln_c","(4R,5S)-4,5,6-trihydroxy-2,3-dioxohexanoate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"25aics_c","(S)-2-[5-Amino-1-(5-phospho-D-ribosyl)imidazole-4-carboxamido]succinate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"25dhpp_c","2,5-Diamino-6-hydroxy-4-(5-phosphoribosylamino)-pyrimidine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"25dkglcn_c","2,5-diketo-D-gluconate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"26dap__LL_c","LL-2,6-Diaminoheptanedioate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"26dap__M_c","meso-2,6-Diaminoheptanedioate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"2agpe120_c","2-Acyl-sn-glycero-3-phosphoethanolamine (n-C12:0)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"2agpe140_c","2-Acyl-sn-glycero-3-phosphoethanolamine (n-C14:0)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"2agpe141_c","2-Acyl-sn-glycero-3-phosphoethanolamine (n-C14:1)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"2agpe160_c","2-Acyl-sn-glycero-3-phosphoethanolamine (n-C16:0)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"2agpe161_c","2-Acyl-sn-glycero-3-phosphoethanolamine (n-C16:1)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"2agpe180_c","2-Acyl-sn-glycero-3-phosphoethanolamine (n-C18:0)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"2agpe181_c","2-Acyl-sn-glycero-3-phosphoethanolamine (n-C18:1)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"2agpg120_c","2-Acyl-sn-glycero-3-phosphoglycerol (n-C12:0)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"2agpg140_c","2-Acyl-sn-glycero-3-phosphoglycerol (n-C14:0)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"2agpg141_c","2-Acyl-sn-glycero-3-phosphoglycerol (n-C14:1)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"2agpg160_c","2-Acyl-sn-glycero-3-phosphoglycerol (n-C16:0)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"2agpg161_c","2-Acyl-sn-glycero-3-phosphoglycerol (n-C16:1)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"2agpg180_c","2-Acyl-sn-glycero-3-phosphoglycerol (n-C18:0)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"2agpg181_c","2-Acyl-sn-glycero-3-phosphoglycerol (n-C18:1)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"2ahbut_c","(S)-2-Aceto-2-hydroxybutanoate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"2ahhmd_c","2-Amino-4-hydroxy-6-hydroxymethyl-7,8-dihydropteridine diphosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"2ahhmp_c","2-Amino-4-hydroxy-6-hydroxymethyl-7,8-dihydropteridine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"2aobut_c","L-2-amino-3-oxobutanoic acid","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"2cpr5p_c","1-(2-Carboxyphenylamino)-1-deoxy-D-ribulose 5-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"2dda7p_c","2-Dehydro-3-deoxy-D-arabino-heptonate 7-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"2ddecg3p_c","2-dodecanoyl-sn-glycerol 3-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"2ddg6p_c","2-Dehydro-3-deoxy-D-gluconate 6-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"2ddglcn_c","2-Dehydro-3-deoxy-D-gluconate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"2ddglcn_e","2-Dehydro-3-deoxy-D-gluconate","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"2dh3dgal6p_c","2-Dehydro-3-deoxy-D-galactonate 6-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"2dh3dgal_c","2-Dehydro-3-deoxy-D-galactonate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"2dh3dglc_c","2-Dehydro-3-deoxy-D-glucarate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"2dhglcn_c","2-Dehydro-D-gluconate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"2dhguln_c","2-Dehydro-L-gulonate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"2dhp_c","2-Dehydropantoate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"2dmmq8_c","2-Demethylmenaquinone 8","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"2dmmql8_c","2-Demethylmenaquinol 8","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"2dr1p_c","2-Deoxy-D-ribose 1-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"2dr5p_c","2-deoxy-D-ribose 5-phosphate(2-)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"2h3oppan_c","2-Hydroxy-3-oxopropanoate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"2hdec9eg3p_c","2-hexadec-9-enoyl-sn-glycerol 3-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"2hdecg3p_c","2-hexadecanoyl-sn-glycerol 3-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"2hymeph_c","2-(Hydroxymethyl)phenol","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"2ippm_c","2-Isopropylmaleate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"2maacoa_c","2-methylacetoacetyl-CoA(4-)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"2mahmp_c","2-Methyl-4-amino-5-hydroxymethylpyrimidine diphosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"2mb2coa_c","2-methylcrotonoyl-CoA(4-)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"2mbcoa_c","2-methylbutanoyl-CoA(4-)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"2mbutACP_c","2-methylbutanoyl-ACP,2-methylbutyryl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"2mcacn_c","(Z)-but-2-ene-1,2,3-tricarboxylate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"2mcit_c","2-methylcitrate(3-)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"2me4p_c","2-C-methyl-D-erythritol 4-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"2mecdp_c","2-C-methyl-D-erythritol 2,4-cyclodiphosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"2mop_c","2-methyl-3-oxopropanoate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"2mp2coa_c","2-Methylprop-2-enoyl-CoA","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"2mpropACP_c","2-methylpropionyl-ACP,isobutyryl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"2obut_c","2-Oxobutanoate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"2odec11eg3p_c","2-octadec-11-enoyl-sn-glycerol 3-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"2odecg3p_c","2-octadecanoyl-sn-glycerol 3-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"2ohph_c","2-Octaprenyl-6-hydroxyphenol","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"2ombz_c","2-Octaprenyl-6-methoxy-1,4-benzoquinone","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"2ommb_c","2-Octaprenyl-3-methyl-6-methoxy-1,4-benzoquinone","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"2omph_c","2-Octaprenyl-6-methoxyphenol","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"2oph_c","2-Octaprenylphenol","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"2p4c2me_c","2-phospho-4-(cytidine 5-diphospho)-2-C-methyl-D-erythritol","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"2pg_c","D-Glycerate 2-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"2pglyc_c","2-phosphonatoglycolate(3-)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"2s5epchc_c","2-Succinyl-5-enolpyruvyl-6-hydroxy-3-cyclohexene-1-carboxylate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"2shchc_c","2-Succinyl-6-hydroxy-2,4-cyclohexadiene-1-carboxylate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"2tdec7eg3p_c","2-tetradec-7-enoyl-sn-glycerol 3-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"2tdecg3p_c","2-tetradecanoyl-sn-glycerol 3-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"33hmeoxobut_c","2-Oxo-3-hydroxyisovalerate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"34hpp_c","3-(4-hydroxyphenyl)pyruvate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"3a2opp_c","3-Amino-2-oxopropyl phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"3amp_c","3-AMP(2-)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"3c2hmp_c","3-Carboxy-2-hydroxy-4-methylpentanoate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"3c3hmp_c","3-Carboxy-3-hydroxy-4-methylpentanoate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"3c4mop_c","3-Carboxy-4-methyl-2-oxopentanoate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"3cmp_c","3-cmp","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"3dhguln_c","3-dehydro-L-gulonate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"3dhgulnp_c","3-keto-L-gulonate-6-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"3dhq_c","3-Dehydroquinate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"3dhsk_c","3-Dehydroshikimate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"3gmp_c","3-GMP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"3h3mop_c","(R)-3-Hydroxy-3-methyl-2-oxopentanoate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"3haACP_c","(3R)-3-Hydroxyacyl-[acyl-carrier protein]","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"3hadpcoa_c","(3S)-3-Hydroxyadipyl-CoA","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"3hbcoa_c","(S)-3-hydroxybutanoyl-CoA(4-)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"3hbcoa__R_c","(R)-3-hydroxybutanoyl-CoA(4-)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"3hcinnm_c","3-hydroxycinnamic acid","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"3hdcoa_c","(S)-3-Hydroxydecanoyl-CoA","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"3hddcoa_c","(S)-3-Hydroxydodecanoyl-CoA","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"3hddecACP_c","(R)-3-Hydroxydodecanoyl-[acyl-carrier protein]","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"3hdecACP_c","(R)-3-Hydroxydecanoyl-[acyl-carrier protein]","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"3hgACPm_c","3-hydroxyglutaryl-ACP methyl ester","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"3hhcoa_c","(S)-3-Hydroxyhexanoyl-CoA","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"3hhdcoa_c","(S)-3-Hydroxyhexadecanoyl-CoA","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"3hhexACP_c","(R)-3-Hydroxyhexanoyl-[acyl-carrier protein]","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"3hibutcoa_c","(S)-3-Hydroxyisobutyryl-CoA","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"3hmbcoa_c","(2S,3S)-3-hydroxy-2-methylbutanoyl-CoA(4-)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"3hmp_c","3-hydroxy-2-methylpropanoate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"3hmrsACP_c","(R)-3-Hydroxytetradecanoyl-[acyl-carrier protein]","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"3hocoa_c","(S)-3-Hydroxyoctanoyl-CoA","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"3hoctACP_c","(R)-3-Hydroxyoctanoyl-[acyl-carrier protein]","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"3hoctaACP_c","(R)-3-Hydroxyoctadecanoyl-[acyl-carrier protein]","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"3hpACPm_c","3-hydroxypimeloyl-ACP methyl ester","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"3hpalmACP_c","R-3-hydroxypalmitoyl-[acyl-carrier protein]","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"3hpppn_c","3-(3-hydroxy-phenyl)propionate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"3hpppn_e","3-(3-hydroxy-phenyl)propionate","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"3htdcoa_c","(S)-3-Hydroxytetradecanoyl-CoA","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"3ig3p_c","C-(3-Indolyl)-glycerol 3-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"3mbutACP_c","3-methylbutanoyl-ACP,isovaleryl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"3mob_c","3-methyl-2-oxobutanoate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"3mop_c","3-methyl-2-oxopentanoate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"3odcoa_c","3-Oxodecanoyl-CoA","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"3oddcoa_c","3-Oxododecanoyl-CoA","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"3oddecACP_c","3-Oxododecanoyl-[acyl-carrier protein]","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"3odecACP_c","3-Oxodecanoyl-[acyl-carrier protein]","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"3ogACPm_c","3-ketoglutaryl-ACP methyl ester","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"3ohcoa_c","3-Oxohexanoyl-CoA","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"3ohdcoa_c","3-oxopalmitoyl-CoA(4-)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"3ohexACP_c","3-Oxohexanoyl-[acyl-carrier protein]","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"3omrsACP_c","3-Oxotetradecanoyl-[acyl-carrier protein]","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"3oocoa_c","3-Oxooctanoyl-CoA","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"3ooctACP_c","3-Oxooctanoyl-[acyl-carrier protein]","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"3ooctdACP_c","3-Oxooctadecanoyl-[acyl-carrier protein]","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"3opACPm_c","3-ketopimeloyl-ACP methyl ester","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"3opalmACP_c","3-Oxohexadecanoyl-[acyl-carrier protein]","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"3ophb_c","3-Octaprenyl-4-hydroxybenzoate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"3otdcoa_c","3-Oxotetradecanoyl-CoA","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"3padsel_c","3-Phosphoadenylylselenate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"3pg_c","3-Phospho-D-glycerate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"3php_c","3-phosphonatooxypyruvate(3-)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"3psme_c","5-O-(1-Carboxyvinyl)-3-phosphoshikimate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"3ump_c","3-UMP(2-)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"4abut_c","4-Aminobutanoate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"4abut_e","4-Aminobutanoate","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"4abutn_c","4-Aminobutanal","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"4abz_c","4-Aminobenzoate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"4adcho_c","4-amino-4-deoxychorismate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"4ahmmp_c","4-Amino-5-hydroxymethyl-2-methylpyrimidine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"4ampm_c","4-Amino-2-methyl-5-phosphomethylpyrimidine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"4c2me_c","4-(cytidine 5-diphospho)-2-C-methyl-D-erythritol","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"4h2oglt_c","4-hydroxy-2-oxoglutarate(2-)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"4h2opntn_c","4-Hydroxy-2-oxopentanoate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"4hba_c","4-Hydroxy-benzyl alcohol","c",TRUE,TRUE,FALSE,TRUE,"core_and_boundary","internal_only"
+"4hbz_c","4-hydroxybenzoate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"4hbz_e","4-hydroxybenzoate","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"4hoxpacd_c","(4-hydroxyphenyl)acetaldehyde","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"4hoxpacd_e","(4-hydroxyphenyl)acetaldehyde","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"4hpro__LT_c","trans-4-hydroxy-L-proline","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"4hthr_c","4-Hydroxy-L-threonine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"4m3hhexACP_c","4-methyl-3-hydroxy-hexanoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"4m3hpentACP_c","4-methyl-3-hydroxy-pentanoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"4m3ohexACP_c","4-methyl-3-oxo-hexanoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"4m3opentACP_c","4-methyl-3-oxo-pentanoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"4mhetz_c","4-Methyl-5-(2-hydroxyethyl)-thiazole","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"4mhexACP_c","4-methyl-hexanoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"4mop_c","4-methyl-2-oxopentanoate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"4mpentACP_c","4-methyl-pentanoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"4mpetz_c","4-Methyl-5-(2-phosphoethyl)-thiazole","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"4mthex2eACP_c","4-methyl-trans-hex-2-enoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"4mtpent2eACP_c","4-methyl-trans-pent-2-enoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"4pasp_c","4-Phospho-L-aspartate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"4per_c","4-Phospho-D-erythronate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"4ppan_c","D-4-Phosphopantothenate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"4ppcys_c","N-((R)-4-Phosphopantothenoyl)-L-cysteine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"4r5au_c","4-(1-D-Ribitylamino)-5-aminouracil","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"56dthm_c","5,6-dihydrothymine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"56dura_c","5,6-dihydrouracil","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"5aizc_c","5-amino-1-(5-phospho-D-ribosyl)imidazole-4-carboxylate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"5aop_c","5-Amino-4-oxopentanoate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"5aprbu_c","5-Amino-6-(5-phosphoribitylamino)uracil","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"5apru_c","5-Amino-6-(5-phosphoribosylamino)uracil","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"5aptn_c","5-Aminopentanoate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"5dglcn_c","5-Dehydro-D-gluconate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"5dh4dglc_c","5-Dehydro-4-deoxy-D-glucarate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"5drib_c","5-deoxyribose","c",TRUE,TRUE,FALSE,TRUE,"core_and_boundary","internal_only"
+"5fthf_c","5-formyltetrahydrofolate(2-)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"5hxudidzcba_c","5-Hydroxy-2-oxo-4-ureido-2,5-dihydro-1H-imidazole-5-carboxylate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"5m3hhexACP_c","5-methyl-3-hydroxy-hexanoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"5m3ohexACP_c","5-methyl-3-oxo-hexanoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"5mhexACP_c","5-methyl-hexanoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"5mta_c","5-Methylthioadenosine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"5mtc_c","5-Methylcytosine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"5mthex2eACP_c","5-methyl-trans-hex-2-enoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"5mthf_c","5-Methyltetrahydrofolate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"5mthglu_c","5_Methyltetrahydropteroyltri_L_glutamate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"5mtr_c","5-Methylthio-D-ribose","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"5prdmbz_c","N1-(5-Phospho-alpha-D-ribosyl)-5,6-dimethylbenzimidazole","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"5thf_c","pentaglutamyl folate (THF)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"6a2ohxnt_c","6-amino-2-oxohexanoic acid","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"6hmhpt_c","6-hydroxymethyl dihydropterin","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"6hmhptpp_c","6-hydroxymethyl-dihydropterin pyrophosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"6m3hheptACP_c","6-methyl-3-hydroxy-heptanoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"6m3hocACP_c","6-methyl-3-hydroxy-octanoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"6m3oheptACP_c","6-methyl-3-oxo-heptanoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"6m3oocACP_c","6-methyl-3-oxo-octanoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"6mheptACP_c","6-methyl-heptanoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"6mocACP_c","6-methyl-octanoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"6mthept2eACP_c","6-methyl-trans-hept-2-enoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"6mtoct2eACP_c","6-methyl-trans-oct-2-enoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"6pgc_c","6-Phospho-D-gluconate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"6pgg_c","6-Phospho-beta-D-glucosyl-(1,4)-D-glucose","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"6pgl_c","6-phospho-D-glucono-1,5-lactone","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"7dhcdchol_e","7-Dehydrochenodeoxycholate","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"7m3hocACP_c","7-methyl-3-hydroxy-octanoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"7m3oocACP_c","7-methyl-3-oxo-octanoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"7mocACP_c","7-methyl-octanoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"7mtoct2eACP_c","7-methyl-trans-oct-2-enoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"7ocholate_c","3alpha,12alpha-Dihydroxy-7-oxo-5beta-cholanate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"7ocholate_e","3alpha,12alpha-Dihydroxy-7-oxo-5beta-cholanate","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"8aonn_c","8-Amino-7-oxononanoate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"8m3hdcaACP_c","8-methyl-3-hydroxy-decanoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"8m3hnonACP_c","8-methyl-3-hydroxy-nonanoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"8m3odcaACP_c","8-methyl-3-oxo-decanoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"8m3ononACP_c","8-methyl-3-oxo-nonanoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"8mdcaACP_c","8-methyl-decanoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"8mnonACP_c","8-methyl-nonanoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"8mtdec2eACP_c","8-methyl-trans-dec-2-enoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"8mtnon2eACP_c","8-methyl-trans-non-2-enoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"9m3hdcaACP_c","9-methyl-3-hydroxy-decanoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"9m3odcaACP_c","9-methyl-3-oxo-decanoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"9mdcaACP_c","9-methyl-decanoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"9mtdec2eACP_c","9-methyl-trans-dec-2-enoyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ACP_c","acyl carrier protein","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"C02528_e","chenodeoxycholate","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"C11821_c","5-Hydroxyisourate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"CE5656_c","lipoyl-AMP(1-)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"HC00695_c","S-Succinyldihydrolipoamide","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"HC00955_c","L-3-Cyanoalanine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"HC01104_c","4-nitrophenyl phosphate(2-)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"HC01434_c","oxalatosuccinate(3-)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"HC01435_c","3-Carboxy-1-hydroxypropyl-ThPP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"HC01577_c","gamma-Glutamyl-beta-cyanoalanine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"HC01609_c","UroporphyrinogenI","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"HC01651_c","Formamidopyrimidine nucleoside triphosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"HC01652_c","2,5-Diaminopyrimidine nucleoside triphosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"HC01668_c","Propinol adenylate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"HC01700_c","gamma-Glutamyl-3-aminopropiononitrile","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"HC01710_c","2,5-Diamino-6-(5-triphosphoryl-3,4-trihydroxy-2-oxopentyl)- amino-4-oxopyrimidine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"L2aadp6sa_c","L-allysine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"Largn_c","L-Arogenate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"Lcyst_c","L-cysteate(1-)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"Lcyst_e","L-cysteate(1-)","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn100_e","mucin-type O-glycan No 100","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn100__rl_e","released mucin-type O-glycan No 100","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn101_e","mucin-type O-glycan No 101","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn101__rl_e","released mucin-type O-glycan No 101","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn102_e","mucin-type O-glycan No 102","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn102__rl_e","released mucin-type O-glycan No 102","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn104_e","mucin-type O-glycan No 104","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn104__rl_e","released mucin-type O-glycan No 104","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn105_e","mucin-type O-glycan No 105","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn105__rl_e","released mucin-type O-glycan No 105","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn106_e","mucin-type O-glycan No 106","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn106__rl_e","released mucin-type O-glycan No 106","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn107_e","mucin-type O-glycan No 107","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn107__rl_e","released mucin-type O-glycan No 107","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn109_e","mucin-type O-glycan No 109","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn109__rl_e","released mucin-type O-glycan No 109","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn110_e","mucin-type O-glycan No 110","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn110__rl_e","released mucin-type O-glycan No 110","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn111_e","mucin-type O-glycan No 111","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn111__rl_e","released mucin-type O-glycan No 111","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn112_e","mucin-type O-glycan No 112","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn112__rl_e","released mucin-type O-glycan No 112","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn113_e","mucin-type O-glycan No 113","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn113__rl_e","released mucin-type O-glycan No 113","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn114_e","mucin-type O-glycan No 114","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn114__rl_e","released mucin-type O-glycan No 114","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn115_e","mucin-type O-glycan No 115","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn115__rl_e","released mucin-type O-glycan No 115","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn117_e","mucin-type O-glycan No 117","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn117__rl_e","released mucin-type O-glycan No 117","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn120_e","mucin-type O-glycan No 120","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn120__rl_e","released mucin-type O-glycan No 120","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn126_e","mucin-type O-glycan No 126","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn126__rl_e","released mucin-type O-glycan No 126","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn12_e","mucin-type O-glycan No 12","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn12__rl_e","released mucin-type O-glycan No 12","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn130_e","mucin-type O-glycan No 130","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn130__rl_e","released mucin-type O-glycan No 130","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn131_e","mucin-type O-glycan No 131","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn131__rl_e","released mucin-type O-glycan No 131","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn137_e","mucin-type O-glycan No 137","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn137__rl_e","released mucin-type O-glycan No 137","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn138_e","mucin-type O-glycan No 138","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn138__rl_e","released mucin-type O-glycan No 138","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn139_e","mucin-type O-glycan No 139","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn139__rl_e","released mucin-type O-glycan No 139","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn13_e","mucin-type O-glycan No 13","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn13__rl_e","released mucin-type O-glycan No 13","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn140_e","mucin-type O-glycan No 140","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn140__rl_e","released mucin-type O-glycan No 140","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn141_e","mucin-type O-glycan No 141","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn141__rl_e","released mucin-type O-glycan No 141","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn142_e","mucin-type O-glycan No 142","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn142__rl_e","released mucin-type O-glycan No 142","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn143_e","mucin-type O-glycan No 143","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn143__rl_e","released mucin-type O-glycan No 143","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn144_e","mucin-type O-glycan No 144","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn144__rl_e","released mucin-type O-glycan No 144","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn145_e","mucin-type O-glycan No 145","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn145__rl_e","released mucin-type O-glycan No 145","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn146_e","mucin-type O-glycan No 146","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn146__rl_e","released mucin-type O-glycan No 146","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn147_e","mucin-type O-glycan No 147","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn147__rl_e","released mucin-type O-glycan No 147","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn148_e","mucin-type O-glycan No 148","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn148__rl_e","released mucin-type O-glycan No 148","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn149_e","mucin-type O-glycan No 149","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn149__rl_e","released mucin-type O-glycan No 149","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn14_e","mucin-type O-glycan No 14","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn14__rl_e","released mucin-type O-glycan No 14","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn150_e","mucin-type O-glycan No 150","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn150__rl_e","released mucin-type O-glycan No 150","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn151_e","mucin-type O-glycan No 151","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn151__rl_e","released mucin-type O-glycan No 151","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn152_e","mucin-type O-glycan No 152","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn152__rl_e","released mucin-type O-glycan No 152","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn153_e","mucin-type O-glycan No 153","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn153__rl_e","released mucin-type O-glycan No 153","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn154_e","mucin-type O-glycan No 154","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn154__rl_e","released mucin-type O-glycan No 154","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn155_e","mucin-type O-glycan No 155","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn155__rl_e","released mucin-type O-glycan No 155","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn156_e","mucin-type O-glycan No 156","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn156__rl_e","released mucin-type O-glycan No 156","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn157_e","mucin-type O-glycan No 157","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn157__rl_e","released mucin-type O-glycan No 157","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn158_e","mucin-type O-glycan No 158","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn158__rl_e","released mucin-type O-glycan No 158","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn159_e","mucin-type O-glycan No 159","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn159__rl_e","released mucin-type O-glycan No 159","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn160_e","mucin-type O-glycan No 160","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn160__rl_e","released mucin-type O-glycan No 160","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn161_e","mucin-type O-glycan No 161","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn161__rl_e","released mucin-type O-glycan No 161","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn163_e","mucin-type O-glycan No 163","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn163__rl_e","released mucin-type O-glycan No 163","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn164_e","mucin-type O-glycan No 164","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn164__rl_e","released mucin-type O-glycan No 164","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn165_e","mucin-type O-glycan No 165","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn165__rl_e","released mucin-type O-glycan No 165","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn166_e","mucin-type O-glycan No 166","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn166__rl_e","released mucin-type O-glycan No 166","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn167_e","mucin-type O-glycan No 167","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn167__rl_e","released mucin-type O-glycan No 167","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn168_e","mucin-type O-glycan No 168","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn168__rl_e","released mucin-type O-glycan No 168","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn169_e","mucin-type O-glycan No 169","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn169__rl_e","released mucin-type O-glycan No 169","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn16_e","mucin-type O-glycan No 16","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn16__rl_e","released mucin-type O-glycan No 16","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn170_e","mucin-type O-glycan No 170","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn170__rl_e","released mucin-type O-glycan No 170","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn171_e","mucin-type O-glycan No 171","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn171__rl_e","released mucin-type O-glycan No 171","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn172_e","mucin-type O-glycan No 172","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn172__rl_e","released mucin-type O-glycan No 172","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn173_e","mucin-type O-glycan No 173","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn173__rl_e","released mucin-type O-glycan No 173","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn174_e","mucin-type O-glycan No 174","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn174__rl_e","released mucin-type O-glycan No 174","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn175_e","mucin-type O-glycan No 175","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn175__rl_e","released mucin-type O-glycan No 175","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn176_e","mucin-type O-glycan No 176","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn176__rl_e","released mucin-type O-glycan No 176","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn177_e","mucin-type O-glycan No 177","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn177__rl_e","released mucin-type O-glycan No 177","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn178_e","mucin-type O-glycan No 178","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn178__rl_e","released mucin-type O-glycan No 178","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn179_e","mucin-type O-glycan No 179","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn179__rl_e","released mucin-type O-glycan No 179","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn180_e","mucin-type O-glycan No 180","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn180__rl_e","released mucin-type O-glycan No 180","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn181_e","mucin-type O-glycan No 181","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn181__rl_e","released mucin-type O-glycan No 181","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn182_e","mucin-type O-glycan No 182","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn182__rl_e","released mucin-type O-glycan No 182","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn18_e","mucin-type O-glycan No 18","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn18__rl_e","released mucin-type O-glycan No 18","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn195_e","mucin-type O-glycan No 195","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn195__rl_e","released mucin-type O-glycan No 195","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn196_e","mucin-type O-glycan No 196","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn196__rl_e","released mucin-type O-glycan No 196","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn21_e","mucin-type O-glycan No 21","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn21__rl_e","released mucin-type O-glycan No 21","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn22_e","mucin-type O-glycan No 22","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn22__rl_e","released mucin-type O-glycan No 22","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn23_e","mucin-type O-glycan No 23","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn23__rl_e","released mucin-type O-glycan No 23","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn25_e","mucin-type O-glycan No 25","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn25__rl_e","released mucin-type O-glycan No 25","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn26_e","mucin-type O-glycan No 26","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn26__rl_e","released mucin-type O-glycan No 26","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn27_e","mucin-type O-glycan No 27","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn27__rl_e","released mucin-type O-glycan No 27","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn28_e","mucin-type O-glycan No 28","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn28__rl_e","released mucin-type O-glycan No 28","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn29_e","mucin-type O-glycan No 29","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn29__rl_e","released mucin-type O-glycan No 29","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn2_e","mucin-type O-glycan No 2","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn2__rl_e","released mucin-type O-glycan No 2","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn30_e","mucin-type O-glycan No 30","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn30__rl_e","released mucin-type O-glycan No 30","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn31_e","mucin-type O-glycan No 31","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn31__rl_e","released mucin-type O-glycan No 31","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn32_e","mucin-type O-glycan No 32","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn32__rl_e","released mucin-type O-glycan No 32","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn34_e","mucin-type O-glycan No 34","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn34__rl_e","released mucin-type O-glycan No 34","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn35_e","mucin-type O-glycan No 35","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn35__rl_e","released mucin-type O-glycan No 35","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn36_e","mucin-type O-glycan No 36","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn36__rl_e","released mucin-type O-glycan No 36","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn39_e","mucin-type O-glycan No 39","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn39__rl_e","released mucin-type O-glycan No 39","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn3_e","mucin-type O-glycan No 3","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn3__rl_e","released mucin-type O-glycan No 3","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn42_e","mucin-type O-glycan No 42","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn42__rl_e","released mucin-type O-glycan No 42","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn45_e","mucin-type O-glycan No 45","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn45__rl_e","released mucin-type O-glycan No 45","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn46_e","mucin-type O-glycan No 46","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn46__rl_e","released mucin-type O-glycan No 46","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn48_e","mucin-type O-glycan No 48","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn48__rl_e","released mucin-type O-glycan No 48","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn4_e","mucin-type O-glycan No 4","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn4__rl_e","released mucin-type O-glycan No 4","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn51_e","mucin-type O-glycan No 51","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn51__rl_e","released mucin-type O-glycan No 51","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn53_e","mucin-type O-glycan No 53","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn53__rl_e","released mucin-type O-glycan No 53","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn55_e","mucin-type O-glycan No 55","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn55__rl_e","released mucin-type O-glycan No 55","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn56_e","mucin-type O-glycan No 56","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn56__rl_e","released mucin-type O-glycan No 56","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn57_e","mucin-type O-glycan No 57","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn57__rl_e","released mucin-type O-glycan No 57","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn58_e","mucin-type O-glycan No 58","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn58__rl_e","released mucin-type O-glycan No 58","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn5_e","mucin-type O-glycan No 5","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn5__rl_e","released mucin-type O-glycan No 5","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn61_e","mucin-type O-glycan No 61","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn61__rl_e","released mucin-type O-glycan No 61","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn64_e","mucin-type O-glycan No 64","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn64__rl_e","released mucin-type O-glycan No 64","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn65_e","mucin-type O-glycan No 65","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn65__rl_e","released mucin-type O-glycan No 65","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn66_e","mucin-type O-glycan No 66","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn66__rl_e","released mucin-type O-glycan No 66","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn68_e","mucin-type O-glycan No 68","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn68__rl_e","released mucin-type O-glycan No 68","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn69_e","mucin-type O-glycan No 69","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn69__rl_e","released mucin-type O-glycan No 69","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn6_e","mucin-type O-glycan No 6","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn6__rl_e","released mucin-type O-glycan No 6","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn70_e","mucin-type O-glycan No 70","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn70__rl_e","released mucin-type O-glycan No 70","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn71_e","mucin-type O-glycan No 71","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn71__rl_e","released mucin-type O-glycan No 71","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn72_e","mucin-type O-glycan No 72","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn72__rl_e","released mucin-type O-glycan No 72","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn74_e","mucin-type O-glycan No 74","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn74__rl_e","released mucin-type O-glycan No 74","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn75_e","mucin-type O-glycan No 75","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn75__rl_e","released mucin-type O-glycan No 75","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn77_e","mucin-type O-glycan No 77","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn77__rl_e","released mucin-type O-glycan No 77","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn78_e","mucin-type O-glycan No 78","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn78__rl_e","released mucin-type O-glycan No 78","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn79_e","mucin-type O-glycan No 79","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn79__rl_e","released mucin-type O-glycan No 79","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn80_e","mucin-type O-glycan No 80","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn80__rl_e","released mucin-type O-glycan No 80","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn81_e","mucin-type O-glycan No 81","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn81__rl_e","released mucin-type O-glycan No 81","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn82_e","mucin-type O-glycan No 82","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn82__rl_e","released mucin-type O-glycan No 82","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn83_e","mucin-type O-glycan No 83","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn83__rl_e","released mucin-type O-glycan No 83","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn84_e","mucin-type O-glycan No 84","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn84__rl_e","released mucin-type O-glycan No 84","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn85_e","mucin-type O-glycan No 85","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn85__rl_e","released mucin-type O-glycan No 85","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn90_e","mucin-type O-glycan No 90","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn90__rl_e","released mucin-type O-glycan No 90","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn91_e","mucin-type O-glycan No 91","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn91__rl_e","released mucin-type O-glycan No 91","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn92_e","mucin-type O-glycan No 92","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn92__rl_e","released mucin-type O-glycan No 92","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn93_e","mucin-type O-glycan No 93","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn93__rl_e","released mucin-type O-glycan No 93","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn94_e","mucin-type O-glycan No 94","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn94__rl_e","released mucin-type O-glycan No 94","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn95_e","mucin-type O-glycan No 95","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn95__rl_e","released mucin-type O-glycan No 95","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn96_e","mucin-type O-glycan No 96","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn96__rl_e","released mucin-type O-glycan No 96","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn97_e","mucin-type O-glycan No 97","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn97__rl_e","released mucin-type O-glycan No 97","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn98_e","mucin-type O-glycan No 98","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn98__rl_e","released mucin-type O-glycan No 98","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn99_e","mucin-type O-glycan No 99","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"MGlcn99__rl_e","released mucin-type O-glycan No 99","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"N1aspmd_c","N(1)-acetylspermidinium(2+)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"Naccitr__L_c","N-Acetyl-L-citrulline","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"PGP_c","Peptidoglycan polymer (n subunits)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"PGPm1_c","Peptidoglycan polymer (n-1 subunits)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"T__antigen_e","T antigen (core 1)","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"Tn__antigen_e","Tn antigen","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"aacald_c","Aminoacetaldehyde","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"aacoa_c","Acetoacetyl-CoA","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"aact_c","ammonioacetone","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"acACP_c","Acetyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ac_c","acetate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ac_e","acetate","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"acac_c","acetoacetate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"acac_e","acetoacetate","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"acald_c","acetaldehyde","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"acald_e","acetaldehyde","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"accoa_c","Acetyl-CoA","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"acg5p_c","N-acetyl-L-gamma-glutamyl phosphate(3-)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"acg5sa_c","2-acetamido-5-oxopentanoate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"acgal6p_c","N-Acetyl-D-galactosamine 6-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"acgal_c","N-acetyl-D-galactosamine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"acgal_e","N-acetyl-D-galactosamine","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"acgam1p_c","N-Acetyl-D-glucosamine 1-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"acgam6p_c","N-acetyl-D-glucosamine 6-phosphate(2-)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"acgam_e","N-acetyl-D-glucosamine","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"acglu_c","N-acetyl-L-glutamate(2-)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"achms_c","O-Acetyl-L-homoserine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"acmalt_c","Acetyl-maltose","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"acmana_c","N-acetyl-D-mannosamine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"acmanap_c","N-acetyl-D-mannosamine 6-phosphate(2-)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"acnam2a6agal_e","Alpha-2,6-N-acetylneuraminate-N-acetylgalactosamine","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"acnam_c","N-acetylneuraminate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"acnam_e","N-acetylneuraminate","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"acon__C_c","cis-Aconitate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"acon__T_c","trans-Aconitate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"aconm_c","E-3-carboxy-2-pentenedioate 6-methyl ester","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"acorn_c","N(2)-acetyl-L-ornithine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"acser_c","O-Acetyl-L-serine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"actACP_c","Acetoacetyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"actp_c","Acetyl phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"adcobdam_c","Adenosyl cobyrinate diamide","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ade_c","Adenine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"adhlam_c","S-Acetyldihydrolipoamide","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"adn_c","Adenosine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"adn_e","Adenosine","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"adocbi_c","Adenosyl cobinamide","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"adocbip_c","Adenosyl cobinamide phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"adocbl_c","Adenosylcobalamin","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"adocbl_e","Adenosylcobalamin","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"adp_c","ADP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"adpglc_c","ADP alpha-D-glucoside(2-)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"adphep__DD_c","ADP-D-glycero-D-manno-heptose","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"adphep__LD_c","ADP-L-glycero-D-manno-heptose","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"adprib_c","ADPribose","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"adsel_c","Adenylylselenate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"agam1b3agal_e","Beta-1,3-N-acetylglucosamine-N-acetylgalactosamine","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"agam1b6agal_e","Beta-1,6-N-acetylglucosamine-N-acetylgalactosamine","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"agdpcbi_c","Adenosine-GDP-cobinamide","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"agm_c","agmatinium(2+)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ahcys_c","S-Adenosyl-L-homocysteine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ahdt_c","7,8-dihydroneopterin 3-triphosphate(4-)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ai15tca1_c","Anteisopentadecanoyllipoteichoic acid (n=24), linked, unsubstituted","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ai15tcaacgam_c","Anteisopentadecanoyllipoteichoic acid (n=24), linked, N-acetyl-D-glucosamine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ai17tca1_c","Anteisoheptadecanoyllipoteichoic acid (n=24), linked, unsubstituted","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ai17tcaacgam_c","Anteisoheptadecanoyllipoteichoic acid (n=24), linked, N-acetyl-D-glucosamine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"aicar_c","5-Amino-1-(5-Phospho-D-ribosyl)imidazole-4-carboxamide","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"aihpdcoa_c","fa12coa,Anteiso-C17:0 CoA   Anteisoheptadecanoyl-CoA","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"aipdcoa_c","fa4coa,Anteiso-C15:0 CoA   Anteisopentadecanoyl-CoA","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"air_c","5-amino-1-(5-phospho-D-ribosyl)imidazole","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"akg_c","2-Oxoglutarate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"akg_e","2-Oxoglutarate","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"ala__B_c","beta-alanine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ala__D_c","D-alanine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ala__D_e","D-alanine","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"ala__L_c","L-alanine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ala__L_e","L-alanine","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"alaala_c","D-Alanyl-D-alanine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"alaasp_c","L-alanyl-L-aspartate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"alaasp_e","L-alanyl-L-aspartate","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"alac__S_c","(S)-2-Acetolactate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"alagln_c","L-alanyl-L-glutamine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"alagln_e","L-alanyl-L-glutamine","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"alaglu_c","L-alanyl-L-glutamate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"alaglu_e","L-alanyl-L-glutamate","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"alagly_c","L-alanylglycine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"alagly_e","L-alanylglycine","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"alahis_c","L-alanyl-L-histidine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"alahis_e","L-alanyl-L-histidine","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"alaleu_c","L-alanyl-L-leucine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"alaleu_e","L-alanyl-L-leucine","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"alathr_c","L-alanyl-L-threonine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"alathr_e","L-alanyl-L-threonine","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"allphn_c","Allophanate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"alltn_c","Allantoin","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"alltn_e","Allantoin","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"alltn__R_c","(R)-Allantoin","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"alltt_c","allantoate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"alpro_c","S-Aminomethyldihydrolipoylprotein","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"altrn_c","D-Altronate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"amet_c","S-Adenosyl-L-methionine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ametam_c","S-Adenosylmethioninamine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"amob_c","S-Adenosyl-4-methylthio-2-oxobutanoate","c",TRUE,TRUE,FALSE,TRUE,"core_and_boundary","internal_only"
+"amopbut__L_c","2-Amino-3-oxo-4-phosphonooxybutyrate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"amp_c","AMP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"anth_c","anthranilate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ap4a_c","P(1),P(4)-bis(5-adenosyl) tetraphosphate(4-)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"apoACP_c","apoprotein [acyl carrier protein]","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"apoC__Lys__btn_c","Holocarboxylase (biotin covalent bound to Lys residue of apoC)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"aps_c","5-adenylyl sulfate(2-)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ara5p_c","D-Arabinose 5-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"arab__L_c","L-arabinose","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"arab__L_e","L-arabinose","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"arbt6p_c","Arbutin 6-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"arbt_e","Arbutin","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"arg__L_c","L-argininium(1+)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"arg__L_e","L-argininium(1+)","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"argsuc_c","N(omega)-(L-Arginino)succinate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ascb6p_c","L-ascorbate-6-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"asn__L_c","L-asparagine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"asn__L_e","L-asparagine","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"aso3_c","arsenite","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"aso3_e","arsenite","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"aso4_c","arsenate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"aso4_e","arsenate","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"asp__L_c","L-aspartate(1-)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"asp__L_e","L-aspartate(1-)","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"aspsa_c","L-Aspartate 4-semialdehyde","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"atp_c","ATP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"b2coa_c","crotonoyl-CoA(4-)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"bbtcoa_c","gamma-butyrobetainyl-CoA","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"betald_c","betaine aldehyde","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"bhb_c","(R)-3-hydroxybutyrate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"biomass_c","Produced biomass","c",TRUE,TRUE,FALSE,TRUE,"core_and_boundary","internal_only"
+"btal_c","Butanal","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"btamp_c","Biotinyl-5-AMP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"btcoa_c","Butanoyl-CoA","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"btn_c","Biotin","c",TRUE,TRUE,FALSE,TRUE,"core_and_boundary","internal_only"
+"btn_e","Biotin","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"btn__co2_c","Carboxybiotin-carboxyl-carrier protein","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"btnso_c","d-biotin d-sulfoxide","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"but2eACP_c","But-2-enoyl-[acyl-carrier protein]","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"butACP_c","Butyryl-ACP (n-C4:0ACP)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"but_c","butyrate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"but_e","butyrate","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"butso3_c","butanesulfonate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"butso3_e","butanesulfonate","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"ca2_c","calcium(2+)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ca2_e","calcium(2+)","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"camp_c","3,5-cyclic AMP(1-)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"cbasp_c","N-Carbamoyl-L-aspartate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"cbi_c","Cobinamide","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"cbl1_c","Cob(I)alamin","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"cbl1_e","Cob(I)alamin","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"cbl2_c","Cob(II)alamin","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"cbl2_e","Cob(II)alamin","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"cbmt_c","Carbamate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"cbp_c","Carbamoyl phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"cd2_c","Cadmium","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"cd2_e","Cadmium","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"cdp_c","CDP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"cdpdaihpdecg_c","CDP-1,2-dianteisoheptadecanoylglycerol (14-methyl-hexadecanoyl, anteiso-C17)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"cdpdaipdecg_c","CDP-1,2-dianteisopentadecanoylglycerol (12-methyl-tetradecanoyl, anteiso-C15)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"cdpdddecg_c","CDP-1,2-didodecanoylglycerol","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"cdpdhdec9eg_c","CDP-1,2-dihexadec-9-enoylglycerol","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"cdpdhdecg_c","CDP-1,2-dihexadecanoylglycerol","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"cdpdihdecg_c","CDP-1,2-diisohexadecanoylglycerol (14-methyl-pentadecanoyl, iso-C16)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"cdpdihpdecg_c","CDP-1,2-diisoheptadecanoylglycerol (15-methyl-hexadecanoyl, iso-C17)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"cdpdipdecg_c","CDP-1,2-diisopentadecanoylglycerol (13-methyl-tetradecanoyl, iso-C15)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"cdpditdecg_c","CDP-1,2-diisotetradecanoylglycerol (12-methyl-tridecanoyl, iso-C14)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"cdpdodec11eg_c","CDP-1,2-dioctadec-11-enoylglycerol","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"cdpdodecg_c","CDP-1,2-dioctadecanoylglycerol","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"cdpdtdec7eg_c","CDP-1,2-ditetradec-7-enoylglycerol","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"cdpdtdecg_c","CDP-1,2-ditetradecanoylglycerol","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"cechddd_c","cis-3-(3-carboxyethyl)-3,5-cyclohexadiene-1,2-diol","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"cellb_c","cellobiose","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"cenchddd_c","cis-3-(3-carboxyethenyl)-3,5-cyclohexadiene-1,2-diol","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"cgly_c","L-cysteinylglycine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"cgly_e","L-cysteinylglycine","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"chol_c","Choline","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"chol_e","Choline","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"cholate_c","Cholate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"cholate_e","Cholate","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"chols_c","Choline sulfate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"chor_c","chorismate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"cinnm_c","trans-Cinnamate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"cinnm_e","trans-Cinnamate","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"cit_c","Citrate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"cit_e","Citrate","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"citr__L_c","L-citrulline","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ckdo_c","CMP-3-deoxy-D-manno-octulosonate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"cl_c","Chloride","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"cl_e","Chloride","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"clpn140_c","cardiolipin (tetratetradecanoyl, n-C14:0)","c",TRUE,TRUE,FALSE,TRUE,"core_and_boundary","internal_only"
+"clpn160_c","cardiolipin (tetrahexadecanoyl, n-C16:0)","c",TRUE,TRUE,FALSE,TRUE,"core_and_boundary","internal_only"
+"clpn180_c","cardiolipin (tetraoctadecanoyl, n-C18:0)","c",TRUE,TRUE,FALSE,TRUE,"core_and_boundary","internal_only"
+"clpnai15_c","cardiolipin (12-methyl-tetradecanoyl, anteiso-C15)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"clpnai17_c","cardiolipin (14-methyl-hexadecanoyl, anteiso-C17)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"clpni14_c","cardiolipin (12-methyl-tridecanoyl, iso-C14)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"clpni15_c","cardiolipin (13-methyl-tetradecanoyl, iso-C15)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"clpni16_c","cardiolipin (14-methyl-pentadecanoyl, iso-C16)","c",TRUE,TRUE,FALSE,TRUE,"core_and_boundary","internal_only"
+"clpni17_c","cardiolipin (15-methyl-hexadecanoyl, iso-C17)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"cmp_c","CMP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"co1dam_c","Cob(I)yrinate a,c diamide","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"co2_c","carbon dioxide","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"co2_e","carbon dioxide","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"coa_c","Coenzyme A","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"cobalt2_c","Co2+","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"cobalt2_e","Co2+","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"colipa_c","core oligosaccharide lipid A","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"core2_e","Core 2","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"core2__rl_e","released Core 2","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"core3_e","Core 3","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"core6_e","Core 6","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"core8_e","Core 8","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"cpppg1_c","Coproporphyrinogen I","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"cpppg3_c","Coproporphyrinogen III","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"crn_c","L-Carnitine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"crn_e","L-Carnitine","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"crncoa_c","L-Carnitinyl-CoA","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"csn_c","cytosine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"csn_e","cytosine","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"ctbt_c","crotonobetaine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ctbt_e","crotonobetaine","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"ctbtcoa_c","crotonobetainyl-CoA","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ctp_c","CTP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"cu2_c","Cu2+","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"cu2_e","Cu2+","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"cyan_c","hydrogen cyanide","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"cynt_c","Cyanate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"cynt_e","Cyanate","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"cys__L_c","L-cysteine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"cys__L_e","L-cysteine","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"cyst__L_c","L-cystathionine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"cytd_c","Cytidine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"cytd_e","Cytidine","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"dad__2_c","2-deoxyadenosine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"dad__2_e","2-deoxyadenosine","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"dad__5_c","5-Deoxyadenosine","c",TRUE,TRUE,FALSE,TRUE,"core_and_boundary","internal_only"
+"dadp_c","dADP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"damp_c","dAMP(2-)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"dann_c","7,8-Diaminononanoate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"datp_c","dATP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"db4p_c","3,4-dihydroxy-2-butanone 4-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"dc2coa_c","trans-Dec-2-enoyl-CoA","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"dcaACP_c","Decanoyl-ACP (n-C10:0ACP)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"dcacoa_c","Decanoyl-CoA (n-C10:0CoA)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"dcamp_c","N6-(1,2-Dicarboxyethyl)-AMP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"dcdp_c","dCDP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"dcmp_c","dCMP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"dctp_c","dCTP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"dcyt_c","Deoxycytidine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"dcyt_e","Deoxycytidine","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"dd2coa_c","trans-Dodec-2-enoyl-CoA","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ddcaACP_c","Dodecanoyl-ACP (n-C12:0ACP)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ddca_c","laurate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ddca_e","laurate","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"ddcacoa_c","Dodecanoyl-CoA (n-C12:0CoA)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"dgdp_c","dGDP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"dgmp_c","dGMP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"dgsn_c","Deoxyguanosine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"dgsn_e","Deoxyguanosine","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"dgtp_c","dGTP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"dha_c","glycerone","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"dhap_c","Dihydroxyacetone phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"dhbpt_c","6,7-dihydrobiopterin","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"dhcinnm_c","2,3-dihydroxicinnamic acid","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"dhcinnm_e","2,3-dihydroxicinnamic acid","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"dhdpacoa_c","cis-dihydrodiol derivative of phenylacetyl-CoA","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"dhf_c","7,8-Dihydrofolate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"dhlam_c","dihydrolipoamide","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"dhlpro_c","Dihydrolipolprotein","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"dhna_c","1,4-Dihydroxy-2-naphthoate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"dhnpt_c","Dihydroneopterin","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"dhor__S_c","(S)-dihydroorotate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"dhpmp_c","Dihydroneopterin monophosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"dhpppn_c","3-(2,3-Dihydroxyphenyl)propanoate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"dhpppn_e","3-(2,3-Dihydroxyphenyl)propanoate","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"dhpt_c","Dihydropteroate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"dhptd_c","4,5-dihydroxy-2,3-pentanedione","c",TRUE,TRUE,FALSE,TRUE,"core_and_boundary","internal_only"
+"din_c","Deoxyinosine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"din_e","Deoxyinosine","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"dmbzid_c","5,6-Dimethylbenzimidazole","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"dmlz_c","6,7-Dimethyl-8-(1-D-ribityl)lumazine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"dmphqno_c","Demethylphylloquinone","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"dmpp_c","Dimethylallyl diphosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"dms_c","Dimethyl sulfide","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"dms_e","Dimethyl sulfide","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"dmso_c","Dimethyl sulfoxide","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"dmso_e","Dimethyl sulfoxide","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"dnad_c","Deamino-NAD+","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"dnarep_c","DNA replication","c",TRUE,TRUE,FALSE,TRUE,"core_and_boundary","internal_only"
+"dpcoa_c","Dephospho-CoA","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"drib_c","2-deoxy-D-ribose","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"drib_e","2-deoxy-D-ribose","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"dscl_c","dihydrosirohydrochlorin","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"dtbt_c","Dethiobiotin","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"dtdp4aaddg_c","dTDP-4-acetamido-4,6-dideoxy-D-galactose","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"dtdp4addg_c","dTDP-4-amino-4,6-dideoxy-D-galactose","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"dtdp4d6dg_c","dTDP-4-dehydro-6-deoxy-alpha-D-glucose(2-)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"dtdp4d6dm_c","dTDP-4-dehydro-6-deoxy-L-mannose(2-)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"dtdp_c","dTDP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"dtdpglu_c","dTDP-glucose(2-)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"dtdprmn_c","dTDP-L-rhamnose","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"dtmp_c","dTMP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"dttp_c","dTTP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"dudp_c","dUDP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"dump_c","dUMP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"duri_c","Deoxyuridine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"duri_e","Deoxyuridine","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"dutp_c","dUTP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"dxyl5p_c","1-deoxy-D-xylulose 5-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"e4hglu_c","erythro-4-hydroxy-L-glutamate(1-)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"e4p_c","D-Erythrose 4-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"egACPm_c","Enoylglutaryl-ACP methyl ester","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"eig3p_c","D-erythro-1-(Imidazol-4-yl)glycerol 3-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"epACPm_c","Enoylpimeloyl-ACP methyl ester","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"etha_c","etha[c]","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"etha_e","etha[c]","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"ethso3_c","ethanesulfonate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ethso3_e","ethanesulfonate","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"etoh_c","ethanol","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"etoh_e","ethanol","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"f1a_e","F1alpha","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"f1a__rl_e","released F1alpha antigen","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"f1p_c","D-Fructose 1-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"f6p_c","D-Fructose 6-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"fa11_c","Fatty acid (Iso-C17:0)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"fa12_c","Fatty acid (Anteiso-C17:0)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"fa1_c","Fatty acid (Iso-C14:0)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"fa3_c","Fatty acid (Iso-C15:0)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"fa4_c","Fatty acid (Anteiso-C15:0)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"fa6_c","Fatty acid (iso-C16:0)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"fad_c","Flavin adenine dinucleotide oxidized","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"fadh2_c","Flavin adenine dinucleotide reduced","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"fald_c","formaldehyde","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"fc1p_c","L-Fuculose 1-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"fcl__L_c","L-fuculose","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"fdp_c","D-Fructose 1,6-bisphosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"fdxox_c","Oxidized ferredoxin","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"fdxrd_c","Reduced ferredoxin","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"fe2_c","Fe2+","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"fe2_e","Fe2+","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"fe3_c","Fe3+","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"fe3_e","Fe3+","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"fecrm_c","Ferrichrome","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"fecrm_e","Ferrichrome","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"fgam_c","N2-Formyl-N1-(5-phospho-D-ribosyl)glycinamide","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ficytC_c","Ferricytochrome c","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"fmn_c","FMN","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"fmnh2_c","Reduced FMN","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"focytC_c","Ferrocytochrome C","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"fol_c","Folate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"for_c","Formate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"for_e","Formate","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"fpram_c","2-(Formamido)-N1-(5-phospho-D-ribosyl)acetamidine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"fprica_c","5-Formamido-1-(5-phospho-D-ribosyl)imidazole-4-carboxamide","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"frdp_c","Farnesyl diphosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"fru_c","D-Fructose","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"fru_e","D-Fructose","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"fruur_c","D-Fructuronate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"fuc1p__L_c","L-Fucose 1-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"fuc1p__L_e","L-Fucose 1-phosphate","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"fuc__L_c","L-fucose","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"fuc__L_e","L-fucose","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"fum_c","Fumarate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"fum_e","Fumarate","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"g15lac_c","Gluconolactone","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"g1p_c","D-Glucose 1-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"g1p__B_c","beta D-Glucose 1-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"g3p_c","Glyceraldehyde 3-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"g3pc_c","sn-Glycero-3-phosphocholine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"g3pe_c","sn-Glycero-3-phosphoethanolamine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"g3pg_c","Glycerophosphoglycerol","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"g6p_c","D-Glucose 6-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"g6p_e","D-Glucose 6-phosphate","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"g6p__B_c","beta-D-glucose 6-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"gACPm_c","Glutaryl-ACP methyl ester","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"gagicolipa_c","galactosyl-glucosyl-inner core oligosaccharide lipid A","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"gal1a3acgal_e","Alpha-1,3-Galactose-N-acetylgalactosamine","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"gal1b3acgal_e","Beta-1,3-Galactose-N-acetylgalactosamine","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"gal1p_c","(2R,3R,4S,5R,6R)-3,4,5-trihydroxy-6-(hydroxymethyl)oxan-2-yl phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"gal_c","D-Galactose","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"gal_e","D-Galactose","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"galam6p_c","D-galactosamine-6-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"galct__D_c","D-Galactarate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"galct__D_e","D-Galactarate","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"galctn__D_c","D-Galactonate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"galctn__D_e","D-Galactonate","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"galt1p_c","Galactitol 1-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"galt_e","galactitol","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"galur_c","D-Galacturonate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"galur_e","D-Galacturonate","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"gam1p_c","D-Glucosamine 1-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"gam6p_c","D-Glucosamine 6-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"gar_c","N1-(5-Phospho-D-ribosyl)glycinamide","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"gbbtn_c","gamma-butyrobetaine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"gbbtn_e","gamma-butyrobetaine","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"gcald_c","glycolaldehyde","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"gcald_e","glycolaldehyde","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"gdp_c","GDP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"gdpddman_c","GDP-4-dehydro-6-deoxy-alpha-D-mannose(2-)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"gdpfuc_c","GDP-L-fucose(2-)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"gdpmann_c","GDP-alpha-D-mannose(2-)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"gdptp_c","Guanosine 3-diphosphate 5-triphosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"gg4abut_c","gamma-glutamyl-gamma aminobutyric acid","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ggagicolipa_c","glucosyl-galactosyl-glucosyl-inner core oligosaccharide lipid A","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ggbutal_c","gamma-glutamyl-gamma-butyraldehyde","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ggdp_c","2-trans,6-trans,10-trans-geranylgeranyl diphosphate(3-)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"gggagicolipa_c","glucosyl-glucosyl-galactosyl-glucosyl-inner core oligosaccharide lipid A","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"gicolipa_c","glucosyl-inner core oligosaccharide lipid A","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"glc__D_c","D-glucose","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"glc__D_e","D-glucose","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"glc__bD_c","beta D-glucose","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"glcn_c","D-gluconate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"glcn_e","D-gluconate","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"glcr_c","D-glucarate(2-)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"glcr_e","D-glucarate(2-)","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"glcur_c","D-glucuronate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"glcur_e","D-glucuronate","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"gln__L_c","L-glutamine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"gln__L_e","L-glutamine","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"glu1sa_c","L-Glutamate 1-semialdehyde","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"glu5p_c","L-Glutamate 5-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"glu5sa_c","L-Glutamate 5-semialdehyde","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"glu__D_c","D-Glutamate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"glu__L_c","L-glutamate(1-)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"glu__L_e","L-glutamate(1-)","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"glucys_c","gamma-L-Glutamyl-L-cysteine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"glutar_c","Glutarate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"glutcoa_c","glutaryl-CoA(5-)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"glutrna_c","L-Glutamyl-tRNA(Glu)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"glx_c","glyoxylate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"gly_c","Glycine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"gly_e","Glycine","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"glyald_c","D-Glyceraldehyde","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"glyasn_c","Glycyl-L-asparagine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"glyasn_e","Glycyl-L-asparagine","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"glyasp_c","Glycyl-L-aspartate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"glyasp_e","Glycyl-L-aspartate","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"glyb_c","glycine betaine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"glyb_e","glycine betaine","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"glyc3p_c","Glycerol 3-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"glyc3p_e","Glycerol 3-phosphate","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"glyc_c","Glycerol","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"glyc_e","Glycerol","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"glyc__R_c","D-glycerate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"glyclt_c","glycolate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"glyclt_e","glycolate","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"glycogen_c","glycogen","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"glycogenb_c","glycogen(n-1)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"glycys_c","Gly-Cys","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"glycys_e","Gly-Cys","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"glygln_c","Glycyl-L-glutamine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"glygln_e","Glycyl-L-glutamine","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"glyglu_c","Glycyl-L-glutamate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"glyglu_e","Glycyl-L-glutamate","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"glyleu_c","Glycylleucine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"glyleu_e","Glycylleucine","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"glymet_c","Glycyl-L-methionine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"glymet_e","Glycyl-L-methionine","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"glyphe_c","Glycylphenylalanine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"glyphe_e","Glycylphenylalanine","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"glypro_c","Glycylproline","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"glypro_e","Glycylproline","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"glytyr_c","Glycyl-L-tyrosine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"glytyr_e","Glycyl-L-tyrosine","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"gmhep17bp_c","D-Glycero-D-manno-heptose 1,7-bisphosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"gmhep1p_c","D-Glycero-D-manno-heptose 1-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"gmhep7p_c","D-Glycero-D-manno-heptose 7-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"gmp_c","GMP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"grdp_c","Geranyl diphosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"gsn_c","Guanosine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"gsn_e","Guanosine","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"gthox_c","Oxidized glutathione","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"gthrd_c","Reduced glutathione","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"gtp_c","GTP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"gtspmd_c","Glutathionylspermidine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"gua_c","Guanine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"h2_c","Hydrogen","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"h2_e","Hydrogen","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"h2mb4p_c","1-hydroxy-2-methyl-2-(E)-butenyl 4-diphosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"h2o2_c","Hydrogen peroxide","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"h2o_c","Water","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"h2o_e","Water","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"h2s_c","Hydrogen sulfide","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"h2s_e","Hydrogen sulfide","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"h_c","proton","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"h_e","proton","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"hco3_c","Bicarbonate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"hcys__L_c","L-homocysteine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"hdca_c","Hexadecanoate (n-C16:0)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"hdca_e","Hexadecanoate (n-C16:0)","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"hdcea_c","Hexadecenoate (n-C16:1)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"hdcoa_c","Hexadecenoyl-CoA (n-C16:1CoA)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"hdd2coa_c","trans-Hexadec-2-enoyl-CoA","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"hdeACP_c","cis-hexadec-9-enoyl-[acyl-carrier protein] (n-C16:1)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"hemeO_c","Heme O","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"hepdp_c","all-trans-Heptaprenyl diphosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"hethmpp_c","Hydroxy ethyl Thiamin diphosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"hexACP_c","Hexanoyl-ACP (n-C6:0ACP)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"hexdp_c","all-trans-Hexaprenyl diphosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"hexs_c","hexanesulfonate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"hexs_e","hexanesulfonate","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"hg2_c","Hg2+","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"hg2_e","Hg2+","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"hhlipa_c","heptosyl-heptosyl-kdo2-lipidA","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"his__L_c","L-histidine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"his__L_e","L-histidine","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"hisp_c","L-Histidinol phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"histd_c","L-Histidinol","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"histl__L_c","L-Histidinal","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"hkndd_c","2-Hydroxy-6-oxonona-2,4-diene-1,9-dioate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"hkntd_c","2-hydroxy-6-ketononatrienedioate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"hlipa_c","heptosyl-kdo2-lipidA","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"hmbil_c","Hydroxymethylbilane","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"hoacoa_c","3-hydroxyadipyl-CoA","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"hom__L_c","L-homoserine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"hphhlipa_c","heptosyl-phospho-heptosyl-heptosyl-kdo2-lipidA","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"hpyr_c","3-hydroxypyruvate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"hqn_c","Hydroquinone","c",TRUE,TRUE,FALSE,TRUE,"core_and_boundary","internal_only"
+"hx2coa_c","trans-Hex-2-enoyl-CoA","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"hxal_c","hexanal","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"hxan_c","Hypoxanthine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"hxan_e","Hypoxanthine","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"hxcoa_c","Hexanoyl-CoA (n-C6:0CoA)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"i14tca1_c","Isotetradecanoyllipoteichoic acid (n=24), linked, unsubstituted","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"i14tcaacgam_c","Isotetradecanoyllipoteichoic acid (n=24), linked, N-acetyl-D-glucosamine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"i15tca1_c","Isopentadecanoyllipoteichoic acid (n=24), linked, unsubstituted","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"i15tcaacgam_c","Isopentadecanoyllipoteichoic acid (n=24), linked, N-acetyl-D-glucosamine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"i16tca1_c","Isohexadecanoyllipoteichoic acid (n=24), linked, unsubstituted","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"i16tcaacgam_c","Isohexadecanoyllipoteichoic acid (n=24), linked, N-acetyl-D-glucosamine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"i17tca1_c","Isoheptadecanoyllipoteichoic acid (n=24), linked, unsubstituted","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"i17tcaacgam_c","Isoheptadecanoyllipoteichoic acid (n=24), linked, N-acetyl-D-glucosamine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"iasp_c","Iminoaspartate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ibcoa_c","isobutyryl-CoA(4-)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ichor_c","Isochorismate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"icit_c","Isocitrate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"icolipa_c","inner core oligosaccharide lipid A (E coli)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"idon__L_c","L-Idonate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"idon__L_e","L-Idonate","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"idp_c","IDP(3-)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ihdcoa_c","fa6coa,Iso-C16:0 CoA   Isohexadecanoyl-CoA","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ihpdcoa_c","fa11coa, Iso-C17:0 CoA   Isoheptadecanoyl-CoA","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ile__L_c","L-isoleucine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ile__L_e","L-isoleucine","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"imacp_c","3-(Imidazol-4-yl)-2-oxopropyl phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"imp_c","IMP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"indole_c","Indole","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"indole_e","Indole","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"indpyr_c","Indolepyruvate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"inost_c","myo-inositol","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ins_c","Inosine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ins_e","Inosine","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"ipdcoa_c","fa3coa,Iso-C15:0 CoA   Isopentadecanoyl-CoA","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ipdp_c","Isopentenyl diphosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"isetac_c","Isethionic acid","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"isetac_e","Isethionic acid","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"itdcoa_c","fa1coa,Iso-C14:0 CoA   Isotetradecanoyl-CoA","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"itp_c","ITP(3-)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ivcoa_c","Isovaleryl-CoA","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"k_c","potassium","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"k_e","potassium","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"kdo2lipid4L_c","KDO(2)-lipid IV(A) with laurate","c",TRUE,TRUE,FALSE,TRUE,"core_and_boundary","internal_only"
+"kdo2lipid4_c","KDO(2)-lipid IV(A)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"kdo8p_c","3-Deoxy-D-manno-octulosonate 8-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"kdo_c","3-Deoxy-D-manno-2-octulosonate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"kdolipid4_c","KDO-lipid IV(A)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"kphphhlipa_c","kdo-phospho-heptosyl-phospho-heptosyl-heptosyl-kdo2-lipidA","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"l2a6o_c","L-2-Amino-6-oxopimelate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"lac__D_c","(R)-lactate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"lac__D_e","(R)-lactate","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"lac__L_c","(S)-lactate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"lac__L_e","(S)-lactate","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"lald__L_c","(S)-lactaldehyde","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"lcts_c","Lactose","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"lcts_e","Lactose","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"leu__L_c","L-leucine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"leu__L_e","L-leucine","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"lgt__S_c","(R)-S-lactoylglutathionate(1-)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"lipa_c","KDO(2)-lipid (A)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"lipidA_c","2,3,23-Tetrakis(beta-hydroxymyristoyl)-D-glucosaminyl-1,6-beta-D-glucosamine 1,4-bisphosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"lipidAds_c","Lipid A Disaccharide","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"lipidX_c","2,3-Bis(3-hydroxytetradecanoyl)-beta-D-glucosaminyl 1-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"lipoate_c","lipoate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"lpam_c","lipoamide","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"lpro_c","Lipoylprotein","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"lys__L_c","L-lysinium(1+)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"lys__L_e","L-lysinium(1+)","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"malACP_c","Malonyl-[acyl-carrier protein]","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"mal__D_c","D-Malate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"mal__L_c","(S)-malate(2-)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"mal__L_e","(S)-malate(2-)","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"malcoa_c","Malonyl-CoA","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"malcoam_c","Malonyl-CoA methyl ester","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"malt6p_c","Maltose 6-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"malt_c","Maltose","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"malt_e","Maltose","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"malthp_c","maltoheptaose","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"malthx_c","Maltohexaose","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"malthx_e","Maltohexaose","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"maltpt_c","maltopentaose","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"malttr_c","maltotriose","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"malttr_e","maltotriose","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"maltttr_c","Maltotetraose","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"man1p_c","D-Mannose 1-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"man6p_c","D-Mannose 6-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"man6p_e","D-Mannose 6-phosphate","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"man_c","D-Mannose","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"man_e","D-Mannose","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"mana_c","D-Mannonate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"mantr_c","mannotriose (beta-1,4)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"mantr_e","mannotriose (beta-1,4)","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"melib_c","Melibiose","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"melib_e","Melibiose","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"melt_c","Melilotate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"meoh_c","methanol","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"met__D_c","D-Methionine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"met__D_e","D-Methionine","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"met__L_c","L-methionine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"met__L_e","L-methionine","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"metala_c","L-methionyl-L-alanine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"metala_e","L-methionyl-L-alanine","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"methf_c","5,10-Methenyltetrahydrofolate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"metsox__R__L_c","L-methionine-R-sulfoxide","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"metsox__R__L_e","L-methionine-R-sulfoxide","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"metsox__S__L_c","L-Methionine Sulfoxide","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"metsox__S__L_e","L-Methionine Sulfoxide","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"mg2_c","magnesium","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"mg2_e","magnesium","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"mi1p__D_c","1D-myo-inositol 1-phosphate(2-)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"mi3p__D_c","1D-myo-inositol 3-phosphate(2-)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"mi4p__D_c","1D-myo-inositol 4-phosphate(2-)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"micit_c","(2S,3R)-3-hydroxybutane-1,2,3-tricarboxylate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"mlthf_c","5,10-Methylenetetrahydrofolate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"mmcoa__R_c","(R)-methylmalonyl-CoA(5-)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"mmcoa__S_c","(S)-methylmalonyl-CoA(5-)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"mn2_c","Mn2+","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"mn2_e","Mn2+","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"mnl1p_c","D-Mannitol 1-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"mnl_e","D-Mannitol","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"mops_c","3-(n-Morpholino)Propanesulfonic Acid","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"mops_e","3-(n-Morpholino)Propanesulfonic Acid","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"mql8_c","Menaquinol 8","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"mqn8_c","Menaquinone 8","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"mso3_c","methanesulfonate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"mso3_e","methanesulfonate","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"mthgxl_c","methylglyoxal","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"myrsACP_c","Myristoyl-ACP (n-C14:0ACP)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"myrstca1_c","Myristoyllipoteichoic acid (n=24), linked, unsubstituted","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"myrstcaacgam_c","Myristoyllipoteichoic acid (n=24), linked, N-acetyl-D-glucosamine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"n8aspmd_c","N(8)-acetylspermidinium(2+)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"na1_c","Sodium","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"na1_e","Sodium","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"nac_c","Nicotinate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"nac_e","Nicotinate","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"nad_c","Nicotinamide adenine dinucleotide","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"nadh_c","Nicotinamide adenine dinucleotide - reduced","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"nadp_c","Nicotinamide adenine dinucleotide phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"nadph_c","Nicotinamide adenine dinucleotide phosphate - reduced","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ncam_c","Nicotinamide","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"nh4_c","Ammonium","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"nh4_e","Ammonium","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"nicrns_c","Nicotinate D-ribonucleoside","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"nicrnt_c","Nicotinate D-ribonucleotide","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"nmn_c","NMN","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"nmn_e","NMN","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"no2_c","Nitrite","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"no2_e","Nitrite","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"no3_c","Nitrate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"no3_e","Nitrate","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"no_c","Nitric oxide","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"np2msucc_c","Naphthyl-2-methyl-succinic acid","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"np2msucccoa_c","Naphthyl-2-methyl-succinyl-CoA","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"o2_c","O2","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"o2_e","O2","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"o2s_c","superoxide","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"oaa_c","Oxaloacetate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"oc2coa_c","trans-Oct-2-enoyl-CoA","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ocACP_c","Octanoyl-ACP (n-C8:0ACP)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"occoa_c","Octanoyl-CoA (n-C8:0CoA)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ocdcaACP_c","Octadecanoyl-ACP (n-C18:0ACP)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ocdca_c","octadecanoate (n-C18:0)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ocdca_e","octadecanoate (n-C18:0)","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"ocdcea_c","octadecenoate (n-C18:1)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ocmhmxbq_c","2-Octaprenyl-3-methyl-5-hydroxy-6-methoxy-1,4-benzoquinone","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"octdp_c","all-trans-Octaprenyl diphosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"octeACP_c","cis-octadec-11-enoyl-[acyl-carrier protein] (n-C18:1)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"odecoa_c","Octadecenoyl-CoA (n-C18:1CoA)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ohpb_c","2-Oxo-3-hydroxy-4-phosphobutanoate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"op4en_c","2-Oxopent-4-enoate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"orn_c","Ornithine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"orn_e","Ornithine","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"orot5p_c","Orotidine 5-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"orot_c","Orotate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"oxadpcoa_c","3-Oxoadipyl-CoA","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"oxglyc_c","Oxaloglycolate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"oxptn_c","5-Oxopentanoate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"oxur_c","Oxalureate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pa120_c","1,2-didodecanoyl-sn-glycerol 3-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pa140_c","1,2-ditetradecanoyl-sn-glycerol 3-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pa141_c","1,2-ditetradec-7-enoyl-sn-glycerol 3-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pa160_c","1,2-dihexadecanoyl-sn-glycerol 3-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pa161_c","1,2-dihexadec-9-enoyl-sn-glycerol 3-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pa180_c","1,2-dioctadecanoyl-sn-glycerol 3-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pa181_c","1,2-dioctadec-11-enoyl-sn-glycerol 3-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"paai15_c","1,2-dianteisopentadecanoyl-sn-glycerol 3-phosphate (12-methyl-tetradecanoyl, anteiso-C15)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"paai17_c","1,2-dianteisoheptadecanoyl-sn-glycerol 3-phosphate (14-methyl-hexadecanoyl, anteiso-C17)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pac_c","phenylacetate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pac_e","phenylacetate","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"pacald_c","phenylacetaldehyde","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pai14_c","1,2-diisotetradecanoyl-sn-glycerol 3-phosphate (12-methyl-tridecanoyl, iso-C14)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pai15_c","1,2-diisopentadecanoyl-sn-glycerol 3-phosphate (13-methyl-tetradecanoyl, iso-C15)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pai16_c","1,2-diisohexadecanoyl-sn-glycerol 3-phosphate (14-methyl-pentadecanoyl, iso-C16)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pai17_c","1,2-diisoheptadecanoyl-sn-glycerol 3-phosphate (15-methyl-hexadecanoyl, iso-C17)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"palmACP_c","Palmitoyl-ACP (n-C16:0ACP)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"palmtca1_c","Palmitoyllipoteichoic acid (n=24), linked, unsubstituted","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"palmtcaacgam_c","Palmitoyllipoteichoic acid (n=24), linked, N-acetyl-D-glucosamine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pan4p_c","Pantetheine 4-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pant__R_c","(R)-Pantoate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pap_c","adenosine 3,5-bismonophosphate(4-)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"paps_c","Phosphoadenosine phosphosulfate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pb_c","Lead","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pb_e","Lead","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"pdx5p_c","Pyridoxine 5-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pe120_c","phosphatidylethanolamine (didodecanoyl, n-C12:0)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pe140_c","phosphatidylethanolamine (ditetradecanoyl, n-C14:0)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pe141_c","phosphatidylethanolamine (ditetradec-7-enoyl, n-C14:1)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pe160_c","phosphatidylethanolamine (dihexadecanoyl, n-C16:0)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pe161_c","phosphatidylethanolamine (dihexadec-9enoyl, n-C16:1)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pe180_c","phosphatidylethanolamine (dioctadecanoyl, n-C18:0)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pe181_c","phosphatidylethanolamine (dioctadec-11-enoyl, n-C18:1)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"peai15_c","Phosphatidylethanolamine (12-methyl-tetradecanoyl, anteiso-C15)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"peai17_c","Phosphatidylethanolamine (14-methyl-hexadecanoyl, anteiso-C17)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pei14_c","Phosphatidylethanolamine (12-methyl-tridecanoyl, iso-C14)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pei15_c","Phosphatidylethanolamine (13-methyl-tetradecanoyl, iso-C15)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pei16_c","Phosphatidylethanolamine (14-methyl-pentadecanoyl, iso-C16)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pei17_c","Phosphatidylethanolamine (15-methyl-hexadecanoyl, iso-C17)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pendp_c","all-trans-Pentaprenyl diphosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pep_c","Phosphoenolpyruvate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"peptmet__L_c","Peptide-L-methionine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"peptmetox__L_c","Peptide-L-methionine (R)-S-oxide","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pg120_c","Phosphatidylglycerol (didodecanoyl, n-C12:0)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pg140_c","Phosphatidylglycerol (ditetradecanoyl, n-C14:0)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pg141_c","Phosphatidylglycerol (ditetradec-7-enoyl, n-C14:1)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pg160_c","Phosphatidylglycerol (dihexadecanoyl, n-C16:0)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pg161_c","Phosphatidylglycerol (dihexadec-9-enoyl, n-C16:1)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pg180_c","Phosphatidylglycerol (dioctadecanoyl, n-C18:0)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pg181_c","Phosphatidylglycerol (dioctadec-11-enoyl, n-C18:1)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pgai15_c","Phosphatidylglycerol (12-methyl-tetradecanoyl, anteiso-C15)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pgai17_c","Phosphatidylglycerol (14-methyl-hexadecanoyl, anteiso-C17)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pgi14_c","Phosphatidylglycerol (12-methyltridecanoyl, iso-C14)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pgi15_c","Phosphatidylglycerol (13-methyltetradecanoyl, iso-C15)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pgi16_c","Phosphatidylglycerol (14-methylpentadecanoyl, iso-C16)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pgi17_c","Phosphatidylglycerol (15-methyl-hexadecanoyl, iso-C17)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pgp120_c","Phosphatidylglycerophosphate (didodecanoyl, n-C12:0)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pgp140_c","Phosphatidylglycerophosphate (ditetradecanoyl, n-C14:0)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pgp141_c","Phosphatidylglycerophosphate (ditetradec-7-enoyl, n-C14:1)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pgp160_c","Phosphatidylglycerophosphate (dihexadecanoyl, n-C16:0)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pgp161_c","Phosphatidylglycerophosphate (dihexadec-9-enoyl, n-C16:1)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pgp180_c","Phosphatidylglycerophosphate (dioctadecanoyl, n-C18:0)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pgp181_c","Phosphatidylglycerophosphate (dioctadec-11-enoyl, n-C18:1)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pgpai15_c","Phosphatidylglycerophosphate (12-methyl-tetradecanoyl, anteiso-C15)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pgpai17_c","Phosphatidylglycerophosphate (14-methyl-hexadecanoyl, anteiso-C17)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pgpi14_c","Phosphatidylglycerophosphate (12-methyltridecanoyl, iso-C14)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pgpi15_c","Phosphatidylglycerophosphate (13-methyltetradecanoyl, iso-C15)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pgpi16_c","Phosphatidylglycerophosphate (14-methylpentadecanoyl, iso-C16)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pgpi17_c","Phosphatidylglycerophosphate (15-methyl-hexadecanoyl, iso-C17)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"phaccoa_c","phenylacetyl-CoA(4-)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"phe__L_c","L-phenylalanine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"phe__L_e","L-phenylalanine","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"pheme_c","Protoheme","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"phhlipa_c","phospho-heptosyl-heptosyl-kdo2-lipidA","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"phom_c","O-phosphonato-L-homoserine(2-)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"phphhlipa_c","phospho-heptosyl-phospho-heptosyl-heptosyl-kdo2-lipidA","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"phpyr_c","keto-phenylpyruvate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"phthr_c","O-Phospho-4-hydroxy-L-threonine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"phyQ_c","phylloquinone","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"phyldpp_c","Phytyl diphosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pi_c","hydrogenphosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pi_e","hydrogenphosphate","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"pmACP_c","Pimeloyl-ACP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pmACPm_c","Pimeloyl-ACP methyl ester","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pmcoa_c","Pimeloyl-CoA","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pmtcoa_c","Palmitoyl-CoA (n-C16:0CoA)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pnp_c","4-Hydroxynitrobenzene, p-Nitrophenol","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pnto__R_c","(R)-Pantothenate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pnto__R_e","(R)-Pantothenate","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"ppa_c","propionate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ppa_e","propionate","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"ppap_c","Propanoyl phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ppbng_c","Porphobilinogen","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ppcoa_c","Propanoyl-CoA","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ppgpp_c","Guanosine 3,5-bis(diphosphate)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pphn_c","Prephenate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ppi_c","Diphosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ppi_e","Diphosphate","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"ppp9_c","Protoporphyrin","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pppg9_c","Protoporphyrinogen IX","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pppi_c","triphosphate(5-)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pppn_c","Phenylpropanoate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pppn_e","Phenylpropanoate","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"pprdn_c","Piperideine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pram_c","5-Phospho-beta-D-ribosylamine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pran_c","N-(5-Phospho-D-ribosyl)anthranilate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"prbamp_c","1-(5-Phosphoribosyl)-AMP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"prbatp_c","1-(5-Phosphoribosyl)-ATP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"prfp_c","1-(5-Phosphoribosyl)-5-[(5-phosphoribosylamino)methylideneamino]imidazole-4-carboxamide","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"prlp_c","5-[(5-phospho-1-deoxyribulos-1-ylamino)methylideneamino]-1-(5-phosphoribosyl)imidazole-4-carboxamide","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pro__L_c","L-proline","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pro__L_e","L-proline","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"prodslfd_c","Protein disulfide","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"prodthl_c","Protein dithiol","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"proteinsynth_c","Protein biosynthesis","c",TRUE,TRUE,FALSE,TRUE,"core_and_boundary","internal_only"
+"prpp_c","5-Phospho-alpha-D-ribose 1-diphosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ps120_c","phosphatidylserine (didodecanoyl, n-C12:0)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ps140_c","phosphatidylserine (ditetradecanoyl, n-C14:0)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ps141_c","phosphatidylserine (ditetradec-7-enoyl, n-C14:1)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ps160_c","phosphatidylserine (dihexadecanoyl, n-C16:0)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ps161_c","phosphatidylserine (dihexadec-9-enoyl, n-C16:1)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ps180_c","phosphatidylserine (dioctadecanoyl, n-C18:0)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ps181_c","phosphatidylserine (dioctadec-11-enoyl, n-C18:1)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"psai15_c","Phosphatidylserine (12-methyl-tetradecanoyl, anteiso-C15)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"psai17_c","Phosphatidylserine (14-methyl-hexadecanoyl, anteiso-C17)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"psd5p_c","Pseudouridine 5-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pser__L_c","O-Phospho-L-serine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"psi14_c","Phosphatidylserine (12-methyl-tridecanoyl, iso-C14)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"psi15_c","Phosphatidylserine (13-methyl-tetradecanoyl, iso-C15)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"psi16_c","Phosphatidylserine (14-methyl-pentadecanoyl, iso-C16)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"psi17_c","Phosphatidylserine (15-methyl-hexadecanoyl, iso-C17)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ptrc_c","Putrescine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ptrc_e","Putrescine","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"pyam5p_c","Pyridoxamine 5-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pydam_c","Pyridoxamine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pydam_e","Pyridoxamine","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"pydx5p_c","Pyridoxal 5-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pydx_c","Pyridoxal","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pydx_e","Pyridoxal","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"pydxn_c","Pyridoxine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"pydxn_e","Pyridoxine","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"pyr_c","pyruvate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"q8_c","Ubiquinone-8","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"q8h2_c","Ubiquinol-8","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"quln_c","quinolinate(2-)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"r1p_c","alpha-D-Ribose 1-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"r5p_c","alpha-D-Ribose 5-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"raffin_c","Raffinose","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"rbl__D_c","D-ribulose","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"rbl__L_c","L-Ribulose","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"rdmbzi_c","N1-(alpha-D-ribosyl)-5,6-dimethylbenzimidazole","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"rhcys_c","S-Ribosyl-L-homocysteine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"rib__D_c","D-ribose","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"rib__D_e","D-ribose","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"ribflv_c","Riboflavin","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"rml1p_c","L-Rhamnulose 1-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"rml_c","L-Rhamnulose","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"rmn_c","L-Rhamnose","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"rmn_e","L-Rhamnose","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"rnam_c","N-Ribosylnicotinamide","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"rnatrans_c","RNA transcription","c",TRUE,TRUE,FALSE,TRUE,"core_and_boundary","internal_only"
+"ru5p__D_c","D-ribulose 5-phosphate(2-)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ru5p__L_c","L-Ribulose 5-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"s17bp_c","Sedoheptulose 1,7-bisphosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"s7p_c","Sedoheptulose 7-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"sTn__antigen_e","sialyl-Tn antigen","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"s_c","Sulfur","c",TRUE,TRUE,FALSE,TRUE,"core_and_boundary","internal_only"
+"salc6p_c","Salicin 6-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"salcn_e","Salicin","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"sbt6p_c","D-Sorbitol 6-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"sbt__D_c","D-glucitol","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"sbt__D_e","D-glucitol","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"sbzcoa_c","O-Succinylbenzoyl-CoA","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"scl_c","sirohydrochlorin","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"sel_e","selenate","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"seln_c","Selenide","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"selni_e","selenite","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"selnp_c","Selenophosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ser__D_c","D-serine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ser__D_e","D-serine","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"ser__L_c","L-serine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ser__L_e","L-serine","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"sheme_c","Siroheme","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"skm5p_c","Shikimate 5-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"skm_c","Shikimate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"sl26da_c","N-Succinyl-LL-2,6-diaminoheptanedioate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"sl2a6o_c","N-Succinyl-2-L-amino-6-oxoheptanedioate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"so3_c","Sulfite","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"so4_c","sulfate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"so4_e","sulfate","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"spmd_c","Spermidine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"spmd_e","Spermidine","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"stcoa_c","Stearoyl-CoA (n-C18:0CoA)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"sttca1_c","Stearoyllipoteichoic acid (n=24), linked, unsubstituted","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"sttcaacgam_c","Stearoyllipoteichoic acid (n=24), linked, N-acetyl-D-glucosamine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"stys_c","Stachyose","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"suc6p_c","Sucrose 6-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"sucarg_c","N2-Succinyl-L-arginine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"sucbz_c","o-Succinylbenzoate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"succ_c","Succinate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"succ_e","Succinate","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"succoa_c","Succinyl-CoA","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"sucglu_c","N2-Succinyl-L-glutamate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"sucgsa_c","N2-Succinyl-L-glutamate 5-semialdehyde","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"suchms_c","O-Succinyl-L-homoserine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"sucorn_c","N2-Succinyl-L-ornithine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"sucr_c","Sucrose","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"sucr_e","Sucrose","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"sucsal_c","Succinic semialdehyde","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"sulfac_c","sulfoacetate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"sulfac_e","sulfoacetate","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"tag6p__D_c","D-Tagatose 6-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"tagdp__D_c","D-Tagatose 1,6-biphosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"tagur_c","D-Tagaturonate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"tartr__L_c","L-tartrate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"tartr__M_c","meso-Tartrate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"taur_c","Taurine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"taur_e","Taurine","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"tcynt_c","thiocyanate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"td2coa_c","trans-Tetradec-2-enoyl-CoA","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"tdcoa_c","Tetradecanoyl-CoA (n-C14:0CoA)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"tddec2eACP_c","trans-Dodec-2-enoyl-[acyl-carrier protein]","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"tdeACP_c","cis-tetradec-7-enoyl-[acyl-carrier protein] (n-C14:1)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"tdec2eACP_c","trans-Dec-2-enoyl-[acyl-carrier protein]","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"thbpt_c","5,6,7,8-tetrahydrobiopterin","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"thdp_c","2,3,4,5-Tetrahydrodipicolinate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"thex2eACP_c","trans-Hex-2-enoyl-[acyl-carrier protein]","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"thf_c","5,6,7,8-Tetrahydrofolate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"thfglu_c","Tetrahydrofolyl-[Glu](2)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"thglu_c","Tetrahydropteroyltri_L_glutamate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"thm_c","Thiamin","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"thm_e","Thiamin","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"thmmp_c","Thiamin monophosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"thmpp_c","Thiamine diphosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"thp2c_c","1-piperideine-6-carboxylate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"thr__L_c","L-threonine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"thr__L_e","L-threonine","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"thym_c","Thymine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"thymd_c","Thymidine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"thymd_e","Thymidine","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"tma_c","trimethylamine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"tma_e","trimethylamine","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"tmao_c","Trimethylamine N-oxide","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"tmao_e","Trimethylamine N-oxide","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"tmrs2eACP_c","trans-Tetradec-2-enoyl-[acyl-carrier protein]","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"toct2eACP_c","trans-Oct-2-enoyl-[acyl-carrier protein]","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"toctd2eACP_c","trans-octadec-2-enoyl-[acyl-carrier protein]","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"tpalm2eACP_c","trans-Hexadec-2-enoyl-[acyl-carrier protein]","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"trdox_c","Oxidized thioredoxin","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"trdrd_c","Reduced thioredoxin","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"tre6p_c","alpha,alpha-Trehalose 6-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"tre_c","Trehalose","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"tre_e","Trehalose","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"trnaglu_c","tRNA (Glu)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"trp__L_c","L-tryptophan","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"trp__L_e","L-tryptophan","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"tsul_c","thiosulfate(2-)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"tsul_e","thiosulfate(2-)","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"ttdca_c","tetradecanoate (n-C14:0)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ttdca_e","tetradecanoate (n-C14:0)","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"ttdcea_c","tetradecenoate (n-C14:1)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"tym_c","tyraminium","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"tym_e","tyraminium","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"tyr__L_c","L-tyrosine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"tyr__L_e","L-tyrosine","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"u23ga_c","UDP-2,3-bis(3-hydroxytetradecanoyl)glucosamine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"u3aga_c","UDP-3-O-(3-hydroxytetradecanoyl)-N-acetylglucosamine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"u3hga_c","UDP-3-O-(3-hydroxytetradecanoyl)-D-glucosamine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"uGgla_c","UDP-N-acetylmuramoyl-L-alanyl-gamma-D-glutamyl-L-lysyl-D-alanyl-D-alanine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"uaGgla_c","Undecaprenyl-diphospho-N-acetylmuramoyl-L-alanyl-gamma-D-glutamyl-L-lysyl-D-alanyl-D-alanine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"uaaAgla_c","Undecaprenyl-diphospho-N-acetylmuramoyl-(N-acetylglucosamine)-L-alanyl-D-glutamyl-L-lysyl-D-alanyl-D-alanine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"uaaAgtla_c","Undecaprenyl-diphospho-N-acetylmuramoyl-(N-acetylglucosamine)-L-alanyl-D-glutaminyl-L-lysyl-D-alanyl-D-alanine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"uaaGgla_c","Undecaprenyl-diphospho-N-acetylmuramoyl-(N-acetylglucosamine)-L-alanyl-gamma-D-glutamyl-L-lysyl-D-alanyl-D-alanine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"uaaGgtla_c","Undecaprenyl-diphospho-N-acetylmuramoyl-(N-acetylglucosamine)-L-alanyl-D-isoglutaminyl-L-lysyl-D-alanyl-D-alanine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"uaagmda_c","Undecaprenyl-diphospho-N-acetylmuramoyl-(N-acetylglucosamine)-L-ala-D-glu-meso-2,6-diaminopimeloyl-D-ala-D-ala","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"uaagtmda_c","Undecaprenyl-diphospho-N-acetylmuramoyl-(N-acetylglucosamine)-L-alanyl-D-glutaminyl-meso-2,6-diaminopimeloyl-D-alanyl-D-alanine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"uaccg_c","UDP-N-acetyl-3-O-(1-carboxyvinyl)-D-glucosamine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"uacgam_c","UDP-N-acetyl-alpha-D-glucosamine(2-)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"uacmam_c","UDP-N-acetyl-D-mannosamine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"uacmamu_c","UDP-N-acetyl-D-mannosaminouronate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"uagmda_c","Undecaprenyl-diphospho-N-acetylmuramoyl-L-alanyl-D-glutamyl-meso-2,6-diaminopimeloyl-D-alanyl-D-alanine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"uama_c","UDP-N-acetylmuramoyl-L-alanine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"uamag_c","UDP-N-acetylmuramoyl-L-alanyl-D-glutamate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"uamr_c","UDP-N-acetylmuramate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"udcpdp_c","Undecaprenyl diphosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"udcpp_c","Undecaprenyl phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"udp_c","UDP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"udpacgal_c","UDP-N-acetyl-D-galactosamine(2-)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"udpg_c","UDPglucose","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"udpgal_c","UDP-D-galactose(2-)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"udpgalfur_c","UDP-D-galacto-1,4-furanose","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"udpglcur_c","UDP-D-glucuronate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ugmd_c","UDP-N-acetylmuramoyl-L-alanyl-D-gamma-glutamyl-meso-2,6-diaminopimelate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ugmda_c","UDP-N-acetylmuramoyl-L-alanyl-D-glutamyl-meso-2,6-diaminopimeloyl-D-alanyl-D-alanine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ump_c","UMP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"unaga_c","Undecaprenyl diphospho N-acetyl-glucosamine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"uppg3_c","Uroporphyrinogen III","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ura_c","uracil","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"ura_e","uracil","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"urate_c","Urate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"urdgly_c","Ureidoglycine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"urdglyc_c","(-)-Ureidoglycolate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"urea_c","Urea","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"urea_e","Urea","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"uri_c","Uridine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"uri_e","Uridine","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"utp_c","UTP","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"val__L_c","L-valine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"val__L_e","L-valine","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"xan_c","Xanthine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"xan_e","Xanthine","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"xmp_c","Xanthosine 5-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"xtsn_c","xanthosine","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"xtsn_e","xanthosine","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"xu1p__L_c","L-Xylulose 1-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"xu5p__D_c","D-xylulose 5-phosphate(2-)","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"xu5p__L_c","L-Xylulose 5-phosphate","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"xyl__D_c","aldehydo-D-xylose","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"xyl__D_e","aldehydo-D-xylose","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"
+"xylu__D_c","D-xylulose","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"xylu__L_c","L-xylulose","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"zn2_c","Zinc","c",TRUE,FALSE,FALSE,FALSE,"core_only",NA
+"zn2_e","Zinc","e",TRUE,TRUE,TRUE,FALSE,"core_and_boundary","external_only"

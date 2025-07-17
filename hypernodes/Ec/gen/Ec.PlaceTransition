@@ -1,0 +1,9 @@
+#PLACE  ID
+biomass_e_ecsk1sm	0
+n_ecsk1sm	1
+#TRANSITION  ID
+Starv_ecsk1sm	0
+Dup_ecsk1sm	1
+Death_ecsk1sm	2
+EX_biomass_e_in_ecsk1sm	3
+EX_biomass_e_out_ecsk1sm	4
