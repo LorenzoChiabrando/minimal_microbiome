@@ -84,7 +84,7 @@ epimod::model.analysis(
   parameters_fname = fs::path(paths$config, "initial_data_Ec.csv"),
   functions_fname  = fs::path(paths$src,   paste0("functions_", hypernode_name, ".R")),
   debug            = debug_solver,
-  i_time = 0, f_time = 72, s_time = 0.25,
+  i_time = 0, f_time = 24, s_time = 0.25,
   atol  = 1e-6, rtol = 1e-6,
   fba_fname = fba_files,
   user_files = c(
@@ -96,3 +96,56 @@ epimod::model.analysis(
 )
 
 cat("\n🎉 All results gathered in", fs::path_rel(paths$gen, base_dir), "\n")
+
+source(file.path("src/R/plt_ana.R"))
+
+p = plt_ana(
+  fba_name = "ecsk1sm",
+  reactions_of_interest = c(
+    "EX_biomass_e_f", "EX_biomass_e_r",
+    "EX_glc__D_e_r", "EX_glc__D_e_f",
+    "EX_for_e_r", "EX_for_e_f",
+    "EX_but_e_r", "EX_but_e_f",
+    "EX_ppa_e_r", "EX_ppa_e_f",
+    "EX_ac_e_r", "EX_ac_e_f"))
+
+epimod::model.sensitivity(
+  solver_fname     = fs::path(paths$gen, paste0(hypernode_name, ".solver")),
+  fba_fname = fba_files,
+  i_time = 0, f_time = 24, s_time = 0.25,
+  atol  = 1e-6, rtol = 1e-6,
+  n_config = parallel::detectCores(),
+  debug            = debug_solver,
+  target_value = c('ecsk1sm_biomass_e', 'n_ecsk1sm'),
+  parameters_fname = fs::path(paths$config, "initial_data_Ec_sen.csv"),
+  parallel_processors = parallel::detectCores(),
+  functions_fname  = fs::path(paths$src, paste0("functions_", hypernode_name, "_sen.R")),
+  user_files = c(
+    fs::path(paths$config, "population_parameters.csv"),
+    fs::path(paths$gen,    paste0(hypernode_name, ".fbainfo")),
+    fs::path(paths$output, "ub_bounds_projected.csv"),
+    fs::path(paths$output, "ub_bounds_not_projected.csv")
+  ))
+
+# results <- process_sensitivity_analysis(wd = wd, save_type = "both")
+# Save only trace files
+trace_results <- process_sensitivity_analysis(wd = wd, save_type = "trace")
+
+# Get the plots
+plots_places <- analyze_trace_sensitivity(wd = wd, model_name = model_name)
+
+ggsave(paste0(model_name, "_",  "Sensitivity_places.pdf"), 
+       plots_places[[1]] + plots_places[[2]], 
+       width = 8, height = 3)
+
+# Run the analysis
+results <- analyze_flux_sensitivity(
+  wd = wd,
+  model_name = model_name,
+  mn_name = mn_name,
+  reactions_of_interest = c("EX_biomass_e_f", "EX_biomass_e_r",
+                            "EX_glc_D_e_r", "EX_glc_D_e_f",
+                            "EX_lcts_e_r", "EX_lcts_e_f",
+                            "EX_but_e_r", "EX_but_e_f",
+                            "EX_ppa_e_r", "EX_ppa_e_f",
+                            "EX_ac_e_r", "EX_ac_e_f"))
