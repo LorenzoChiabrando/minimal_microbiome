@@ -12,7 +12,10 @@ remotes::install_github(
 )
 
 library(epimodFBAfunctions)
+# remove.packages("epimod")
+# devtools::install_github("https://github.com/qBioTurin/epimod", ref="epimod_pFBA")
 library(epimod)
+# downloadContainers()
 
 # -------------------------------------------------------------------------
 # user-editable knobs
@@ -116,7 +119,7 @@ epimod::model.sensitivity(
   atol  = 1e-6, rtol = 1e-6,
   n_config = parallel::detectCores(),
   debug            = debug_solver,
-  target_value = c('ecsk1sm_biomass_e', 'n_ecsk1sm'),
+  target_value = c('biomass_e_ecsk1sm', 'n_ecsk1sm'),
   parameters_fname = fs::path(paths$config, "initial_data_Ec_sen.csv"),
   parallel_processors = parallel::detectCores(),
   functions_fname  = fs::path(paths$src, paste0("functions_", hypernode_name, "_sen.R")),

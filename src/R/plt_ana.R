@@ -191,7 +191,6 @@ plt_ana <- function(fba_name,
     
     plot_list[[reaction]] = ggplot(f_data, aes(x = Time, y = Flux, color = Organism)) +
       geom_line(linewidth = 1) +
-      scale_colour_manual(values = col_flux) +
       coord_cartesian(ylim = c(lower_ylim, y_max)) + # Use the dynamically determined lower_ylim
       labs(x = "Time (h)", y = "Flux (mmol/gDW*h)") +
       facet_wrap(~Reaction, ncol = 1) +
