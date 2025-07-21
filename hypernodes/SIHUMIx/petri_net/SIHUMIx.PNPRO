@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- This project file has been saved by the New GreatSPN Editor, v.100 --><project name="Generated Project" version="121">
+  <gspn name="PetriNet" zoom="50">
+    <nodes>
+      <place label-x="0.0" label-y="0.0" name="biomass_e_ecs" x="6.0" y="3"/>
+      <place label-x="0.0" label-y="0.0" name="n_ecs" x="6.0" y="5"/>
+      <place label-x="0.0" label-y="0.0" name="biomass_e_cbd1" x="6.0" y="7"/>
+      <place label-x="0.0" label-y="0.0" name="n_cbd1" x="6.0" y="9"/>
+      <place label-x="0.0" label-y="0.0" name="biomass_e_acd1" x="6.0" y="11"/>
+      <place label-x="0.0" label-y="0.0" name="n_acd1" x="6.0" y="13"/>
+      <place label-x="0.0" label-y="0.0" name="biomass_e_btv5" x="6.0" y="15"/>
+      <place label-x="0.0" label-y="0.0" name="n_btv5" x="6.0" y="17"/>
+      <place label-x="0.0" label-y="0.0" name="biomass_e_bln" x="6.0" y="19"/>
+      <place label-x="0.0" label-y="0.0" name="n_bln" x="6.0" y="21"/>
+      <place label-x="0.0" label-y="0.0" name="biomass_e_bpd2" x="6.0" y="23"/>
+      <place label-x="0.0" label-y="0.0" name="n_bpd2" x="6.0" y="25"/>
+      <place label-x="0.0" label-y="0.0" name="biomass_e_crv0d1" x="6.0" y="27"/>
+      <place label-x="0.0" label-y="0.0" name="n_crv0d1" x="6.0" y="29"/>
+      <place label-x="0.0" label-y="0.0" name="biomass_e_lpspa1" x="6.0" y="31"/>
+      <place label-x="0.0" label-y="0.0" name="n_lpspa1" x="6.0" y="33"/>
+      <place label-x="0.0" label-y="0.0" name="ac_e" x="6.0" y="35"/>
+      <place label-x="0.0" label-y="0.0" name="but_e" x="6.0" y="37"/>
+      <place label-x="0.0" label-y="0.0" name="lcts_e" x="6.0" y="39"/>
+      <place label-x="0.0" label-y="0.0" name="ppa_e" x="6.0" y="41"/>
+      <transition delay="Call[&quot;Starvation&quot;, FromTable[&quot;population_parameters.csv&quot;, 0, 0], 0]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="Starv_ecs" nservers-x="0.5" rotation="0.0" type="EXP" x="4" y="7"/>
+      <transition delay="Call[&quot;Duplication&quot;, FromTable[&quot;population_parameters.csv&quot;, 0, 1], 0]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="Dup_ecs" nservers-x="0.5" rotation="0.0" type="EXP" x="7" y="7"/>
+      <transition delay="Call[&quot;Death&quot;, FromTable[&quot;population_parameters.csv&quot;, 0, 2], 0]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="Death_ecs" nservers-x="0.5" rotation="0.0" type="EXP" x="10" y="7"/>
+      <transition delay="Call[&quot;Starvation&quot;, FromTable[&quot;population_parameters.csv&quot;, 1, 0], 1]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="Starv_cbd1" nservers-x="0.5" rotation="0.0" type="EXP" x="13" y="7"/>
+      <transition delay="Call[&quot;Duplication&quot;, FromTable[&quot;population_parameters.csv&quot;, 1, 1], 1]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="Dup_cbd1" nservers-x="0.5" rotation="0.0" type="EXP" x="4" y="10"/>
+      <transition delay="Call[&quot;Death&quot;, FromTable[&quot;population_parameters.csv&quot;, 1, 2], 1]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="Death_cbd1" nservers-x="0.5" rotation="0.0" type="EXP" x="7" y="10"/>
+      <transition delay="Call[&quot;Starvation&quot;, FromTable[&quot;population_parameters.csv&quot;, 2, 0], 2]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="Starv_acd1" nservers-x="0.5" rotation="0.0" type="EXP" x="10" y="10"/>
+      <transition delay="Call[&quot;Duplication&quot;, FromTable[&quot;population_parameters.csv&quot;, 2, 1], 2]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="Dup_acd1" nservers-x="0.5" rotation="0.0" type="EXP" x="13" y="10"/>
+      <transition delay="Call[&quot;Death&quot;, FromTable[&quot;population_parameters.csv&quot;, 2, 2], 2]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="Death_acd1" nservers-x="0.5" rotation="0.0" type="EXP" x="4" y="13"/>
+      <transition delay="Call[&quot;Starvation&quot;, FromTable[&quot;population_parameters.csv&quot;, 3, 0], 3]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="Starv_btv5" nservers-x="0.5" rotation="0.0" type="EXP" x="7" y="13"/>
+      <transition delay="Call[&quot;Duplication&quot;, FromTable[&quot;population_parameters.csv&quot;, 3, 1], 3]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="Dup_btv5" nservers-x="0.5" rotation="0.0" type="EXP" x="10" y="13"/>
+      <transition delay="Call[&quot;Death&quot;, FromTable[&quot;population_parameters.csv&quot;, 3, 2], 3]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="Death_btv5" nservers-x="0.5" rotation="0.0" type="EXP" x="13" y="13"/>
+      <transition delay="Call[&quot;Starvation&quot;, FromTable[&quot;population_parameters.csv&quot;, 4, 0], 4]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="Starv_bln" nservers-x="0.5" rotation="0.0" type="EXP" x="4" y="16"/>
+      <transition delay="Call[&quot;Duplication&quot;, FromTable[&quot;population_parameters.csv&quot;, 4, 1], 4]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="Dup_bln" nservers-x="0.5" rotation="0.0" type="EXP" x="7" y="16"/>
+      <transition delay="Call[&quot;Death&quot;, FromTable[&quot;population_parameters.csv&quot;, 4, 2], 4]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="Death_bln" nservers-x="0.5" rotation="0.0" type="EXP" x="10" y="16"/>
+      <transition delay="Call[&quot;Starvation&quot;, FromTable[&quot;population_parameters.csv&quot;, 5, 0], 5]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="Starv_bpd2" nservers-x="0.5" rotation="0.0" type="EXP" x="13" y="16"/>
+      <transition delay="Call[&quot;Duplication&quot;, FromTable[&quot;population_parameters.csv&quot;, 5, 1], 5]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="Dup_bpd2" nservers-x="0.5" rotation="0.0" type="EXP" x="4" y="19"/>
+      <transition delay="Call[&quot;Death&quot;, FromTable[&quot;population_parameters.csv&quot;, 5, 2], 5]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="Death_bpd2" nservers-x="0.5" rotation="0.0" type="EXP" x="7" y="19"/>
+      <transition delay="Call[&quot;Starvation&quot;, FromTable[&quot;population_parameters.csv&quot;, 6, 0], 6]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="Starv_crv0d1" nservers-x="0.5" rotation="0.0" type="EXP" x="10" y="19"/>
+      <transition delay="Call[&quot;Duplication&quot;, FromTable[&quot;population_parameters.csv&quot;, 6, 1], 6]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="Dup_crv0d1" nservers-x="0.5" rotation="0.0" type="EXP" x="13" y="19"/>
+      <transition delay="Call[&quot;Death&quot;, FromTable[&quot;population_parameters.csv&quot;, 6, 2], 6]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="Death_crv0d1" nservers-x="0.5" rotation="0.0" type="EXP" x="4" y="22"/>
+      <transition delay="Call[&quot;Starvation&quot;, FromTable[&quot;population_parameters.csv&quot;, 7, 0], 7]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="Starv_lpspa1" nservers-x="0.5" rotation="0.0" type="EXP" x="7" y="22"/>
+      <transition delay="Call[&quot;Duplication&quot;, FromTable[&quot;population_parameters.csv&quot;, 7, 1], 7]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="Dup_lpspa1" nservers-x="0.5" rotation="0.0" type="EXP" x="10" y="22"/>
+      <transition delay="Call[&quot;Death&quot;, FromTable[&quot;population_parameters.csv&quot;, 7, 2], 7]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="Death_lpspa1" nservers-x="0.5" rotation="0.0" type="EXP" x="13" y="22"/>
+      <transition delay="FBA[&quot;acd1_model.txt&quot;,&quot;EX_ac_e&quot;,1,&quot;n_acd1&quot;,&quot;biomass_e_acd1&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_ac_e_in_acd1" nservers-x="0.5" rotation="0.0" type="EXP" x="4" y="25"/>
+      <transition delay="FBA[&quot;acd1_model.txt&quot;,&quot;EX_ac_e&quot;,1,&quot;n_acd1&quot;,&quot;biomass_e_acd1&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_ac_e_out_acd1" nservers-x="0.5" rotation="0.0" type="EXP" x="7" y="25"/>
+      <transition delay="FBA[&quot;acd1_model.txt&quot;,&quot;EX_biomass_e&quot;,1,&quot;n_acd1&quot;,&quot;biomass_e_acd1&quot;, &quot;true&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_biomass_e_in_acd1" nservers-x="0.5" rotation="0.0" type="EXP" x="10" y="25"/>
+      <transition delay="FBA[&quot;acd1_model.txt&quot;,&quot;EX_biomass_e&quot;,1,&quot;n_acd1&quot;,&quot;biomass_e_acd1&quot;, &quot;true&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_biomass_e_out_acd1" nservers-x="0.5" rotation="0.0" type="EXP" x="13" y="25"/>
+      <transition delay="FBA[&quot;acd1_model.txt&quot;,&quot;EX_but_e&quot;,1,&quot;n_acd1&quot;,&quot;biomass_e_acd1&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_but_e_in_acd1" nservers-x="0.5" rotation="0.0" type="EXP" x="4" y="28"/>
+      <transition delay="FBA[&quot;acd1_model.txt&quot;,&quot;EX_but_e&quot;,1,&quot;n_acd1&quot;,&quot;biomass_e_acd1&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_but_e_out_acd1" nservers-x="0.5" rotation="0.0" type="EXP" x="7" y="28"/>
+      <transition delay="FBA[&quot;bln_model.txt&quot;,&quot;EX_ac_e&quot;,1,&quot;n_bln&quot;,&quot;biomass_e_bln&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_ac_e_in_bln" nservers-x="0.5" rotation="0.0" type="EXP" x="10" y="28"/>
+      <transition delay="FBA[&quot;bln_model.txt&quot;,&quot;EX_ac_e&quot;,1,&quot;n_bln&quot;,&quot;biomass_e_bln&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_ac_e_out_bln" nservers-x="0.5" rotation="0.0" type="EXP" x="13" y="28"/>
+      <transition delay="FBA[&quot;bln_model.txt&quot;,&quot;EX_biomass_e&quot;,1,&quot;n_bln&quot;,&quot;biomass_e_bln&quot;, &quot;true&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_biomass_e_in_bln" nservers-x="0.5" rotation="0.0" type="EXP" x="4" y="31"/>
+      <transition delay="FBA[&quot;bln_model.txt&quot;,&quot;EX_biomass_e&quot;,1,&quot;n_bln&quot;,&quot;biomass_e_bln&quot;, &quot;true&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_biomass_e_out_bln" nservers-x="0.5" rotation="0.0" type="EXP" x="7" y="31"/>
+      <transition delay="FBA[&quot;bln_model.txt&quot;,&quot;EX_lcts_e&quot;,1,&quot;n_bln&quot;,&quot;biomass_e_bln&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_lcts_e_in_bln" nservers-x="0.5" rotation="0.0" type="EXP" x="10" y="31"/>
+      <transition delay="FBA[&quot;bln_model.txt&quot;,&quot;EX_lcts_e&quot;,1,&quot;n_bln&quot;,&quot;biomass_e_bln&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_lcts_e_out_bln" nservers-x="0.5" rotation="0.0" type="EXP" x="13" y="31"/>
+      <transition delay="FBA[&quot;bpd2_model.txt&quot;,&quot;EX_ac_e&quot;,1,&quot;n_bpd2&quot;,&quot;biomass_e_bpd2&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_ac_e_in_bpd2" nservers-x="0.5" rotation="0.0" type="EXP" x="4" y="34"/>
+      <transition delay="FBA[&quot;bpd2_model.txt&quot;,&quot;EX_ac_e&quot;,1,&quot;n_bpd2&quot;,&quot;biomass_e_bpd2&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_ac_e_out_bpd2" nservers-x="0.5" rotation="0.0" type="EXP" x="7" y="34"/>
+      <transition delay="FBA[&quot;bpd2_model.txt&quot;,&quot;EX_biomass_e&quot;,1,&quot;n_bpd2&quot;,&quot;biomass_e_bpd2&quot;, &quot;true&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_biomass_e_in_bpd2" nservers-x="0.5" rotation="0.0" type="EXP" x="10" y="34"/>
+      <transition delay="FBA[&quot;bpd2_model.txt&quot;,&quot;EX_biomass_e&quot;,1,&quot;n_bpd2&quot;,&quot;biomass_e_bpd2&quot;, &quot;true&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_biomass_e_out_bpd2" nservers-x="0.5" rotation="0.0" type="EXP" x="13" y="34"/>
+      <transition delay="FBA[&quot;bpd2_model.txt&quot;,&quot;EX_lcts_e&quot;,1,&quot;n_bpd2&quot;,&quot;biomass_e_bpd2&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_lcts_e_in_bpd2" nservers-x="0.5" rotation="0.0" type="EXP" x="4" y="37"/>
+      <transition delay="FBA[&quot;bpd2_model.txt&quot;,&quot;EX_lcts_e&quot;,1,&quot;n_bpd2&quot;,&quot;biomass_e_bpd2&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_lcts_e_out_bpd2" nservers-x="0.5" rotation="0.0" type="EXP" x="7" y="37"/>
+      <transition delay="FBA[&quot;btv5_model.txt&quot;,&quot;EX_ac_e&quot;,1,&quot;n_btv5&quot;,&quot;biomass_e_btv5&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_ac_e_in_btv5" nservers-x="0.5" rotation="0.0" type="EXP" x="10" y="37"/>
+      <transition delay="FBA[&quot;btv5_model.txt&quot;,&quot;EX_ac_e&quot;,1,&quot;n_btv5&quot;,&quot;biomass_e_btv5&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_ac_e_out_btv5" nservers-x="0.5" rotation="0.0" type="EXP" x="13" y="37"/>
+      <transition delay="FBA[&quot;btv5_model.txt&quot;,&quot;EX_biomass_e&quot;,1,&quot;n_btv5&quot;,&quot;biomass_e_btv5&quot;, &quot;true&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_biomass_e_in_btv5" nservers-x="0.5" rotation="0.0" type="EXP" x="4" y="40"/>
+      <transition delay="FBA[&quot;btv5_model.txt&quot;,&quot;EX_biomass_e&quot;,1,&quot;n_btv5&quot;,&quot;biomass_e_btv5&quot;, &quot;true&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_biomass_e_out_btv5" nservers-x="0.5" rotation="0.0" type="EXP" x="7" y="40"/>
+      <transition delay="FBA[&quot;btv5_model.txt&quot;,&quot;EX_lcts_e&quot;,1,&quot;n_btv5&quot;,&quot;biomass_e_btv5&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_lcts_e_in_btv5" nservers-x="0.5" rotation="0.0" type="EXP" x="10" y="40"/>
+      <transition delay="FBA[&quot;btv5_model.txt&quot;,&quot;EX_lcts_e&quot;,1,&quot;n_btv5&quot;,&quot;biomass_e_btv5&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_lcts_e_out_btv5" nservers-x="0.5" rotation="0.0" type="EXP" x="13" y="40"/>
+      <transition delay="FBA[&quot;btv5_model.txt&quot;,&quot;EX_ppa_e&quot;,1,&quot;n_btv5&quot;,&quot;biomass_e_btv5&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_ppa_e_in_btv5" nservers-x="0.5" rotation="0.0" type="EXP" x="4" y="43"/>
+      <transition delay="FBA[&quot;btv5_model.txt&quot;,&quot;EX_ppa_e&quot;,1,&quot;n_btv5&quot;,&quot;biomass_e_btv5&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_ppa_e_out_btv5" nservers-x="0.5" rotation="0.0" type="EXP" x="7" y="43"/>
+      <transition delay="FBA[&quot;cbd1_model.txt&quot;,&quot;EX_ac_e&quot;,1,&quot;n_cbd1&quot;,&quot;biomass_e_cbd1&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_ac_e_in_cbd1" nservers-x="0.5" rotation="0.0" type="EXP" x="10" y="43"/>
+      <transition delay="FBA[&quot;cbd1_model.txt&quot;,&quot;EX_ac_e&quot;,1,&quot;n_cbd1&quot;,&quot;biomass_e_cbd1&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_ac_e_out_cbd1" nservers-x="0.5" rotation="0.0" type="EXP" x="13" y="43"/>
+      <transition delay="FBA[&quot;cbd1_model.txt&quot;,&quot;EX_biomass_e&quot;,1,&quot;n_cbd1&quot;,&quot;biomass_e_cbd1&quot;, &quot;true&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_biomass_e_in_cbd1" nservers-x="0.5" rotation="0.0" type="EXP" x="4" y="46"/>
+      <transition delay="FBA[&quot;cbd1_model.txt&quot;,&quot;EX_biomass_e&quot;,1,&quot;n_cbd1&quot;,&quot;biomass_e_cbd1&quot;, &quot;true&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_biomass_e_out_cbd1" nservers-x="0.5" rotation="0.0" type="EXP" x="7" y="46"/>
+      <transition delay="FBA[&quot;cbd1_model.txt&quot;,&quot;EX_but_e&quot;,1,&quot;n_cbd1&quot;,&quot;biomass_e_cbd1&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_but_e_in_cbd1" nservers-x="0.5" rotation="0.0" type="EXP" x="10" y="46"/>
+      <transition delay="FBA[&quot;cbd1_model.txt&quot;,&quot;EX_but_e&quot;,1,&quot;n_cbd1&quot;,&quot;biomass_e_cbd1&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_but_e_out_cbd1" nservers-x="0.5" rotation="0.0" type="EXP" x="13" y="46"/>
+      <transition delay="FBA[&quot;cbd1_model.txt&quot;,&quot;EX_lcts_e&quot;,1,&quot;n_cbd1&quot;,&quot;biomass_e_cbd1&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_lcts_e_in_cbd1" nservers-x="0.5" rotation="0.0" type="EXP" x="4" y="49"/>
+      <transition delay="FBA[&quot;cbd1_model.txt&quot;,&quot;EX_lcts_e&quot;,1,&quot;n_cbd1&quot;,&quot;biomass_e_cbd1&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_lcts_e_out_cbd1" nservers-x="0.5" rotation="0.0" type="EXP" x="7" y="49"/>
+      <transition delay="FBA[&quot;crv0d1_model.txt&quot;,&quot;EX_ac_e&quot;,1,&quot;n_crv0d1&quot;,&quot;biomass_e_crv0d1&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_ac_e_in_crv0d1" nservers-x="0.5" rotation="0.0" type="EXP" x="10" y="49"/>
+      <transition delay="FBA[&quot;crv0d1_model.txt&quot;,&quot;EX_ac_e&quot;,1,&quot;n_crv0d1&quot;,&quot;biomass_e_crv0d1&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_ac_e_out_crv0d1" nservers-x="0.5" rotation="0.0" type="EXP" x="13" y="49"/>
+      <transition delay="FBA[&quot;crv0d1_model.txt&quot;,&quot;EX_biomass_e&quot;,1,&quot;n_crv0d1&quot;,&quot;biomass_e_crv0d1&quot;, &quot;true&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_biomass_e_in_crv0d1" nservers-x="0.5" rotation="0.0" type="EXP" x="4" y="52"/>
+      <transition delay="FBA[&quot;crv0d1_model.txt&quot;,&quot;EX_biomass_e&quot;,1,&quot;n_crv0d1&quot;,&quot;biomass_e_crv0d1&quot;, &quot;true&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_biomass_e_out_crv0d1" nservers-x="0.5" rotation="0.0" type="EXP" x="7" y="52"/>
+      <transition delay="FBA[&quot;crv0d1_model.txt&quot;,&quot;EX_lcts_e&quot;,1,&quot;n_crv0d1&quot;,&quot;biomass_e_crv0d1&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_lcts_e_in_crv0d1" nservers-x="0.5" rotation="0.0" type="EXP" x="10" y="52"/>
+      <transition delay="FBA[&quot;crv0d1_model.txt&quot;,&quot;EX_lcts_e&quot;,1,&quot;n_crv0d1&quot;,&quot;biomass_e_crv0d1&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_lcts_e_out_crv0d1" nservers-x="0.5" rotation="0.0" type="EXP" x="13" y="52"/>
+      <transition delay="FBA[&quot;ecs_model.txt&quot;,&quot;EX_ac_e&quot;,1,&quot;n_ecs&quot;,&quot;biomass_e_ecs&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_ac_e_in_ecs" nservers-x="0.5" rotation="0.0" type="EXP" x="4" y="55"/>
+      <transition delay="FBA[&quot;ecs_model.txt&quot;,&quot;EX_ac_e&quot;,1,&quot;n_ecs&quot;,&quot;biomass_e_ecs&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_ac_e_out_ecs" nservers-x="0.5" rotation="0.0" type="EXP" x="7" y="55"/>
+      <transition delay="FBA[&quot;ecs_model.txt&quot;,&quot;EX_biomass_e&quot;,1,&quot;n_ecs&quot;,&quot;biomass_e_ecs&quot;, &quot;true&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_biomass_e_in_ecs" nservers-x="0.5" rotation="0.0" type="EXP" x="10" y="55"/>
+      <transition delay="FBA[&quot;ecs_model.txt&quot;,&quot;EX_biomass_e&quot;,1,&quot;n_ecs&quot;,&quot;biomass_e_ecs&quot;, &quot;true&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_biomass_e_out_ecs" nservers-x="0.5" rotation="0.0" type="EXP" x="13" y="55"/>
+      <transition delay="FBA[&quot;ecs_model.txt&quot;,&quot;EX_lcts_e&quot;,1,&quot;n_ecs&quot;,&quot;biomass_e_ecs&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_lcts_e_in_ecs" nservers-x="0.5" rotation="0.0" type="EXP" x="4" y="58"/>
+      <transition delay="FBA[&quot;ecs_model.txt&quot;,&quot;EX_lcts_e&quot;,1,&quot;n_ecs&quot;,&quot;biomass_e_ecs&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_lcts_e_out_ecs" nservers-x="0.5" rotation="0.0" type="EXP" x="7" y="58"/>
+      <transition delay="FBA[&quot;ecs_model.txt&quot;,&quot;EX_ppa_e&quot;,1,&quot;n_ecs&quot;,&quot;biomass_e_ecs&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_ppa_e_in_ecs" nservers-x="0.5" rotation="0.0" type="EXP" x="10" y="58"/>
+      <transition delay="FBA[&quot;ecs_model.txt&quot;,&quot;EX_ppa_e&quot;,1,&quot;n_ecs&quot;,&quot;biomass_e_ecs&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_ppa_e_out_ecs" nservers-x="0.5" rotation="0.0" type="EXP" x="13" y="58"/>
+      <transition delay="FBA[&quot;lpspa1_model.txt&quot;,&quot;EX_ac_e&quot;,1,&quot;n_lpspa1&quot;,&quot;biomass_e_lpspa1&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_ac_e_in_lpspa1" nservers-x="0.5" rotation="0.0" type="EXP" x="4" y="61"/>
+      <transition delay="FBA[&quot;lpspa1_model.txt&quot;,&quot;EX_ac_e&quot;,1,&quot;n_lpspa1&quot;,&quot;biomass_e_lpspa1&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_ac_e_out_lpspa1" nservers-x="0.5" rotation="0.0" type="EXP" x="7" y="61"/>
+      <transition delay="FBA[&quot;lpspa1_model.txt&quot;,&quot;EX_biomass_e&quot;,1,&quot;n_lpspa1&quot;,&quot;biomass_e_lpspa1&quot;, &quot;true&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_biomass_e_in_lpspa1" nservers-x="0.5" rotation="0.0" type="EXP" x="10" y="61"/>
+      <transition delay="FBA[&quot;lpspa1_model.txt&quot;,&quot;EX_biomass_e&quot;,1,&quot;n_lpspa1&quot;,&quot;biomass_e_lpspa1&quot;, &quot;true&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_biomass_e_out_lpspa1" nservers-x="0.5" rotation="0.0" type="EXP" x="13" y="61"/>
+      <transition delay="FBA[&quot;lpspa1_model.txt&quot;,&quot;EX_lcts_e&quot;,1,&quot;n_lpspa1&quot;,&quot;biomass_e_lpspa1&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_lcts_e_in_lpspa1" nservers-x="0.5" rotation="0.0" type="EXP" x="4" y="64"/>
+      <transition delay="FBA[&quot;lpspa1_model.txt&quot;,&quot;EX_lcts_e&quot;,1,&quot;n_lpspa1&quot;,&quot;biomass_e_lpspa1&quot;]" delay-x="0.0" delay-y="0.0" label-x="0.0" label-y="0.0" name="EX_lcts_e_out_lpspa1" nservers-x="0.5" rotation="0.0" type="EXP" x="7" y="64"/>
+    </nodes>
+    <edges>
+      <arc head="Starv_ecs" kind="INPUT" tail="biomass_e_ecs"/>
+      <arc head="Dup_ecs" kind="INPUT" tail="n_ecs"/>
+      <arc head="Dup_ecs" kind="INPUT" tail="biomass_e_ecs"/>
+      <arc head="n_ecs" kind="OUTPUT" mult="2" tail="Dup_ecs"/>
+      <arc head="biomass_e_ecs" kind="OUTPUT" tail="Dup_ecs"/>
+      <arc head="Death_ecs" kind="INPUT" tail="n_ecs"/>
+      <arc head="Death_ecs" kind="INPUT" tail="biomass_e_ecs"/>
+      <arc head="biomass_e_ecs" kind="OUTPUT" tail="Death_ecs"/>
+      <arc head="Starv_cbd1" kind="INPUT" tail="biomass_e_cbd1"/>
+      <arc head="Dup_cbd1" kind="INPUT" tail="n_cbd1"/>
+      <arc head="Dup_cbd1" kind="INPUT" tail="biomass_e_cbd1"/>
+      <arc head="n_cbd1" kind="OUTPUT" mult="2" tail="Dup_cbd1"/>
+      <arc head="biomass_e_cbd1" kind="OUTPUT" tail="Dup_cbd1"/>
+      <arc head="Death_cbd1" kind="INPUT" tail="n_cbd1"/>
+      <arc head="Death_cbd1" kind="INPUT" tail="biomass_e_cbd1"/>
+      <arc head="biomass_e_cbd1" kind="OUTPUT" tail="Death_cbd1"/>
+      <arc head="Starv_acd1" kind="INPUT" tail="biomass_e_acd1"/>
+      <arc head="Dup_acd1" kind="INPUT" tail="n_acd1"/>
+      <arc head="Dup_acd1" kind="INPUT" tail="biomass_e_acd1"/>
+      <arc head="n_acd1" kind="OUTPUT" mult="2" tail="Dup_acd1"/>
+      <arc head="biomass_e_acd1" kind="OUTPUT" tail="Dup_acd1"/>
+      <arc head="Death_acd1" kind="INPUT" tail="n_acd1"/>
+      <arc head="Death_acd1" kind="INPUT" tail="biomass_e_acd1"/>
+      <arc head="biomass_e_acd1" kind="OUTPUT" tail="Death_acd1"/>
+      <arc head="Starv_btv5" kind="INPUT" tail="biomass_e_btv5"/>
+      <arc head="Dup_btv5" kind="INPUT" tail="n_btv5"/>
+      <arc head="Dup_btv5" kind="INPUT" tail="biomass_e_btv5"/>
+      <arc head="n_btv5" kind="OUTPUT" mult="2" tail="Dup_btv5"/>
+      <arc head="biomass_e_btv5" kind="OUTPUT" tail="Dup_btv5"/>
+      <arc head="Death_btv5" kind="INPUT" tail="n_btv5"/>
+      <arc head="Death_btv5" kind="INPUT" tail="biomass_e_btv5"/>
+      <arc head="biomass_e_btv5" kind="OUTPUT" tail="Death_btv5"/>
+      <arc head="Starv_bln" kind="INPUT" tail="biomass_e_bln"/>
+      <arc head="Dup_bln" kind="INPUT" tail="n_bln"/>
+      <arc head="Dup_bln" kind="INPUT" tail="biomass_e_bln"/>
+      <arc head="n_bln" kind="OUTPUT" mult="2" tail="Dup_bln"/>
+      <arc head="biomass_e_bln" kind="OUTPUT" tail="Dup_bln"/>
+      <arc head="Death_bln" kind="INPUT" tail="n_bln"/>
+      <arc head="Death_bln" kind="INPUT" tail="biomass_e_bln"/>
+      <arc head="biomass_e_bln" kind="OUTPUT" tail="Death_bln"/>
+      <arc head="Starv_bpd2" kind="INPUT" tail="biomass_e_bpd2"/>
+      <arc head="Dup_bpd2" kind="INPUT" tail="n_bpd2"/>
+      <arc head="Dup_bpd2" kind="INPUT" tail="biomass_e_bpd2"/>
+      <arc head="n_bpd2" kind="OUTPUT" mult="2" tail="Dup_bpd2"/>
+      <arc head="biomass_e_bpd2" kind="OUTPUT" tail="Dup_bpd2"/>
+      <arc head="Death_bpd2" kind="INPUT" tail="n_bpd2"/>
+      <arc head="Death_bpd2" kind="INPUT" tail="biomass_e_bpd2"/>
+      <arc head="biomass_e_bpd2" kind="OUTPUT" tail="Death_bpd2"/>
+      <arc head="Starv_crv0d1" kind="INPUT" tail="biomass_e_crv0d1"/>
+      <arc head="Dup_crv0d1" kind="INPUT" tail="n_crv0d1"/>
+      <arc head="Dup_crv0d1" kind="INPUT" tail="biomass_e_crv0d1"/>
+      <arc head="n_crv0d1" kind="OUTPUT" mult="2" tail="Dup_crv0d1"/>
+      <arc head="biomass_e_crv0d1" kind="OUTPUT" tail="Dup_crv0d1"/>
+      <arc head="Death_crv0d1" kind="INPUT" tail="n_crv0d1"/>
+      <arc head="Death_crv0d1" kind="INPUT" tail="biomass_e_crv0d1"/>
+      <arc head="biomass_e_crv0d1" kind="OUTPUT" tail="Death_crv0d1"/>
+      <arc head="Starv_lpspa1" kind="INPUT" tail="biomass_e_lpspa1"/>
+      <arc head="Dup_lpspa1" kind="INPUT" tail="n_lpspa1"/>
+      <arc head="Dup_lpspa1" kind="INPUT" tail="biomass_e_lpspa1"/>
+      <arc head="n_lpspa1" kind="OUTPUT" mult="2" tail="Dup_lpspa1"/>
+      <arc head="biomass_e_lpspa1" kind="OUTPUT" tail="Dup_lpspa1"/>
+      <arc head="Death_lpspa1" kind="INPUT" tail="n_lpspa1"/>
+      <arc head="Death_lpspa1" kind="INPUT" tail="biomass_e_lpspa1"/>
+      <arc head="biomass_e_lpspa1" kind="OUTPUT" tail="Death_lpspa1"/>
+      <arc head="EX_ac_e_in_acd1" kind="INPUT" tail="ac_e"/>
+      <arc head="EX_ac_e_in_acd1" kind="INPUT" tail="n_acd1"/>
+      <arc head="EX_ac_e_in_acd1" kind="INPUT" tail="biomass_e_acd1"/>
+      <arc head="n_acd1" kind="OUTPUT" tail="EX_ac_e_in_acd1"/>
+      <arc head="biomass_e_acd1" kind="OUTPUT" tail="EX_ac_e_in_acd1"/>
+      <arc head="EX_ac_e_out_acd1" kind="INPUT" tail="n_acd1"/>
+      <arc head="EX_ac_e_out_acd1" kind="INPUT" tail="biomass_e_acd1"/>
+      <arc head="ac_e" kind="OUTPUT" tail="EX_ac_e_out_acd1"/>
+      <arc head="n_acd1" kind="OUTPUT" tail="EX_ac_e_out_acd1"/>
+      <arc head="biomass_e_acd1" kind="OUTPUT" tail="EX_ac_e_out_acd1"/>
+      <arc head="EX_biomass_e_in_acd1" kind="INPUT" tail="biomass_e_acd1"/>
+      <arc head="EX_biomass_e_out_acd1" kind="INPUT" tail="biomass_e_acd1"/>
+      <arc head="biomass_e_acd1" kind="OUTPUT" mult="2" tail="EX_biomass_e_out_acd1"/>
+      <arc head="EX_but_e_in_acd1" kind="INPUT" tail="but_e"/>
+      <arc head="EX_but_e_in_acd1" kind="INPUT" tail="n_acd1"/>
+      <arc head="EX_but_e_in_acd1" kind="INPUT" tail="biomass_e_acd1"/>
+      <arc head="n_acd1" kind="OUTPUT" tail="EX_but_e_in_acd1"/>
+      <arc head="biomass_e_acd1" kind="OUTPUT" tail="EX_but_e_in_acd1"/>
+      <arc head="EX_but_e_out_acd1" kind="INPUT" tail="n_acd1"/>
+      <arc head="EX_but_e_out_acd1" kind="INPUT" tail="biomass_e_acd1"/>
+      <arc head="but_e" kind="OUTPUT" tail="EX_but_e_out_acd1"/>
+      <arc head="n_acd1" kind="OUTPUT" tail="EX_but_e_out_acd1"/>
+      <arc head="biomass_e_acd1" kind="OUTPUT" tail="EX_but_e_out_acd1"/>
+      <arc head="EX_ac_e_in_bln" kind="INPUT" tail="ac_e"/>
+      <arc head="EX_ac_e_in_bln" kind="INPUT" tail="n_bln"/>
+      <arc head="EX_ac_e_in_bln" kind="INPUT" tail="biomass_e_bln"/>
+      <arc head="n_bln" kind="OUTPUT" tail="EX_ac_e_in_bln"/>
+      <arc head="biomass_e_bln" kind="OUTPUT" tail="EX_ac_e_in_bln"/>
+      <arc head="EX_ac_e_out_bln" kind="INPUT" tail="n_bln"/>
+      <arc head="EX_ac_e_out_bln" kind="INPUT" tail="biomass_e_bln"/>
+      <arc head="ac_e" kind="OUTPUT" tail="EX_ac_e_out_bln"/>
+      <arc head="n_bln" kind="OUTPUT" tail="EX_ac_e_out_bln"/>
+      <arc head="biomass_e_bln" kind="OUTPUT" tail="EX_ac_e_out_bln"/>
+      <arc head="EX_biomass_e_in_bln" kind="INPUT" tail="biomass_e_bln"/>
+      <arc head="EX_biomass_e_out_bln" kind="INPUT" tail="biomass_e_bln"/>
+      <arc head="biomass_e_bln" kind="OUTPUT" mult="2" tail="EX_biomass_e_out_bln"/>
+      <arc head="EX_lcts_e_in_bln" kind="INPUT" tail="lcts_e"/>
+      <arc head="EX_lcts_e_in_bln" kind="INPUT" tail="n_bln"/>
+      <arc head="EX_lcts_e_in_bln" kind="INPUT" tail="biomass_e_bln"/>
+      <arc head="n_bln" kind="OUTPUT" tail="EX_lcts_e_in_bln"/>
+      <arc head="biomass_e_bln" kind="OUTPUT" tail="EX_lcts_e_in_bln"/>
+      <arc head="EX_lcts_e_out_bln" kind="INPUT" tail="n_bln"/>
+      <arc head="EX_lcts_e_out_bln" kind="INPUT" tail="biomass_e_bln"/>
+      <arc head="lcts_e" kind="OUTPUT" tail="EX_lcts_e_out_bln"/>
+      <arc head="n_bln" kind="OUTPUT" tail="EX_lcts_e_out_bln"/>
+      <arc head="biomass_e_bln" kind="OUTPUT" tail="EX_lcts_e_out_bln"/>
+      <arc head="EX_ac_e_in_bpd2" kind="INPUT" tail="ac_e"/>
+      <arc head="EX_ac_e_in_bpd2" kind="INPUT" tail="n_bpd2"/>
+      <arc head="EX_ac_e_in_bpd2" kind="INPUT" tail="biomass_e_bpd2"/>
+      <arc head="n_bpd2" kind="OUTPUT" tail="EX_ac_e_in_bpd2"/>
+      <arc head="biomass_e_bpd2" kind="OUTPUT" tail="EX_ac_e_in_bpd2"/>
+      <arc head="EX_ac_e_out_bpd2" kind="INPUT" tail="n_bpd2"/>
+      <arc head="EX_ac_e_out_bpd2" kind="INPUT" tail="biomass_e_bpd2"/>
+      <arc head="ac_e" kind="OUTPUT" tail="EX_ac_e_out_bpd2"/>
+      <arc head="n_bpd2" kind="OUTPUT" tail="EX_ac_e_out_bpd2"/>
+      <arc head="biomass_e_bpd2" kind="OUTPUT" tail="EX_ac_e_out_bpd2"/>
+      <arc head="EX_biomass_e_in_bpd2" kind="INPUT" tail="biomass_e_bpd2"/>
+      <arc head="EX_biomass_e_out_bpd2" kind="INPUT" tail="biomass_e_bpd2"/>
+      <arc head="biomass_e_bpd2" kind="OUTPUT" mult="2" tail="EX_biomass_e_out_bpd2"/>
+      <arc head="EX_lcts_e_in_bpd2" kind="INPUT" tail="lcts_e"/>
+      <arc head="EX_lcts_e_in_bpd2" kind="INPUT" tail="n_bpd2"/>
+      <arc head="EX_lcts_e_in_bpd2" kind="INPUT" tail="biomass_e_bpd2"/>
+      <arc head="n_bpd2" kind="OUTPUT" tail="EX_lcts_e_in_bpd2"/>
+      <arc head="biomass_e_bpd2" kind="OUTPUT" tail="EX_lcts_e_in_bpd2"/>
+      <arc head="EX_lcts_e_out_bpd2" kind="INPUT" tail="n_bpd2"/>
+      <arc head="EX_lcts_e_out_bpd2" kind="INPUT" tail="biomass_e_bpd2"/>
+      <arc head="lcts_e" kind="OUTPUT" tail="EX_lcts_e_out_bpd2"/>
+      <arc head="n_bpd2" kind="OUTPUT" tail="EX_lcts_e_out_bpd2"/>
+      <arc head="biomass_e_bpd2" kind="OUTPUT" tail="EX_lcts_e_out_bpd2"/>
+      <arc head="EX_ac_e_in_btv5" kind="INPUT" tail="ac_e"/>
+      <arc head="EX_ac_e_in_btv5" kind="INPUT" tail="n_btv5"/>
+      <arc head="EX_ac_e_in_btv5" kind="INPUT" tail="biomass_e_btv5"/>
+      <arc head="n_btv5" kind="OUTPUT" tail="EX_ac_e_in_btv5"/>
+      <arc head="biomass_e_btv5" kind="OUTPUT" tail="EX_ac_e_in_btv5"/>
+      <arc head="EX_ac_e_out_btv5" kind="INPUT" tail="n_btv5"/>
+      <arc head="EX_ac_e_out_btv5" kind="INPUT" tail="biomass_e_btv5"/>
+      <arc head="ac_e" kind="OUTPUT" tail="EX_ac_e_out_btv5"/>
+      <arc head="n_btv5" kind="OUTPUT" tail="EX_ac_e_out_btv5"/>
+      <arc head="biomass_e_btv5" kind="OUTPUT" tail="EX_ac_e_out_btv5"/>
+      <arc head="EX_biomass_e_in_btv5" kind="INPUT" tail="biomass_e_btv5"/>
+      <arc head="EX_biomass_e_out_btv5" kind="INPUT" tail="biomass_e_btv5"/>
+      <arc head="biomass_e_btv5" kind="OUTPUT" mult="2" tail="EX_biomass_e_out_btv5"/>
+      <arc head="EX_lcts_e_in_btv5" kind="INPUT" tail="lcts_e"/>
+      <arc head="EX_lcts_e_in_btv5" kind="INPUT" tail="n_btv5"/>
+      <arc head="EX_lcts_e_in_btv5" kind="INPUT" tail="biomass_e_btv5"/>
+      <arc head="n_btv5" kind="OUTPUT" tail="EX_lcts_e_in_btv5"/>
+      <arc head="biomass_e_btv5" kind="OUTPUT" tail="EX_lcts_e_in_btv5"/>
+      <arc head="EX_lcts_e_out_btv5" kind="INPUT" tail="n_btv5"/>
+      <arc head="EX_lcts_e_out_btv5" kind="INPUT" tail="biomass_e_btv5"/>
+      <arc head="lcts_e" kind="OUTPUT" tail="EX_lcts_e_out_btv5"/>
+      <arc head="n_btv5" kind="OUTPUT" tail="EX_lcts_e_out_btv5"/>
+      <arc head="biomass_e_btv5" kind="OUTPUT" tail="EX_lcts_e_out_btv5"/>
+      <arc head="EX_ppa_e_in_btv5" kind="INPUT" tail="ppa_e"/>
+      <arc head="EX_ppa_e_in_btv5" kind="INPUT" tail="n_btv5"/>
+      <arc head="EX_ppa_e_in_btv5" kind="INPUT" tail="biomass_e_btv5"/>
+      <arc head="n_btv5" kind="OUTPUT" tail="EX_ppa_e_in_btv5"/>
+      <arc head="biomass_e_btv5" kind="OUTPUT" tail="EX_ppa_e_in_btv5"/>
+      <arc head="EX_ppa_e_out_btv5" kind="INPUT" tail="n_btv5"/>
+      <arc head="EX_ppa_e_out_btv5" kind="INPUT" tail="biomass_e_btv5"/>
+      <arc head="ppa_e" kind="OUTPUT" tail="EX_ppa_e_out_btv5"/>
+      <arc head="n_btv5" kind="OUTPUT" tail="EX_ppa_e_out_btv5"/>
+      <arc head="biomass_e_btv5" kind="OUTPUT" tail="EX_ppa_e_out_btv5"/>
+      <arc head="EX_ac_e_in_cbd1" kind="INPUT" tail="ac_e"/>
+      <arc head="EX_ac_e_in_cbd1" kind="INPUT" tail="n_cbd1"/>
+      <arc head="EX_ac_e_in_cbd1" kind="INPUT" tail="biomass_e_cbd1"/>
+      <arc head="n_cbd1" kind="OUTPUT" tail="EX_ac_e_in_cbd1"/>
+      <arc head="biomass_e_cbd1" kind="OUTPUT" tail="EX_ac_e_in_cbd1"/>
+      <arc head="EX_ac_e_out_cbd1" kind="INPUT" tail="n_cbd1"/>
+      <arc head="EX_ac_e_out_cbd1" kind="INPUT" tail="biomass_e_cbd1"/>
+      <arc head="ac_e" kind="OUTPUT" tail="EX_ac_e_out_cbd1"/>
+      <arc head="n_cbd1" kind="OUTPUT" tail="EX_ac_e_out_cbd1"/>
+      <arc head="biomass_e_cbd1" kind="OUTPUT" tail="EX_ac_e_out_cbd1"/>
+      <arc head="EX_biomass_e_in_cbd1" kind="INPUT" tail="biomass_e_cbd1"/>
+      <arc head="EX_biomass_e_out_cbd1" kind="INPUT" tail="biomass_e_cbd1"/>
+      <arc head="biomass_e_cbd1" kind="OUTPUT" mult="2" tail="EX_biomass_e_out_cbd1"/>
+      <arc head="EX_but_e_in_cbd1" kind="INPUT" tail="but_e"/>
+      <arc head="EX_but_e_in_cbd1" kind="INPUT" tail="n_cbd1"/>
+      <arc head="EX_but_e_in_cbd1" kind="INPUT" tail="biomass_e_cbd1"/>
+      <arc head="n_cbd1" kind="OUTPUT" tail="EX_but_e_in_cbd1"/>
+      <arc head="biomass_e_cbd1" kind="OUTPUT" tail="EX_but_e_in_cbd1"/>
+      <arc head="EX_but_e_out_cbd1" kind="INPUT" tail="n_cbd1"/>
+      <arc head="EX_but_e_out_cbd1" kind="INPUT" tail="biomass_e_cbd1"/>
+      <arc head="but_e" kind="OUTPUT" tail="EX_but_e_out_cbd1"/>
+      <arc head="n_cbd1" kind="OUTPUT" tail="EX_but_e_out_cbd1"/>
+      <arc head="biomass_e_cbd1" kind="OUTPUT" tail="EX_but_e_out_cbd1"/>
+      <arc head="EX_lcts_e_in_cbd1" kind="INPUT" tail="lcts_e"/>
+      <arc head="EX_lcts_e_in_cbd1" kind="INPUT" tail="n_cbd1"/>
+      <arc head="EX_lcts_e_in_cbd1" kind="INPUT" tail="biomass_e_cbd1"/>
+      <arc head="n_cbd1" kind="OUTPUT" tail="EX_lcts_e_in_cbd1"/>
+      <arc head="biomass_e_cbd1" kind="OUTPUT" tail="EX_lcts_e_in_cbd1"/>
+      <arc head="EX_lcts_e_out_cbd1" kind="INPUT" tail="n_cbd1"/>
+      <arc head="EX_lcts_e_out_cbd1" kind="INPUT" tail="biomass_e_cbd1"/>
+      <arc head="lcts_e" kind="OUTPUT" tail="EX_lcts_e_out_cbd1"/>
+      <arc head="n_cbd1" kind="OUTPUT" tail="EX_lcts_e_out_cbd1"/>
+      <arc head="biomass_e_cbd1" kind="OUTPUT" tail="EX_lcts_e_out_cbd1"/>
+      <arc head="EX_ac_e_in_crv0d1" kind="INPUT" tail="ac_e"/>
+      <arc head="EX_ac_e_in_crv0d1" kind="INPUT" tail="n_crv0d1"/>
+      <arc head="EX_ac_e_in_crv0d1" kind="INPUT" tail="biomass_e_crv0d1"/>
+      <arc head="n_crv0d1" kind="OUTPUT" tail="EX_ac_e_in_crv0d1"/>
+      <arc head="biomass_e_crv0d1" kind="OUTPUT" tail="EX_ac_e_in_crv0d1"/>
+      <arc head="EX_ac_e_out_crv0d1" kind="INPUT" tail="n_crv0d1"/>
+      <arc head="EX_ac_e_out_crv0d1" kind="INPUT" tail="biomass_e_crv0d1"/>
+      <arc head="ac_e" kind="OUTPUT" tail="EX_ac_e_out_crv0d1"/>
+      <arc head="n_crv0d1" kind="OUTPUT" tail="EX_ac_e_out_crv0d1"/>
+      <arc head="biomass_e_crv0d1" kind="OUTPUT" tail="EX_ac_e_out_crv0d1"/>
+      <arc head="EX_biomass_e_in_crv0d1" kind="INPUT" tail="biomass_e_crv0d1"/>
+      <arc head="EX_biomass_e_out_crv0d1" kind="INPUT" tail="biomass_e_crv0d1"/>
+      <arc head="biomass_e_crv0d1" kind="OUTPUT" mult="2" tail="EX_biomass_e_out_crv0d1"/>
+      <arc head="EX_lcts_e_in_crv0d1" kind="INPUT" tail="lcts_e"/>
+      <arc head="EX_lcts_e_in_crv0d1" kind="INPUT" tail="n_crv0d1"/>
+      <arc head="EX_lcts_e_in_crv0d1" kind="INPUT" tail="biomass_e_crv0d1"/>
+      <arc head="n_crv0d1" kind="OUTPUT" tail="EX_lcts_e_in_crv0d1"/>
+      <arc head="biomass_e_crv0d1" kind="OUTPUT" tail="EX_lcts_e_in_crv0d1"/>
+      <arc head="EX_lcts_e_out_crv0d1" kind="INPUT" tail="n_crv0d1"/>
+      <arc head="EX_lcts_e_out_crv0d1" kind="INPUT" tail="biomass_e_crv0d1"/>
+      <arc head="lcts_e" kind="OUTPUT" tail="EX_lcts_e_out_crv0d1"/>
+      <arc head="n_crv0d1" kind="OUTPUT" tail="EX_lcts_e_out_crv0d1"/>
+      <arc head="biomass_e_crv0d1" kind="OUTPUT" tail="EX_lcts_e_out_crv0d1"/>
+      <arc head="EX_ac_e_in_ecs" kind="INPUT" tail="ac_e"/>
+      <arc head="EX_ac_e_in_ecs" kind="INPUT" tail="n_ecs"/>
+      <arc head="EX_ac_e_in_ecs" kind="INPUT" tail="biomass_e_ecs"/>
+      <arc head="n_ecs" kind="OUTPUT" tail="EX_ac_e_in_ecs"/>
+      <arc head="biomass_e_ecs" kind="OUTPUT" tail="EX_ac_e_in_ecs"/>
+      <arc head="EX_ac_e_out_ecs" kind="INPUT" tail="n_ecs"/>
+      <arc head="EX_ac_e_out_ecs" kind="INPUT" tail="biomass_e_ecs"/>
+      <arc head="ac_e" kind="OUTPUT" tail="EX_ac_e_out_ecs"/>
+      <arc head="n_ecs" kind="OUTPUT" tail="EX_ac_e_out_ecs"/>
+      <arc head="biomass_e_ecs" kind="OUTPUT" tail="EX_ac_e_out_ecs"/>
+      <arc head="EX_biomass_e_in_ecs" kind="INPUT" tail="biomass_e_ecs"/>
+      <arc head="EX_biomass_e_out_ecs" kind="INPUT" tail="biomass_e_ecs"/>
+      <arc head="biomass_e_ecs" kind="OUTPUT" mult="2" tail="EX_biomass_e_out_ecs"/>
+      <arc head="EX_lcts_e_in_ecs" kind="INPUT" tail="lcts_e"/>
+      <arc head="EX_lcts_e_in_ecs" kind="INPUT" tail="n_ecs"/>
+      <arc head="EX_lcts_e_in_ecs" kind="INPUT" tail="biomass_e_ecs"/>
+      <arc head="n_ecs" kind="OUTPUT" tail="EX_lcts_e_in_ecs"/>
+      <arc head="biomass_e_ecs" kind="OUTPUT" tail="EX_lcts_e_in_ecs"/>
+      <arc head="EX_lcts_e_out_ecs" kind="INPUT" tail="n_ecs"/>
+      <arc head="EX_lcts_e_out_ecs" kind="INPUT" tail="biomass_e_ecs"/>
+      <arc head="lcts_e" kind="OUTPUT" tail="EX_lcts_e_out_ecs"/>
+      <arc head="n_ecs" kind="OUTPUT" tail="EX_lcts_e_out_ecs"/>
+      <arc head="biomass_e_ecs" kind="OUTPUT" tail="EX_lcts_e_out_ecs"/>
+      <arc head="EX_ppa_e_in_ecs" kind="INPUT" tail="ppa_e"/>
+      <arc head="EX_ppa_e_in_ecs" kind="INPUT" tail="n_ecs"/>
+      <arc head="EX_ppa_e_in_ecs" kind="INPUT" tail="biomass_e_ecs"/>
+      <arc head="n_ecs" kind="OUTPUT" tail="EX_ppa_e_in_ecs"/>
+      <arc head="biomass_e_ecs" kind="OUTPUT" tail="EX_ppa_e_in_ecs"/>
+      <arc head="EX_ppa_e_out_ecs" kind="INPUT" tail="n_ecs"/>
+      <arc head="EX_ppa_e_out_ecs" kind="INPUT" tail="biomass_e_ecs"/>
+      <arc head="ppa_e" kind="OUTPUT" tail="EX_ppa_e_out_ecs"/>
+      <arc head="n_ecs" kind="OUTPUT" tail="EX_ppa_e_out_ecs"/>
+      <arc head="biomass_e_ecs" kind="OUTPUT" tail="EX_ppa_e_out_ecs"/>
+      <arc head="EX_ac_e_in_lpspa1" kind="INPUT" tail="ac_e"/>
+      <arc head="EX_ac_e_in_lpspa1" kind="INPUT" tail="n_lpspa1"/>
+      <arc head="EX_ac_e_in_lpspa1" kind="INPUT" tail="biomass_e_lpspa1"/>
+      <arc head="n_lpspa1" kind="OUTPUT" tail="EX_ac_e_in_lpspa1"/>
+      <arc head="biomass_e_lpspa1" kind="OUTPUT" tail="EX_ac_e_in_lpspa1"/>
+      <arc head="EX_ac_e_out_lpspa1" kind="INPUT" tail="n_lpspa1"/>
+      <arc head="EX_ac_e_out_lpspa1" kind="INPUT" tail="biomass_e_lpspa1"/>
+      <arc head="ac_e" kind="OUTPUT" tail="EX_ac_e_out_lpspa1"/>
+      <arc head="n_lpspa1" kind="OUTPUT" tail="EX_ac_e_out_lpspa1"/>
+      <arc head="biomass_e_lpspa1" kind="OUTPUT" tail="EX_ac_e_out_lpspa1"/>
+      <arc head="EX_biomass_e_in_lpspa1" kind="INPUT" tail="biomass_e_lpspa1"/>
+      <arc head="EX_biomass_e_out_lpspa1" kind="INPUT" tail="biomass_e_lpspa1"/>
+      <arc head="biomass_e_lpspa1" kind="OUTPUT" mult="2" tail="EX_biomass_e_out_lpspa1"/>
+      <arc head="EX_lcts_e_in_lpspa1" kind="INPUT" tail="lcts_e"/>
+      <arc head="EX_lcts_e_in_lpspa1" kind="INPUT" tail="n_lpspa1"/>
+      <arc head="EX_lcts_e_in_lpspa1" kind="INPUT" tail="biomass_e_lpspa1"/>
+      <arc head="n_lpspa1" kind="OUTPUT" tail="EX_lcts_e_in_lpspa1"/>
+      <arc head="biomass_e_lpspa1" kind="OUTPUT" tail="EX_lcts_e_in_lpspa1"/>
+      <arc head="EX_lcts_e_out_lpspa1" kind="INPUT" tail="n_lpspa1"/>
+      <arc head="EX_lcts_e_out_lpspa1" kind="INPUT" tail="biomass_e_lpspa1"/>
+      <arc head="lcts_e" kind="OUTPUT" tail="EX_lcts_e_out_lpspa1"/>
+      <arc head="n_lpspa1" kind="OUTPUT" tail="EX_lcts_e_out_lpspa1"/>
+      <arc head="biomass_e_lpspa1" kind="OUTPUT" tail="EX_lcts_e_out_lpspa1"/>
+    </edges>
+  </gspn>
+  <measures gspn-name="PetriNet" name="Measures" simplified-UI="false">
+    <assignments/>
+    <greatspn/>
+    <formulas>
+      <formula comment="Basic statistics of the toolchain execution." language="STAT"/>
+      <formula comment="All the basic Petri net measures" language="ALL"/>
+    </formulas>
+  </measures>
+</project>

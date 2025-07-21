@@ -1,0 +1,4 @@
+reaction,organism,lower_bound,upper_bound
+EX_ac_e,cbd1,-1000,1000
+EX_but_e,cbd1,-1000,1000
+EX_lcts_e,cbd1,-1000,1000

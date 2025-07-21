@@ -1,0 +1,104 @@
+# config/models.yaml
+
+boundary_metabolites:
+  - "lcts_e"
+  - "ac_e"
+  - "but_e"
+  - "ppa_e"
+
+cellular_units:
+  - model_name: "Escherichia_coli_SE11"
+    label:      "Escherichia coli SE11"
+    biomass:
+      max:  1.172
+      mean: 0.489
+      min:  0.083
+    population:
+      starv: 0.21
+      dup:   1.00
+      death: 0.018
+    initial_count: 1e+06
+
+  - model_name: "Clostridium_butyricum_DSM_10702"
+    label:      "Clostridium butyricum DSM 10702"
+    biomass:
+      max:  1.500
+      mean: 0.600
+      min:  0.100
+    population:
+      starv: 0.21
+      dup:   1.00
+      death: 0.018
+    initial_count: 1e+06
+
+  - model_name: "Anaerostipes_caccae_DSM_14662"
+    label:      "Anaerostipes caccae DSM 14662"
+    biomass:
+      max:  1.500
+      mean: 0.600
+      min:  0.100
+    population:
+      starv: 0.21
+      dup:   1.00
+      death: 0.018
+    initial_count: 1e+06
+    
+  - model_name: "Bacteroides_thetaiotaomicron_VPI_5482"
+    label:      "Bacteroides thetaiotaomicron VPI 5482"
+    biomass:
+      max:  1.500
+      mean: 0.600
+      min:  0.100
+    population:
+      starv: 0.21
+      dup:   1.00
+      death: 0.018
+    initial_count: 1e+06
+    
+  - model_name: "Bifidobacterium_longum_NCC2705"
+    label:      "Bifidobacterium longum NCC2705"
+    biomass:
+      max:  1.500
+      mean: 0.600
+      min:  0.100
+    population:
+      starv: 0.21
+      dup:   1.00
+      death: 0.018
+    initial_count: 1e+06
+
+  - model_name: "Blautia_producta_DSM_2950"
+    label:      "Blautia producta DSM 2950"
+    biomass:
+      max:  1.500
+      mean: 0.600
+      min:  0.100
+    population:
+      starv: 0.21
+      dup:   1.00
+      death: 0.018
+    initial_count: 1e+06
+
+  - model_name: "Clostridium_ramosum_VPI_0427_DSM_1402"
+    label:      "Clostridium ramosum VPI 0427 DSM 1402"
+    biomass:
+      max:  1.500
+      mean: 0.600
+      min:  0.100
+    population:
+      starv: 0.21
+      dup:   1.00
+      death: 0.018
+    initial_count: 1e+06
+    
+  - model_name: "Lactobacillus_plantarum_subsp_plantarum_ATCC_14917"
+    label:      "Lactobacillus plantarum subsp plantarum ATCC 14917"
+    biomass:
+      max:  1.500
+      mean: 0.600
+      min:  0.100
+    population:
+      starv: 0.21
+      dup:   1.00
+      death: 0.018
+    initial_count: 1e+06
