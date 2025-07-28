@@ -1,0 +1,510 @@
+id,name,compartment,is_core,is_boundary,is_external_boundary,is_internal_boundary,primary_class,boundary_subtype
+12dhchol_e,12-Dehydrocholate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+2hymeph_c,2-(Hydroxymethyl)phenol,c,TRUE,TRUE,FALSE,TRUE,core_and_boundary,internal_only
+MGlcn100_e,mucin-type O-glycan No 100,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn100__rl_e,released mucin-type O-glycan No 100,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn101_e,mucin-type O-glycan No 101,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn101__rl_e,released mucin-type O-glycan No 101,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn102_e,mucin-type O-glycan No 102,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn102__rl_e,released mucin-type O-glycan No 102,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn103_e,mucin-type O-glycan No 103,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn103__rl_e,released mucin-type O-glycan No 103,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn104_e,mucin-type O-glycan No 104,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn104__rl_e,released mucin-type O-glycan No 104,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn105_e,mucin-type O-glycan No 105,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn105__rl_e,released mucin-type O-glycan No 105,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn106_e,mucin-type O-glycan No 106,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn106__rl_e,released mucin-type O-glycan No 106,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn107_e,mucin-type O-glycan No 107,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn107__rl_e,released mucin-type O-glycan No 107,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn108_e,mucin-type O-glycan No 108,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn108__rl_e,released mucin-type O-glycan No 108,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn109_e,mucin-type O-glycan No 109,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn109__rl_e,released mucin-type O-glycan No 109,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn10_e,mucin-type O-glycan No 10,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn10__rl_e,released mucin-type O-glycan No 10,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn110_e,mucin-type O-glycan No 110,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn110__rl_e,released mucin-type O-glycan No 110,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn111_e,mucin-type O-glycan No 111,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn111__rl_e,released mucin-type O-glycan No 111,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn112_e,mucin-type O-glycan No 112,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn112__rl_e,released mucin-type O-glycan No 112,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn113_e,mucin-type O-glycan No 113,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn113__rl_e,released mucin-type O-glycan No 113,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn114_e,mucin-type O-glycan No 114,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn114__rl_e,released mucin-type O-glycan No 114,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn115_e,mucin-type O-glycan No 115,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn115__rl_e,released mucin-type O-glycan No 115,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn116_e,mucin-type O-glycan No 116,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn116__rl_e,released mucin-type O-glycan No 116,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn117_e,mucin-type O-glycan No 117,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn117__rl_e,released mucin-type O-glycan No 117,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn118_e,mucin-type O-glycan No 118,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn118__rl_e,released mucin-type O-glycan No 118,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn119_e,mucin-type O-glycan No 119,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn119__rl_e,released mucin-type O-glycan No 119,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn120_e,mucin-type O-glycan No 120,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn120__rl_e,released mucin-type O-glycan No 120,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn121_e,mucin-type O-glycan No 121,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn121__rl_e,released mucin-type O-glycan No 121,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn122_e,mucin-type O-glycan No 122,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn122__rl_e,released mucin-type O-glycan No 122,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn123_e,mucin-type O-glycan No 123,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn123__rl_e,released mucin-type O-glycan No 123,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn124_e,mucin-type O-glycan No 124,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn124__rl_e,released mucin-type O-glycan No 124,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn126_e,mucin-type O-glycan No 126,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn126__rl_e,released mucin-type O-glycan No 126,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn127_e,mucin-type O-glycan No 127,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn127__rl_e,released mucin-type O-glycan No 127,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn128_e,mucin-type O-glycan No 128,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn128__rl_e,released mucin-type O-glycan No 128,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn129_e,mucin-type O-glycan No 129,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn129__rl_e,released mucin-type O-glycan No 129,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn12_e,mucin-type O-glycan No 12,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn12__rl_e,released mucin-type O-glycan No 12,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn130_e,mucin-type O-glycan No 130,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn130__rl_e,released mucin-type O-glycan No 130,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn131_e,mucin-type O-glycan No 131,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn131__rl_e,released mucin-type O-glycan No 131,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn132_e,mucin-type O-glycan No 132,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn132__rl_e,released mucin-type O-glycan No 132,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn133_e,mucin-type O-glycan No 133,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn133__rl_e,released mucin-type O-glycan No 133,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn134_e,mucin-type O-glycan No 134,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn134__rl_e,released mucin-type O-glycan No 134,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn135_e,mucin-type O-glycan No 135,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn135__rl_e,released mucin-type O-glycan No 135,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn136_e,mucin-type O-glycan No 136,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn136__rl_e,released mucin-type O-glycan No 136,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn137_e,mucin-type O-glycan No 137,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn137__rl_e,released mucin-type O-glycan No 137,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn138_e,mucin-type O-glycan No 138,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn138__rl_e,released mucin-type O-glycan No 138,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn139_e,mucin-type O-glycan No 139,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn139__rl_e,released mucin-type O-glycan No 139,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn13_e,mucin-type O-glycan No 13,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn13__rl_e,released mucin-type O-glycan No 13,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn140_e,mucin-type O-glycan No 140,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn140__rl_e,released mucin-type O-glycan No 140,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn141_e,mucin-type O-glycan No 141,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn141__rl_e,released mucin-type O-glycan No 141,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn142_e,mucin-type O-glycan No 142,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn142__rl_e,released mucin-type O-glycan No 142,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn143_e,mucin-type O-glycan No 143,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn143__rl_e,released mucin-type O-glycan No 143,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn144_e,mucin-type O-glycan No 144,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn144__rl_e,released mucin-type O-glycan No 144,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn145_e,mucin-type O-glycan No 145,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn145__rl_e,released mucin-type O-glycan No 145,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn146_e,mucin-type O-glycan No 146,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn146__rl_e,released mucin-type O-glycan No 146,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn147_e,mucin-type O-glycan No 147,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn147__rl_e,released mucin-type O-glycan No 147,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn148_e,mucin-type O-glycan No 148,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn148__rl_e,released mucin-type O-glycan No 148,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn149_e,mucin-type O-glycan No 149,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn149__rl_e,released mucin-type O-glycan No 149,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn14_e,mucin-type O-glycan No 14,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn14__rl_e,released mucin-type O-glycan No 14,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn150_e,mucin-type O-glycan No 150,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn150__rl_e,released mucin-type O-glycan No 150,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn151_e,mucin-type O-glycan No 151,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn151__rl_e,released mucin-type O-glycan No 151,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn152_e,mucin-type O-glycan No 152,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn152__rl_e,released mucin-type O-glycan No 152,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn153_e,mucin-type O-glycan No 153,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn153__rl_e,released mucin-type O-glycan No 153,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn154_e,mucin-type O-glycan No 154,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn154__rl_e,released mucin-type O-glycan No 154,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn155_e,mucin-type O-glycan No 155,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn155__rl_e,released mucin-type O-glycan No 155,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn156_e,mucin-type O-glycan No 156,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn156__rl_e,released mucin-type O-glycan No 156,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn157_e,mucin-type O-glycan No 157,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn157__rl_e,released mucin-type O-glycan No 157,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn158_e,mucin-type O-glycan No 158,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn158__rl_e,released mucin-type O-glycan No 158,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn159_e,mucin-type O-glycan No 159,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn159__rl_e,released mucin-type O-glycan No 159,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn15_e,mucin-type O-glycan No 15,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn15__rl_e,released mucin-type O-glycan No 15,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn160_e,mucin-type O-glycan No 160,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn160__rl_e,released mucin-type O-glycan No 160,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn161_e,mucin-type O-glycan No 161,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn161__rl_e,released mucin-type O-glycan No 161,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn162_e,mucin-type O-glycan No 162,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn162__rl_e,released mucin-type O-glycan No 162,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn163_e,mucin-type O-glycan No 163,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn163__rl_e,released mucin-type O-glycan No 163,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn164_e,mucin-type O-glycan No 164,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn164__rl_e,released mucin-type O-glycan No 164,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn165_e,mucin-type O-glycan No 165,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn165__rl_e,released mucin-type O-glycan No 165,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn166_e,mucin-type O-glycan No 166,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn166__rl_e,released mucin-type O-glycan No 166,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn167_e,mucin-type O-glycan No 167,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn167__rl_e,released mucin-type O-glycan No 167,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn168_e,mucin-type O-glycan No 168,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn168__rl_e,released mucin-type O-glycan No 168,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn169_e,mucin-type O-glycan No 169,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn169__rl_e,released mucin-type O-glycan No 169,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn16_e,mucin-type O-glycan No 16,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn16__rl_e,released mucin-type O-glycan No 16,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn170_e,mucin-type O-glycan No 170,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn170__rl_e,released mucin-type O-glycan No 170,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn171_e,mucin-type O-glycan No 171,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn171__rl_e,released mucin-type O-glycan No 171,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn172_e,mucin-type O-glycan No 172,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn172__rl_e,released mucin-type O-glycan No 172,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn173_e,mucin-type O-glycan No 173,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn173__rl_e,released mucin-type O-glycan No 173,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn174_e,mucin-type O-glycan No 174,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn174__rl_e,released mucin-type O-glycan No 174,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn175_e,mucin-type O-glycan No 175,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn175__rl_e,released mucin-type O-glycan No 175,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn176_e,mucin-type O-glycan No 176,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn176__rl_e,released mucin-type O-glycan No 176,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn177_e,mucin-type O-glycan No 177,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn177__rl_e,released mucin-type O-glycan No 177,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn178_e,mucin-type O-glycan No 178,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn178__rl_e,released mucin-type O-glycan No 178,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn179_e,mucin-type O-glycan No 179,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn179__rl_e,released mucin-type O-glycan No 179,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn17_e,mucin-type O-glycan No 17,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn17__rl_e,released mucin-type O-glycan No 17,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn180_e,mucin-type O-glycan No 180,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn180__rl_e,released mucin-type O-glycan No 180,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn181_e,mucin-type O-glycan No 181,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn181__rl_e,released mucin-type O-glycan No 181,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn182_e,mucin-type O-glycan No 182,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn182__rl_e,released mucin-type O-glycan No 182,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn183_e,mucin-type O-glycan No 183,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn183__rl_e,released mucin-type O-glycan No 183,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn185_e,mucin-type O-glycan No 185,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn185__rl_e,released mucin-type O-glycan No 185,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn186_e,mucin-type O-glycan No 186,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn186__rl_e,released mucin-type O-glycan No 186,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn187_e,mucin-type O-glycan No 187,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn187__rl_e,released mucin-type O-glycan No 187,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn188_e,mucin-type O-glycan No 188,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn188__rl_e,released mucin-type O-glycan No 188,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn189_e,mucin-type O-glycan No 189,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn189__rl_e,released mucin-type O-glycan No 189,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn18_e,mucin-type O-glycan No 18,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn18__rl_e,released mucin-type O-glycan No 18,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn190_e,mucin-type O-glycan No 190,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn190__rl_e,released mucin-type O-glycan No 190,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn191_e,mucin-type O-glycan No 191,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn191__rl_e,released mucin-type O-glycan No 191,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn192_e,mucin-type O-glycan No 192,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn192__rl_e,released mucin-type O-glycan No 192,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn193_e,mucin-type O-glycan No 193,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn193__rl_e,released mucin-type O-glycan No 193,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn194_e,mucin-type O-glycan No 194,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn194__rl_e,released mucin-type O-glycan No 194,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn195_e,mucin-type O-glycan No 195,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn195__rl_e,released mucin-type O-glycan No 195,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn196_e,mucin-type O-glycan No 196,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn196__rl_e,released mucin-type O-glycan No 196,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn19_e,mucin-type O-glycan No 19,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn19__rl_e,released mucin-type O-glycan No 19,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn20_e,mucin-type O-glycan No 20,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn20__rl_e,released mucin-type O-glycan No 20,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn21_e,mucin-type O-glycan No 21,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn21__rl_e,released mucin-type O-glycan No 21,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn22_e,mucin-type O-glycan No 22,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn22__rl_e,released mucin-type O-glycan No 22,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn23_e,mucin-type O-glycan No 23,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn23__rl_e,released mucin-type O-glycan No 23,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn24_e,mucin-type O-glycan No 24,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn24__rl_e,released mucin-type O-glycan No 24,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn25_e,mucin-type O-glycan No 25,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn25__rl_e,released mucin-type O-glycan No 25,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn26_e,mucin-type O-glycan No 26,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn26__rl_e,released mucin-type O-glycan No 26,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn27_e,mucin-type O-glycan No 27,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn27__rl_e,released mucin-type O-glycan No 27,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn28_e,mucin-type O-glycan No 28,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn28__rl_e,released mucin-type O-glycan No 28,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn29_e,mucin-type O-glycan No 29,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn29__rl_e,released mucin-type O-glycan No 29,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn2_e,mucin-type O-glycan No 2,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn2__rl_e,released mucin-type O-glycan No 2,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn30_e,mucin-type O-glycan No 30,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn30__rl_e,released mucin-type O-glycan No 30,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn31_e,mucin-type O-glycan No 31,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn31__rl_e,released mucin-type O-glycan No 31,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn32_e,mucin-type O-glycan No 32,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn32__rl_e,released mucin-type O-glycan No 32,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn34_e,mucin-type O-glycan No 34,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn34__rl_e,released mucin-type O-glycan No 34,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn35_e,mucin-type O-glycan No 35,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn35__rl_e,released mucin-type O-glycan No 35,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn36_e,mucin-type O-glycan No 36,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn36__rl_e,released mucin-type O-glycan No 36,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn39_e,mucin-type O-glycan No 39,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn39__rl_e,released mucin-type O-glycan No 39,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn3_e,mucin-type O-glycan No 3,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn3__rl_e,released mucin-type O-glycan No 3,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn40_e,mucin-type O-glycan No 40,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn40__rl_e,released mucin-type O-glycan No 40,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn41_e,mucin-type O-glycan No 41,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn41__rl_e,released mucin-type O-glycan No 41,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn42_e,mucin-type O-glycan No 42,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn42__rl_e,released mucin-type O-glycan No 42,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn45_e,mucin-type O-glycan No 45,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn45__rl_e,released mucin-type O-glycan No 45,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn46_e,mucin-type O-glycan No 46,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn46__rl_e,released mucin-type O-glycan No 46,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn48_e,mucin-type O-glycan No 48,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn48__rl_e,released mucin-type O-glycan No 48,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn4_e,mucin-type O-glycan No 4,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn4__rl_e,released mucin-type O-glycan No 4,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn50_e,mucin-type O-glycan No 50,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn50__rl_e,released mucin-type O-glycan No 50,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn51_e,mucin-type O-glycan No 51,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn51__rl_e,released mucin-type O-glycan No 51,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn53_e,mucin-type O-glycan No 53,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn53__rl_e,released mucin-type O-glycan No 53,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn54_e,mucin-type O-glycan No 54,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn54__rl_e,released mucin-type O-glycan No 54,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn55_e,mucin-type O-glycan No 55,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn55__rl_e,released mucin-type O-glycan No 55,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn56_e,mucin-type O-glycan No 56,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn56__rl_e,released mucin-type O-glycan No 56,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn57_e,mucin-type O-glycan No 57,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn57__rl_e,released mucin-type O-glycan No 57,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn58_e,mucin-type O-glycan No 58,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn58__rl_e,released mucin-type O-glycan No 58,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn59_e,mucin-type O-glycan No 59,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn59__rl_e,released mucin-type O-glycan No 59,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn5_e,mucin-type O-glycan No 5,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn5__rl_e,released mucin-type O-glycan No 5,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn60_e,mucin-type O-glycan No 60,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn60__rl_e,released mucin-type O-glycan No 60,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn61_e,mucin-type O-glycan No 61,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn61__rl_e,released mucin-type O-glycan No 61,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn62_e,mucin-type O-glycan No 62,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn62__rl_e,released mucin-type O-glycan No 62,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn63_e,mucin-type O-glycan No 63,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn63__rl_e,released mucin-type O-glycan No 63,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn64_e,mucin-type O-glycan No 64,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn64__rl_e,released mucin-type O-glycan No 64,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn65_e,mucin-type O-glycan No 65,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn65__rl_e,released mucin-type O-glycan No 65,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn66_e,mucin-type O-glycan No 66,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn66__rl_e,released mucin-type O-glycan No 66,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn67_e,mucin-type O-glycan No 67,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn67__rl_e,released mucin-type O-glycan No 67,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn68_e,mucin-type O-glycan No 68,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn68__rl_e,released mucin-type O-glycan No 68,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn69_e,mucin-type O-glycan No 69,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn69__rl_e,released mucin-type O-glycan No 69,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn6_e,mucin-type O-glycan No 6,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn6__rl_e,released mucin-type O-glycan No 6,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn70_e,mucin-type O-glycan No 70,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn70__rl_e,released mucin-type O-glycan No 70,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn71_e,mucin-type O-glycan No 71,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn71__rl_e,released mucin-type O-glycan No 71,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn72_e,mucin-type O-glycan No 72,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn72__rl_e,released mucin-type O-glycan No 72,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn73_e,mucin-type O-glycan No 73,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn73__rl_e,released mucin-type O-glycan No 73,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn74_e,mucin-type O-glycan No 74,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn74__rl_e,released mucin-type O-glycan No 74,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn75_e,mucin-type O-glycan No 75,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn75__rl_e,released mucin-type O-glycan No 75,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn77_e,mucin-type O-glycan No 77,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn77__rl_e,released mucin-type O-glycan No 77,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn78_e,mucin-type O-glycan No 78,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn78__rl_e,released mucin-type O-glycan No 78,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn79_e,mucin-type O-glycan No 79,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn79__rl_e,released mucin-type O-glycan No 79,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn7_e,mucin-type O-glycan No 7,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn7__rl_e,released mucin-type O-glycan No 7,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn80_e,mucin-type O-glycan No 80,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn80__rl_e,released mucin-type O-glycan No 80,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn81_e,mucin-type O-glycan No 81,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn81__rl_e,released mucin-type O-glycan No 81,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn82_e,mucin-type O-glycan No 82,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn82__rl_e,released mucin-type O-glycan No 82,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn83_e,mucin-type O-glycan No 83,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn83__rl_e,released mucin-type O-glycan No 83,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn84_e,mucin-type O-glycan No 84,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn84__rl_e,released mucin-type O-glycan No 84,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn85_e,mucin-type O-glycan No 85,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn85__rl_e,released mucin-type O-glycan No 85,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn88_e,mucin-type O-glycan No 88,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn88__rl_e,released mucin-type O-glycan No 88,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn89_e,mucin-type O-glycan No 89,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn89__rl_e,released mucin-type O-glycan No 89,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn8_e,mucin-type O-glycan No 8,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn8__rl_e,released mucin-type O-glycan No 8,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn90_e,mucin-type O-glycan No 90,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn90__rl_e,released mucin-type O-glycan No 90,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn91_e,mucin-type O-glycan No 91,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn91__rl_e,released mucin-type O-glycan No 91,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn92_e,mucin-type O-glycan No 92,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn92__rl_e,released mucin-type O-glycan No 92,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn93_e,mucin-type O-glycan No 93,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn93__rl_e,released mucin-type O-glycan No 93,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn94_e,mucin-type O-glycan No 94,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn94__rl_e,released mucin-type O-glycan No 94,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn95_e,mucin-type O-glycan No 95,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn95__rl_e,released mucin-type O-glycan No 95,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn96_e,mucin-type O-glycan No 96,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn96__rl_e,released mucin-type O-glycan No 96,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn97_e,mucin-type O-glycan No 97,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn97__rl_e,released mucin-type O-glycan No 97,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn98_e,mucin-type O-glycan No 98,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn98__rl_e,released mucin-type O-glycan No 98,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn99_e,mucin-type O-glycan No 99,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn99__rl_e,released mucin-type O-glycan No 99,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn9_e,mucin-type O-glycan No 9,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+MGlcn9__rl_e,released mucin-type O-glycan No 9,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+T__antigen_e,T antigen (core 1),e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+Tn__antigen_e,Tn antigen,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+ac_e,acetate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+acald_e,acetaldehyde,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+acgal_e,N-acetyl-D-galactosamine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+acgam_e,N-acetyl-D-glucosamine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+acnam2a6agal_e,"Alpha-2,6-N-acetylneuraminate-N-acetylgalactosamine",e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+acnam_e,N-acetylneuraminate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+agal1b3agal_e,"Beta-1,3-N,N-diacetylgalactosamine",e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+agam1b3agal_e,"Beta-1,3-N-acetylglucosamine-N-acetylgalactosamine",e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+agam1b6agal_e,"Beta-1,6-N-acetylglucosamine-N-acetylgalactosamine",e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+ala__L_e,L-alanine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+alaasp_e,L-alanyl-L-aspartate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+alagln_e,L-alanyl-L-glutamine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+alaglu_e,L-alanyl-L-glutamate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+alagly_e,L-alanylglycine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+alahis_e,L-alanyl-L-histidine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+alaleu_e,L-alanyl-L-leucine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+alathr_e,L-alanyl-L-threonine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+arab__L_e,L-arabinose,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+arbt_e,Arbutin,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+asn__L_e,L-asparagine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+asp__L_e,L-aspartate(1-),e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+biomass_c,Produced biomass,c,TRUE,TRUE,FALSE,TRUE,core_and_boundary,internal_only
+btn_e,Biotin,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+ca2_e,calcium(2+),e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+cd2_e,Cadmium,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+cellb_e,cellobiose,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+cgly_e,L-cysteinylglycine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+cholate_e,Cholate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+cl_e,Chloride,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+co2_e,carbon dioxide,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+cobalt2_e,Co2+,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+core2_e,Core 2,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+core2__rl_e,released Core 2,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+core3_e,Core 3,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+core4_e,Core 4,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+core4__rl_e,released Core 4,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+core5_e,Core 5,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+core6_e,Core 6,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+core8_e,Core 8,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+cro4_e,chromate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+cu2_e,Cu2+,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+cys__L_e,L-cysteine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+dextrin_e,Dextrin,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+dhptd_c,"4,5-dihydroxy-2,3-pentanedione",c,TRUE,TRUE,FALSE,TRUE,core_and_boundary,internal_only
+dnarep_c,DNA replication,c,TRUE,TRUE,FALSE,TRUE,core_and_boundary,internal_only
+dsT__antigen_e,disialyl-T antigen,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+dsT__antigen__rl_e,released disialyl-T antigen,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+etha_e,etha[c],e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+etoh_e,ethanol,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+f1a_e,F1alpha,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+f1a__rl_e,released F1alpha antigen,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+fe2_e,Fe2+,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+fe3_e,Fe3+,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+fecrm_e,Ferrichrome,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+for_e,Formate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+fru_e,D-Fructose,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+gal1a3acgal_e,"Alpha-1,3-Galactose-N-acetylgalactosamine",e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+gal1b3acgal_e,"Beta-1,3-Galactose-N-acetylgalactosamine",e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+gal_e,D-Galactose,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+glc__D_e,D-glucose,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+glctnb_e,Galacto-N-biose,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+gln__L_e,L-glutamine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+glu__L_e,L-glutamate(1-),e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+gly_e,Glycine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+glyasn_e,Glycyl-L-asparagine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+glyasp_e,Glycyl-L-aspartate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+glyb_e,glycine betaine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+glyc3p_e,Glycerol 3-phosphate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+glycys_e,Gly-Cys,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+glygln_e,Glycyl-L-glutamine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+glyglu_e,Glycyl-L-glutamate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+glyleu_e,Glycylleucine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+glymet_e,Glycyl-L-methionine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+glyphe_e,Glycylphenylalanine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+glypro_e,Glycylproline,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+glytyr_e,Glycyl-L-tyrosine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+gncore1_e,"GlcNAc-alpha-1,4-Core 1",e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+gncore1__rl_e,"released GlcNAc-alpha-1,4-Core 1",e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+gncore2_e,"GlcNAc-alpha-1,4-Core 2",e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+gncore2__rl_e,"released GlcNAc-alpha-1,4-Core 2",e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+h2o_e,Water,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+h_e,proton,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+hg2_e,Hg2+,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+his__L_e,L-histidine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+hqn_c,Hydroquinone,c,TRUE,TRUE,FALSE,TRUE,core_and_boundary,internal_only
+hxan_e,Hypoxanthine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+ile__L_e,L-isoleucine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+k_e,potassium,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+kesto_e,"Kestose (2 fru, 1 glc inulin-type fructo-oligosaccharide)",e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+kestopt_e,"Kestopentaose (4 fru, 1 glc inulin-type fructo-oligosaccharide)",e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+kestottr_e,"Kestotetraose (3 fru, 1 glc inulin-type fructo-oligosaccharide)",e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+lac__D_e,(R)-lactate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+lac__L_e,(S)-lactate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+lcts_e,Lactose,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+leu__L_e,L-leucine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+lys__L_e,L-lysinium(1+),e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+malt_e,Maltose,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+man_e,D-Mannose,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+mantr_e,"mannotriose (beta-1,4)",e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+melib_e,Melibiose,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+met__D_e,D-Methionine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+met__L_e,L-methionine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+metala_e,L-methionyl-L-alanine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+metsox__R__L_e,L-methionine-R-sulfoxide,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+metsox__S__L_e,L-Methionine Sulfoxide,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+mg2_e,magnesium,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+mn2_e,Mn2+,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+na1_e,Sodium,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+nac_e,Nicotinate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+nh4_e,Ammonium,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+o2_e,O2,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+pb_e,Lead,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+phe__L_e,L-phenylalanine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+pi_e,hydrogenphosphate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+pnto__R_e,(R)-Pantothenate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+pppn_e,Phenylpropanoate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+pro__L_e,L-proline,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+proteinsynth_c,Protein biosynthesis,c,TRUE,TRUE,FALSE,TRUE,core_and_boundary,internal_only
+ptrc_e,Putrescine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+pydx_e,Pyridoxal,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+pydxn_e,Pyridoxine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+pyr_e,pyruvate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+raffin_e,Raffinose,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+ribflv_e,Riboflavin,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+rnatrans_c,RNA transcription,c,TRUE,TRUE,FALSE,TRUE,core_and_boundary,internal_only
+sT__antigen_e,sialyl-T antigen,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+sT__antigen__rl_e,released sialyl-Tn antigen,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+sTn__antigen_e,sialyl-Tn antigen,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+salcn_e,Salicin,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+ser__L_e,L-serine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+so4_e,sulfate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+spmd_e,Spermidine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+stys_e,Stachyose,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+succ_e,Succinate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+sucr_e,Sucrose,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+thr__L_e,L-threonine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+tre_e,Trehalose,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+tyr__L_e,L-tyrosine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+ura_e,uracil,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+urea_e,Urea,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+val__L_e,L-valine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+xan_e,Xanthine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+zn2_e,Zinc,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only

@@ -1,0 +1,13 @@
+|1
+Call["Starvation", FromTable["population_parameters.csv", 0, 0], 0]
+|2
+Call["Duplication", FromTable["population_parameters.csv", 0, 1], 0]
+|3
+Call["Death", FromTable["population_parameters.csv", 0, 2], 0]
+|4
+FBA["i_model.txt","EX_biomass_e",1,"n_i","biomass_e_i","true"]
+|5
+FBA["i_model.txt","EX_biomass_e",1,"n_i","biomass_e_i","true"]
+|256
+%
+|

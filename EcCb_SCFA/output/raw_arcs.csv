@@ -1,0 +1,12 @@
+transition,direction,place,multiplicity,command
+Starv_abbr,INPUT,biomass_e_abbr,1,"Call[""Starvation"", FromTable[""population_parameters.csv"", 0, 0], 0]"
+Dup_abbr,OUTPUT,n_abbr,2,"Call[""Duplication"", FromTable[""population_parameters.csv"", 0, 1], 0]"
+Dup_abbr,INPUT,n_abbr,1,"Call[""Duplication"", FromTable[""population_parameters.csv"", 0, 1], 0]"
+Death_abbr,INPUT,n_abbr,1,"Call[""Death"", FromTable[""population_parameters.csv"", 0, 2], 0]"
+Death_abbr,INPUT,biomass_e_abbr,1,"Call[""Death"", FromTable[""population_parameters.csv"", 0, 2], 0]"
+Dup_abbr,INPUT,biomass_e_abbr,1,"Call[""Duplication"", FromTable[""population_parameters.csv"", 0, 1], 0]"
+Dup_abbr,OUTPUT,biomass_e_abbr,1,"Call[""Duplication"", FromTable[""population_parameters.csv"", 0, 1], 0]"
+Death_abbr,OUTPUT,biomass_e_abbr,1,"Call[""Death"", FromTable[""population_parameters.csv"", 0, 2], 0]"
+EX_biomass_e_in_abbr,INPUT,biomass_e_abbr,1,"FBA[""abbr_model.txt"", ""EX_biomass_e"", 1, ""n_abbr"", ""biomass_e_abbr"", ""true""]"
+EX_biomass_e_out_abbr,OUTPUT,biomass_e_abbr,2,"FBA[""abbr_model.txt"", ""EX_biomass_e"", 1, ""n_abbr"", ""biomass_e_abbr"", ""true""]"
+EX_biomass_e_out_abbr,INPUT,biomass_e_abbr,1,"FBA[""abbr_model.txt"", ""EX_biomass_e"", 1, ""n_abbr"", ""biomass_e_abbr"", ""true""]"

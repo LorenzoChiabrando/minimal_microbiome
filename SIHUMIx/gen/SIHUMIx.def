@@ -1,0 +1,163 @@
+|1
+Call["Starvation", FromTable["population_parameters.csv", 0, 0], 0]
+|2
+Call["Duplication", FromTable["population_parameters.csv", 0, 1], 0]
+|3
+Call["Death", FromTable["population_parameters.csv", 0, 2], 0]
+|4
+Call["Starvation", FromTable["population_parameters.csv", 1, 0], 1]
+|5
+Call["Duplication", FromTable["population_parameters.csv", 1, 1], 1]
+|6
+Call["Death", FromTable["population_parameters.csv", 1, 2], 1]
+|7
+Call["Starvation", FromTable["population_parameters.csv", 2, 0], 2]
+|8
+Call["Duplication", FromTable["population_parameters.csv", 2, 1], 2]
+|9
+Call["Death", FromTable["population_parameters.csv", 2, 2], 2]
+|10
+Call["Starvation", FromTable["population_parameters.csv", 3, 0], 3]
+|11
+Call["Duplication", FromTable["population_parameters.csv", 3, 1], 3]
+|12
+Call["Death", FromTable["population_parameters.csv", 3, 2], 3]
+|13
+Call["Starvation", FromTable["population_parameters.csv", 4, 0], 4]
+|14
+Call["Duplication", FromTable["population_parameters.csv", 4, 1], 4]
+|15
+Call["Death", FromTable["population_parameters.csv", 4, 2], 4]
+|16
+Call["Starvation", FromTable["population_parameters.csv", 5, 0], 5]
+|17
+Call["Duplication", FromTable["population_parameters.csv", 5, 1], 5]
+|18
+Call["Death", FromTable["population_parameters.csv", 5, 2], 5]
+|19
+Call["Starvation", FromTable["population_parameters.csv", 6, 0], 6]
+|20
+Call["Duplication", FromTable["population_parameters.csv", 6, 1], 6]
+|21
+Call["Death", FromTable["population_parameters.csv", 6, 2], 6]
+|22
+Call["Starvation", FromTable["population_parameters.csv", 7, 0], 7]
+|23
+Call["Duplication", FromTable["population_parameters.csv", 7, 1], 7]
+|24
+Call["Death", FromTable["population_parameters.csv", 7, 2], 7]
+|25
+FBA["acd1_model.txt","EX_ac_e",1,"n_acd1","biomass_e_acd1","false"]
+|26
+FBA["acd1_model.txt","EX_ac_e",1,"n_acd1","biomass_e_acd1","false"]
+|27
+FBA["acd1_model.txt","EX_biomass_e",1,"n_acd1","biomass_e_acd1","true"]
+|28
+FBA["acd1_model.txt","EX_biomass_e",1,"n_acd1","biomass_e_acd1","true"]
+|29
+FBA["acd1_model.txt","EX_but_e",1,"n_acd1","biomass_e_acd1","false"]
+|30
+FBA["acd1_model.txt","EX_but_e",1,"n_acd1","biomass_e_acd1","false"]
+|31
+FBA["acd1_model.txt","EX_lac__L_e",1,"n_acd1","biomass_e_acd1","false"]
+|32
+FBA["acd1_model.txt","EX_lac__L_e",1,"n_acd1","biomass_e_acd1","false"]
+|33
+FBA["bln_model.txt","EX_ac_e",1,"n_bln","biomass_e_bln","false"]
+|34
+FBA["bln_model.txt","EX_ac_e",1,"n_bln","biomass_e_bln","false"]
+|35
+FBA["bln_model.txt","EX_biomass_e",1,"n_bln","biomass_e_bln","true"]
+|36
+FBA["bln_model.txt","EX_biomass_e",1,"n_bln","biomass_e_bln","true"]
+|37
+FBA["bln_model.txt","EX_lac__L_e",1,"n_bln","biomass_e_bln","false"]
+|38
+FBA["bln_model.txt","EX_lac__L_e",1,"n_bln","biomass_e_bln","false"]
+|39
+FBA["bpd2_model.txt","EX_ac_e",1,"n_bpd2","biomass_e_bpd2","false"]
+|40
+FBA["bpd2_model.txt","EX_ac_e",1,"n_bpd2","biomass_e_bpd2","false"]
+|41
+FBA["bpd2_model.txt","EX_biomass_e",1,"n_bpd2","biomass_e_bpd2","true"]
+|42
+FBA["bpd2_model.txt","EX_biomass_e",1,"n_bpd2","biomass_e_bpd2","true"]
+|43
+FBA["bpd2_model.txt","EX_lac__L_e",1,"n_bpd2","biomass_e_bpd2","false"]
+|44
+FBA["bpd2_model.txt","EX_lac__L_e",1,"n_bpd2","biomass_e_bpd2","false"]
+|45
+FBA["btv5_model.txt","EX_ac_e",1,"n_btv5","biomass_e_btv5","false"]
+|46
+FBA["btv5_model.txt","EX_ac_e",1,"n_btv5","biomass_e_btv5","false"]
+|47
+FBA["btv5_model.txt","EX_biomass_e",1,"n_btv5","biomass_e_btv5","true"]
+|48
+FBA["btv5_model.txt","EX_biomass_e",1,"n_btv5","biomass_e_btv5","true"]
+|49
+FBA["btv5_model.txt","EX_lac__L_e",1,"n_btv5","biomass_e_btv5","false"]
+|50
+FBA["btv5_model.txt","EX_lac__L_e",1,"n_btv5","biomass_e_btv5","false"]
+|51
+FBA["btv5_model.txt","EX_ppa_e",1,"n_btv5","biomass_e_btv5","false"]
+|52
+FBA["btv5_model.txt","EX_ppa_e",1,"n_btv5","biomass_e_btv5","false"]
+|53
+FBA["cbd1_model.txt","EX_ac_e",1,"n_cbd1","biomass_e_cbd1","false"]
+|54
+FBA["cbd1_model.txt","EX_ac_e",1,"n_cbd1","biomass_e_cbd1","false"]
+|55
+FBA["cbd1_model.txt","EX_biomass_e",1,"n_cbd1","biomass_e_cbd1","true"]
+|56
+FBA["cbd1_model.txt","EX_biomass_e",1,"n_cbd1","biomass_e_cbd1","true"]
+|57
+FBA["cbd1_model.txt","EX_but_e",1,"n_cbd1","biomass_e_cbd1","false"]
+|58
+FBA["cbd1_model.txt","EX_but_e",1,"n_cbd1","biomass_e_cbd1","false"]
+|59
+FBA["cbd1_model.txt","EX_lac__L_e",1,"n_cbd1","biomass_e_cbd1","false"]
+|60
+FBA["cbd1_model.txt","EX_lac__L_e",1,"n_cbd1","biomass_e_cbd1","false"]
+|61
+FBA["crv0d1_model.txt","EX_ac_e",1,"n_crv0d1","biomass_e_crv0d1","false"]
+|62
+FBA["crv0d1_model.txt","EX_ac_e",1,"n_crv0d1","biomass_e_crv0d1","false"]
+|63
+FBA["crv0d1_model.txt","EX_biomass_e",1,"n_crv0d1","biomass_e_crv0d1","true"]
+|64
+FBA["crv0d1_model.txt","EX_biomass_e",1,"n_crv0d1","biomass_e_crv0d1","true"]
+|65
+FBA["crv0d1_model.txt","EX_lac__L_e",1,"n_crv0d1","biomass_e_crv0d1","false"]
+|66
+FBA["crv0d1_model.txt","EX_lac__L_e",1,"n_crv0d1","biomass_e_crv0d1","false"]
+|67
+FBA["ecs_model.txt","EX_ac_e",1,"n_ecs","biomass_e_ecs","false"]
+|68
+FBA["ecs_model.txt","EX_ac_e",1,"n_ecs","biomass_e_ecs","false"]
+|69
+FBA["ecs_model.txt","EX_biomass_e",1,"n_ecs","biomass_e_ecs","true"]
+|70
+FBA["ecs_model.txt","EX_biomass_e",1,"n_ecs","biomass_e_ecs","true"]
+|71
+FBA["ecs_model.txt","EX_lac__L_e",1,"n_ecs","biomass_e_ecs","false"]
+|72
+FBA["ecs_model.txt","EX_lac__L_e",1,"n_ecs","biomass_e_ecs","false"]
+|73
+FBA["ecs_model.txt","EX_ppa_e",1,"n_ecs","biomass_e_ecs","false"]
+|74
+FBA["ecs_model.txt","EX_ppa_e",1,"n_ecs","biomass_e_ecs","false"]
+|75
+FBA["lpspa1_model.txt","EX_ac_e",1,"n_lpspa1","biomass_e_lpspa1","false"]
+|76
+FBA["lpspa1_model.txt","EX_ac_e",1,"n_lpspa1","biomass_e_lpspa1","false"]
+|77
+FBA["lpspa1_model.txt","EX_biomass_e",1,"n_lpspa1","biomass_e_lpspa1","true"]
+|78
+FBA["lpspa1_model.txt","EX_biomass_e",1,"n_lpspa1","biomass_e_lpspa1","true"]
+|79
+FBA["lpspa1_model.txt","EX_lac__L_e",1,"n_lpspa1","biomass_e_lpspa1","false"]
+|80
+FBA["lpspa1_model.txt","EX_lac__L_e",1,"n_lpspa1","biomass_e_lpspa1","false"]
+|256
+%
+|

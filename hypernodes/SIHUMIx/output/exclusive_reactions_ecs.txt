@@ -1,2 +1,0 @@
-EX_lcts_e
-EX_ppa_e

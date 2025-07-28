@@ -1,0 +1,342 @@
+id,name,compartment,is_core,is_boundary,is_external_boundary,is_internal_boundary,primary_class,boundary_subtype
+co2__e,CO2 CO2,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+akg__e,2-Oxoglutarate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+gsn__e,Guanosine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+34dhpac__e,"3,4-Dihydroxyphenylacetaldehyde",e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+anhgm__e,N-Acetyl-D-glucosamine(anhydrous)N-Acetylmuramic acid,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+dms__e,Dimethyl sulfide,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+galctn____L__e,L-Galactonate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+btn__e,Biotin,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+ocdcea__e,Octadecenoate (n-C18:1),e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+acmum__e,N-Acetylmuramate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+adocbl__e,Adenosylcobalamin,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+novbcn__e,Novobiocin,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+feenter__e,Fe-enterobactin,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+arbtn__e,Aerobactin minus Fe3,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+gln____L__e,L-Glutamine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+cpgn__un__e,Coprogen unloaded (no Fe(III)),e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+tre__e,Trehalose,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+alaala__e,D-Alanyl-D-alanine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+idon____L__e,L-Idonate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+pheme__e,Protoheme C34H30FeN4O4,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+all____D__e,D-Allose,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+ca2__e,Calcium,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+g1p__e,D-Glucose 1-phosphate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+ag__e,Silver,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+no2__e,Nitrite,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+ala____L__e,L-Alanine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+g6p__e,D-Glucose 6-phosphate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+mso3__e,Methanesulfonate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+thrp__e,L-Threonine O-3-phosphate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+LalaLglu__e,L-alanine-L-glutamate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+mththf__c,"(2R,4S)-2-methyl-2,3,3,4-tetrahydroxytetrahydrofuran",c,TRUE,TRUE,FALSE,TRUE,core_and_boundary,internal_only
+metsox__R____L__e,L-methionine-R-sulfoxide,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+g3pe__e,Sn-Glycero-3-phosphoethanolamine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+5drib__c,5'-deoxyribose,c,TRUE,TRUE,FALSE,TRUE,core_and_boundary,internal_only
+ade__e,Adenine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+mepn__e,Methylphosphonic acid,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+rmn__e,L-Rhamnose,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+2ddglcn__e,2-Dehydro-3-deoxy-D-gluconate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+glyb__e,Glycine betaine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+glcr__e,D-Glucarate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+alltn__e,Allantoin,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+f6p__e,D-Fructose 6-phosphate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+cu2__e,Copper,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+zn2__e,Zinc,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+ura__e,Uracil,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+lys____L__e,L-Lysine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+ocdca__e,Octadecanoate (n-C18:0),e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+gmp__e,GMP C10H12N5O8P,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+but__e,Butyrate (n-C4:0),e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+cobalt2__e,Co2+,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+LalaDgluMdapDala__e,"L-alanine-D-glutamate-meso-2,6-diaminoheptanedioate-D-alanine",e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+tma__e,Trimethylamine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+lyx____L__e,L-Lyxose,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+gtp__e,GTP C10H12N5O14P3,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+cellb__e,Cellobiose,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+sbt____D__e,D-Sorbitol,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+arg____L__e,L-Arginine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+murein3p3p__p,"Two linked disacharide tripeptide murein units (uncrosslinked, middle of chain)",p,TRUE,TRUE,FALSE,TRUE,core_and_boundary,internal_only
+dgsn__e,Deoxyguanosine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+spmd__e,Spermidine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+fru__e,D-Fructose,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+pyr__e,Pyruvate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+malttr__e,Maltotriose C18H32O16,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+cys____D__e,D-Cysteine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+3hpppn__e,3-(3-hydroxy-phenyl)propionate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+ppt__e,Phosphonate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+val____L__e,L-Valine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+hom____L__e,L-Homoserine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+dcmp__e,DCMP C9H12N3O7P,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+dgmp__e,DGMP C10H12N5O7P,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+cd2__e,Cadmium,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+met____D__e,D-Methionine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+23ccmp__e,"2',3'-Cyclic CMP",e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+dmso__e,Dimethyl sulfoxide,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+udpg__e,UDPglucose,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+acgal__e,N-Acetyl-D-galactosamine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+4crsol__c,P-Cresol,c,TRUE,TRUE,FALSE,TRUE,core_and_boundary,internal_only
+thymd__e,Thymidine C10H14N2O5,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+ac__e,Acetate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+k__e,Potassium,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+etoh__e,Ethanol,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+pro____L__e,L-Proline,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+taur__e,Taurine C2H7NO3S,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+xmp__e,Xanthosine 5'-phosphate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+gam6p__e,D-Glucosamine 6-phosphate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+glcur1p__e,D-Glucuronate 1-phosphate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+nac__e,Nicotinate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+gal__e,D-Galactose,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+dha__e,Dihydroxyacetone,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+aacald__c,Aminoacetaldehyde,c,TRUE,TRUE,FALSE,TRUE,core_and_boundary,internal_only
+gal__bD__e,Beta D-Galactose,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+cit__e,Citrate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+leu____L__e,L-Leucine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+ala____D__e,D-Alanine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+fe2__e,Fe2+ mitochondria,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+skm__e,Shikimate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+galt__e,Galactitol,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+5dglcn__e,5-Dehydro-D-gluconate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+cynt__e,Cyanate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+4abzglu__e,4-aminobenzoyl-glutamate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+sulfac__e,Sulfoacetate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+gam__e,D-Glucosamine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+met____L__e,L-Methionine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+acmana__e,N-Acetyl-D-mannosamine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+ascb____L__e,L-Ascorbate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+malt__e,Maltose C12H22O11,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+mn2__e,Manganese,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+23dappa__e,"2,3-diaminopropionate",e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+cs1__e,Cesium ion,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+sq__e,Sulphoquinovose,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+progly__e,L-Prolinylglycine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+man__e,D-Mannose,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+dcyt__e,Deoxycytidine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+orot__e,Orotate C5H3N2O4,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+h2__e,Hydrogen,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+nmn__e,NMN C11H14N2O8P,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+man6p__e,D-Mannose 6-phosphate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+h__e,H+,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+asn____L__e,L-Asparagine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+lcts__e,Lactose C12H22O11,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+udpglcur__e,UDP-D-glucuronate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+dca__e,Decanoate (n-C10:0),e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+chtbs__e,"N,N'-diacetylchitobiose",e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+dopa__e,Dopamine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+isetac__e,Isethionic acid,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+metglcur__e,1-O-methyl-Beta-D-glucuronate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+cu__e,Cu+,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+adn__e,Adenosine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+fe3dcit__e,Fe(III)dicitrate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+lac____D__e,D-Lactate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+damp__e,DAMP C10H12N5O6P,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+hg2__e,Mercury  charged 2  Hg,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+feoxam__e,Generic ferrioxamine-Fe-III,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+lipoate__e,Lipoate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+doxrbcn__e,Doxorubicin,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+ser____D__e,D-Serine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+so2__e,Sulfur dioxide,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+amp__e,AMP C10H12N5O7P,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+arab____L__e,L-Arabinose,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+crn____D__e,D-Carnitine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+pppn__e,Phenylpropanoate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+3hcinnm__e,3-hydroxycinnamic acid,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+LalaDgluMdap__e,"L-alanine-D-glutamate-meso-2,6-diaminoheptanedioate",e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+chol__e,Choline C5H14NO,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+gly__e,Glycine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+oxam__c,Oxamate,c,TRUE,TRUE,FALSE,TRUE,core_and_boundary,internal_only
+tmao__e,Trimethylamine N-oxide,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+enlipa__e,Phosphoethanolamine KDO(2)-lipid (A),e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+n2o__e,Nitrous oxide,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+aso3__e,Arsenite,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+glyc__e,Glycerol,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+dad__2__e,Deoxyadenosine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+tartr____L__e,L-tartrate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+octa__e,Octanoate (n-C8:0),e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+thym__e,Thymine C5H6N2O2,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+gdp__e,GDP C10H12N5O11P2,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+4hoxpacd__e,4-Hydroxyphenylacetaldehyde,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+cbi__e,Cobinamide,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+crn__e,L-Carnitine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+dtmp__e,DTMP C10H13N2O8P,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+thm__e,Thiamin,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+glyald__e,D-Glyceraldehyde,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+indole__e,Indole,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+mg2__e,Magnesium,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+mththf__e,"(2R,4S)-2-methyl-2,3,3,4-tetrahydroxytetrahydrofuran",e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+g3pg__e,Glycerophosphoglycerol,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+so4__e,Sulfate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+orn__e,Ornithine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+4abut__e,4-Aminobutanoate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+glu____L__e,L-Glutamate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+manglyc__e,2(alpha-D-Mannosyl)-D-glycerate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+halipa__e,Hepta-acylated KDO(2)-lipid (A),e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+r5p__e,Alpha-D-Ribose 5-phosphate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+acser__e,O-Acetyl-L-serine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+dxylnt__e,D-Xylonate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+murein4p4p__p,"Two linked disacharide tetrapeptide murein units (uncrosslinked, middle of chain)",p,TRUE,TRUE,FALSE,TRUE,core_and_boundary,internal_only
+tartr____D__e,D-tartrate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+ile____L__e,L-Isoleucine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+his____L__e,L-Histidine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+hxan__e,Hypoxanthine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+h2s__e,Hydrogen sulfide,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+na1__e,Sodium,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+tyr____L__e,L-Tyrosine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+acac__e,Acetoacetate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+fmn__e,FMN C17H19N4O9P,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+cys____L__e,L-Cysteine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+glyc3p__e,Glycerol 3-phosphate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+26dap____M__e,"Meso-2,6-Diaminoheptanedioate",e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+g3ps__e,Glycerophosphoserine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+anhgm4p__p,N-Acetyl-D-glucosamine(anhydrous)N-Acetylmuramyl-tetrapeptide,p,TRUE,TRUE,FALSE,TRUE,core_and_boundary,internal_only
+ddca__e,Dodecanoate (n-C12:0),e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+hacolipa__e,Hepta-acylated core oligosaccharide lipid A (E. coli),e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+arbt__e,Arbutin C12H16O7,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+fad__e,Flavin adenine dinucleotide oxidized,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+anhgm3p__p,N-Acetyl-D-glucosamine(anhydrous)N-Acetylmuramyl-tripeptide,p,TRUE,TRUE,FALSE,TRUE,core_and_boundary,internal_only
+pacald__e,Phenylacetaldehyde,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+inost__e,Myo-Inositol,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+fe3dhbzs__e,"Ferric 2,3-dihydroxybenzoylserine",e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+cytd__e,Cytidine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+tcynt__e,Thiocyanate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+glyclt__e,Glycolate C2H3O3,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+12ppd____S__e,"(S)-Propane-1,2-diol",e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+ppa__e,Propionate (n-C3:0),e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+slnt__e,Selenite,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+xan__e,Xanthine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+uacgam__e,UDP-N-acetyl-D-glucosamine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+ttdcea__e,Tetradecenoate (n-C14:1),e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+fruur__e,D-Fructuronate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+dump__e,DUMP C9H11N2O8P,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+imp__e,IMP C10H11N4O8P,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+gal1p__e,Alpha-D-Galactose 1-phosphate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+xyl____D__e,D-Xylose,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+galctn____D__e,D-Galactonate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+glc____D__e,D-Glucose,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+mobd__e,Molybdate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+g3pi__e,Sn-Glycero-3-phospho-1-inositol,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+nh4__e,Ammonium,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+g3pc__e,Sn-Glycero-3-phosphocholine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+hdca__e,Hexadecanoate (n-C16:0),e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+fald__e,Formaldehyde,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+csn__e,Cytosine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+o2__e,O2 O2,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+succ__e,Succinate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+ser____L__e,L-Serine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+amob__c,S-Adenosyl-4-methylthio-2-oxobutanoate,c,TRUE,TRUE,FALSE,TRUE,core_and_boundary,internal_only
+xtsn__e,Xanthosine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+ttdca__e,Tetradecanoate (n-C14:0),e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+mmet__e,S-Methyl-L-methionine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+fecrm__e,Ferrichrome,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+mal____D__e,D-Malate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+ins__e,Inosine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+arbtn__fe3__e,Aerobactin,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+cl__e,Chloride,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+gthox__e,Oxidized glutathione,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+3gmp__e,Guanosine 3  phosphate C10H12N5O8P,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+3hpp__e,3-Hydroxypropanoate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+acgam__e,N-Acetyl-D-glucosamine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+no3__e,Nitrate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+pnto____R__e,(R)-Pantothenate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+glcn__e,D-Gluconate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+duri__e,Deoxyuridine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+minohp__e,Myo-Inositol hexakisphosphate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+acnam__e,N-Acetylneuraminate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+cgly__e,Cys Gly C5H10N2O3S,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+ump__e,UMP C9H11N2O9P,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+ni2__e,Nickel,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+ch4__e,Methane,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+o2s__e,Superoxide anion,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+udpgal__e,UDPgalactose,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+12ppd____R__e,"(R)-Propane-1,2-diol",e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+glyc2p__e,Glycerol 2-phosphate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+ttrcyc__e,Tetracycline,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+lac____L__e,L-Lactate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+cbl1__e,Cob(I)alamin,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+xylu____L__e,L-Xylulose,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+pydx__e,Pyridoxal,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+gua__e,Guanine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+sel__e,Selenate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+glyc____R__e,(R)-Glycerate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+eca4colipa__e,(enterobacterial common antigen)x4 core oligosaccharide lipid A,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+cyan__e,Hydrogen cyanide,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+ala__B__e,Beta-Alanine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+fecrm__un__e,Ferrichrome minus Fe(III),e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+fuc____L__e,L-Fucose,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+tsul__e,Thiosulfate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+3cmp__e,3  CMP C9H12N3O8P,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+butso3__e,Butanesulfonate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+ptrc__e,Putrescine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+hxa__e,Hexanoate (n-C6:0),e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+acgal1p__e,N-Acetyl-D-galactosamine 1-phosphate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+malthx__e,Maltohexaose,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+dimp__e,DIMP C10H12N4O7P,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+3ump__e,3  UMP C9H11N2O9P,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+ethso3__e,Ethanesulfonate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+psclys__e,Psicoselysine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+quin__e,Quinate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+ppal__e,Propanal,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+sucr__e,Sucrose C12H22O11,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+urea__e,Urea CH4N2O,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+fusa__e,Fusidic acid,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+tyrp__e,Phosphotyrosine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+hdcea__e,Hexadecenoate (n-C16:1),e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+gthrd__e,Reduced glutathione,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+so3__e,Sulfite,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+2dglc__e,2 Deoxy D glucose C6H12O5,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+frulys__e,Fructoselysine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+cmp__e,CMP C9H12N3O8P,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+pydam__e,Pyridoxamine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+pi__e,Phosphate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+3amp__e,3  AMP C10H12N5O7P,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+14glucan__e,"1,4-alpha-D-glucan",e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+fe3__e,Iron (Fe3+),e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+asp____L__e,L-Aspartate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+thr____L__e,L-Threonine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+maltpt__e,Maltopentaose,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+metsox__S____L__e,L-Methionine Sulfoxide,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+15dap__e,"1,5-Diaminopentane",e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+no__e,Nitric oxide,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+meoh__e,Methanol,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+melib__e,Melibiose C12H22O11,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+etha__e,Ethanolamine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+maltttr__e,Maltotetraose,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+glcur__e,D-Glucuronate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+fe3hox__e,Fe(III)hydroxamate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+gbbtn__e,Gamma-butyrobetaine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+enter__e,Enterochelin,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+acgam1p__e,N-Acetyl-D-glucosamine 1-phosphate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+LalaDglu__e,L-alanine-D-glutamate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+urate__e,Urate C5H4N4O3,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+cm__e,Chloramphenicol,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+agm__e,Agmatine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+mal____L__e,L-Malate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+phe____L__e,L-Phenylalanine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+cpgn__e,Coprogen,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+fum__e,Fumarate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+acald__e,Acetaldehyde,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+peamn__e,Phenethylamine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+feoxam__un__e,Ferroxamine minus Fe(3),e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+udpacgal__e,UDP-N-acetyl-D-galactosamine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+fe3hox__un__e,"Fe(III)hydoxamate, unloaded",e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+pydxn__e,Pyridoxine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+23cgmp__e,"2',3'-Cyclic GMP",e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+tym__e,Tyramine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+pser____L__e,O-Phospho-L-serine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+5mtr__e,5-Methylthio-D-ribose,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+mincyc__e,Minocycline,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+rfamp__e,Rifampin,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+h2o__e,H2O H2O,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+rib____D__e,D-Ribose,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+uri__e,Uridine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+trp____L__e,L-Tryptophan,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+din__e,Deoxyinosine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+galct____D__e,D-Galactarate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+galur__e,D-Galacturonate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+23camp__e,"2',3'-Cyclic AMP",e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+dhps__e,"2,3-Dihydroxypropane-1-sulfonate",e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+mnl__e,D-Mannitol,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+for__e,Formate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+h2o2__e,Hydrogen peroxide,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+23cump__e,"2',3'-Cyclic UMP",e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+tungs__e,Tungstate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only

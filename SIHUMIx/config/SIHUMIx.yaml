@@ -1,0 +1,103 @@
+boundary_metabolites:
+  - ac_e
+  - but_e
+  - ppa_e
+  - lac__L_e
+cellular_units:
+  - model_name: Anaerostipes_caccae_DSM_14662
+    label: acd1
+    biomass:
+      max: 0.45
+      mean: 0.32
+      min: 0.2
+    population:
+      starv: 0.016
+      dup: 0.35
+      death: 0.005
+    initial_count: 90
+    mu_max: 1.0
+  - model_name: Bacteroides_thetaiotaomicron_VPI_5482
+    label: btv5
+    biomass:
+      max: 0.5
+      mean: 0.35
+      min: 0.25
+    population:
+      starv: 0.015
+      dup: 0.65
+      death: 0.005
+    initial_count: 100
+    mu_max: 1.0
+  - model_name: Bifidobacterium_longum_NCC2705
+    label: bln
+    biomass:
+      max: 0.45
+      mean: 0.3
+      min: 0.2
+    population:
+      starv: 0.01
+      dup: 0.3
+      death: 0.003
+    initial_count: 100
+    mu_max: 1.0
+  - model_name: Blautia_producta_DSM_2950
+    label: bpd2
+    biomass:
+      max: 0.55
+      mean: 0.38
+      min: 0.28
+    population:
+      starv: 0.018
+      dup: 0.3
+      death: 0.004
+    initial_count: 100
+    mu_max: 1.0
+  - model_name: Clostridium_butyricum_DSM_10702
+    label: cbd1
+    biomass:
+      max: 1.5
+      mean: 0.6
+      min: 0.1
+    population:
+      starv: 0.21
+      dup: 1
+      death: 0.018
+    initial_count: 80
+    mu_max: 1
+  - model_name: Clostridium_ramosum_VPI_0427_DSM_1402
+    label: crv0d1
+    biomass:
+      max: 0.48
+      mean: 0.33
+      min: 0.23
+    population:
+      starv: 0.014
+      dup: 0.35
+      death: 0.005
+    initial_count: 100
+    mu_max: 1.0
+  - model_name: Escherichia_coli_SE11
+    label: ecs
+    biomass:
+      max: 1.172
+      mean: 0.489
+      min: 0.083
+    population:
+      starv: 0.21
+      dup: 1
+      death: 0.018
+    initial_count: 90
+    mu_max: 1.0
+  - model_name: Lactobacillus_plantarum_subsp_plantarum_ATCC_14917
+    label: lpspa1
+    biomass:
+      max: 0.4
+      mean: 0.25
+      min: 0.15
+    population:
+      starv: 0.012
+      dup: 0.5
+      death: 0.004
+    initial_count: 70
+    mu_max: 1.0
+

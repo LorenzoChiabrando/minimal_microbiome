@@ -2,20 +2,32 @@
 # run.R – one-click demo for the “minimal-doublet” community
 # -------------------------------------------------------------------------
 
-if (!requireNamespace("remotes", quietly = TRUE))
-  install.packages("remotes")
+# if (!requireNamespace("remotes", quietly = TRUE))
+#   install.packages("remotes")
 
+# remove.packages("epimodFBAfunctionsGUI")
+# remove.packages("epimod")
+# remove.packages("epimodFBAfunctions")
 remotes::install_github(
   "qBioTurin/epimod_FBAfunctions",
   ref      = "unified-epimod_FBAfunctions",
   upgrade  = "never"
 )
 
+remotes::install_github(
+  "https://github.com/LorenzoChiabrando/epimodFBAfunctions_GUI",
+  ref = "main")
+
+remotes::install_github("https://github.com/LorenzoChiabrando/epimod_gui", ref="main")
+
+library(epimodFBAfunctionsGUI)
 library(epimodFBAfunctions)
-# remove.packages("epimod")
-# devtools::install_github("https://github.com/qBioTurin/epimod", ref="epimod_pFBA")
+# install.packages("devtools")
+library(devtools)
 library(epimod)
 # downloadContainers()
+
+epimodFBAfunctionsGUI::run_app()
 
 # -------------------------------------------------------------------------
 # user-editable knobs
@@ -23,9 +35,9 @@ library(epimod)
 hypernode_name <- "Ec"
 base_dir       <- getwd()                       # where you launch run.R
 mat_dir        <- "models"                      # user *.mat* live here
-cfg_yaml       <- "config/config_Ec.yaml"
-bc_json        <- "config/boundary_conditions_Ec.json"
-init_csv       <- "config/initial_data_Ec.csv"
+cfg_yaml       <- paste0("config/config_", hypernode_name, ".yaml")
+bc_json        <- paste0("config/boundary_conditions_", hypernode_name, ".json")
+init_csv       <- paste0("config/initial_data_", hypernode_name, ".csv")
 overwrite_run  <- TRUE
 debug_solver   <- FALSE                         # epimod::model.analysis()
 
@@ -84,7 +96,7 @@ purrr::walk(solver_suffixes, function(ext) {
 # -------------------------------------------------------------------------
 epimod::model.analysis(
   solver_fname     = fs::path(paths$gen, paste0(hypernode_name, ".solver")),
-  parameters_fname = fs::path(paths$config, "initial_data_Ec.csv"),
+  parameters_fname = fs::path(paths$config, paste0("initial_data_", hypernode_name, ".csv")),
   functions_fname  = fs::path(paths$src,   paste0("functions_", hypernode_name, ".R")),
   debug            = debug_solver,
   i_time = 0, f_time = 24, s_time = 0.25,
@@ -98,57 +110,74 @@ epimod::model.analysis(
   )
 )
 
+
 cat("\n🎉 All results gathered in", fs::path_rel(paths$gen, base_dir), "\n")
 
-source(file.path("src/R/plt_ana.R"))
+source(file.path("plot_flux_pca.R"))
+source(file.path("plot_all_results.R"))
+source(file.path("plotting_int_net.R"))
+source(file.path("plot_metadata.R"))
 
-p = plt_ana(
-  fba_name = "ecsk1sm",
-  reactions_of_interest = c(
-    "EX_biomass_e_f", "EX_biomass_e_r",
-    "EX_glc__D_e_r", "EX_glc__D_e_f",
-    "EX_for_e_r", "EX_for_e_f",
-    "EX_but_e_r", "EX_but_e_f",
-    "EX_ppa_e_r", "EX_ppa_e_f",
-    "EX_ac_e_r", "EX_ac_e_f"))
+f_time = 24
+s_time = 0.01
 
-epimod::model.sensitivity(
-  solver_fname     = fs::path(paths$gen, paste0(hypernode_name, ".solver")),
-  fba_fname = fba_files,
-  i_time = 0, f_time = 24, s_time = 0.25,
-  atol  = 1e-6, rtol = 1e-6,
-  n_config = parallel::detectCores(),
-  debug            = debug_solver,
-  target_value = c('biomass_e_ecsk1sm', 'n_ecsk1sm'),
-  parameters_fname = fs::path(paths$config, "initial_data_Ec_sen.csv"),
-  parallel_processors = parallel::detectCores(),
-  functions_fname  = fs::path(paths$src, paste0("functions_", hypernode_name, "_sen.R")),
-  user_files = c(
-    fs::path(paths$config, "population_parameters.csv"),
-    fs::path(paths$gen,    paste0(hypernode_name, ".fbainfo")),
-    fs::path(paths$output, "ub_bounds_projected.csv"),
-    fs::path(paths$output, "ub_bounds_not_projected.csv")
-  ))
+col_bac <- c("#341539")
 
-# results <- process_sensitivity_analysis(wd = wd, save_type = "both")
-# Save only trace files
-trace_results <- process_sensitivity_analysis(wd = wd, save_type = "trace")
+generate_metadata_plots(hypernode_name, col_bac) 
+  
+my_col_met_places <- c("#282728", "#eaa380", "#ad4233", "#8887cd", "#086")
 
-# Get the plots
-plots_places <- analyze_trace_sensitivity(wd = wd, model_name = model_name)
+my_react2plot <- c("EX_biomass_e_f", "EX_biomass_e_r",
+                   "EX_glc__D_e_f", "EX_glc__D_e_r", "EX_lac__D_e_r", "EX_lac__D_e_f",
+                   "EX_ppa_e_f", "EX_ac_e_f", "EX_but_e_f", "EX_for_e_f",
+                   "EX_ppa_e_r", "EX_ac_e_r", "EX_but_e_r", "EX_for_e_r")
 
-ggsave(paste0(model_name, "_",  "Sensitivity_places.pdf"), 
-       plots_places[[1]] + plots_places[[2]], 
-       width = 8, height = 3)
+my_scfa_list <- c("ac_e", "ac_c", "ppa_e", "ppa_c", "but_e", "but_c", "for_e", "for_c",
+                  "M03134_e", "M03134_c", "caproic_e", "caproic_c",
+                  "isobut_e", "isobut_c", "isoval_e", "isoval_c",
+                  "isocapr_e", "isocapr_c", "isobut_e", "isobut_c")
 
-# Run the analysis
-results <- analyze_flux_sensitivity(
-  wd = wd,
-  model_name = model_name,
-  mn_name = mn_name,
-  reactions_of_interest = c("EX_biomass_e_f", "EX_biomass_e_r",
-                            "EX_glc_D_e_r", "EX_glc_D_e_f",
-                            "EX_lcts_e_r", "EX_lcts_e_f",
-                            "EX_but_e_r", "EX_but_e_f",
-                            "EX_ppa_e_r", "EX_ppa_e_f",
-                            "EX_ac_e_r", "EX_ac_e_f"))
+my_entities_list <- c(my_scfa_list, "glu__L_e", "glu__L_c", 
+                      "lac__L_e", "lac__L_c", "lac__D_e", "lac__D_c",
+                      "ade_e", "ade_c", "gua_e", "gua_c", "nac_e", "nac_c",
+                      "thymd_e", "thymd_c", "ptrc_e", "ptrc_c")
+
+plot_marking_and_flux_trends(case_name = hypernode_name, 
+                             col_bac = col_bac,
+                             col_met_places = my_col_met_places,
+                             react2plot = my_react2plot,
+                             num_sampling_points_rel_abun = 12,
+                             num_sampling_points_met_plots = 12,
+                             plot_filename_suffix = ".pdf"
+)
+
+my_flux_sampling_times <- unique(round(seq(0, f_time, length.out = f_time*10), round(abs(log10(s_time)), 1)))
+
+plot_flux_pca(
+  case_name = hypernode_name,
+  flux_sampling_times = my_flux_sampling_times,
+  flux_th_l = -1000,
+  flux_th_h = 1000,
+  col_bac = col_bac,
+  scfa_list = my_scfa_list,
+  entities_list = my_entities_list,
+  plot_filename = paste0(hypernode_name, "_pca_output.pdf")
+)
+
+my_cross_fed_met_list <- c("lcts_e", "glc__D_e", "ac_e","ppa_e", "but_e",
+                           "M03134_e", "caproic_e", "isobut_e",
+                           "isoval_e", "isocapr_e", "isobut_e",
+                           "glu_L_e", "lac__L_e", "lac__D_e", "for_e", "ade_e",
+                           "gua_e", "nac_e", "thymd_e", "ptrc_e")
+
+plotting_int_net(
+  case_name = hypernode_name,
+  t_frame = my_flux_sampling_times,
+  col_bac = "#f06b368c",
+  col_met = "lightblue",
+  shape_bac = "square",
+  shape_met = "circle",
+  cross_fed_met = my_cross_fed_met_list,
+  output_filename_prefix = paste0(hypernode_name, "_CrossFeeding"),
+  plot_filename_suffix = ".pdf"
+)

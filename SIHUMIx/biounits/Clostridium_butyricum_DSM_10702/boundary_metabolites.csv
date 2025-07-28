@@ -1,0 +1,201 @@
+id,name,compartment,is_core,is_boundary,is_external_boundary,is_internal_boundary,primary_class,boundary_subtype
+12dgr180_e,"1,2-Diacyl-sn-glycerol (dioctadecanoyl, n-C18:0)",e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+13ppd_e,"Propane-1,3-diol",e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+15dap_e,"1,5-Diaminopentane",e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+26dap__M_e,"meso-2,6-Diaminoheptanedioate",e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+2hymeph_c,2-(Hydroxymethyl)phenol,c,TRUE,TRUE,FALSE,TRUE,core_and_boundary,internal_only
+2obut_c,2-Oxobutanoate,c,TRUE,TRUE,FALSE,TRUE,core_and_boundary,internal_only
+2obut_e,2-Oxobutanoate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+4hba_c,4-Hydroxy-benzyl alcohol,c,TRUE,TRUE,FALSE,TRUE,core_and_boundary,internal_only
+5drib_c,5-deoxyribose,c,TRUE,TRUE,FALSE,TRUE,core_and_boundary,internal_only
+5mtr_c,5-Methylthio-D-ribose,c,TRUE,TRUE,FALSE,TRUE,core_and_boundary,internal_only
+Lcyst_e,L-cysteate(1-),e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+PGPm1_c,Peptidoglycan polymer (n-1 subunits),c,TRUE,TRUE,FALSE,TRUE,core_and_boundary,internal_only
+Tyr__ggn_e,Tyr-194 of apo-glycogenin protein (primer for glycogen synthesis),e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+ac_e,acetate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+acald_e,acetaldehyde,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+acgam_e,N-acetyl-D-glucosamine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+ade_e,Adenine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+adn_e,Adenosine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+adocbl_e,Adenosylcobalamin,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+ala__D_e,D-alanine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+ala__L_e,L-alanine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+alaasp_e,L-alanyl-L-aspartate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+alagln_e,L-alanyl-L-glutamine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+alaglu_e,L-alanyl-L-glutamate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+alagly_e,L-alanylglycine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+alahis_e,L-alanyl-L-histidine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+alaleu_e,L-alanyl-L-leucine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+alathr_e,L-alanyl-L-threonine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+alltn_e,Allantoin,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+arab__L_e,L-arabinose,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+arbt_e,Arbutin,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+arg__L_e,L-argininium(1+),e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+asn__L_e,L-asparagine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+asp__L_e,L-aspartate(1-),e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+biomass_c,Produced biomass,c,TRUE,TRUE,FALSE,TRUE,core_and_boundary,internal_only
+btn_c,Biotin,c,TRUE,TRUE,FALSE,TRUE,core_and_boundary,internal_only
+btn_e,Biotin,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+but_e,butyrate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+butso3_e,butanesulfonate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+ca2_e,calcium(2+),e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+cbl1_e,Cob(I)alamin,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+cbl2_e,Cob(II)alamin,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+cd2_e,Cadmium,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+cellb_e,cellobiose,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+cgly_e,L-cysteinylglycine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+cl_e,Chloride,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+clpn140_c,"cardiolipin (tetratetradecanoyl, n-C14:0)",c,TRUE,TRUE,FALSE,TRUE,core_and_boundary,internal_only
+clpn160_c,"cardiolipin (tetrahexadecanoyl, n-C16:0)",c,TRUE,TRUE,FALSE,TRUE,core_and_boundary,internal_only
+clpn180_c,"cardiolipin (tetraoctadecanoyl, n-C18:0)",c,TRUE,TRUE,FALSE,TRUE,core_and_boundary,internal_only
+clpnai15_c,"cardiolipin (12-methyl-tetradecanoyl, anteiso-C15)",c,TRUE,TRUE,FALSE,TRUE,core_and_boundary,internal_only
+clpnai17_c,"cardiolipin (14-methyl-hexadecanoyl, anteiso-C17)",c,TRUE,TRUE,FALSE,TRUE,core_and_boundary,internal_only
+clpni15_c,"cardiolipin (13-methyl-tetradecanoyl, iso-C15)",c,TRUE,TRUE,FALSE,TRUE,core_and_boundary,internal_only
+clpni16_c,"cardiolipin (14-methyl-pentadecanoyl, iso-C16)",c,TRUE,TRUE,FALSE,TRUE,core_and_boundary,internal_only
+clpni17_c,"cardiolipin (15-methyl-hexadecanoyl, iso-C17)",c,TRUE,TRUE,FALSE,TRUE,core_and_boundary,internal_only
+co2_e,carbon dioxide,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+cobalt2_e,Co2+,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+cro4_e,chromate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+csn_e,cytosine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+cu2_e,Cu2+,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+cys__L_e,L-cysteine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+cytd_e,Cytidine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+dad__2_e,2-deoxyadenosine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+dad__5_c,5-Deoxyadenosine,c,TRUE,TRUE,FALSE,TRUE,core_and_boundary,internal_only
+dcyt_e,Deoxycytidine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+ddca_e,laurate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+dextrin_e,Dextrin,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+dgsn_e,Deoxyguanosine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+dhptd_c,"4,5-dihydroxy-2,3-pentanedione",c,TRUE,TRUE,FALSE,TRUE,core_and_boundary,internal_only
+din_e,Deoxyinosine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+dnarep_c,DNA replication,c,TRUE,TRUE,FALSE,TRUE,core_and_boundary,internal_only
+drib_e,2-deoxy-D-ribose,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+duri_e,Deoxyuridine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+ethso3_e,ethanesulfonate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+etoh_e,ethanol,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+fe2_e,Fe2+,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+fe3_e,Fe3+,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+fecrm_e,Ferrichrome,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+fol_e,Folate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+for_e,Formate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+fru_e,D-Fructose,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+fuc1p__L_e,L-Fucose 1-phosphate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+g6p_e,D-Glucose 6-phosphate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+gal_e,D-Galactose,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+galt_e,galactitol,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+galur_e,D-Galacturonate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+gam_e,D-Glucosamine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+gcald_c,glycolaldehyde,c,TRUE,TRUE,FALSE,TRUE,core_and_boundary,internal_only
+gcald_e,glycolaldehyde,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+glc__D_e,D-glucose,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+gln__L_e,L-glutamine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+glu__L_e,L-glutamate(1-),e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+gly_e,Glycine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+glyasn_e,Glycyl-L-asparagine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+glyasp_e,Glycyl-L-aspartate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+glyb_e,glycine betaine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+glyc3p_e,Glycerol 3-phosphate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+glyc_e,Glycerol,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+glycys_e,Gly-Cys,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+glygln_e,Glycyl-L-glutamine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+glyglu_e,Glycyl-L-glutamate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+glygn2_e,"glycogen, structure 2 (glycogenin-1,6-{7[1,4-Glc], 4[1,4-Glc]})",e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+glygn4_e,"glycogen, structure 4 (glycogenin-1,6-{2[1,4-Glc], [1,4-Glc]})",e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+glygn5_e,"glycogen, structure 5 (glycogenin-2[1,4-Glc])",e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+glyleu_e,Glycylleucine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+glymet_e,Glycyl-L-methionine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+glyphe_e,Glycylphenylalanine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+glypro_e,Glycylproline,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+glytyr_e,Glycyl-L-tyrosine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+gua_e,Guanine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+h2_e,Hydrogen,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+h2o_e,Water,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+h2s_e,Hydrogen sulfide,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+h_e,proton,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+hdca_e,Hexadecanoate (n-C16:0),e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+hexs_e,hexanesulfonate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+hg2_e,Hg2+,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+his__L_e,L-histidine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+hqn_c,Hydroquinone,c,TRUE,TRUE,FALSE,TRUE,core_and_boundary,internal_only
+hxan_e,Hypoxanthine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+ile__L_e,L-isoleucine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+ins_e,Inosine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+isetac_e,Isethionic acid,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+k_e,potassium,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+kesto_e,"Kestose (2 fru, 1 glc inulin-type fructo-oligosaccharide)",e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+kestopt_e,"Kestopentaose (4 fru, 1 glc inulin-type fructo-oligosaccharide)",e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+kestottr_e,"Kestotetraose (3 fru, 1 glc inulin-type fructo-oligosaccharide)",e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+lac__D_e,(R)-lactate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+lac__L_e,(S)-lactate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+lcts_e,Lactose,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+leu__L_e,L-leucine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+lys__L_e,L-lysinium(1+),e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+malt_e,Maltose,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+malthx_e,Maltohexaose,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+malttr_e,maltotriose,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+man6p_e,D-Mannose 6-phosphate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+man_e,D-Mannose,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+mantr_e,"mannotriose (beta-1,4)",e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+melib_e,Melibiose,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+meoh_e,methanol,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+met__D_e,D-Methionine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+met__L_e,L-methionine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+metala_e,L-methionyl-L-alanine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+metsox__R__L_e,L-methionine-R-sulfoxide,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+metsox__S__L_e,L-Methionine Sulfoxide,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+mg2_e,magnesium,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+mn2_e,Mn2+,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+mnl_e,D-Mannitol,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+mobd_e,Molybdate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+mops_e,3-(n-Morpholino)Propanesulfonic Acid,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+mqn8_e,Menaquinone 8,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+mso3_e,methanesulfonate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+n2_e,Nitrogen,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+na1_e,Sodium,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+nac_e,Nicotinate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+nh4_e,Ammonium,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+no2_e,Nitrite,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+no3_e,Nitrate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+o2_e,O2,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+ocdca_e,octadecanoate (n-C18:0),e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+pb_e,Lead,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+pect_e,pectins,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+phe__L_e,L-phenylalanine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+pi_e,hydrogenphosphate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+ppi_e,Diphosphate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+pro__L_e,L-proline,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+proteinsynth_c,Protein biosynthesis,c,TRUE,TRUE,FALSE,TRUE,core_and_boundary,internal_only
+ptrc_e,Putrescine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+raffin_e,Raffinose,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+rib__D_e,D-ribose,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+ribflv_e,Riboflavin,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+rnatrans_c,RNA transcription,c,TRUE,TRUE,FALSE,TRUE,core_and_boundary,internal_only
+salcn_e,Salicin,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+sbt__D_e,D-glucitol,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+ser__L_e,L-serine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+sheme_e,Siroheme,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+so4_e,sulfate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+spmd_e,Spermidine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+strch1_e,"starch, structure 1 (1,6-{7[1,4-Glc], 4[1,4-Glc]})",e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+strch2_e,"starch, structure 2 (1,6-{2[1,4-Glc], [1,4-Glc]})",e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+stys_e,Stachyose,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+succ_e,Succinate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+sucr_e,Sucrose,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+sulfac_e,sulfoacetate,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+taur_e,Taurine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+teich__45__BS_c,"teichuronic acid (GlcA + GalNac, 45 repeating unit)",c,TRUE,TRUE,FALSE,TRUE,core_and_boundary,internal_only
+thm_e,Thiamin,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+thr__L_e,L-threonine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+thymd_e,Thymidine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+tre_e,Trehalose,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+trp__L_e,L-tryptophan,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+tsul_e,thiosulfate(2-),e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+ttdca_e,tetradecanoate (n-C14:0),e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+tyr__L_e,L-tyrosine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+ura_e,uracil,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+urea_e,Urea,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+uri_e,Uridine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+val__L_e,L-valine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+xan_e,Xanthine,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+xyl__D_e,aldehydo-D-xylose,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only
+zn2_e,Zinc,e,TRUE,TRUE,TRUE,FALSE,core_and_boundary,external_only

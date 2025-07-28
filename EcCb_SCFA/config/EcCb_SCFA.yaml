@@ -1,0 +1,31 @@
+boundary_metabolites:
+  - ppa_e
+  - but_e
+  - for_e
+  - ac_e
+cellular_units:
+  - model_name: Clostridium_butyricum_DSM_10702
+    label: cbd1
+    biomass:
+      max: 1.5
+      mean: 0.6
+      min: 0.1
+    population:
+      starv: 0.21
+      dup: 1
+      death: 0.018
+    initial_count: 800
+    mu_max: 1
+  - model_name: Escherichia_coli_SE11
+    label: ecs
+    biomass:
+      max: 1.172
+      mean: 0.489
+      min: 0.083
+    population:
+      starv: 0.21
+      dup: 1
+      death: 0.018
+    initial_count: 900
+    mu_max: 1.0
+

@@ -1,0 +1,24 @@
+[
+  {
+    "Transition": "EX_biomass_e_in_i",
+    "LPfile": "i_model.txt",
+    "Reaction": "EX_biomass_e",
+    "Multiplicity": 1,
+    "BacteriaCountPlace": "n_i",
+    "BacteriaBiomassPlace": "biomass_e_i",
+    "InputPlaces": ["biomass_e_i"],
+    "OutputPlaces": [],
+    "IsBiomass": true
+  },
+  {
+    "Transition": "EX_biomass_e_out_i",
+    "LPfile": "i_model.txt",
+    "Reaction": "EX_biomass_e",
+    "Multiplicity": 1,
+    "BacteriaCountPlace": "n_i",
+    "BacteriaBiomassPlace": "biomass_e_i",
+    "InputPlaces": ["biomass_e_i"],
+    "OutputPlaces": ["biomass_e_i"],
+    "IsBiomass": true
+  }
+]
